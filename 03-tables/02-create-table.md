@@ -1,6 +1,4 @@
----
-title: Create Table
----
+# Create Table
 
 <pre>
 GET /tables/<i class="var">table</i>
