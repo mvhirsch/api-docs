@@ -1,12 +1,8 @@
 # Create Table
 
-<pre>
-GET /tables/<i class="var">table</i>
-</pre>
+Get the information from the given table name.
 
 <i class="material-icons text-align">call_made</i> <h3>HTTP Request</h3>
-
-Get the information from the given table name.
 
 ```
 /api/1/tables/[table-name]
@@ -20,8 +16,25 @@ https://database.account.directus.io/api/v1/tables/projects
 
 <div class="text-md gray-text text-thin margin-bottom-xs margin-top-xl"><i class="material-icons text-align">call_received</i>Response</div>
 
-<div class="text-xs blue-text margin-bottom-xs toggle-element block" data-element="rows-response-example"><i class="material-icons text-align">code</i>Show Example</div>
-<pre id="rows-response-example" class="block hide"><code class="json">{
+<div class="text-xs blue-text margin-bottom-xs toggle-element block" data-element="create-table-response-example"><i class="material-icons text-align">code</i>Show Example</div>
+```json
+{
+   "id":"1",
+   "table_name":"projects",
+   "group_id":"1",
+   "read_field_blacklist":null,
+   "write_field_blacklist":null,
+   "nav_listed":"1",
+   "status_id":"0",
+   "allow_view":"2",
+   "allow_add":"1",
+   "allow_edit":"2",
+   "allow_delete":"2",
+   "allow_alter":"1"
+}
+```
+
+<pre id="create-table-response-example" class="block hide"><code class="json">{
    "id":"1",
    "table_name":"projects",
    "group_id":"1",
