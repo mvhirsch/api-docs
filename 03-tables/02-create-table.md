@@ -8,13 +8,13 @@ Get the information from the given table name.
 ### HTTP Request
 
 ```bash
-GET https://database.account.directus.io/api/1/tables/projects
+GET https://database.account.directus.io/api/1/privileges/[group-id]
 ```
 
 ### Example Request
 
 ```bash
-$ curl https://database.account.directus.io/api/1/tables/projects
+$ curl https://database.account.directus.io/api/1/privileges/1
 ```
 
 ### Response
