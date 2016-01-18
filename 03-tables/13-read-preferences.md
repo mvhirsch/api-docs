@@ -1,0 +1,30 @@
+# Read Table Preferences
+
+Get table preferences.
+
+### HTTP Request
+
+```bash
+GET /api/1/tables/[table-name]/preferences
+```
+
+### Example Request
+
+```bash
+$ curl https://database.account.directus.io/api/1/tables/projects/preferences
+```
+
+### Response
+
+```json
+{
+  "id": "1",
+  "user": "1",
+  "table_name": "projects",
+  "title": null,
+  "columns_visible": "title",
+  "sort": "id",
+  "sort_order": "ASC",
+  "active": "1,2",
+  "search_string": null
+}```
