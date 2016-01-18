@@ -11,7 +11,7 @@ POST /api/1/tables/[table-name]/rows
 ### Example Request
 
 ```bash
-$ curl --data "active=1&title=Example" \
+$ curl --data "active=1&title='School Website'" \
         https://database.account.directus.io/api/1/tables/projects/rows
 ```
 
@@ -26,7 +26,7 @@ $ curl --data "active=1&title=Example" \
 ```json
 {
   "id": 1,
-  "active" :2,
-  "title": "John's Website"
+  "active": 1,
+  "title": "School Website"
 }
 ```
