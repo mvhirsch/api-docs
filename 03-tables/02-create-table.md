@@ -1,6 +1,3 @@
----
-extra: true
----
 # Create Table
 
 Get the information from the given table name.
@@ -16,6 +13,18 @@ GET https://database.account.directus.io/api/1/privileges/[group-id]
 ```bash
 $ curl https://database.account.directus.io/api/1/privileges/1
 ```
+
+### Parameters
+Name        | Description
+----------- | ------------
+table_name  | Name of the table
+group_id    | the group id to which this privileges are going to be assigned to.
+addTable    | Set to **true** to add a new table
+allow_add   | Allow **group_id** to whether add entries in this table or not. (1=yes, 0=no)
+allow_alter | Allow **group_id** to whether alter this table or not. (1=yes, 0=no)
+allow_delete| Allow **group_id** to whether _delete_ entries in this table or not. (0=no, 1=yes (your own), 2=yes (any))
+allow_edit  | Allow **group_id** to whether _edit_ entries in this table or not. (0=no, 1=yes (your own), 2=yes (any))
+allow_view  | Allow **group_id** to whether _view_ entries in this table or not. (0=no, 1=yes (your own), 2=yes (any))
 
 ### Response
 
@@ -35,15 +44,3 @@ $ curl https://database.account.directus.io/api/1/privileges/1
    "allow_alter":"1"
 }
 ```
-
-### Parameters
-Name        | Description
------------ | ------------
-table_name  | Name of the table
-group_id    | the group id to which this privileges are going to be assigned to.
-addTable    | Set to **true** to add a new table
-allow_add   | Allow **group_id** to whether add entries in this table or not. (1=yes, 0=no)
-allow_alter | Allow **group_id** to whether alter this table or not. (1=yes, 0=no)
-allow_delete| Allow **group_id** to whether _delete_ entries in this table or not. (0=no, 1=yes (your own), 2=yes (any))
-allow_edit  | Allow **group_id** to whether _edit_ entries in this table or not. (0=no, 1=yes (your own), 2=yes (any))
-allow_view  | Allow **group_id** to whether _view_ entries in this table or not. (0=no, 1=yes (your own), 2=yes (any))

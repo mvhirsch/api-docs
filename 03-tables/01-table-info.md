@@ -87,35 +87,3 @@ $ curl https://database.account.directus.io/api/1/tables/projects
  }
 }
 ```
-
-  <div class="docs-header dark-gray-text text-xs">
-    <div class="docs-name">Name</div>
-    <div class="docs-type">Type</div>
-    <div class="docs-description">Description</div>
-  </div>
-
-  <div class="docs-item">
-    <div class="docs-name">Active</div>
-    <div class="docs-type gray-text">integer</div>
-    <div class="docs-description gray-text">Active entries count.</div>
-  </div>
-  <div class="docs-item">
-    <div class="docs-name">Delete</div>
-    <div class="docs-type gray-text">integer</div>
-    <div class="docs-description gray-text">Soft-delete entries count.</div>
-  </div>
-  <div class="docs-item">
-    <div class="docs-name">Draft</div>
-    <div class="docs-type gray-text">interger</div>
-    <div class="docs-description gray-text">Draft entries count.</div>
-  </div>
-  <div class="docs-item">
-    <div class="docs-name">total</div>
-    <div class="docs-type gray-text">integer</div>
-    <div class="docs-description gray-text">Total entries count.</div>
-  </div>
-  <div class="docs-item">
-    <div class="docs-name">rows</div>
-    <div class="docs-type gray-text">array</div>
-    <div class="docs-description gray-text">Each row data.</div>
-  </div>
