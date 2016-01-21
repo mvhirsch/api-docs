@@ -12,7 +12,8 @@ PATCH /api/1/tables/[table-name]/rows/[row-id]
 
 ```bash
 $ curl --data "active=1&title=Example" \
-        https://database.account.directus.io/api/1/tables/projects/rows/1
+        https://database.account.directus.io/api/1/tables/projects/rows/1 \
+                -u usrSTeeornngkti:
 ```
 
 ### Parameters

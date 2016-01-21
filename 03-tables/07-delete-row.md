@@ -15,13 +15,21 @@ DELETE /api/1/tables/[table-name]/rows/[row-id]
 ### Example Request
 
 ```bash
-$ curl --request PATH \
-        https://database.account.directus.io/api/1/tables/projects/rows/1
+$ curl -X PATCH \
+        https://database.account.directus.io/api/1/tables/projects/rows/1 \
+                -u usrSTeeornngkti:
 ```
 
+### Parameters
+
+Name     | Description
+-------- | -----------
+active   | Status value. delete = 0
+
 ```bash
-$ curl --request DELETE \
-        https://database.account.directus.io/api/1/tables/projects/rows/1
+$ curl -X DELETE \
+        https://database.account.directus.io/api/1/tables/projects/rows/1 \
+                -u usrSTeeornngkti:
 ```
 
 ### Parameters

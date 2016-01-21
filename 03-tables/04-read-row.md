@@ -11,7 +11,8 @@ GET /api/1/tables/[table-name]/rows/[row-id]
 ### Example Request
 
 ```bash
-$ curl https://database.account.directus.io/api/1/tables/projects/rows/1
+$ curl https://database.account.directus.io/api/1/tables/projects/rows/1 \
+        -u usrSTeeornngkti:
 ```
 
 ### Response

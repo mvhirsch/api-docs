@@ -11,7 +11,8 @@ GET /api/1/tables/[table-name]/preferences
 ### Example Request
 
 ```bash
-$ curl https://database.account.directus.io/api/1/tables/projects/preferences
+$ curl https://database.account.directus.io/api/1/tables/projects/preferences \
+        -u usrSTeeornngkti:
 ```
 
 ### Response

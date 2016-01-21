@@ -11,7 +11,8 @@ GET /api/1/tables/[table-name]/columns/[column-name]
 ### Example Request
 
 ```bash
-$ curl https://database.account.directus.io/api/1/tables/projects/columns/title
+$ curl https://database.account.directus.io/api/1/tables/projects/columns/title \
+        -u usrSTeeornngkti:
 ```
 
 ### Parameters

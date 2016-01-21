@@ -7,12 +7,14 @@ The Create Table endpoint adds a new table to your database. Table names must be
 
 ```bash
 GET https://database.account.directus.io/api/1/privileges/[group-id]
+Authentication:
 ```
 
 ### Example Request
 
 ```bash
-$ curl https://database.account.directus.io/api/1/privileges/1
+$ curl -d "table_name=Projects&group_id=1&addTable=true&allow_add=1&allow_alter=1&allow_delete=1&allow_edit=1&allow_view=1" https://database.account.directus.io/api/1/privileges/1 \
+        -u usrSTeeornngkti:
 ```
 
 ### Parameters

@@ -10,6 +10,13 @@ _Work in Progress._
 POST /api/1/tables/[table-name]/columns/[column-name]
 ```
 
+### Example Request
+
+```bash
+$ curl --data "comment=Project+name" https://database.account.directus.io/api/1/tables/projects/title \
+        -u usrSTeeornngkti:
+```
+
 ### Parameters
 
 Name        | Description

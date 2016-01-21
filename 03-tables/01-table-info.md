@@ -11,7 +11,8 @@ GET https://database.account.directus.io/api/1/tables/projects
 ### Example Request
 
 ```bash
-$ curl https://database.account.directus.io/api/1/tables/projects
+$ curl https://database.account.directus.io/api/1/tables/projects \
+        -u [user-token]:
 ```
 
 ### Response

@@ -8,6 +8,12 @@ Create/Add a column to the given table.
 POST /api/1/tables/[table-name]/columns
 ```
 
+```bash
+$ curl -X POST -d "column_name=year&data_type=int&char_length=4&ui=numeric&comment=Year+build" \       
+        https://database.account.directus.io/api/1/tables/projects/columns \
+        -u usrSTeeornngkti:
+```
+
 ### Parameters
 
 Name        | Description

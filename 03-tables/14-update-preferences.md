@@ -21,7 +21,8 @@ active           | List of status values. separated by comma.
 ### Example Request
 
 ```bash
-$ curl https://database.account.directus.io/api/1/tables/projects/preferences
+$ curl -d sort_order=DESC https://database.account.directus.io/api/1/tables/projects/preferences \
+        -u usrSTeeornngkti:
 ```
 
 ### Response
