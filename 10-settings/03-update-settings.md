@@ -1,4 +1,4 @@
-# Read Settings
+# Update Settings
 
 Update Directus settings by the specified collection.
 
