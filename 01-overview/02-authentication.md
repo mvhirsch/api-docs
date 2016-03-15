@@ -1,1 +1,25 @@
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Authentication is perform by using your private account API Key. You can generate API keys [here](#).
+
+Authentication can be done in three different ways:
+
+## HTTP Basic Auth
+
+```bash
+curl -u Py8RumuLD7HE5juFrOR5: https://account-instance.directus.io/api/1/tables
+```
+
+Pay attention to the colon after the API key, it's not part of the API key.
+
+## Bearer Auth
+
+Instead of using `-u -u Py8RumuLD7HE5juFrOR5:` it can be used Authentication header.
+
+```bash
+curl -H "Authorization: Bearer Py8RumuLD7HE5juFrOR5" https://account-instance.directus.io/api/1/tables
+```
+
+## Query String
+
+```bash
+curl https://account-instance.directus.io/api/1/tables?access_token=Py8RumuLD7HE5juFrOR5
+```
