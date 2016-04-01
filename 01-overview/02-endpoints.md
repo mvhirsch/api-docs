@@ -37,7 +37,7 @@ Parameter  |  Example  |  Description
 *Returns JSON object of the privileges for a given group*
 
 #### Example Request
-**GET** http://directus.dev/api/1/privileges/0
+**GET** http://directus.dev/api/1/privileges/1
 
 ```json
 [
