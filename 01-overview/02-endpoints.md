@@ -4,8 +4,8 @@
 
 Type      | Resource | Description
 --------- | -------- | -----------
-GET | `/tables` | Collection of all tables registered with Directus
-GET | `/tables/[table-name]/rows` | Collection of tables viewable by current user
+GET | `/tables` | Collection of table names viewable by current user
+GET | `/tables/[table-name]/rows` | Collection of rows (items) for a given table
 GET | `/tables/[table-name]/rows/[id]` | Details for a specific table row (item)
 GET | `/tables/[table-name]/columns` | Collection of the column details for a given table
 GET | `/tables/[table-name]/columns/[column-name]` | Details for a specific column in a given table
