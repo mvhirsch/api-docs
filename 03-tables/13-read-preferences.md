@@ -28,4 +28,5 @@ $ curl https://database.account.directus.io/api/1/tables/projects/preferences \
   "sort_order": "ASC",
   "active": "1,2",
   "search_string": null
-}```
+}
+```
