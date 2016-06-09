@@ -1,6 +1,6 @@
 # Table list
 
-Get the list of table viewable by current user
+Get the list of tables viewable by current user
 
 ### HTTP Request
 
