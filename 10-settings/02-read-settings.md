@@ -5,7 +5,7 @@ Read all Directus settings by the specified collection.
 ### HTTP Request
 
 ```bash
-GET /api/1/settings/[id]
+GET /api/1/settings/[collectionName]
 ```
 
 ### Example Request
