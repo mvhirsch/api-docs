@@ -2,6 +2,8 @@
 
 Update column information. _*Note*_: Does not update the table column-type.
 
+> Note: Table and column names are case-sensitive
+
 _Work in Progress._
 
 ### HTTP Request
