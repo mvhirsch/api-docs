@@ -1,6 +1,7 @@
 # Read Table Preferences
-
 Get table preferences.
+
+> Note: Table names are case-sensitive
 
 ### HTTP Request
 
