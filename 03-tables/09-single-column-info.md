@@ -2,6 +2,8 @@
 
 Get Information on a given column information from the specified table.
 
+> Note: Table names are case-sensitive
+
 ### HTTP Request
 
 ```bash
