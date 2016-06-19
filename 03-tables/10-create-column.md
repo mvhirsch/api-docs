@@ -2,6 +2,8 @@
 
 Create/Add a column to the given table.
 
+> Note: Table names are case-sensitive
+
 ### HTTP Request
 
 ```bash
