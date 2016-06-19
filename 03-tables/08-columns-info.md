@@ -2,6 +2,8 @@
 
 Get all the given table columns information.
 
+> Note: Table names are case-sensitive
+
 ### HTTP Request
 
 ```bash
