@@ -2,6 +2,8 @@
 
 Delete or Soft-delete a row in the given table with the specified ID.
 
+> Note: Table names are case-sensitive
+
 ### HTTP Request
 
 ```bash
