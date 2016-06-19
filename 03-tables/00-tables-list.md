@@ -2,6 +2,8 @@
 
 Get the list of tables viewable by current user
 
+> Note: Table names are case-sensitive
+
 ### HTTP Request
 
 ```bash
