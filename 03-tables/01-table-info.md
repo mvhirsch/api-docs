@@ -2,10 +2,12 @@
 
 Get the information from the given table name.
 
+> Note: Table names are case-sensitive
+
 ### HTTP Request
 
 ```bash
-GET https://database.account.directus.io/api/1/tables/projects
+GET https://database.account.directus.io/api/1/tables/[table-name]
 ```
 
 ### Example Request
