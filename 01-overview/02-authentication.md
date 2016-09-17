@@ -10,6 +10,33 @@ Authentication is perform by using your private account API Key. You can generat
 
 Authentication can be done in three different ways:
 
+### Request API Key
+Using a user credentials you can request its API key by using `/api/1/auth/request-token`.
+
+```bash
+curl -d "email=user@directus.local&password=pass123" https://account-instance.directus.io/api/1/auth/request-token
+```
+
+On a successful request the API will respond with the json below:
+
+```json
+{
+  "success": true,
+  "data": {
+    "token": "userAPIToken"
+  }
+}
+```
+
+Otherwise with the json below:
+
+```json
+{
+  "success": false,
+  "message": "Incorrect email or password"
+}
+```
+
 #### HTTP Basic Auth
 
 ```bash
