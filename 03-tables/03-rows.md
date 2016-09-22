@@ -26,6 +26,7 @@ currentPage | Number of the requested page based on perPage. (0 = First `perPage
 sort        | Column used to sort the result
 sort_order  | Order to be sorted. (ASC=Ascending or DESC=Descending).
 status      | List of status values to be included. Separated by commas. `status: 1,2`
+in[field]   | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 
 ### Response
 
