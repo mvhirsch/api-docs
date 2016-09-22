@@ -25,7 +25,7 @@ perPage     | Number of rows per request.
 currentPage | Number of the requested page based on perPage. (0 = First `perPage` rows, 1 = Second `perPage` rows, and so on)
 sort        | Column used to sort the result
 sort_order  | Order to be sorted. (ASC=Ascending or DESC=Descending).
-active      | List of status values to be included. Separated by commas. `active: 1,2`
+status      | List of status values to be included. Separated by commas. `status: 1,2`
 
 ### Response
 
