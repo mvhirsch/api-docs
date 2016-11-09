@@ -47,7 +47,7 @@ Pay attention to the colon after the API key, it's not part of the API key.
 
 #### Bearer Auth
 
-Instead of using `-u -u Py8RumuLD7HE5juFrOR5:` it can be used Authentication header.
+Instead of using `-u Py8RumuLD7HE5juFrOR5:` it can be used Authentication header.
 
 ```bash
 curl -H "Authorization: Bearer Py8RumuLD7HE5juFrOR5" https://account-instance.directus.io/api/1/tables
