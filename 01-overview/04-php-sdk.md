@@ -42,6 +42,8 @@ $user = $client->createUser([
 
 ```
 
+---
+
 ## Getting data
 
 Method                  | Parameters             | Description
@@ -169,6 +171,8 @@ Parameters    | Description
 table         | The Table name.
 column        | The column name.
 
+---
+
 ## Updating data
 
 Method                  | Parameters             | Description
@@ -201,6 +205,8 @@ Parameters    | Description
 ------------- | -----------
 id            | The id of the file to update.
 data          | Data to update.
+
+---
 
 ## Deleting data
 
