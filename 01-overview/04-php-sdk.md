@@ -18,7 +18,7 @@ createFile              | `data`                 | Creates a new file.
 Parameters    | Description
 ------------- | -----------
 table         | The Table name where the `data` are going to be inserted.
-data          | Array of data to be inserted in `table`.
+data          | Array of data to be inserted in `table`. All this data attributes will depend on your table columns.
 
 #### Returns
 An `Entry` object containing the new created entry.
@@ -36,12 +36,38 @@ $article = $client->createEntry('articles', [
 ```
 ### Create User
 
+Column                  | Description
+----------------------- | ---------------------- 
+active                  | User's status. By default `1=active, 2-inactive, 3=deleted`.
+email `Required`        | User's unique email address.
+first_name              | User first name.
+last_name               | User last name.
+password                | Plain text password, will be hashed on the server side.
+token                   | User's unique API access token
+group                   | User's group ID
+email_messages          | Whether the user wants to receive email notification.
+avatar                  | Avatar url
+avatar_file_id          | Use a file id as avatar
+language                | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
+timezone                | User's default timezone.
+position                | User's position on the project/company.
+location                | User's location in the world or universe.
+phone                   | User's phone number
+address                 | User's address
+city                    | User's city
+state                   | User's state
+zip                     | User's zip code
+
+
 Example:
 
 ```php
 $user = $client->createUser([
-  'email' => 'New Article',
-  'body' => 'Some text'
+  'email' => 'user@website.local',
+  'first_name' => 'John',
+  'last_name' => 'Bohannon',
+  'password' => 'plain-text-password',
+  'token' => 'secret-token`
 ]);
 
 // echo $user->email;
@@ -277,7 +303,7 @@ Operator                | Description
 `<>`, `!=`, `neq`       | Not Equal to
 `<`, `lt`               | Less than
 `<=`, `lte`             | Less than or equal to
-`>`, 'gt`               | Greater than
+`>`, `gt`               | Greater than
 `>=`, `gte`             | Greater than or equal to
 `in`                    | Match one of the value in the list
 `nin`                   | Not match any value in the list
@@ -316,6 +342,30 @@ Parameters    | Description
 ------------- | -----------
 id            | The id of the user to update.
 data          | Data to update.
+
+#### User data
+
+Column                  | Description
+----------------------- | ---------------------- 
+active                  | User's status. By default `1=active, 2-inactive, 3=deleted`.
+email `Required`        | User's unique email address.
+first_name              | User first name.
+last_name               | User last name.
+password                | Plain text password, will be hashed on the server side.
+token                   | User's unique API access token
+group                   | User's group ID
+email_messages          | Whether the user wants to receive email notification.
+avatar                  | Avatar url
+avatar_file_id          | Use a file id as avatar
+language                | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
+timezone                | User's default timezone.
+position                | User's position on the project/company.
+location                | User's location in the world or universe.
+phone                   | User's phone number
+address                 | User's address
+city                    | User's city
+state                   | User's state
+zip                     | User's zip code
 
 ### Update File
 
