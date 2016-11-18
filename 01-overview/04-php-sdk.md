@@ -286,7 +286,7 @@ Operator                | Description
 **contains** (_TODO_)   | Contains a string
 **ncontains** (_TODO_)  | Not Contains a string
 **between** (_TODO_)    | Is Between
-**empty* (_TODO_)       | Is Emtpy
+**empty** (_TODO_)       | Is Emtpy
 **nempty** (_TODO_)     | Is Not Empty
 
 ---
