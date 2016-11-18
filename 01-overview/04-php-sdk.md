@@ -258,17 +258,45 @@ $params = [
 
 Sort by only one column.
 
+
+```php
+$params = [
+  'orderBy' => 'title'
+];
+```
+
 ### orderDirection
 
-Sort `orderBy` in this direction. `ASC` or `DESC`
+Sort `orderBy` in this direction. `ASC` or `DESC`. Default to `ASC`.
+
+```php
+$params = [
+  'orderBy' => 'title',
+  'orderDirection' => 'DESC'
+];
+```
 
 ### Limit
 
 Limit the numbers of records to be returned.
 
+```php
+$params = [
+  'limit' => 100
+];
+```
+
 ### Offset
 
 Skip this many rows.
+
+
+```php
+$params = [
+  'limit' => 100,
+  'offset' => 50
+];
+```
 
 ### status
 
