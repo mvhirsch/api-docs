@@ -364,6 +364,12 @@ updateEntry             | `table`, `id`, `data`  | Updates the record with the g
 updateUser              | `id`, `data`           | Updates the given user `id` with the given `data`.
 updateFile              | `id`, `data`           | Updates the give file `id` with the given `data`.
 
+**TODO:** More helpers
+- Directus Groups
+- Directus Privileges
+- Directus Preferences
+- Directus Settings
+
 #### Returns
 An `Entry` object containing the updated data.
 
@@ -435,12 +441,18 @@ deleteEntry             | `table`, `id`          | Deletes the record with the g
 deleteUser              | `id`                   | Deletes the given user `id`.
 deleteFile              | `id`                   | Deletes the give file `id`.
 
+**TODO:** More helpers
+- Directus Groups
+- Directus Privileges
+- Directus Preferences
+- Directus Settings
+
 #### Returns
 Nothing is returned.
 
-### Delete Entry
-
 **TODO**: Return whether or not were deleted.
+
+### Delete Entry
 
 Parameters    | Description
 ------------- | -----------
