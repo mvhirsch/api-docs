@@ -58,6 +58,11 @@ city                    | User's city
 state                   | User's state
 zip                     | User's zip code
 
+**TODO**
+
+#### Returns
+An `UserEntry` object containing the new created user.
+
 Example:
 
 ```php
@@ -70,6 +75,7 @@ $user = $client->createUser([
 ]);
 
 // echo $user->email;
+// @TODO: echo $user->getEmail(); 
 
 ```
 
@@ -113,6 +119,11 @@ caption                 | File caption (Description).
 
 `file` `url` or `data` a required.
 
+**TODO**
+
+#### Returns
+An `FileEntry` object containing the new created file.
+
 Example:
 
 ```php
@@ -127,6 +138,7 @@ $file = $client->createFile([
 // echo '<h1>' . $file->title . '</h1>;
 // echo '<p>' . $file->caption . '</p>';
 // echo '<img src="' . $client->getBaseUrl() . $file->url . '">';
+// @TODO: $file->getTitle();
 
 ```
 
@@ -192,12 +204,25 @@ Parameters    | Description
 table         | The Table name to fetch data from.
 params        | Array of customiziable options.
 
+```php
+$articles = $client->getEntries('articles');
+
+foreach($articles as $article) {
+  echo $article->title;
+}
+```
+
 ### Get Entry by ID
 
 Parameters    | Description
 ------------- | -----------
 table         | The Table name to fetch data from.
 id            | The record id.
+
+```php
+$article = $client->getEntry('articles', 1);
+echo $article->title;
+```
 
 
 ### Get Users
@@ -206,11 +231,32 @@ Parameters    | Description
 ------------- | -----------
 params        | Array of customizable options.
 
+```php
+$users = $client->getUsers([
+  'orders' => ['email' => 'ASC']
+]);
+
+foreach($users as $user) {
+  echo $user->email;
+}
+```
+
 ### Get User by ID
 
 Parameters    | Description
 ------------- | -----------
 id            | The user id.
+
+
+```php
+$user = $client->getUser(1);
+echo $user->email;
+```
+
+**TODO**
+
+#### Returns
+An `UserEntry` object containing the user information.
 
 ### Get Files
 
@@ -218,11 +264,31 @@ Parameters    | Description
 ------------- | -----------
 params        | Array of customizable options.
 
+```php
+$files = $client->getFiles([
+  'orders' => ['size' => 'DESC']
+]);
+
+foreach($files as $file) {
+  echo $file->email;
+}
+```
+
 ### Get File by ID
 
 Parameters    | Description
 ------------- | -----------
 id            | The file.
+
+```php
+$file = $client->getFile(1);
+echo $file->name;
+```
+
+**TODO**
+
+#### Returns
+A `FileEntry` object containing the file information.
 
 ### Get Groups
 
@@ -230,11 +296,31 @@ Parameters    | Description
 ------------- | -----------
 params        | Array of customizable options.
 
+```php
+$groups = $client->getGroups([
+  'orders' => ['name' => 'ASC']
+]);
+
+foreach($groups as $group) {
+  echo $group->name;
+}
+```
+
 ### Get Group by ID
 
 Parameters    | Description
 ------------- | -----------
 id            | The group id.
+
+```php
+$group = $client->getGroup(1);
+echo $group->name;
+```
+
+**TODO**
+
+#### Returns
+A `GroupEntry` object containing the group information.
 
 ### Get Group Privileges
 
@@ -242,11 +328,30 @@ Parameters    | Description
 ------------- | -----------
 id            | The group id.
 
+```php
+$privileges = $client->getGroupsPrivileges(1);
+
+foreach($privileges as $privilege) {
+  echo $privilege->table_name;
+  echo $privilege->allow_view;
+}
+```
+
 ### Get Settings
 
 Parameters    | Description
 ------------- | -----------
 None          |
+
+```php
+$settings = $client->getSettings();
+echo $settings->global->project_name
+```
+
+**TODO**
+
+#### Returns
+A `SettingEntry` object containing the setting information.
 
 ### Get Settings by collection
 
@@ -254,17 +359,41 @@ Parameters    | Description
 ------------- | -----------
 collection    | Name of the collection
 
-### Get Messages
+```php
+$settings = $client->getSettingsByCollection('global');
+echo $settings->project_name
+```
+
+### Get Message
 
 Parameters    | Description
 ------------- | -----------
 user          | The user id.
+
+**TODO**: 
+**INCORRECT**: This returns a single message, and the parameters is a message id.
 
 ### Get Tables
 
 Parameters    | Description
 ------------- | -----------
 params        | Array of customizable options.
+
+```php
+$tables = $client->getTables([
+  'include_system' => 1
+]);
+
+foreach($tables as $table) {
+  echo $table->name;
+}
+```
+
+**Params**
+
+Parameters    | Description
+------------- | -----------
+include_system| Include the core tables
 
 ### Get Table
 
@@ -273,6 +402,10 @@ Parameters    | Description
 table         | The Table name.
 params        | Array of customizable options.
 
+```php
+$table = $client->getTable('directus_groups');
+echo $table->name;
+```
 
 ### Get Table Columns
 
@@ -281,6 +414,14 @@ Parameters    | Description
 table         | The Table name.
 params        | Array of customizable options.
 
+```php
+$columns = $client->getTableColumns('articles');
+
+foreach($columns as $column) {
+  echo $column->name;
+}
+```
+
 ### Get Table Column
 
 Parameters    | Description
@@ -288,6 +429,14 @@ Parameters    | Description
 table         | The Table name.
 column        | The column name.
 
+```php
+$column = $client->getTableColumn('articles', 'title');
+$isRequired = $column->required;
+```
+
+**TODO**:
+#### Returns
+A `ColumnEntry` object containing the setting information.
 
 ## Get data Parameters list
 
@@ -400,8 +549,9 @@ Operator                | Description
 **contains** (_TODO_)   | Contains a string
 **ncontains** (_TODO_)  | Not Contains a string
 **between** (_TODO_)    | Is Between
-**empty** (_TODO_)       | Is Emtpy
+**empty** (_TODO_)      | Is Emtpy
 **nempty** (_TODO_)     | Is Not Empty
+**has** (_TODO_)        | Has one or more related entries
 
 ---
 
