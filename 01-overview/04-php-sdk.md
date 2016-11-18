@@ -73,6 +73,32 @@ $user = $client->createUser([
 
 ```
 
+#### User Entry attributes
+
+Column                  | Description
+----------------------- | ---------------------- 
+id                      | User ID
+active                  | User's status. `1=active, 2=inactive, 3=deleted`.
+email                   | User's unique email address.
+first_name              | User first name.
+last_name               | User last name.
+password                | hashed password. **IS THIS NEEDED?**
+token                   | User's unique API access token
+group                   | User's group ID
+email_messages          | Whether the user wants to receive email notification.
+avatar                  | Avatar url
+avatar_file_id          | File id used as avatar
+language                | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
+timezone                | User's default timezone.
+position                | User's position on the project/company.
+location                | User's location in the world or universe.
+phone                   | User's phone number
+address                 | User's address
+city                    | User's city
+state                   | User's state
+zip                     | User's zip code
+
+
 ### Create File
 
 Column                  | Description
@@ -106,6 +132,29 @@ $file = $client->createFile([
 
 **TODO**
  - Create file from a url
+ 
+ 
+#### File Entry object attributes
+
+Column                  | Description
+----------------------- | ---------------------- 
+id                      | File ID
+active                  | File's status. `1=active, 2=inactive, 3=deleted`.
+name                    | File name
+title                   | File's title
+location                | Location of where the picture was taken. if any.
+type                    | File mime type
+url                     | File url relativity to Directus base url
+tags                    | Comma separated tags.
+caption                 | File caption (Description).
+width                   | File width.
+height                  | File height.
+size                    | File size in bytes.
+embed_id                | ID of the embeded file. Ex Youtube ID
+user                    | File owner (who uploaded the file)
+date_uploaded           | File uploaded date
+storage_adapter         | Storage adapter used to upload the file
+ 
 
 ---
 
