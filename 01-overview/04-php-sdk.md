@@ -7,6 +7,12 @@ createEntry             | `table`, `data`        | Creates a new entry in the gi
 createUser              | `data`                 | Creates a new user.
 createFile              | `data`                 | Creates a new file.
 
+**TODO**: More helpers
+- Directus Groups
+- Directus Privileges
+- Directus Preferences
+- Directus Settings
+
 ### Create Entry
 
 Parameters    | Description
@@ -42,6 +48,28 @@ $user = $client->createUser([
 
 ```
 
+### Create File
+
+Example:
+
+```php
+// From a local file
+$file = $client->createFile([
+  'file' => '/path/to/the/file.jpg',
+]);
+
+// From file content
+$file = $client->createFile([
+  'data' => '<file content>'
+]);
+
+// echo $article->title;
+
+```
+
+**TODO**
+ - Create file from a url
+
 ---
 
 ## Getting data
@@ -64,6 +92,9 @@ getTables               | `params`               | Collection of tables viewable
 getTable                | `table`                | Collection of latest Directus activity.
 getColumns              | `table`, `params`      | Collection of the column details for a given table.
 getColumn               | `table`, `column`      | Details for a specific column in a given table.
+
+**TODO**: More helpers
+- Directus Preferences
 
 #### Returns
 An `Entry` or `EntryCollection` object containing the fetched data.
@@ -170,6 +201,93 @@ Parameters    | Description
 ------------- | -----------
 table         | The Table name.
 column        | The column name.
+
+
+## Get data Parameters list
+
+### orders
+
+Sort the result by one or more columns.
+
+```php
+$params = [
+  'orders' => [
+    'id' => 'ASC',
+    'title' => 'DESC'
+  ]
+];
+```
+### orderBy
+
+Sort by only one column.
+
+### orderDirection
+
+Sort `orderBy` in this direction. `ASC` or `DESC`
+
+### Limit
+
+Limit the numbers of records to be returned.
+
+### Offset
+
+Skip this many rows.
+
+### status
+
+Return only records that has this status. To include multiple status, it has to be separated by comma.
+
+```php
+$params = [
+  'status' => [1, 2]
+];
+```
+
+### ids
+
+A comma-separated list of IDs.
+
+```php
+$params = [
+   'ids' => [2, 4, 11]
+];
+```
+
+### Filters
+
+Filter the request by using any of the supported operators.
+
+```php
+$params = [
+  'filters' => [
+    'column_name' => ['operator' => 'value']
+  ]
+];
+
+$articles = $client->getEntries('articles, [
+  'filters' => ['title' => ['like' => 'movies']]
+]);
+```
+
+#### Supported Operators
+
+Operator                | Description
+----------------------- | ----------------------
+`=`, `eq`               | Equal to
+`<>`, `!=`, `neq`       | Not Equal to
+`<`, `lt`               | Less than
+`<=`, `lte`             | Less than or equal to
+`>`, 'gt`               | Greater than
+`>=`, `gte`             | Greater than or equal to
+`in`                    | Match one of the value in the list
+`nin`                   | Not match any value in the list
+`null`                  | Is Null
+**nnull** (_TODO_)      | Is Not Null
+**contains** (_TODO_)   | Contains a string
+**ncontains** (_TODO_)  | Not Contains a string
+**between** (_TODO_)    | Is Between
+**empty* (_TODO_)       | Is Emtpy
+**nempty** (_TODO_)     | Is Not Empty
 
 ---
 
