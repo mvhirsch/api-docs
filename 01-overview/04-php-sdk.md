@@ -58,7 +58,6 @@ city                    | User's city
 state                   | User's state
 zip                     | User's zip code
 
-
 Example:
 
 ```php
@@ -76,20 +75,32 @@ $user = $client->createUser([
 
 ### Create File
 
+Column                  | Description
+----------------------- | ---------------------- 
+active                  | File's status. By default `1=active, 2-inactive, 3=deleted`.
+title                   | File's title
+file                    | Local path of the file that's going to be uploaded.
+data                    | File raw content that's going to be uploaded.
+**url** (_TODO_)        | URL of the file to upload, OR a youtube/vimeo link to be embeded.
+tags                    | Comma separated tags.
+caption                 | File caption (Description).
+
+`file` `url` or `data` a required.
+
 Example:
 
 ```php
 // From a local file
 $file = $client->createFile([
   'file' => '/path/to/the/file.jpg',
+  'title' => 'Company Group picture',
+  'tags' => 'company, employees, team',
+  'caption' => 'Whole company at Christmas party'
 ]);
 
-// From file content
-$file = $client->createFile([
-  'data' => '<file content>'
-]);
-
-// echo $article->title;
+// echo '<h1>' . $file->title . '</h1>;
+// echo '<p>' . $file->caption . '</p>';
+// echo '<img src="' . $client->getBaseUrl() . $file->url . '">';
 
 ```
 
@@ -373,6 +384,18 @@ Parameters    | Description
 ------------- | -----------
 id            | The id of the file to update.
 data          | Data to update.
+
+#### File data
+
+Column                  | Description
+----------------------- | ---------------------- 
+active                  | File's status. By default `1=active, 2-inactive, 3=deleted`.
+title                   | File's title
+file                    | Local path of the file that's going to be uploaded.
+data                    | File raw content that's going to be uploaded.
+**url** (_TODO_)        | URL of the file to upload, OR a youtube/vimeo link to be embeded.
+tags                    | Comma separated tags.
+caption                 | File caption (Description).
 
 ---
 
