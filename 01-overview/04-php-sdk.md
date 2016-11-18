@@ -440,9 +440,16 @@ Nothing is returned.
 
 ### Delete Entry
 
+**TODO**: Return whether or not were deleted.
+
 Parameters    | Description
 ------------- | -----------
-id            | The id of the record to delete.
+table         | The table name
+id            | The id of the record to delete in `table`.
+
+```php
+$client->deleteEntry('articles', 1);
+```
 
 ### Delete User
 
@@ -450,8 +457,17 @@ Parameters    | Description
 ------------- | -----------
 id            | The id of the user to delete.
 
+```php
+$client->deleteUser(1);
+```
+
 ### Delete File
 
 Parameters    | Description
 ------------- | -----------
 id            | The id of the file to delete.
+
+
+```php
+$client->deleteUser(1);
+```
