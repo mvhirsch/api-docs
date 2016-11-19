@@ -42,7 +42,7 @@ active                  | User's status. By default `1=active, 2-inactive, 3=del
 email `Required`        | User's unique email address.
 first_name              | User first name.
 last_name               | User last name.
-password                | Plain text password, will be hashed on the server side.
+password                | Plain text password. **TODO** It will be hashed on the server side.
 token                   | User's unique API access token
 group                   | User's group ID
 email_messages          | Whether the user wants to receive email notification.
