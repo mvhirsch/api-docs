@@ -71,7 +71,7 @@ $user = $client->createUser([
   'first_name' => 'John',
   'last_name' => 'Bohannon',
   'password' => 'plain-text-password',
-  'token' => 'secret-token`
+  'token' => 'secret-token'
 ]);
 
 // echo $user->email;
