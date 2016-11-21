@@ -4,14 +4,19 @@
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
 createEntry             | `table`, `data`        | Creates a new entry in the given table.
-createUser              | `data`                 | Creates a new user.
+**createActivity**      | `data`                 | Creates an activity log.
+**createBookmark**      | `data`                 | Creates a bookmark.
+**createColumn**        | `data`                 | Creates a new column.
 createFile              | `data`                 | Creates a new file.
-
-**TODO**: More helpers
-- Directus Groups
-- Directus Privileges
-- Directus Preferences
-- Directus Settings
+**createGroup**         | `data`                 | Creates a new group.
+**createMessage**       | `data`                 | Creates/Sends a new messsage.
+**sendMessage**         | `data`                 | `createMessage` alias.
+**createPreferences**   | `data`                 | Creates a table preferences.
+**createPrivileges**    | `data`                 | Creates a table privileges (Permissions).
+**createSettings**      | `data`                 | Creates a new setting.
+**createTable**         | `name`, `params`       | Creates a new table.
+**createUIOptions**     | `data`                 | Creates a new UI options.
+createUser              | `data`                 | Creates a new user.
 
 ### Create Entry
 
