@@ -1,4 +1,4 @@
-# PHP SDK (alpha)
+# PHP SDK (alpha) - UNDER DEVELOPMENT
 
 ## Creating data
 Method                  | Parameters             | Description
