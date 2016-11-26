@@ -4,7 +4,7 @@
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
 createEntry             | `table`, `data`        | Creates a new entry in the given table.
-createActivity          | `data`                 | Creates an activity log.
+~~createActivity~~      | `data`                 | Creates an activity log.
 **createBookmark**      | `data`                 | Creates a bookmark.
 **createColumn**        | `data`                 | Creates a new column.
 createFile              | `data`                 | Creates a new file.
