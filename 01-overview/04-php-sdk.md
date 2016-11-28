@@ -47,7 +47,7 @@ Column                  | Description
 table_name              | Bookmark Table name
 title                   | Bookmark title
 columns_visible         | List of column separated by comma.
-search_string           | User's unique email address.
+search_string           | List of filters separated by comma. Format `column:operator:value`
 sort                    | Sort column.
 sort_order              | Sort column order.
 status                  | List of status separated by comma.
