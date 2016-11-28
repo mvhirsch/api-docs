@@ -5,7 +5,7 @@ Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
 createEntry             | `table`, `data`        | Creates a new entry in the given table.
 ~~createActivity~~      | `data`                 | Creates an activity log.
-**createBookmark**      | `data`                 | Creates a bookmark.
+createBookmark          | `data`                 | Creates a bookmark.
 **createColumn**        | `data`                 | Creates a new column.
 createFile              | `data`                 | Creates a new file.
 **createGroup**         | `data`                 | Creates a new group.
@@ -39,6 +39,33 @@ $article = $client->createEntry('articles', [
 // echo $article->title;
 
 ```
+
+### Create Bookmark
+
+Column                  | Description
+----------------------- | ---------------------- 
+table_name              | Bookmark Table name
+title                   | Bookmark title
+columns_visible         | List of column separated by comma.
+search_string           | User's unique email address.
+sort                    | Sort column.
+sort_order              | Sort column order.
+status                  | List of status separated by comma.
+
+#### Returns
+An `Entry` object containing the new bookmark created.
+
+```php
+$bookmark = $client->createBookmark([
+  'title' => 'Draft Posts',
+  'table_name' => 'posts',
+  'status' => '2'
+]);
+
+// echo $bookmark->title;
+
+```
+
 ### Create User
 
 Column                  | Description
