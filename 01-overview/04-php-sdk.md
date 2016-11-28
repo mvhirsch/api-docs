@@ -57,8 +57,8 @@ An `Entry` object containing the new bookmark created.
 
 ```php
 $bookmark = $client->createBookmark([
-  'title' => 'Draft Posts',
-  'table_name' => 'posts',
+  'title' => 'Draft Articles',
+  'table_name' => 'articles',
   'status' => '2'
 ]);
 
