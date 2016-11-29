@@ -12,7 +12,7 @@ createGroup             | `data`                 | Creates a new group.
 createMessage           | `data`                 | Creates/Sends a new messsage.
 sendMessage             | `data`                 | `createMessage` alias.
 createPreferences       | `data`                 | Creates a table preferences.
-**createPrivileges**    | `data`                 | Creates a table privileges (Permissions).
+createPrivileges        | `data`                 | Creates a table privileges (Permissions).
 **createSettings**      | `data`                 | Creates a new setting.
 **createTable**         | `name`, `params`       | Creates a new table.
 **createUIOptions**     | `data`                 | Creates a new UI options.
@@ -209,6 +209,41 @@ $preference = $client->createPreferences([
 // echo $preference->columns_visible;
 
 ```
+
+### Create Privileges (Permissions)
+
+Column                  | Description
+----------------------- | ---------------------- 
+group_id                | Group ID
+table_name              | Table name that this permissions belongs to.
+allow_add               | Whether the group is allow to add/create entries in the table. (See values below)
+allow_edit              | Whether the group is allow to edit/update entries in the table. (See values below)
+allow_delete            | Whether the group is allow to delete/remove entries in the table. (See values below)
+allow_view              | Whether the group is allow to view/read entries in the table. (See values below)
+allow_alter             | Whether the group is allow to add/create entries in the table. (See values below)
+nav_listed              | Whether the table should be visible in the sidebar.
+read_field_blacklist    | List of columns that the group can't view/read.
+write_field_blacklist   | List of columns that the group can't edit/update.
+**status_id**           | State of the record that this permissions belongs to. (Draft, Active or Soft Deleted)
+
+Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **TODO** Adding constant for the permissions value.
+
+#### Returns
+An `Entry` object containing the new preference created.
+
+```php
+$privileges = $client->createPrivileges([
+  'group_id' => 2,
+  'table_name' => 'articles',
+  'allow_edit' => 2,
+  'allow_delete' => 0,
+  'write_field_blacklist' => 'title,published_date'
+]);
+
+// echo $privileges->allow_edit;
+
+```
+
 
 ### Create User
 
