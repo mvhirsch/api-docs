@@ -6,7 +6,7 @@ Method                  | Parameters             | Description
 createEntry             | `table`, `data`        | Creates a new entry in the given table.
 ~~createActivity~~      | `data`                 | Creates an activity log.
 createBookmark          | `data`                 | Creates a bookmark.
-**createColumn**        | `data`                 | Creates a new column.
+createColumn            | `data`                 | Creates a new column.
 createFile              | `data`                 | Creates a new file.
 **createGroup**         | `data`                 | Creates a new group.
 **createMessage**       | `data`                 | Creates/Sends a new messsage.
@@ -64,6 +64,60 @@ $bookmark = $client->createBookmark([
 
 // echo $bookmark->title;
 
+```
+
+### Create Column
+
+Column                  | Description
+----------------------- | ---------------------- 
+name                    | Column name.
+table                   | Table name.
+type                    | Data type.
+ui                      | UI name
+hidden_input            | Whether the column will be hidden in the edit form.
+hidden_list             | Whether the column will be hidden in the list page.
+required                | Whether the column is required.
+sort                    | Sort position in number.
+comment                 | Note on the column.
+related_type            |
+related_table           |
+junction_table          |
+junction_key_left       |
+junction_key_right      |
+
+**@TODO: ** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
+
+```php
+$column = $client->createColumn([
+    'name' => 'title',
+    'table' => 'articles',
+    'type' => 'varchar',
+    'ui' => 'textinput',
+    'length' => 255
+]);
+```
+
+```php
+$column = $client->createColumn([
+    'name' => 'image',
+    'table' => 'articles',
+    'type' => 'int',
+    'ui' => 'single_file',
+    'related_table' => 'directus_files',
+    'junction_key_right' => 'image' // same as the title
+]);
+```
+
+```php
+$column = $client->createColumn([
+    'name' => 'posts',
+    'table' => 'authors',
+    'type' => 'ALIAS',
+    'ui' => 'one_to_many',
+    'relationship_type' => 'ONETOMANY',
+    'related_table' => 'articles',
+    'junction_key_right' => 'author'
+]);
 ```
 
 ### Create User
