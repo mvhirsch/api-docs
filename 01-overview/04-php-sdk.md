@@ -9,8 +9,8 @@ createBookmark          | `data`                 | Creates a bookmark.
 createColumn            | `data`                 | Creates a new column.
 createFile              | `data`                 | Creates a new file.
 createGroup             | `data`                 | Creates a new group.
-**createMessage**       | `data`                 | Creates/Sends a new messsage.
-**sendMessage**         | `data`                 | `createMessage` alias.
+createMessage           | `data`                 | Creates/Sends a new messsage.
+sendMessage             | `data`                 | `createMessage` alias.
 **createPreferences**   | `data`                 | Creates a table preferences.
 **createPrivileges**    | `data`                 | Creates a table privileges (Permissions).
 **createSettings**      | `data`                 | Creates a new setting.
@@ -85,7 +85,7 @@ junction_table          |
 junction_key_left       |
 junction_key_right      |
 
-**@TODO: ** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
+**TODO:** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
 
 ```php
 $column = $client->createColumn([
