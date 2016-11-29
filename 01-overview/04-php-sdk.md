@@ -11,7 +11,7 @@ createFile              | `data`                 | Creates a new file.
 createGroup             | `data`                 | Creates a new group.
 createMessage           | `data`                 | Creates/Sends a new messsage.
 sendMessage             | `data`                 | `createMessage` alias.
-**createPreferences**   | `data`                 | Creates a table preferences.
+createPreferences       | `data`                 | Creates a table preferences.
 **createPrivileges**    | `data`                 | Creates a table privileges (Permissions).
 **createSettings**      | `data`                 | Creates a new setting.
 **createTable**         | `name`, `params`       | Creates a new table.
@@ -183,6 +183,32 @@ responses               | List of responses messages
 response_to             | Parent message (replied to this message id)
 read                    | Whether the message was read by the authenticated user.
 
+
+### Create Preferences
+
+Column                  | Description
+----------------------- | ---------------------- 
+user                    | User ID that this preferences belongs to.
+table_name              | Table name that this preferences belongs to.
+columns_visible         | List of visible column separated by comma.
+sort                    | Sort column.
+sort_order              | Sort column order.
+status                  | List of status separated by comma.
+
+#### Returns
+An `Entry` object containing the new preference created.
+
+```php
+$preference = $client->createPreferences([
+  'user' => 1,
+  'table_name' => 'articles',
+  'columns_visible' => 'title,content,author,published_date'
+  'status' => '2'
+]);
+
+// echo $preference->columns_visible;
+
+```
 
 ### Create User
 
