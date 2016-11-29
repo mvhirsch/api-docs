@@ -127,11 +127,60 @@ Column                  | Description
 name                    | Group name.
 restrict_to_ip_whitelist| List of IPs allowed to authenticate, separated  by comma.
 
+
 ```php
 $group = $client->createGroup([
     'name' => 'Editors'
 ]);
 ```
+
+### Create/Send Messages
+
+Column                  | Description
+----------------------- | ---------------------- 
+from                    | Sender user id.
+to                      | List of users id, separated by comma.
+to                      | List of groups id, separated by comma.
+subject                 | Message subject.
+message                 | Message content.
+attachements            | **TODO** List of files to add to the message
+
+#### Returns
+`Entry` object containing the new created message.
+
+Sending message to two users.
+```php
+$message = $client->createMessage([
+    'from' => 1,
+    'to' => [2, 5],
+    'subject' => 'New Design review',
+    'message' => 'I want some feedback on this new design.'
+]);
+```
+
+Sending message to two groups.
+```php
+// same as createMessage
+$message = $client->sendMessage([
+    'from' => 1,
+    'toGroup' => [1, 3], // 1 = Administrator, 3 = Editors
+    'subject' => 'Tomorrow Meeting',
+    'message' => 'I want to you all know that tomorrow meeting was cancelled.'
+]);
+```
+
+#### Message Entry attributes
+
+Attribute               | Description
+----------------------- | ---------------------- 
+id                      | Message ID
+from                    | Sender ID
+to                      | Recipients ID
+subject                 | Message subject
+responses               | List of responses messages
+response_to             | Parent message (replied to this message id)
+read                    | Whether the message was read by the authenticated user.
+
 
 ### Create User
 
