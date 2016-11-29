@@ -14,7 +14,7 @@ sendMessage             | `data`                 | `createMessage` alias.
 createPreferences       | `data`                 | Creates a table preferences.
 createPrivileges        | `data`                 | Creates a table privileges (Permissions).
 **createSettings**      | `data`                 | Creates a new setting.
-**createTable**         | `name`, `params`       | Creates a new table.
+createTable             | `name`, `params`       | Creates a new table.
 **createUIOptions**     | `data`                 | Creates a new UI options.
 createUser              | `data`                 | Creates a new user.
 
@@ -229,7 +229,7 @@ write_field_blacklist   | List of columns that the group can't edit/update.
 Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **TODO** Adding constant for the permissions value.
 
 #### Returns
-An `Entry` object containing the new preference created.
+An `Entry` object containing the new privileges created.
 
 ```php
 $privileges = $client->createPrivileges([
@@ -239,6 +239,23 @@ $privileges = $client->createPrivileges([
   'allow_delete' => 0,
   'write_field_blacklist' => 'title,published_date'
 ]);
+
+// echo $privileges->allow_edit;
+
+```
+
+### Create Table
+
+Parameters              | Description
+----------------------- | ---------------------- 
+name                    | New table name
+**data**                | Not defined yet.
+
+#### Returns
+An `Entry` object containing the new table created privileges.
+
+```php
+$privileges = $client->createTable('comments');
 
 // echo $privileges->allow_edit;
 
