@@ -145,6 +145,8 @@ subject                 | Message subject.
 message                 | Message content.
 attachements            | **TODO** List of files to add to the message
 
+**TODO:** Send/Create responses without the need to specify each recipients.
+
 #### Returns
 `Entry` object containing the new created message.
 
