@@ -140,7 +140,7 @@ Column                  | Description
 ----------------------- | ---------------------- 
 from                    | Sender user id.
 to                      | List of users id, separated by comma.
-to                      | List of groups id, separated by comma.
+toGroup                 | List of groups id, separated by comma.
 subject                 | Message subject.
 message                 | Message content.
 attachements            | **TODO** List of files to add to the message
