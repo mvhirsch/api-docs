@@ -90,10 +90,8 @@ city                    | User's city
 state                   | User's state
 zip                     | User's zip code
 
-**TODO**
-
 #### Returns
-An `UserEntry` object containing the new created user.
+An `Entry` object containing the new created user.
 
 Example:
 
@@ -107,7 +105,7 @@ $user = $client->createUser([
 ]);
 
 // echo $user->email;
-// @TODO: echo $user->getEmail(); 
+// @TODO: echo $user->getEmail(); (UserEntry Object)
 
 ```
 
