@@ -8,7 +8,7 @@ createEntry             | `table`, `data`        | Creates a new entry in the gi
 createBookmark          | `data`                 | Creates a bookmark.
 createColumn            | `data`                 | Creates a new column.
 createFile              | `data`                 | Creates a new file.
-**createGroup**         | `data`                 | Creates a new group.
+createGroup             | `data`                 | Creates a new group.
 **createMessage**       | `data`                 | Creates/Sends a new messsage.
 **sendMessage**         | `data`                 | `createMessage` alias.
 **createPreferences**   | `data`                 | Creates a table preferences.
@@ -117,6 +117,19 @@ $column = $client->createColumn([
     'relationship_type' => 'ONETOMANY',
     'related_table' => 'articles',
     'junction_key_right' => 'author'
+]);
+```
+
+### Create Group
+
+Column                  | Description
+----------------------- | ---------------------- 
+name                    | Group name.
+restrict_to_ip_whitelist| List of IPs allowed to authenticate, separated  by comma.
+
+```php
+$group = $client->createGroup([
+    'name' => 'Editors'
 ]);
 ```
 
