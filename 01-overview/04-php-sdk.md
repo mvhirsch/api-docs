@@ -15,7 +15,7 @@ createPreferences       | `data`                 | Creates a table preferences.
 createPrivileges        | `data`                 | Creates a table privileges (Permissions).
 **createSettings**      | `data`                 | Creates a new setting.
 createTable             | `name`, `params`       | Creates a new table.
-**createUIOptions**     | `data`                 | Creates a new UI options.
+createUIOptions         | `data`                 | Creates a new UI options.
 createUser              | `data`                 | Creates a new user.
 
 ### Create Entry
@@ -261,6 +261,33 @@ $privileges = $client->createTable('comments');
 
 ```
 
+### Create Column Options
+
+Column                  | Description
+----------------------- | ---------------------- 
+column                  | Column name.
+table                   | Column table name.
+ui                      | Coolumn UI name.
+options                 | Array of options.
+
+#### Returns
+`Entry` object containing all the column options.
+
+Example:
+
+```php
+$options = $client->createColumnUIOptions([
+    'column' => 'slug',
+    'table' => 'articles',
+    'ui' => 'textinput',
+    'options' => [
+        'readonly' => 1,
+        'placeholder' => 'Title slug'
+    ]
+]);
+
+// echo $options->placeholder;
+```
 
 ### Create User
 
