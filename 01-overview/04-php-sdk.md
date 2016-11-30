@@ -55,6 +55,8 @@ status                  | List of status separated by comma.
 #### Returns
 An `Entry` object containing the new bookmark created.
 
+Example:
+
 ```php
 $bookmark = $client->createBookmark([
   'title' => 'Draft Articles',
@@ -86,6 +88,8 @@ junction_key_left       |
 junction_key_right      |
 
 **TODO:** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
+
+Example:
 
 ```php
 $column = $client->createColumn([
@@ -127,6 +131,7 @@ Column                  | Description
 name                    | Group name.
 restrict_to_ip_whitelist| List of IPs allowed to authenticate, separated  by comma.
 
+Example:
 
 ```php
 $group = $client->createGroup([
@@ -149,6 +154,8 @@ attachements            | **TODO** List of files to add to the message
 
 #### Returns
 `Entry` object containing the new created message.
+
+Example:
 
 Sending message to two users.
 ```php
@@ -198,6 +205,8 @@ status                  | List of status separated by comma.
 #### Returns
 An `Entry` object containing the new preference created.
 
+Example:
+
 ```php
 $preference = $client->createPreferences([
   'user' => 1,
@@ -231,6 +240,8 @@ Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **TODO** Adding constant 
 #### Returns
 An `Entry` object containing the new privileges created.
 
+Example:
+
 ```php
 $privileges = $client->createPrivileges([
   'group_id' => 2,
@@ -253,6 +264,8 @@ name                    | New table name
 
 #### Returns
 An `Entry` object containing the new table created privileges.
+
+Example:
 
 ```php
 $privileges = $client->createTable('comments');
