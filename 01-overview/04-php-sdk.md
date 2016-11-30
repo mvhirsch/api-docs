@@ -903,14 +903,12 @@ caption                 | File caption (Description).
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
 deleteEntry             | `table`, `id`          | Deletes the record with the given `id` in `table`.
-deleteUser              | `id`                   | Deletes the given user `id`.
+deleteBookmark          | `id`                   | Deletes the given bookmark id.
+deleteColumn            | `name`. `table`        | Deletes the tiven column name in the given table name.
 deleteFile              | `id`                   | Deletes the give file `id`.
-
-**TODO:** More helpers
-- Directus Groups
-- Directus Privileges
-- Directus Preferences
-- Directus Settings
+deleteGroup             | `id`                   | Creates a new group.
+deleteTable             | `name`                 | Creates a new table.
+deleteUser              | `id`                   | Deletes the given user `id`.
 
 #### Returns
 Nothing is returned.
@@ -924,18 +922,35 @@ Parameters    | Description
 table         | The table name
 id            | The id of the record to delete in `table`.
 
+Example:
+
 ```php
 $client->deleteEntry('articles', 1);
 ```
 
-### Delete User
+### Delete Bookmark
 
 Parameters    | Description
 ------------- | -----------
-id            | The id of the user to delete.
+id            | The id of the bookmark to delete.
+
+Example:
 
 ```php
-$client->deleteUser(1);
+$client->deleteBookmark(1);
+```
+
+### Delete Column
+
+Parameters    | Description
+------------- | -----------
+name          | The column name to delete.
+table         | The table the colum belongs to.
+
+Example:
+
+```php
+$client->deleteColumn('slug', 'articles');
 ```
 
 ### Delete File
@@ -944,6 +959,43 @@ Parameters    | Description
 ------------- | -----------
 id            | The id of the file to delete.
 
+Example:
+
+```php
+$client->deleteUser(1);
+```
+
+### Delete Group
+
+Parameters    | Description
+------------- | -----------
+id            | The id of the group to delete.
+
+Example:
+
+```php
+$client->deleteGroup(1);
+```
+
+### Delete Table
+
+Parameters    | Description
+------------- | -----------
+name          | The name of the table to delete.
+
+Example:
+
+```php
+$client->deleteTable('comments');
+```
+
+### Delete User
+
+Parameters    | Description
+------------- | -----------
+id            | The id of the user to delete.
+
+Example:
 
 ```php
 $client->deleteUser(1);
