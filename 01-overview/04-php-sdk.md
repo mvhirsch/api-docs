@@ -1,4 +1,4 @@
-# PHP SDK (alpha) - UNDER DEVELOPMENT
+# PHP SDK
 
 ## Creating data
 Method                  | Parameters             | Description
@@ -87,7 +87,7 @@ junction_table          | String    | The pivot/junction table that joins the co
 junction_key_left       | String    | The column name in junction that is related to the column's table.
 junction_key_right      | String    | The column name in junction that is related to the related table.
 
-**TODO:** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
+**@TODO** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
 
 Example:
 
@@ -148,9 +148,9 @@ to                      | Array     | List of users id, separated by comma.
 toGroup                 | Array     | List of groups id, separated by comma.
 subject                 | String    | Message subject.
 message                 | String    | Message content.
-attachements            | Array     | **TODO** List of files to add to the message
+attachements            | Array     | **@TODO** List of files to add to the message
 
-**TODO:** Send/Create responses without the need to specify each recipients.
+**@TODO** Send/Create responses without the need to specify each recipients.
 
 #### Returns
 `Entry` object containing the new created message.
@@ -184,11 +184,11 @@ Attribute               | Type      | Description
 ----------------------- | --------- | ---------------------- 
 id                      | Integer   | Message ID
 from                    | Integer   | Sender ID
-recipients              | String    | List of Recipients separated by comma. **TODO**: it should be an array.
+recipients              | String    | List of Recipients separated by comma. **@TODO**: it should be an array.
 subject                 | String    | Message subject
 responses               | Array     | List of responses messages
 response_to             | Integer   | Parent message (replied to this message id)
-read                    | Integer   | Whether the message was read by the authenticated user. **TODO** It should be bool
+read                    | Integer   | Whether the message was read by the authenticated user. **@TODO** It should be bool
 
 
 ### Create Preferences
@@ -235,7 +235,7 @@ read_field_blacklist    | String    | List of columns that the group can't view/
 write_field_blacklist   | String    | List of columns that the group can't edit/update.
 **status_id**           | String    | State of the record that this permissions belongs to. (Draft, Active or Soft Deleted)
 
-Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **TODO** Adding constant for the permissions value.
+Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **@TODO** Adding constant for the permissions value.
 
 #### Returns
 An `Entry` object containing the new privileges created.
@@ -388,7 +388,7 @@ caption                 | String   | File caption (Description).
 #### Returns
 An `Entry` object containing the new created file.
 
-**TODO:** Returns a `FileEntry` Object.
+**@TODO** Returns a `FileEntry` Object.
 
 Example:
 
@@ -407,7 +407,7 @@ $file = $client->createFile(new File('/path/to/the/file.jpg', [
 
 ```
 
-**TODO**
+**@TODO**
  - Create file from a url
  
  
@@ -427,15 +427,15 @@ caption                 | String   | File caption (Description).
 width                   | Integer  | File width.
 height                  | Integer  | File height.
 size                    | Integer  | File size in bytes.
-embed_id                | String   | ID of the embeded file. Ex Youtube ID
+embed_id                | String   | ID of the embedded file. Ex Youtube ID
 user                    | Integer  | File owner (who uploaded the file)
-date_uploaded           | String   | File uploaded date. **TODO** It should be an DateTime object.
+date_uploaded           | String   | File uploaded date. **@TODO** It should be an DateTime object.
 storage_adapter         | String   | Storage adapter used to upload the file
  
 
 ---
 
-## Getting data
+## Getting Data
 
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
@@ -456,7 +456,7 @@ getTable                | `table`                | Collection of latest Directus
 getColumns              | `table`, `params`      | Collection of the column details for a given table.
 getColumn               | `table`, `column`      | Details for a specific column in a given table.
 
-**TODO**: More helpers
+**@TODO**: More helpers
 - Directus Preferences
 
 #### Returns
@@ -518,7 +518,7 @@ $user = $client->getUser(1);
 echo $user->email;
 ```
 
-**TODO**
+**@TODO**
 
 #### Returns
 An `UserEntry` object containing the user information.
@@ -550,7 +550,7 @@ $file = $client->getFile(1);
 echo $file->name;
 ```
 
-**TODO**
+**@TODO**
 
 #### Returns
 A `FileEntry` object containing the file information.
@@ -582,7 +582,7 @@ $group = $client->getGroup(1);
 echo $group->name;
 ```
 
-**TODO**
+**@TODO**
 
 #### Returns
 A `GroupEntry` object containing the group information.
@@ -613,7 +613,7 @@ $settings = $client->getSettings();
 echo $settings->global->project_name
 ```
 
-**TODO**
+**@TODO**
 
 #### Returns
 A `SettingEntry` object containing the setting information.
@@ -635,7 +635,7 @@ Parameters    | Type    | Description
 ------------- | ------- | -----------
 user          | Integer | The user id.
 
-**TODO**: 
+**@TODO**: 
 **INCORRECT**: This returns a single message, and the parameters is a message id.
 
 ### Get Tables
@@ -827,7 +827,7 @@ updateEntry             | `table`, `id`, `data`  | Updates the record with the g
 updateUser              | `id`, `data`           | Updates the given user `id` with the given `data`.
 updateFile              | `id`, `data`           | Updates the give file `id` with the given `data`.
 
-**TODO:** More helpers
+**@TODO** More helpers
 - Directus Groups
 - Directus Privileges
 - Directus Preferences
@@ -914,7 +914,7 @@ deleteUser              | `id`                   | Deletes the given user `id`.
 #### Returns
 Nothing is returned.
 
-**TODO**: Return whether or not were deleted.
+**@TODO**: Return whether or not were deleted.
 
 ### Delete Entry
 

@@ -1,20 +1,20 @@
-# List Files
+# Get Files
 
 Get all the files entries.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/files
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/files
 ```
 
-### Response
+## Response
 
 ```json
 {

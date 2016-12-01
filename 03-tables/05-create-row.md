@@ -2,15 +2,15 @@
 
 Create a new row in the given table.
 
-> Note: Table names are case-sensitive
+> **Note:** Table names are case-sensitive
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 POST /api/1/tables/[table-name]/rows
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl --data "active=1&title=School+Website" \
@@ -18,13 +18,13 @@ $ curl --data "active=1&title=School+Website" \
                 -u usrSTeeornngkti:
 ```
 
-### Parameters
+## Parameters
 
-> The parameters are based on the table's column.
+> **Note:** The parameters are based on the table's column.
 
-### Response
+## Response
 
-> The architecture of this response is based on your schema.
+> **Note:** The architecture of this response is based on your schema.
 
 ```json
 {

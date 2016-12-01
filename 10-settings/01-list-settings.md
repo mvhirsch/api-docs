@@ -1,20 +1,20 @@
-# List Settings
+# Get Settings
 
 Get all Directus settings.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/settings
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/settings
 ```
 
-### Response
+## Response
 
 ```json
 {

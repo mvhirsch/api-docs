@@ -1,27 +1,27 @@
-# Columns Information
+# Get Columns
 
 Get all the given table columns information.
 
-> Note: Table names are case-sensitive
+> **Note:** Table names are case-sensitive
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/tables/[table-name]/columns
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/tables/projects/columns \
         -u usrSTeeornngkti:
 ```
 
-### Parameters
+## Parameters
 
 None.
 
-### Response
+## Response
 
 ```json
 [{

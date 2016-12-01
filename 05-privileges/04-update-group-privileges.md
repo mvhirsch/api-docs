@@ -1,14 +1,14 @@
-# Update Group Privileges
+# Update Privileges
 
 Update the specified group privileges/permission on the specified table.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/privileges/[group-id]/[privileges-id]
 ```
 
-### Parameters
+## Parameters
 
 Name        | Description
 ----------- | ------------
@@ -21,13 +21,13 @@ allow_edit  | Allow **group_id** to _edit_ entries within this table (0=no, 1=ye
 allow_view  | Allow **group_id** to _view_ entries within this table (0=no, 1=yes (your own), 2=yes (all))
 nav_listed  | Allow **group_id** to view this table in the navigation.
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl --data "name='Manager'" https://database.account.directus.io/api/1/groups
 ```
 
-### Response
+## Response
 ```json
 {
   "id": "21",

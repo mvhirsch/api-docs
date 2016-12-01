@@ -1,23 +1,23 @@
-# Table Information
+# Get Table
 
 Get the information from the given table name.
 
-> Note: Table names are case-sensitive
+> **Note:** Table names are case-sensitive
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET https://database.account.directus.io/api/1/tables/[table-name]
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/tables/projects \
         -u [user-token]:
 ```
 
-### Response
+## Response
 ```json
 {
  "id":"projects",

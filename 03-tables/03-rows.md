@@ -1,23 +1,23 @@
-# Table Rows
+# Get Rows
 
 Collection of tables viewable by current user.
 
-> Note: Table names are case-sensitive
+> **Note:** Table names are case-sensitive
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/tables/[table-name]/rows
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/tables/projects/rows \
         -u usrSTeeornngkti:
 ```
 
-### Parameters
+## Parameters
 
 Name        | Description
 ----------- | ------------
@@ -28,9 +28,9 @@ sort_order  | Order to be sorted. (ASC=Ascending or DESC=Descending).
 status      | List of status values to be included. Separated by commas. `status: 1,2`
 in[field]   | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 
-### Response
+## Response
 
-> The architecture of this response is based on your schema.
+> **Note:** The architecture of this response is based on your schema.
 
 ```json
 {
@@ -50,7 +50,7 @@ in[field]   | Only list records that its `field` matches one of given value. Can
 }
 ```
 
-### Result Object
+## Result Object
 
 Name        | Description
 ----------- | ------------

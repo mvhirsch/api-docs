@@ -1,20 +1,20 @@
-# Read Settings
+# Get Settings By Type
 
 Read all Directus settings by the specified collection.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/settings/[collectionName]
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/settings/global
 ```
 
-### Response
+## Response
 
 ```json
 {

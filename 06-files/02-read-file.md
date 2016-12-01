@@ -1,20 +1,20 @@
-# Read File
+# Get File
 
 Get information of the specified file.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/files/[id]
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/files/1
 ```
 
-### Response
+## Response
 
 ```json
 {

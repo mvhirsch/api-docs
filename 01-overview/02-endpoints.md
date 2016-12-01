@@ -1,4 +1,4 @@
-# API (v1) Endpoints
+# API Endpoints
 
 **Base API URL: `{{DIRECTUS_ROOT}}/api/1/`**
 
@@ -19,7 +19,7 @@ GET | `/messages/rows` | Collection of messages for the authenticated user
 GET | `/messages/rows/[id]` | Details for a specific message
 GET | `/activity` | Collection of latest Directus activity
 
-# Global Parameters
+## Global Parameters
 
 Parameter  |  Example  |  Description
 :-----------|:-----------|:-----------------------
@@ -31,9 +31,9 @@ Parameter  |  Example  |  Description
 **`columns_visible`**  |  *`title`, `date`*  |  Name of column shown in results. Can be chained such as: `columns_visible=title&columns_visibile=first_name`
 
 
-# Example API Requests
+## Example API Requests
 
-## GET  privileges/:groupId/
+### GET  privileges/:groupId/
 *Returns JSON object of the privileges for a given group*
 
 #### Example Request
@@ -71,7 +71,7 @@ Parameter  |  Example  |  Description
 ]
 ```
 
-## GET  tables/:table/rows/
+### GET  tables/:table/rows/
 *Returns a collection of table entries the authenticated user has permission to view*
 
 Parameter  |  Example  |  Description
