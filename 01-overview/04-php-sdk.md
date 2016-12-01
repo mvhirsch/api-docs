@@ -373,29 +373,28 @@ zip                     | User's zip code
 
 ### Create File
 
-Column                  | Description
------------------------ | ---------------------- 
-active                  | File's status. By default `1=active, 2-inactive, 3=deleted`.
-title                   | File's title
-file                    | Local path of the file that's going to be uploaded.
-data                    | File raw content that's going to be uploaded.
-**url** (_TODO_)        | URL of the file to upload, OR a youtube/vimeo link to be embeded.
-tags                    | Comma separated tags.
-caption                 | File caption (Description).
+Parameters              | Type     | Description
+----------------------- | -------- | ---------------------------
+file                    | File     | New file
 
-`file` `url` or `data` a required.
-
-**TODO**
+File Parameters         | Type     | Description
+----------------------- | --------------------------------------
+path `Required`         | String   | Local path of the file.
+**url** (_TODO_)        | String   | URL of the file to upload, OR a youtube/vimeo link to be embeded.
+title                   | String   | File's title
+tags                    | String   | Comma separated tags.
+caption                 | String   | File caption (Description).
 
 #### Returns
-An `FileEntry` object containing the new created file.
+An `Entry` object containing the new created file.
+
+**TODO:** Returns a `FileEntry` Object.
 
 Example:
 
 ```php
 // From a local file
-$file = $client->createFile([
-  'file' => '/path/to/the/file.jpg',
+$file = $client->createFile(new File('/path/to/the/file.jpg', [
   'title' => 'Company Group picture',
   'tags' => 'company, employees, team',
   'caption' => 'Whole company at Christmas party'
