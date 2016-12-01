@@ -907,7 +907,7 @@ active                  | File's status. By default `1=active, 2-inactive, 3=del
 title                   | File's title
 file                    | Local path of the file that's going to be uploaded.
 data                    | File raw content that's going to be uploaded.
-**url** (_TODO_)        | URL of the file to upload, OR a youtube/vimeo link to be embeded.
+url                     | URL of the file to upload, OR a youtube/vimeo link to be embeded.
 tags                    | Comma separated tags.
 caption                 | File caption (Description).
 
