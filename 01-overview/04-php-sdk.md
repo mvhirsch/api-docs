@@ -464,10 +464,10 @@ An `Entry` or `EntryCollection` object containing the fetched data.
 
 ### Get Entries
 
-Parameters    | Description
-------------- | -----------
-table         | The Table name to fetch data from.
-params        | Array of customiziable options.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+table         | String  | The Table name to fetch data from.
+params        | Array   | Customiziable options.
 
 ```php
 $articles = $client->getEntries('articles');
@@ -479,10 +479,10 @@ foreach($articles as $article) {
 
 ### Get Entry by ID
 
-Parameters    | Description
-------------- | -----------
-table         | The Table name to fetch data from.
-id            | The record id.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+table         | String  | The Table name to fetch data from.
+id            | Mixed   | The record id.
 
 ```php
 $article = $client->getEntry('articles', 1);
@@ -492,9 +492,9 @@ echo $article->title;
 
 ### Get Users
 
-Parameters    | Description
-------------- | -----------
-params        | Array of customizable options.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+params        | Array   | Customizable options.
 
 ```php
 $users = $client->getUsers([
@@ -508,9 +508,9 @@ foreach($users as $user) {
 
 ### Get User by ID
 
-Parameters    | Description
-------------- | -----------
-id            | The user id.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+id            | Integer | The user id.
 
 
 ```php
@@ -525,9 +525,9 @@ An `UserEntry` object containing the user information.
 
 ### Get Files
 
-Parameters    | Description
-------------- | -----------
-params        | Array of customizable options.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+params        | Array   | Customizable options.
 
 ```php
 $files = $client->getFiles([
@@ -541,9 +541,9 @@ foreach($files as $file) {
 
 ### Get File by ID
 
-Parameters    | Description
-------------- | -----------
-id            | The file.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+id            | Integer | The file.
 
 ```php
 $file = $client->getFile(1);
@@ -557,9 +557,9 @@ A `FileEntry` object containing the file information.
 
 ### Get Groups
 
-Parameters    | Description
-------------- | -----------
-params        | Array of customizable options.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+params        | Array   | Customizable options.
 
 ```php
 $groups = $client->getGroups([
@@ -573,9 +573,9 @@ foreach($groups as $group) {
 
 ### Get Group by ID
 
-Parameters    | Description
-------------- | -----------
-id            | The group id.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+id            | Integer | The group id.
 
 ```php
 $group = $client->getGroup(1);
@@ -589,9 +589,9 @@ A `GroupEntry` object containing the group information.
 
 ### Get Group Privileges
 
-Parameters    | Description
-------------- | -----------
-id            | The group id.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+id            | Integer | The group id.
 
 ```php
 $privileges = $client->getGroupsPrivileges(1);
@@ -604,9 +604,9 @@ foreach($privileges as $privilege) {
 
 ### Get Settings
 
-Parameters    | Description
-------------- | -----------
-None          |
+Parameters    | Type    | Description
+------------- | ------- | -----------
+None          |         |
 
 ```php
 $settings = $client->getSettings();
@@ -620,9 +620,9 @@ A `SettingEntry` object containing the setting information.
 
 ### Get Settings by collection
 
-Parameters    | Description
-------------- | -----------
-collection    | Name of the collection
+Parameters    | Type    | Description
+------------- | ------- | -----------
+collection    | String  | Name of the collection
 
 ```php
 $settings = $client->getSettingsByCollection('global');
@@ -631,18 +631,18 @@ echo $settings->project_name
 
 ### Get Message
 
-Parameters    | Description
-------------- | -----------
-user          | The user id.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+user          | Integer | The user id.
 
 **TODO**: 
 **INCORRECT**: This returns a single message, and the parameters is a message id.
 
 ### Get Tables
 
-Parameters    | Description
-------------- | -----------
-params        | Array of customizable options.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+params        | Array   | Customizable options.
 
 ```php
 $tables = $client->getTables([
@@ -656,16 +656,16 @@ foreach($tables as $table) {
 
 **Params**
 
-Parameters    | Description
-------------- | -----------
-include_system| Include the core tables
+Parameters    | Type    | Description
+------------- | ------- | -----------
+include_system| Boolean | Include the core tables
 
 ### Get Table
 
-Parameters    | Description
-------------- | -----------
-table         | The Table name.
-params        | Array of customizable options.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+table         | String  | The Table name.
+params        | Array   | Customizable options.
 
 ```php
 $table = $client->getTable('directus_groups');
@@ -674,10 +674,10 @@ echo $table->name;
 
 ### Get Table Columns
 
-Parameters    | Description
-------------- | -----------
-table         | The Table name.
-params        | Array of customizable options.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+table         | String  | The Table name.
+params        | Array   | Customizable options.
 
 ```php
 $columns = $client->getTableColumns('articles');
@@ -689,19 +689,18 @@ foreach($columns as $column) {
 
 ### Get Table Column
 
-Parameters    | Description
-------------- | -----------
-table         | The Table name.
-column        | The column name.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+table         | String  | The Table name.
+column        | String  | The column name.
 
 ```php
 $column = $client->getTableColumn('articles', 'title');
 $isRequired = $column->required;
 ```
 
-**TODO**:
 #### Returns
-A `ColumnEntry` object containing the setting information.
+A `Entry` object containing the setting information.
 
 ## Get data Parameters list
 
