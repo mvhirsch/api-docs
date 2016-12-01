@@ -918,10 +918,10 @@ Nothing is returned.
 
 ### Delete Entry
 
-Parameters    | Description
-------------- | -----------
-table         | The table name
-id            | The id of the record to delete in `table`.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+table         | String  | The table name
+id            | Integer | The id of the record to delete in `table`.
 
 Example:
 
@@ -931,9 +931,9 @@ $client->deleteEntry('articles', 1);
 
 ### Delete Bookmark
 
-Parameters    | Description
-------------- | -----------
-id            | The id of the bookmark to delete.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+id            | Integer | The id of the bookmark to delete.
 
 Example:
 
@@ -943,10 +943,10 @@ $client->deleteBookmark(1);
 
 ### Delete Column
 
-Parameters    | Description
-------------- | -----------
-name          | The column name to delete.
-table         | The table the colum belongs to.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+name          | String  | The column name to delete.
+table         | String  | The table the colum belongs to.
 
 Example:
 
@@ -956,9 +956,9 @@ $client->deleteColumn('slug', 'articles');
 
 ### Delete File
 
-Parameters    | Description
-------------- | -----------
-id            | The id of the file to delete.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+id            | Integer | The id of the file to delete.
 
 Example:
 
@@ -968,9 +968,9 @@ $client->deleteUser(1);
 
 ### Delete Group
 
-Parameters    | Description
-------------- | -----------
-id            | The id of the group to delete.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+id            | Integer | The id of the group to delete.
 
 Example:
 
@@ -980,9 +980,9 @@ $client->deleteGroup(1);
 
 ### Delete Table
 
-Parameters    | Description
-------------- | -----------
-name          | The name of the table to delete.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+name          | String  | The name of the table to delete.
 
 Example:
 
@@ -992,9 +992,9 @@ $client->deleteTable('comments');
 
 ### Delete User
 
-Parameters    | Description
-------------- | -----------
-id            | The id of the user to delete.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+id            | Integer | The id of the user to delete.
 
 Example:
 
