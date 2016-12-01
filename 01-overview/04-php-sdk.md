@@ -841,7 +841,7 @@ An `Entry` object containing the updated data.
 Parameters    | Type    | Description
 ------------- | ------- | -----------
 table         | String  | The Table name.
-id            | String  | The id of the record to update.
+id            | Mixed   | The id of the record to update.
 data          | Array   | Data to update.
 
 ### Update User
