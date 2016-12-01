@@ -20,10 +20,10 @@ createUser              | `data`                 | Creates a new user.
 
 ### Create Entry
 
-Parameters    | Description
-------------- | -----------
-table         | The Table name where the `data` are going to be inserted.
-data          | Array of data to be inserted in `table`. All this data attributes will depend on your table columns.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+table         | String  | The Table name where the `data` are going to be inserted.
+data          | Array   | Data to be inserted in `table`. All this data attributes will depend on your table columns.
 
 #### Returns
 An `Entry` object containing the new created entry.
@@ -42,15 +42,15 @@ $article = $client->createEntry('articles', [
 
 ### Create Bookmark
 
-Column                  | Description
------------------------ | ---------------------- 
-table_name              | Bookmark Table name
-title                   | Bookmark title
-columns_visible         | List of column separated by comma.
-search_string           | List of filters separated by comma. Format `column:operator:value`
-sort                    | Sort column.
-sort_order              | Sort column order.
-status                  | List of status separated by comma.
+Column                  |  Type    | Description
+----------------------- | -------- | ---------------------- 
+table_name              | String   | Bookmark Table name
+title                   | String   | Bookmark title
+columns_visible         | String   | List of column separated by comma.
+search_string           | String   | List of filters separated by comma. Format `column:operator:value`
+sort                    | String   | Sort column.
+sort_order              | String   | Sort column order. (`ASC` or `DESC`)
+status                  | String   | List of status separated by comma.
 
 #### Returns
 An `Entry` object containing the new bookmark created.
@@ -70,22 +70,22 @@ $bookmark = $client->createBookmark([
 
 ### Create Column
 
-Column                  | Description
+Column                  | Type      | Description
 ----------------------- | ---------------------- 
-name                    | Column name.
-table                   | Table name.
-type                    | Data type.
-ui                      | UI name
-hidden_input            | Whether the column will be hidden in the edit form.
-hidden_list             | Whether the column will be hidden in the list page.
-required                | Whether the column is required.
-sort                    | Sort position in number.
-comment                 | Note on the column.
-related_type            |
-related_table           |
-junction_table          |
-junction_key_left       |
-junction_key_right      |
+name                    | String    | Column name.
+table                   | String    | Table name.
+type                    | String    | Data type.
+ui                      | String    | UI name
+hidden_input            | Boolean   | Whether the column will be hidden in the edit form.
+hidden_list             | Boolean   | Whether the column will be hidden in the list page.
+required                | Boolean   | Whether the column is required.
+sort                    | String    | Sort position in number.
+comment                 | String    | Note on the column.
+relationship_type       | String    | Column relationship type, `ONETOMANY`, `MANYTOMANY` or `MANYTOONE`
+related_table           | String    | The table name this column is related to.
+junction_table          | String    | The pivot/junction table that joins the column's table with the related table
+junction_key_left       | String    | The column name in junction that is related to the column's table.
+junction_key_right      | String    | The column name in junction that is related to the related table.
 
 **TODO:** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
 
@@ -126,10 +126,10 @@ $column = $client->createColumn([
 
 ### Create Group
 
-Column                  | Description
------------------------ | ---------------------- 
-name                    | Group name.
-restrict_to_ip_whitelist| List of IPs allowed to authenticate, separated  by comma.
+Column                  | Type       | Description
+----------------------- | ---------- | -------------------- 
+name                    | String     | Group name.
+restrict_to_ip_whitelist| String     | List of IPs allowed to authenticate, separated  by comma.
 
 Example:
 
@@ -141,14 +141,14 @@ $group = $client->createGroup([
 
 ### Create/Send Messages
 
-Column                  | Description
------------------------ | ---------------------- 
-from                    | Sender user id.
-to                      | List of users id, separated by comma.
-toGroup                 | List of groups id, separated by comma.
-subject                 | Message subject.
-message                 | Message content.
-attachements            | **TODO** List of files to add to the message
+Column                  | Type      |  Description
+----------------------- | --------- | ---------------------- 
+from                    | Integer   | Sender user id.
+to                      | Array     | List of users id, separated by comma.
+toGroup                 | Array     | List of groups id, separated by comma.
+subject                 | String    | Message subject.
+message                 | String    | Message content.
+attachements            | Array     | **TODO** List of files to add to the message
 
 **TODO:** Send/Create responses without the need to specify each recipients.
 
@@ -180,27 +180,27 @@ $message = $client->sendMessage([
 
 #### Message Entry attributes
 
-Attribute               | Description
------------------------ | ---------------------- 
-id                      | Message ID
-from                    | Sender ID
-to                      | Recipients ID
-subject                 | Message subject
-responses               | List of responses messages
-response_to             | Parent message (replied to this message id)
-read                    | Whether the message was read by the authenticated user.
+Attribute               | Type      | Description
+----------------------- | --------- | ---------------------- 
+id                      | Integer   | Message ID
+from                    | Integer   | Sender ID
+recipients              | String    | List of Recipients separated by comma. **TODO**: it should be an array.
+subject                 | String    | Message subject
+responses               | Array     | List of responses messages
+response_to             | Integer   | Parent message (replied to this message id)
+read                    | Integer   | Whether the message was read by the authenticated user. **TODO** It should be bool
 
 
 ### Create Preferences
 
-Column                  | Description
------------------------ | ---------------------- 
-user                    | User ID that this preferences belongs to.
-table_name              | Table name that this preferences belongs to.
-columns_visible         | List of visible column separated by comma.
-sort                    | Sort column.
-sort_order              | Sort column order.
-status                  | List of status separated by comma.
+Column                  | Type      | Description
+----------------------- | --------- | ---------------------- 
+user                    | Integer   | User ID that this preferences belongs to.
+table_name              | String    | Table name that this preferences belongs to.
+columns_visible         | String    | List of visible column separated by comma.
+sort                    | String    | Sort column.
+sort_order              | String    | Sort column order. `ASC` or `DESC`
+status                  | String    | List of status separated by comma.
 
 #### Returns
 An `Entry` object containing the new preference created.
@@ -221,19 +221,19 @@ $preference = $client->createPreferences([
 
 ### Create Privileges (Permissions)
 
-Column                  | Description
------------------------ | ---------------------- 
-group_id                | Group ID
-table_name              | Table name that this permissions belongs to.
-allow_add               | Whether the group is allow to add/create entries in the table. (See values below)
-allow_edit              | Whether the group is allow to edit/update entries in the table. (See values below)
-allow_delete            | Whether the group is allow to delete/remove entries in the table. (See values below)
-allow_view              | Whether the group is allow to view/read entries in the table. (See values below)
-allow_alter             | Whether the group is allow to add/create entries in the table. (See values below)
-nav_listed              | Whether the table should be visible in the sidebar.
-read_field_blacklist    | List of columns that the group can't view/read.
-write_field_blacklist   | List of columns that the group can't edit/update.
-**status_id**           | State of the record that this permissions belongs to. (Draft, Active or Soft Deleted)
+Column                  | Type      | Description
+----------------------- | --------- | ---------------------- 
+group_id                | Integer   | Group ID
+table_name              | String    | Table name that this permissions belongs to.
+allow_add               | Integer   | Whether the group is allow to add/create entries in the table. (See values below)
+allow_edit              | Integer   | Whether the group is allow to edit/update entries in the table. (See values below)
+allow_delete            | Integer   | Whether the group is allow to delete/remove entries in the table. (See values below)
+allow_view              | Integer   | Whether the group is allow to view/read entries in the table. (See values below)
+allow_alter             | Integer   | Whether the group is allow to add/create entries in the table. (See values below)
+nav_listed              | Boolean   | Whether the table should be visible in the sidebar.
+read_field_blacklist    | String    | List of columns that the group can't view/read.
+write_field_blacklist   | String    | List of columns that the group can't edit/update.
+**status_id**           | String    | State of the record that this permissions belongs to. (Draft, Active or Soft Deleted)
 
 Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **TODO** Adding constant for the permissions value.
 
@@ -257,10 +257,10 @@ $privileges = $client->createPrivileges([
 
 ### Create Table
 
-Parameters              | Description
------------------------ | ---------------------- 
-name                    | New table name
-**data**                | Not defined yet.
+Parameters              | Type      | Description
+----------------------- | --------- | ---------------------- 
+name                    | String    | New table name
+**data**                | Array     | Not defined yet.
 
 #### Returns
 An `Entry` object containing the new table created privileges.
@@ -276,12 +276,12 @@ $privileges = $client->createTable('comments');
 
 ### Create Column Options
 
-Column                  | Description
------------------------ | ---------------------- 
-column                  | Column name.
-table                   | Column table name.
-ui                      | Coolumn UI name.
-options                 | Array of options.
+Column                  | Type      | Description
+----------------------- | --------- | ---------------------- 
+column                  | String    | Column name.
+table                   | String    | Column table name.
+ui                      | String    | Coolumn UI name.
+options                 | Array     | UI Options.
 
 #### Returns
 `Entry` object containing all the column options.
@@ -304,27 +304,27 @@ $options = $client->createColumnUIOptions([
 
 ### Create User
 
-Column                  | Description
------------------------ | ---------------------- 
-active                  | User's status. By default `1=active, 2-inactive, 3=deleted`.
-email `Required`        | User's unique email address.
-first_name              | User first name.
-last_name               | User last name.
-password                | Plain text password.
-token                   | User's unique API access token
-group                   | User's group ID
-email_messages          | Whether the user wants to receive email notification.
-avatar                  | Avatar url
-avatar_file_id          | Use a file id as avatar
-language                | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
-timezone                | User's default timezone.
-position                | User's position on the project/company.
-location                | User's location in the world or universe.
-phone                   | User's phone number
-address                 | User's address
-city                    | User's city
-state                   | User's state
-zip                     | User's zip code
+Column                  | Type      | Description
+----------------------- | --------- | ---------------------- 
+active                  | Integer   | User's status. By default `1=active, 2-inactive, 3=deleted`.
+email `Required`        | String    | User's unique email address.
+first_name              | String    | User first name.
+last_name               | String    | User last name.
+password                | String    | Plain text password.
+token                   | String    | User's unique API access token
+group                   | Integer   | User's group ID
+email_messages          | Boolean   | Whether the user wants to receive email notification.
+avatar                  | String    | Avatar url
+avatar_file_id          | Integer   | Use a file id as avatar
+language                | String    | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
+timezone                | String    | User's default timezone.
+position                | String    | User's position on the project/company.
+location                | String    | User's location in the world or universe.
+phone                   | String    | User's phone number
+address                 | String    | User's address
+city                    | String    | User's city
+state                   | String    | User's state
+zip                     | String    | User's zip code
 
 #### Returns
 An `Entry` object containing the new created user.
@@ -347,28 +347,28 @@ $user = $client->createUser([
 
 #### User Entry attributes
 
-Column                  | Description
------------------------ | ---------------------- 
-id                      | User ID
-active                  | User's status. `1=active, 2=inactive, 3=deleted`.
-email                   | User's unique email address.
-first_name              | User first name.
-last_name               | User last name.
-password                | hashed password. **IS THIS NEEDED?**
-token                   | User's unique API access token
-group                   | User's group ID
-email_messages          | Whether the user wants to receive email notification.
-avatar                  | Avatar url
-avatar_file_id          | File id used as avatar
-language                | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
-timezone                | User's default timezone.
-position                | User's position on the project/company.
-location                | User's location in the world or universe.
-phone                   | User's phone number
-address                 | User's address
-city                    | User's city
-state                   | User's state
-zip                     | User's zip code
+Column                  | Type      | Description
+----------------------- | --------- | ---------------------- 
+id                      | Integer   | User ID
+active                  | Integer   | User's status. `1=active, 2=inactive, 3=deleted`.
+email                   | String    | User's unique email address.
+first_name              | String    | User first name.
+last_name               | String    | User last name.
+password                | String    | hashed password. **IS THIS NEEDED?**
+token                   | String    | User's unique API access token
+group                   | Integer   | User's group ID
+email_messages          | Boolean   | Whether the user wants to receive email notification.
+avatar                  | String    | Avatar url
+avatar_file_id          | Integer   | File id used as avatar
+language                | String    | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
+timezone                | String    | User's default timezone.
+position                | String    | User's position on the project/company.
+location                | String    | User's location in the world or universe.
+phone                   | String    | User's phone number
+address                 | String    | User's address
+city                    | String    | User's city
+state                   | String    | User's state
+zip                     | String    | User's zip code
 
 
 ### Create File
@@ -413,24 +413,24 @@ $file = $client->createFile(new File('/path/to/the/file.jpg', [
  
 #### File Entry object attributes
 
-Column                  | Description
------------------------ | ---------------------- 
-id                      | File ID
-active                  | File's status. `1=active, 2=inactive, 3=deleted`.
-name                    | File name
-title                   | File's title
-location                | Location of where the picture was taken. if any.
-type                    | File mime type
-url                     | File url relativity to Directus base url
-tags                    | Comma separated tags.
-caption                 | File caption (Description).
-width                   | File width.
-height                  | File height.
-size                    | File size in bytes.
-embed_id                | ID of the embeded file. Ex Youtube ID
-user                    | File owner (who uploaded the file)
-date_uploaded           | File uploaded date
-storage_adapter         | Storage adapter used to upload the file
+Column                  | Type     | Description
+----------------------- | -------- | ---------------------- 
+id                      | Integer  | File ID
+active                  | Integer  | File's status. `1=active, 2=inactive, 3=deleted`.
+name                    | String   | File name
+title                   | String   | File's title
+location                | String   | Location of where the picture was taken. if any.
+type                    | String   | File mime type
+url                     | String   | File url relativity to Directus base url
+tags                    | String   | Comma separated tags.
+caption                 | String   | File caption (Description).
+width                   | Integer  | File width.
+height                  | Integer  | File height.
+size                    | Integer  | File size in bytes.
+embed_id                | String   | ID of the embeded file. Ex Youtube ID
+user                    | Integer  | File owner (who uploaded the file)
+date_uploaded           | String   | File uploaded date. **TODO** It should be an DateTime object.
+storage_adapter         | String   | Storage adapter used to upload the file
  
 
 ---
