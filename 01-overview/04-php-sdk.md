@@ -71,7 +71,7 @@ $bookmark = $client->createBookmark([
 ### Create Column
 
 Column                  | Type      | Description
------------------------ | ---------------------- 
+----------------------- | --------- | ------------ 
 name                    | String    | Column name.
 table                   | String    | Table name.
 type                    | String    | Data type.
