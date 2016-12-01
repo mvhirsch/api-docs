@@ -884,6 +884,21 @@ Parameters    | Description
 id            | The id of the file to update.
 data          | Data to update.
 
+Example:
+
+```php
+$updatedFile = $client->updateFile(1, ['title' => 'New Design']);
+
+// echo $updatedFile->title;
+```
+
+
+```php
+$updatedFile = $client->updateFile(1, new File('/path/to/file'));
+
+// echo $updatedFile->url;
+```
+
 #### File data
 
 Column                  | Description
