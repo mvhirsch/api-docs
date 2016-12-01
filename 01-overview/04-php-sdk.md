@@ -838,49 +838,49 @@ An `Entry` object containing the updated data.
 
 ### Update Entry
 
-Parameters    | Description
-------------- | -----------
-table         | The Table name.
-id            | The id of the record to update.
-data          | Data to update.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+table         | String  | The Table name.
+id            | String  | The id of the record to update.
+data          | Array   | Data to update.
 
 ### Update User
 
-Parameters    | Description
-------------- | -----------
-id            | The id of the user to update.
-data          | Data to update.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+id            | Integer | The id of the user to update.
+data          | Array   | Data to update.
 
 #### User data
 
-Column                  | Description
------------------------ | ---------------------- 
-active                  | User's status. By default `1=active, 2-inactive, 3=deleted`.
-email `Required`        | User's unique email address.
-first_name              | User first name.
-last_name               | User last name.
-password                | Plain text password, will be hashed on the server side.
-token                   | User's unique API access token
-group                   | User's group ID
-email_messages          | Whether the user wants to receive email notification.
-avatar                  | Avatar url
-avatar_file_id          | Use a file id as avatar
-language                | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
-timezone                | User's default timezone.
-position                | User's position on the project/company.
-location                | User's location in the world or universe.
-phone                   | User's phone number
-address                 | User's address
-city                    | User's city
-state                   | User's state
-zip                     | User's zip code
+Column                  | Type    | Description
+----------------------- | ------- | ---------------------- 
+active                  | Integer | User's status. By default `1=active, 2-inactive, 3=deleted`.
+email `Required`        | String  | User's unique email address.
+first_name              | String  | User first name.
+last_name               | String  | User last name.
+password                | String  | Plain text password, will be hashed on the server side.
+token                   | String  | User's unique API access token
+group                   | Integer | User's group ID
+email_messages          | Integer | Whether the user wants to receive email notification.
+avatar                  | String  | Avatar url
+avatar_file_id          | Integer | Use a file id as avatar
+language                | String  | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
+timezone                | String  | User's default timezone.
+position                | String  | User's position on the project/company.
+location                | String  | User's location in the world or universe.
+phone                   | String  | User's phone number
+address                 | String  | User's address
+city                    | String  | User's city
+state                   | String  | User's state
+zip                     | String  | User's zip code
 
 ### Update File
 
-Parameters    | Description
-------------- | -----------
-id            | The id of the file to update.
-data          | Data to update.
+Parameters    | Type    | Description
+------------- | ------- | -----------
+id            | Integer | The id of the file to update.
+data          | Array|File | Data to update.
 
 Example:
 
@@ -896,18 +896,6 @@ $updatedFile = $client->updateFile(1, new File('/path/to/file'));
 
 // echo $updatedFile->url;
 ```
-
-#### File data
-
-Column                  | Description
------------------------ | ---------------------- 
-active                  | File's status. By default `1=active, 2-inactive, 3=deleted`.
-title                   | File's title
-file                    | Local path of the file that's going to be uploaded.
-data                    | File raw content that's going to be uploaded.
-url                     | URL of the file to upload, OR a youtube/vimeo link to be embeded.
-tags                    | Comma separated tags.
-caption                 | File caption (Description).
 
 ---
 
