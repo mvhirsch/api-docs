@@ -18,3 +18,7 @@ Any non-JSON response: Error
 
 ## Custom Endpoints
 To add custom endpoints into Directus, simply create new sandboxed endpoints using Slim routes for any custom files.
+
+## Translations & Locales
+
+**@TODO**
