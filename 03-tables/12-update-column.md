@@ -2,24 +2,24 @@
 
 Update column information. _*Note*_: Does not update the table column-type.
 
-> Note: Table and column names are case-sensitive
+> **Note:** Table and column names are case-sensitive
 
 _Work in Progress._
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 POST /api/1/tables/[table-name]/columns/[column-name]
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl --data "comment=Project+name" https://database.account.directus.io/api/1/tables/projects/title \
         -u usrSTeeornngkti:
 ```
 
-### Parameters
+## Parameters
 
 Name        | Description
 ----------- | -----------
@@ -29,7 +29,7 @@ char_length | Column's Data type length
 ui          | Column's UI type
 comment     | Column's comments
 
-### Response
+## Response
 
 ```json
 {

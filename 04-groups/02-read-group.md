@@ -1,20 +1,20 @@
-# Read Group
+# Get Group
 
 Get the information of the specified user group.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/groups/[id]
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/groups/1
 ```
 
-### Response
+## Response
 ```json
 {
   "id": "1",

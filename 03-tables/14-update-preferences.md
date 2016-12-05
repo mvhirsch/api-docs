@@ -1,16 +1,16 @@
-# Read Row
+# Update Preference
 
 Get the specified row id in the given table.
 
-> Note: Table names are case-sensitive
+> **Note:** Table names are case-sensitive
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 POST /api/1/tables/[table-name]/preferences
 ```
 
-### Parameters
+## Parameters
 
 Name             | Description
 ---------------- | -----------
@@ -20,14 +20,14 @@ sort             | Result will be sorted by this column
 sort_order       | Sort Order. (ASC=Ascending or DESC=Descending)
 active           | List of status values. separated by comma.
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl -d sort_order=DESC https://database.account.directus.io/api/1/tables/projects/preferences \
         -u usrSTeeornngkti:
 ```
 
-### Response
+## Response
 
 ```json
 {

@@ -2,15 +2,15 @@
 
 Update a row in the given table with the specified ID.
 
-> Note: Table names are case-sensitive
+> **Note:** Table names are case-sensitive
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 PATCH /api/1/tables/[table-name]/rows/[row-id]
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl --data "active=1&title=Example" \
@@ -18,13 +18,13 @@ $ curl --data "active=1&title=Example" \
                 -u usrSTeeornngkti:
 ```
 
-### Parameters
+## Parameters
 
-> The parameters are based on the table's column.
+> **Note:** The parameters are based on the table's column.
 
-### Response
+## Response
 
-> The architecture of this response is based on your schema.
+> **Note:** The architecture of this response is based on your schema.
 
 ```json
 {

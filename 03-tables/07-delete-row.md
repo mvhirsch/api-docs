@@ -2,9 +2,9 @@
 
 Delete or Soft-delete a row in the given table with the specified ID.
 
-> Note: Table names are case-sensitive
+> **Note:** Table names are case-sensitive
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 PATCH /api/1/tables/[table-name]/rows/[row-id]
@@ -14,7 +14,7 @@ PATCH /api/1/tables/[table-name]/rows/[row-id]
 DELETE /api/1/tables/[table-name]/rows/[row-id]
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl -X PATCH \
@@ -22,7 +22,7 @@ $ curl -X PATCH \
                 -u usrSTeeornngkti:
 ```
 
-### Parameters
+## Parameters
 
 Name     | Description
 -------- | -----------
@@ -34,15 +34,15 @@ $ curl -X DELETE \
                 -u usrSTeeornngkti:
 ```
 
-### Parameters
+## Parameters
 
 None.
 
-### Response
+## Response
 
 All the entries from the table.
 
-> The architecture of this response is based on your schema.
+> **Note:** The architecture of this response is based on your schema.
 
 ```json
 {

@@ -2,25 +2,25 @@
 
 Create a new user group.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/groups
 ```
 
-### Parameters
+## Parameters
 
 Name | Description
 ---- | ------------
 name | The name of the group
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl --data "name='Manager'" https://database.account.directus.io/api/1/groups
 ```
 
-### Response
+## Response
 ```json
 {
   "id": "2",
