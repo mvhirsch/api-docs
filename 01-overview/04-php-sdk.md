@@ -327,7 +327,7 @@ state                   | String    | User's state
 zip                     | String    | User's zip code
 
 #### Returns
-An `Entry` object containing the new created user.
+An `Entry` object containing the new created user ([User Object Model](/01-overview/objects-model.md)).
 
 Example:
 
@@ -345,32 +345,6 @@ $user = $client->createUser([
 
 ```
 
-#### User Entry attributes
-
-Column                  | Type      | Description
------------------------ | --------- | ---------------------- 
-id                      | Integer   | User ID
-active                  | Integer   | User's status. `1=active, 2=inactive, 3=deleted`.
-email                   | String    | User's unique email address.
-first_name              | String    | User first name.
-last_name               | String    | User last name.
-password                | String    | hashed password. **IS THIS NEEDED?**
-token                   | String    | User's unique API access token
-group                   | Integer   | User's group ID
-email_messages          | Boolean   | Whether the user wants to receive email notification.
-avatar                  | String    | Avatar url
-avatar_file_id          | Integer   | File id used as avatar
-language                | String    | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
-timezone                | String    | User's default timezone.
-position                | String    | User's position on the project/company.
-location                | String    | User's location in the world or universe.
-phone                   | String    | User's phone number
-address                 | String    | User's address
-city                    | String    | User's city
-state                   | String    | User's state
-zip                     | String    | User's zip code
-
-
 ### Create File
 
 Parameters              | Type     | Description
@@ -386,7 +360,7 @@ tags                    | String   | Comma separated tags.
 caption                 | String   | File caption (Description).
 
 #### Returns
-An `Entry` object containing the new created file.
+An `Entry` object containing the new created file ([File Object Model](/01-overview/objects-model.md)).
 
 **TODO:** Returns a `FileEntry` Object.
 
@@ -408,30 +382,7 @@ $file = $client->createFile(new File('/path/to/the/file.jpg', [
 ```
 
 **TODO**
- - Create file from a url
- 
- 
-#### File Entry object attributes
-
-Column                  | Type     | Description
------------------------ | -------- | ---------------------- 
-id                      | Integer  | File ID
-active                  | Integer  | File's status. `1=active, 2=inactive, 3=deleted`.
-name                    | String   | File name
-title                   | String   | File's title
-location                | String   | Location of where the picture was taken. if any.
-type                    | String   | File mime type
-url                     | String   | File url relativity to Directus base url
-tags                    | String   | Comma separated tags.
-caption                 | String   | File caption (Description).
-width                   | Integer  | File width.
-height                  | Integer  | File height.
-size                    | Integer  | File size in bytes.
-embed_id                | String   | ID of the embeded file. Ex Youtube ID
-user                    | Integer  | File owner (who uploaded the file)
-date_uploaded           | String   | File uploaded date. **TODO** It should be an DateTime object.
-storage_adapter         | String   | Storage adapter used to upload the file
- 
+ - Create file from a url 
 
 ---
 
@@ -518,10 +469,8 @@ $user = $client->getUser(1);
 echo $user->email;
 ```
 
-**TODO**
-
 #### Returns
-An `UserEntry` object containing the user information.
+An `Entry` object containing the user information ([User Object Model](/01-overview/objects-model.md).
 
 ### Get Files
 
@@ -853,27 +802,7 @@ data          | Array   | Data to update.
 
 #### User data
 
-Column                  | Type    | Description
------------------------ | ------- | ---------------------- 
-active                  | Integer | User's status. By default `1=active, 2-inactive, 3=deleted`.
-email `Required`        | String  | User's unique email address.
-first_name              | String  | User first name.
-last_name               | String  | User last name.
-password                | String  | Plain text password, will be hashed on the server side.
-token                   | String  | User's unique API access token
-group                   | Integer | User's group ID
-email_messages          | Integer | Whether the user wants to receive email notification.
-avatar                  | String  | Avatar url
-avatar_file_id          | Integer | Use a file id as avatar
-language                | String  | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
-timezone                | String  | User's default timezone.
-position                | String  | User's position on the project/company.
-location                | String  | User's location in the world or universe.
-phone                   | String  | User's phone number
-address                 | String  | User's address
-city                    | String  | User's city
-state                   | String  | User's state
-zip                     | String  | User's zip code
+The data that can be updated can be found in the [User Object Model](/01-overview/objects-model.md)
 
 ### Update File
 
