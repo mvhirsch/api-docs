@@ -4,7 +4,7 @@
 
 <span class="endpoint">Attribute</span> | Description
 ----------------------------- | ---------------------- 
-id** _Integer_                | File Unique Identification number.
+**id** _Integer_                | File Unique Identification number.
 **active** _Integer_            | File's status. `1=active, 2=inactive, 3=deleted`.
 **name** _String_               | File name
 **title** _String_              | File's title
