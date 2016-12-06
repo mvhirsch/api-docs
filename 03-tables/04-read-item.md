@@ -4,6 +4,10 @@
 
 <span class="request">`GET` **/api/1.1/tables/[table-name]/rows/[row-id]**</span>
 <span class="description">Get the specified row id in the given table.</span>
+<span class="arguments">Name</span> | Value | Description
+--------|-----|------------
+**table** _String_ | <span class="required">Required</span> | The table name within which the record will be updated. The custom column arguments below must match this table's schema.
+**id** _Integer_ | <span class="required">Required</span> | The item id within the table.
 
 ### Example Request
 

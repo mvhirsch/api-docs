@@ -6,11 +6,10 @@
 
 <span class="request">`POST` **/api/1.1/tables/[table-name]/rows**</span>
 <span class="description">Create a new item in the given table.</span>
-
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
-**table** _string_ | <span class="required">Required</span> | The table name within which the record will be added. The custom column arguments below must match this table's schema.
-<span class="custom">**Custom Data**</span> _various_ | | <span class="custom">This data and its architecture is based on your specific project's schema.</span>
+**table** _String_ | <span class="required">Required</span> | The table name within which the record will be added. The custom column arguments below must match this table's schema.
+<span class="custom">**Custom Data**</span> _Array_ | | <span class="custom">This data and its architecture is based on your specific project's schema.</span>
 
 ### Example Request
 
@@ -31,7 +30,7 @@ $newProject = $client->createItem('projects', [
 
 <span class="attributes">Attribute</span> | Description
 --------|-----|------------
-**meta** _object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
+**meta** _Meta object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
 <span class="custom">**Custom Data**</span> _object_ | <span class="custom">This data and its architecture is based on your specific project's schema.</span>
 
 ### Example Response
