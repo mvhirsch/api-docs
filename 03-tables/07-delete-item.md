@@ -1,61 +1,37 @@
 # Delete Item
 
-Delete or Soft-delete a row in the given table with the specified ID.
-
 > **Note:** Table names are case-sensitive
+> **Note:** To perform a Soft-delete directly, use the update endpoint and update the `active` column.
 
-## HTTP Request
-
-```bash
-PATCH /api/1/tables/[table-name]/rows/[row-id]
-```
-
-```bash
-DELETE /api/1/tables/[table-name]/rows/[row-id]
-```
-
-## Example Request
-
-```bash
-$ curl -X PATCH \
-        https://database.account.directus.io/api/1/tables/projects/rows/1 \
-                -u usrSTeeornngkti:
-```
-
-## Parameters
-
-Name     | Description
--------- | -----------
-active   | Status value. delete = 0
+<span class="request">`DELETE` **/api/1.1/tables/[table-name]/rows/[row-id]**</span>
+<span class="description">Delete or Soft-delete a row in the given table with the specified ID.</span>
+<span class="arguments">Name</span> | Value | Description
+--------|-----|------------
+**table** _String_ | <span class="required">Required</span> | The table name within which the record will be deleted.
+**id** _Integer_ | <span class="required">Required</span> | The item id within the table.
 
 ```bash
 $ curl -X DELETE \
         https://database.account.directus.io/api/1/tables/projects/rows/1 \
-                -u usrSTeeornngkti:
+                -u [user-token]:
 ```
 
-## Parameters
-
-None.
+```php
+$response = $client->deleteItem('projects', 1);
+```
 
 ## Response
 
-All the entries from the table.
-
-> **Note:** The architecture of this response is based on your schema.
+<span class="attributes">Attribute</span> | Description
+--------|-----|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**success**</span> _Boolean_ | Whether the deletion was successful or not.
 
 ```json
 {
-  "Delete": 1,
-  "Active": 0,
-  "Draft": 0,
-  "total": 1,
-  "rows": [
-    {
-      "id": 1,
-      "active": 0,
-      "title": "Projects"
-    }
-  ]
+  "meta": {
+    "table": "projects"
+  },
+  "success": true
 }
 ```

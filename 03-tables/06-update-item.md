@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`PATCH` **/api/1/tables/[table-name]/rows/[row-id]**</span>
+<span class="request">`PATCH` **/api/1.1/tables/[table-name]/rows/[row-id]**</span>
 <span class="description">Update an item in the given table with the specified ID.</span>
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
