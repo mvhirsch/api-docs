@@ -8,11 +8,11 @@ Introduction:
   Directus Objects: 01-overview/objects-model.md
 
 Items:
-  Create Item: 03-tables/05-create-row.md
-  Get Items: 03-tables/03-rows.md
-  Get Item: 03-tables/04-read-row.md
-  Update Item: 03-tables/06-update-row.md
-  Delete Item: 03-tables/07-delete-row.md
+  Create Item: 03-tables/05-create-item.md
+  Get Items: 03-tables/03-items.md
+  Get Item: 03-tables/04-read-item.md
+  Update Item: 03-tables/06-update-item.md
+  Delete Item: 03-tables/07-delete-item.md
 
 Files:
   Create File: 06-files/03-create-file.md
