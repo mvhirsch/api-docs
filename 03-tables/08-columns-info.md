@@ -21,7 +21,7 @@ $columns = $client->getColumns('projects');
 <span class="attributes">Attribute</span> | Description
 --------|-----|------------
 **meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Columns Data** _Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema.</span>
+**Columns Data** _Collection of Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema.</span>
 
 ```json
 {
