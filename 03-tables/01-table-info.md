@@ -7,7 +7,7 @@ Get the information from the given table name.
 ## HTTP Request
 
 ```bash
-GET https://database.account.directus.io/api/1.1/tables/[table-name]
+GET https://instance--key.directus.io/api/1.1/tables/[table-name]
 ```
 
 ## Example Request
