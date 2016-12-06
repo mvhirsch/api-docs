@@ -5,6 +5,7 @@ Introduction:
   Authentication: 01-overview/02-authentication.md
   Endpoints: 01-overview/02-endpoints.md
   PHP SDK: 01-overview/04-php-sdk.md
+  Objects Model: 01-overview/objects-model.md
 
 Items:
   Create Item: 03-tables/05-create-row.md
