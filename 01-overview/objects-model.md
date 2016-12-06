@@ -81,3 +81,17 @@ These are the Directus object models used throughout the system.
 **city** _String_             | User's city
 **state** _String_            | User's state
 **zip** _String_              | User's zip code
+
+# Meta Object
+
+<span class="attributes">Attribute</span> | Description
+----------------------------- | ----------------------
+**type** _String_             | Whether the data returned is a `collection` or a single `item`.
+**table** _String_            | Table the data was fetched from.
+**Active** _Integer_          | How many `active` items has this table.
+**Draft** _Integer_           | How many `draft` items has this table.
+**Delete** _String_           | How many `deleted` items has this table.
+**total** _String_            | How many items were returned.
+**total_entries** _String_    | How many items the table has.
+
+The status name are configurable and `Active`, `Draft` and `Delete` are the default values.
