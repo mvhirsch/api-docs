@@ -1,16 +1,11 @@
 # Create Item
 
-Create a new item in the given table.
-
 > **Note:** Table names are case-sensitive
 
 > **Note:** These arguments and attributes are based on the table's custom columns
 
-## Request
-
-```bash
-POST /api/1/tables/[table-name]/rows
-```
+<span class="request">`POST` **/api/1.1/tables/[table-name]/rows**</span>
+<span class="description">Create a new item in the given table.</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
@@ -22,11 +17,11 @@ POST /api/1/tables/[table-name]/rows
 ```bash
 $ curl --data "active=1&title=School+Website" \
         https://database.account.directus.io/api/1/tables/projects/rows \
-                -u usrSTeeornngkti:
+                -u [user-token]:
 ```
 
 ```php
-$client->createItem('projects', [
+$newProject = $client->createItem('projects', [
     'active' => 1,
     'title' =>  'School Website'
 ]);
@@ -43,8 +38,14 @@ $client->createItem('projects', [
 
 ```json
 {
-  "id": 1,
-  "active": 1,
-  "title": "School Website"
+  "meta": {
+    "type": "item",
+    "table": "projects"
+  },
+  "data": {
+    "id": 1,
+    "active": 1,
+    "title": "School Website"
+  }
 }
 ```
