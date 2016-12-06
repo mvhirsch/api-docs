@@ -1,4 +1,4 @@
-# Delete Row
+# Delete Item
 
 Delete or Soft-delete a row in the given table with the specified ID.
 

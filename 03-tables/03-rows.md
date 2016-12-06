@@ -1,4 +1,4 @@
-# Get Rows
+# Get Items
 
 Collection of tables viewable by current user.
 
