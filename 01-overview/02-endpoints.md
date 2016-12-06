@@ -36,7 +36,7 @@ GET | `/activity` | Collection of latest Directus activity
 <span class="request">`GET` **/api/1.1/privileges/:groupId**</span>
 <span class="description">Returns JSON object of the privileges for a given group.</span>
 
-#### Example Request
+### Example Request
 
 ```bash
 $ curl https://instance--key.directus.io/api/1.1/privileges/1 \
