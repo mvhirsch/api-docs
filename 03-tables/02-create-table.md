@@ -5,6 +5,7 @@
 <span class="request">`POST` **/api/1.1/tables**</span>
 <span class="description">The Create Table endpoint adds a new table to your database. Table names must be unique within each database and are limited to letters, numbers, and the following characters: `-_`. When creating a new table you must assign permissions to at least one Directus user-group.</span>
 <span class="arguments">Name</span> | Value | Description
+------------------ | ---------------------------------------- | -------------------
 **name** _String_  |  <span class="required">Required</span>  |  The new table name.
 
 ## Example Request
