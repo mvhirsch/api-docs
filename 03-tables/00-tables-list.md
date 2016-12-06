@@ -23,10 +23,8 @@ $tables = $client->getTables(['include_system' => false]);
 
 <span class="attributes">Attribute</span> | Description
 --------|-----|------------
-**meta** _object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**data**</span> _Table Object_ | <span class="custom">This data and its architecture is based on Directus table schema.</span>
-
-Collection of [Table Object](/01-overview/objects-model.md#table-object).
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**data**</span> _Collection of Table Object_ | <span class="custom">This data and its architecture is based on Directus table schema.</span>
 
 ```json
 {
