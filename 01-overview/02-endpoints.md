@@ -1,6 +1,6 @@
 # API Endpoints
 
-**Base API URL: `{{DIRECTUS_ROOT}}/api/1/`**
+**Base API URL: `{{DIRECTUS_ROOT}}/api/1.1/`**
 
 Type      | Resource | Description
 --------- | -------- | -----------
@@ -21,73 +21,117 @@ GET | `/activity` | Collection of latest Directus activity
 
 ## Global Parameters
 
-Parameter  |  Example  |  Description
-:-----------|:-----------|:-----------------------
-**`currentPage`**  |  *`0`, `1`, `2`*  |  Current page for paginated results
-**`perPage`**  |  *`100`, `200`, `300`*  |  Number of results per page
-**`sort`**  |  *`id`, `title`, `date_uploaded`*  |  Column to sort results upon
-**`sort_order`**  |  *`ASC`, `DESC`*  |  Order direction for sorting
-**`active`**  |  *`1`, `1,2`, `2`*  |  Filter by a CSV of status values **for tables with a status column** such as `active`
-**`columns_visible`**  |  *`title`, `date`*  |  Name of column shown in results. Can be chained such as: `columns_visible=title&columns_visibile=first_name`
+<span class="arguments">Name</span> | Value | Description
+**limit** _Integer_  |  <span class="default">Default **200**</span>  |  The number of items to request
+**offset**  _Integer_ |  <span class="default">Default **0**</span>  |  The offset for for the items
+**orders[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order to be sorted. Available options are: `ASC` (Ascending) or `DESC` (Descending).
+**status**  _String_ |  <span class="default">Default **None**</span> | List of status values to be included. Separated by commas. `1,2`
+**`columns`** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma. `columns=id,title,published_date`
 
 
 ## Example API Requests
 
-### GET  privileges/:groupId/
-*Returns JSON object of the privileges for a given group*
+### GET  
+<span class="request">`GET` **/api/1/privileges/:groupId/**</span>
+<span class="description">Returns JSON object of the privileges for a given group</span>
 
 #### Example Request
-**GET** http://directus.dev/api/1/privileges/1
 
-```json
-[
-  {
-    "id": "23",
-    "table_name": "countries",
-    "permissions": "add,edit,bigedit,delete,bigdelete,alter,view,bigview",
-    "group_id": "0",
-    "read_field_blacklist": null,
-    "write_field_blacklist": null,
-    "unlisted": null
-  },
-  {
-    "id": "1",
-    "table_name": "directus_activity",
-    "permissions": "add,edit,bigedit,delete,bigdelete,alter,view,bigview",
-    "group_id": "0",
-    "read_field_blacklist": null,
-    "write_field_blacklist": null,
-    "unlisted": null
-  },
-  {
-    "id": "18",
-    "table_name": "directus_bookmarks",
-    "permissions": "add,edit,bigedit,delete,bigdelete,alter,view,bigview",
-    "group_id": "0",
-    "read_field_blacklist": null,
-    "write_field_blacklist": null,
-    "unlisted": null
-  }
-]
+```bash
+$ curl https://instance--key.directus.io/api/1.1/privileges/1 \
+        -u yourUserToken:
 ```
 
-### GET  tables/:table/rows/
-*Returns a collection of table entries the authenticated user has permission to view*
+```php
+$privileges = $client->getGroupPrivileges(1);
+```
+
+## Response
+
+[Privileges Object](#)
+
+```json
+{
+  "meta": {
+    "type": "collection",
+    "table": "directus_privileges"
+  },
+  "data": [
+    {
+      "id": 23,
+      "table_name": "countries",
+      "allow_add": 1,
+      "allow_edit": 2,
+      "allow_delete": 2,
+      "allow_alter": 1,
+      "allow_view": 2,
+      "group_id": 1,
+      "read_field_blacklist": null,
+      "write_field_blacklist": null,
+      "nav_listed": 0
+    },
+    {
+      "id": 1,
+      "table_name": "directus_activity",
+      "allow_add": 1,
+      "allow_edit": 2,
+      "allow_delete": 2,
+      "allow_alter": 1,
+      "allow_view": 2,
+      "group_id": 1,
+      "group_id": 1,
+      "read_field_blacklist": null,
+      "write_field_blacklist": null,
+      "nav_listed": 0
+    },
+    {
+      "id": 18,
+      "table_name": "directus_bookmarks",
+      "allow_add": 1,
+      "allow_edit": 2,
+      "allow_delete": 2,
+      "allow_alter": 1,
+      "allow_view": 2,
+      "group_id": 1,
+      "group_id": 0,
+      "read_field_blacklist": null,
+      "write_field_blacklist": null,
+      "nav_listed": 0
+    }
+  ]
+}
+```
+
+<span class="request">`GET` **/api/1.1/tables/_[table-name]_/rows**</span>
+
+<span class="description">Returns a collection of table entries the authenticated user has permission to view.</span>
 
 Parameter  |  Example  |  Description
 :-----------|:-----------|:-----------------------
 **`ids`**  |  `1,2,3,5,6,7,8`  |  Comma delimited list of ids to return
 
 #### Example Request
-**GET** http://directus.dev/api/1/tables/directus_users/rows
+
+```bash
+$ curl https://instance--key.directus.io/api/1.1/tables/directus_users/rows \
+        -u yourUserToken:
+```
+
+```php
+$projects = $client->getItems('users');
+```
 
 ```json
 {
-  "active": 1,
-  "inactive": 0,
-  "trash": 0,
-  "total": 1,
-  "rows": [
+  "meta": {
+    "active": 1,
+    "inactive": 0,
+    "trash": 0,
+    "total": 1,
+    "type": "collection",
+    "table": "directus_users"
+  },
+  "data": [
     {
       "id": 3,
       "active": 1,
@@ -116,5 +160,6 @@ Parameter  |  Example  |  Description
       "state": "",
       "zip": ""
     }
-]
+  ]
+}
 ```

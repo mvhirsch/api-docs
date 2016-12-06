@@ -4,7 +4,7 @@ These are the Directus object models used throughout the system.
 ## File Object
 
 <span class="attributes">Attribute</span> | Description
------------------------------ | ---------------------- 
+----------------------------- | ----------------------
 id** _Integer_                | File Unique Identification number.
 **active** _Integer_            | File's status. `1=active, 2=inactive, 3=deleted`.
 **name** _String_               | File name
@@ -22,10 +22,27 @@ id** _Integer_                | File Unique Identification number.
 **date_uploaded** _String_      | File uploaded date. **TODO** It should be an DateTime object.
 **storage_adapter** _String_    | Storage adapter used to upload the file
 
+## Privileges Object
+
+<span class="attributes">Attribute</span> | Description
+----------------------------- | ----------------------
+**id** _Integer_              | Privilege's Unique Identification number.
+**group_id** _Integer_                | Group ID
+**table_name** _String_               | Table name that this permissions belongs to.
+**allow_add** _Integer_               | Whether the group is allow to add/create entries in the table. (See values below)
+**allow_edit** _Integer_              | Whether the group is allow to edit/update entries in the table. (See values below)
+**allow_delete** _Integer_            | Whether the group is allow to delete/remove entries in the table. (See values below)
+**allow_view** _Integer_              | Whether the group is allow to view/read entries in the table. (See values below)
+**allow_alter** _Integer_             | Whether the group is allow to add/create entries in the table. (See values below)
+**nav_listed** _Boolean_              | Whether the table should be visible in the sidebar.
+**read_field_blacklist** _String_     | List of columns that the group can't view/read.
+**write_field_blacklist** _String_    | List of columns that the group can't edit/update.
+**status_id** _String_                | State of the record that this permissions belongs to. (Draft, Active or Soft Deleted)
+
 ## User Object
 
 <span class="attributes">Attribute</span> | Description
------------------------------ | ---------------------- 
+----------------------------- | ----------------------
 **id** _Integer_              | User's Unique Identification number.
 **active** _Integer_          | User's status. `1=active, 2=inactive, 3=deleted`.
 **email** _String_            | User's unique email address.

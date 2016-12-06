@@ -13,7 +13,7 @@ Authentication can be done in three different ways:
 Using a user credentials you can get its API token key by sending a `POST` request to `/api/1.1/auth/request-token`.
 
 ```bash
-curl -d "email=user@directus.local&password=pass123" https://account-instance.directus.io/api/1.1/auth/request-token
+curl -d "email=user@directus.local&password=pass123" https://instance--key.directus.io/api/1.1/auth/request-token
 ```
 
 On a successful request the API will respond with the json below:
@@ -41,7 +41,7 @@ Otherwise with the json below:
 ### HTTP Basic Auth
 
 ```bash
-curl -u Py8RumuLD7HE5juFrOR5: https://account-instance.directus.io/api/1.1/tables
+curl -u Py8RumuLD7HE5juFrOR5: https://instance--key.directus.io/api/1.1/tables
 ```
 
 Pay attention to the colon after the API key, it's not part of the API key.
@@ -51,13 +51,13 @@ Pay attention to the colon after the API key, it's not part of the API key.
 Instead of using `-u Py8RumuLD7HE5juFrOR5:` it can be used Authentication header.
 
 ```bash
-curl -H "Authorization: Bearer Py8RumuLD7HE5juFrOR5" https://account-instance.directus.io/api/1.1/tables
+curl -H "Authorization: Bearer Py8RumuLD7HE5juFrOR5" https://instance--key.directus.io/api/1.1/tables
 ```
 
 ### Query String
 
 ```bash
-curl https://account-instance.directus.io/api/1.1/tables?access_token=Py8RumuLD7HE5juFrOR5
+curl https://instance--key.directus.io/api/1.1/tables?access_token=Py8RumuLD7HE5juFrOR5
 ```
 
 ## Security

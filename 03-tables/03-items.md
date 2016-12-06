@@ -13,19 +13,18 @@
 **perPage** _int_ | <span class="default">Default **200**</span> | The number of items to request
 **currentPage** _int_ | <span class="default">Default **1**</span> | The offset for for the items
 **sort** _string_ | <span class="default">Default **id**</span> | The column used to sort the items
-**sort_order** _string_ | <span class="default">Default **ASC**</span> | Order to be sorted. Available options are: `ASC` (Ascending) or `DESC`
+**sort_order** _string_ | <span class="default">Default **ASC**</span> | Order to be sorted. Available options are: `ASC` (Ascending) or `DESC`  (Descending).
 **status** _string_ | <span class="default">Default **1**</span> | List of status values to be included. Separated by commas. `1,2`
 **in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 
 ### Example Request
 ```bash
 $ curl https://database.account.directus.io/api/1/tables/projects/rows \
-        -u usrSTeeornngkti:
+        -u yourUserToken:
 ```
 
 ```php
-$ php https://database.account.directus.io/api/1/tables/projects/rows \
-        -u usrSTeeornngkti:
+$projects = $client->getItems('projects');
 ```
 
 ```node
