@@ -27,11 +27,12 @@ GET | `/activity` | Collection of latest Directus activity
 **orders[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order to be sorted. Available options are: `ASC` (Ascending) or `DESC` (Descending).
 **status**  _String_ |  <span class="default">Default **None**</span> | List of status values to be included. Separated by commas. `1,2`
 **`columns`** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma. `columns=id,title,published_date`
+**in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
+**`ids`**  |  <span class="default">Optional</span>  |  Comma delimited list of ids to return.
 
 
 ## Example API Requests
 
-### GET  
 <span class="request">`GET` **/api/1/privileges/:groupId/**</span>
 <span class="description">Returns JSON object of the privileges for a given group</span>
 
@@ -48,7 +49,7 @@ $privileges = $client->getGroupPrivileges(1);
 
 ## Response
 
-[Privileges Object](#)
+[Privileges Object](/01-overview/objects-model.md#privileges-object)
 
 ```json
 {
@@ -106,9 +107,14 @@ $privileges = $client->getGroupPrivileges(1);
 
 <span class="description">Returns a collection of table entries the authenticated user has permission to view.</span>
 
-Parameter  |  Example  |  Description
-:-----------|:-----------|:-----------------------
-**`ids`**  |  `1,2,3,5,6,7,8`  |  Comma delimited list of ids to return
+<span class="arguments">Name</span> | Value | Description
+**limit** _Integer_  |  <span class="default">Default **200**</span>  |  The number of items to request
+**offset**  _Integer_ |  <span class="default">Default **0**</span>  |  The offset for for the items
+**orders[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order to be sorted. Available options are: `ASC` (Ascending) or `DESC` (Descending).
+**status**  _String_ |  <span class="default">Default **None**</span> | List of status values to be included. Separated by commas. `1,2`
+**`columns`** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma. `columns=id,title,published_date`
+**in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
+**`ids`**  |  <span class="default">Optional</span>  |  Comma delimited list of ids to return.
 
 #### Example Request
 
