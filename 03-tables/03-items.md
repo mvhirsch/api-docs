@@ -1,5 +1,9 @@
 # Get Items
 
+> **Note:** Table names are case-sensitive
+
+> **Note:** These arguments and attributes are based on the table's custom columns
+
 <span class="request">`GET` **/api/1/tables/_[table-name]_/rows**</span>
 
 <span class="description">Retrieve a collection of items within a specific table. Which columns are visible is determined by the current user's privileges.</span>
@@ -13,13 +17,19 @@
 **status** _string_ | <span class="default">Default **1**</span> | List of status values to be included. Separated by commas. `1,2`
 **in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 
-> **Note:** Table names are case-sensitive
-
-> **Note:** These arguments and attributes are based on the table's custom columns
-
 ### Example Request
 ```bash
 $ curl https://database.account.directus.io/api/1/tables/projects/rows \
+        -u usrSTeeornngkti:
+```
+
+```php
+$ php https://database.account.directus.io/api/1/tables/projects/rows \
+        -u usrSTeeornngkti:
+```
+
+```node
+$ node https://database.account.directus.io/api/1/tables/projects/rows \
         -u usrSTeeornngkti:
 ```
 
