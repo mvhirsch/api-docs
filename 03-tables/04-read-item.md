@@ -1,29 +1,37 @@
 # Get Item
 
-Get the specified row id in the given table.
-
 > **Note:** Table names are case-sensitive
 
-## HTTP Request
+<span class="request">`GET` **/api/1.1/tables/[table-name]/rows/[row-id]**</span>
+<span class="description">Get the specified row id in the given table.</span>
+
+### Example Request
 
 ```bash
-GET /api/1/tables/[table-name]/rows/[row-id]
+$ curl https://instance--key.directus.io/api/1/tables/projects/rows/1 \
+        -u [user-token]:
 ```
 
-## Example Request
-
-```bash
-$ curl https://database.account.directus.io/api/1/tables/projects/rows/1 \
-        -u usrSTeeornngkti:
+```php
+$item = $client->getItem('projects', 1);
 ```
 
 ## Response
 
-> **Note:** The architecture of this response is based on your schema.
+<span class="attributes">Attribute</span> | Description
+--------|-----|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**data**</span> _object_ | <span class="custom">This data and its architecture is based on your specific project's schema.</span>
 
 ```json
 {
-  "id": 1,
-  "title": "John's website"
+  "meta": {
+    "type": "item",
+    "table": "projects"
+  },
+  "data": {
+    "id": 1,
+    "title": "John's website"
+  }
 }
 ```
