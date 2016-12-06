@@ -1,24 +1,34 @@
 # Get Groups
 
-Get all the user groups.
+<span class="request">`GET` **/api/1.1/groups**</span>
+<span class="description">Get all the user groups.</span>
 
-## HTTP Request
+### Example Request
 
 ```bash
-GET /api/1/groups
+$ curl https://instance--key.directus.io/api/1.1/groups \
+        -u [user-token]:
 ```
 
-## Example Request
-
-```bash
-$ curl https://database.account.directus.io/api/1/groups
+```php
+$groups = $client->getGroups();
 ```
 
 ## Response
+
+<span class="attributes">Attribute</span> | Description
+--------|-----|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
+**Columns Data** _Collection of Group Object_ | <span class="custom">This data and its architecture is based on Directus groups's schema.</span>
+
 ```json
 {
-  "total": 1,
-  "rows": [{
+  "meta": {
+    "table": "directus_groups",
+    "type": "collection",
+    "total": 1,
+  },
+  "data": [{
     "id": 1,
     "name": "Administrator",
     "description": null,

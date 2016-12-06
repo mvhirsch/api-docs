@@ -1,37 +1,45 @@
 # Create Group
 
-Create a new user group.
+<span class="request">`POST` **/api/1.1/groups**</span>
+<span class="description">Create a new user group.</span>
+<span class="arguments">Name</span> | Value | Description
+------------------ | ---------------------------------------- | -------------------
+**name** _String_  |  <span class="required">Required</span>  |  The new group name.
 
-## HTTP Request
+### Example Request
 
 ```bash
-GET /api/1/groups
+$ curl --data "name='Manager'" https://instance--key.directus.io/api/1.1/groups
 ```
 
-## Parameters
-
-Name | Description
----- | ------------
-name | The name of the group
-
-## Example Request
-
-```bash
-$ curl --data "name='Manager'" https://database.account.directus.io/api/1/groups
+```php
+$newGroup = $client->createGroup('Manager');
 ```
 
 ## Response
+
+<span class="attributes">Attribute</span> | Description
+--------|-----|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
+**Columns Data** _Group Object_ | <span class="custom">This data and its architecture is based on Directus groups's schema.</span>
+
 ```json
 {
-  "id": "2",
-  "name": "Manager",
-  "description": null,
-  "restrict_to_ip_whitelist": "0",
-  "nav_override": null,
-  "show_activity": "1",
-  "show_messages": "1",
-  "show_users": "1",
-  "show_files": "1",
-  "nav_blacklist": null
+  "meta": {
+    "table": "directus_groups",
+    "type": "item"
+  },
+  "data": {
+    "id": 2,
+    "name": "Manager",
+    "description": null,
+    "restrict_to_ip_whitelist": 0,
+    "nav_override": null,
+    "show_activity": 1,
+    "show_messages": 1,
+    "show_users": 1,
+    "show_files": 1,
+    "nav_blacklist": null
+  }
 }
 ```
