@@ -1,0 +1,66 @@
+# Directus API Summary
+
+Introduction:
+  API Overview: 01-overview/01-api-overview.md
+  Authentication: 01-overview/02-authentication.md
+  Endpoints: 01-overview/02-endpoints.md
+  PHP SDK: 01-overview/04-php-sdk.md
+  Directus Objects: 01-overview/objects-model.md
+
+Items:
+  Create Item: 03-tables/05-create-item.md
+  Get Items: 03-tables/03-items.md
+  Get Item: 03-tables/04-read-item.md
+  Update Item: 03-tables/06-update-item.md
+  Delete Item: 03-tables/07-delete-item.md
+
+Files:
+  Create File: 06-files/03-create-file.md
+  Get Files: 06-files/01-list-files.md
+  Get File: 06-files/02-read-file.md
+  Update File: 06-files/04-update-file.md
+
+Tables:
+  Create Table: 03-tables/02-create-table.md
+  Get Tables: 03-tables/00-tables-list.md
+  Get Table: 03-tables/01-table-info.md
+
+Columns:
+  Create Column: 03-tables/10-create-column.md
+  Get Columns: 03-tables/08-columns-info.md
+  Get Column: 03-tables/09-single-column-info.md
+  Update Column: 03-tables/12-update-column.md
+  Delete Column: 03-tables/11-delete-column.md
+
+Groups:
+  Create Group: 04-groups/03-create-group.md
+  Get Groups: 04-groups/01-list-groups.md
+  Get Group: 04-groups/02-read-group.md
+
+Group Privileges:
+  Create Privileges: 05-privileges/03-create-privileges.md
+  Get Privileges: 05-privileges/01-group-privileges.md
+  Get Table Privileges: 05-privileges/02-group-table-privileges.md
+  Update Privileges: 05-privileges/04-update-group-privileges.md
+
+Preferences:
+  Read Preferences: 03-tables/13-read-preferences.md
+  Update Preferences: 03-tables/14-update-preferences.md
+
+#Messages:
+#  Get Messages: 07-messages/01-list-messages.md
+#  Get Message: 07-messages/02-read-message.md
+
+#Activity:
+#  Get Activity: 08-activities/01-list-activity.md
+#  Create Activity: 08-activities/02-create-activity.md
+
+#Bookmarks:
+#  Get Bookmarks: 09-bookmarks/01-list-bookmarks.md
+#  Create Bookmark: 09-bookmarks/02-create-bookmark.md
+#  Delete Bookmark: 09-bookmarks/03-delete-bookmark.md
+
+Settings:
+  Get Settings: 10-settings/01-list-settings.md
+  Get Setting By Type: 10-settings/02-read-settings.md
+  Update Settings: 10-settings/03-update-settings.md

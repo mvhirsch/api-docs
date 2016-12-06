@@ -2,13 +2,13 @@
 
 Add new file.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/files
 ```
 
-### Parameters
+## Parameters
 
 Name            | Description
 --------------- | ------------
@@ -28,7 +28,7 @@ embed_id        | Embedded link id. (Supports Youtube ID and Vimeo ID)
 user            | File owner.
 storage_adapter | File storage adapter name
 
-### Response
+## Response
 
 ```json
 {

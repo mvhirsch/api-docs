@@ -1,20 +1,20 @@
-# List Groups
+# Get Groups
 
 Get all the user groups.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/groups
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/groups
 ```
 
-### Response
+## Response
 ```json
 {
   "total": 1,

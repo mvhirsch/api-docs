@@ -1,20 +1,20 @@
-# Group Table Privileges
+# Get Table Privileges
 
 Get the table privilege of the specified user-group.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/privileges/[group-id]/[table-name]
 ```
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/privileges/1/projects
 ```
 
-### Response
+## Response
 
 Table privilege for the specified table and user-group.
 

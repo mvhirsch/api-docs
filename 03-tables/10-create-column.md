@@ -2,9 +2,9 @@
 
 Create/Add a column to the given table.
 
-> Note: Table names are case-sensitive
+> **Note:** Table names are case-sensitive
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 POST /api/1/tables/[table-name]/columns
@@ -16,7 +16,7 @@ $ curl -X POST -d "column_name=year&data_type=int&char_length=4&ui=numeric&comme
         -u usrSTeeornngkti:
 ```
 
-### Parameters
+## Parameters
 
 Name        | Description
 ----------- | -----------
@@ -26,7 +26,7 @@ char_length | Column's Data type length
 ui          | Column's UI type
 comment     | Column's comments
 
-### Response
+## Response
 
 ```json
 {

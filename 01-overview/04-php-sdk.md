@@ -1,4 +1,4 @@
-# PHP SDK (alpha) - UNDER DEVELOPMENT
+# PHP SDK
 
 ## Creating data
 Method                  | Parameters             | Description
@@ -43,7 +43,7 @@ $article = $client->createEntry('articles', [
 ### Create Bookmark
 
 Column                  |  Type    | Description
------------------------ | -------- | ---------------------- 
+----------------------- | -------- | ----------------------
 table_name              | String   | Bookmark Table name
 title                   | String   | Bookmark title
 columns_visible         | String   | List of column separated by comma.
@@ -71,7 +71,7 @@ $bookmark = $client->createBookmark([
 ### Create Column
 
 Column                  | Type      | Description
------------------------ | --------- | ------------ 
+----------------------- | --------- | ------------
 name                    | String    | Column name.
 table                   | String    | Table name.
 type                    | String    | Data type.
@@ -87,7 +87,7 @@ junction_table          | String    | The pivot/junction table that joins the co
 junction_key_left       | String    | The column name in junction that is related to the column's table.
 junction_key_right      | String    | The column name in junction that is related to the related table.
 
-**TODO:** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
+**@TODO** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
 
 Example:
 
@@ -127,7 +127,7 @@ $column = $client->createColumn([
 ### Create Group
 
 Column                  | Type       | Description
------------------------ | ---------- | -------------------- 
+----------------------- | ---------- | --------------------
 name                    | String     | Group name.
 restrict_to_ip_whitelist| String     | List of IPs allowed to authenticate, separated  by comma.
 
@@ -142,15 +142,15 @@ $group = $client->createGroup([
 ### Create/Send Messages
 
 Column                  | Type      |  Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 from                    | Integer   | Sender user id.
 to                      | Array     | List of users id, separated by comma.
 toGroup                 | Array     | List of groups id, separated by comma.
 subject                 | String    | Message subject.
 message                 | String    | Message content.
-attachements            | Array     | **TODO** List of files to add to the message
+attachements            | Array     | **@TODO** List of files to add to the message
 
-**TODO:** Send/Create responses without the need to specify each recipients.
+**@TODO** Send/Create responses without the need to specify each recipients.
 
 #### Returns
 `Entry` object containing the new created message.
@@ -181,20 +181,20 @@ $message = $client->sendMessage([
 #### Message Entry attributes
 
 Attribute               | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 id                      | Integer   | Message ID
 from                    | Integer   | Sender ID
-recipients              | String    | List of Recipients separated by comma. **TODO**: it should be an array.
+recipients              | String    | List of Recipients separated by comma. **@TODO**: it should be an array.
 subject                 | String    | Message subject
 responses               | Array     | List of responses messages
 response_to             | Integer   | Parent message (replied to this message id)
-read                    | Integer   | Whether the message was read by the authenticated user. **TODO** It should be bool
+read                    | Integer   | Whether the message was read by the authenticated user. **@TODO** It should be bool
 
 
 ### Create Preferences
 
 Column                  | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 user                    | Integer   | User ID that this preferences belongs to.
 table_name              | String    | Table name that this preferences belongs to.
 columns_visible         | String    | List of visible column separated by comma.
@@ -222,7 +222,7 @@ $preference = $client->createPreferences([
 ### Create Privileges (Permissions)
 
 Column                  | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 group_id                | Integer   | Group ID
 table_name              | String    | Table name that this permissions belongs to.
 allow_add               | Integer   | Whether the group is allow to add/create entries in the table. (See values below)
@@ -235,7 +235,7 @@ read_field_blacklist    | String    | List of columns that the group can't view/
 write_field_blacklist   | String    | List of columns that the group can't edit/update.
 **status_id**           | String    | State of the record that this permissions belongs to. (Draft, Active or Soft Deleted)
 
-Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **TODO** Adding constant for the permissions value.
+Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **@TODO** Adding constant for the permissions value.
 
 #### Returns
 An `Entry` object containing the new privileges created.
@@ -258,7 +258,7 @@ $privileges = $client->createPrivileges([
 ### Create Table
 
 Parameters              | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 name                    | String    | New table name
 **data**                | Array     | Not defined yet.
 
@@ -277,7 +277,7 @@ $privileges = $client->createTable('comments');
 ### Create Column Options
 
 Column                  | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 column                  | String    | Column name.
 table                   | String    | Column table name.
 ui                      | String    | Coolumn UI name.
@@ -305,7 +305,7 @@ $options = $client->createColumnUIOptions([
 ### Create User
 
 Column                  | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 active                  | Integer   | User's status. By default `1=active, 2-inactive, 3=deleted`.
 email `Required`        | String    | User's unique email address.
 first_name              | String    | User first name.
@@ -362,7 +362,7 @@ caption                 | String   | File caption (Description).
 #### Returns
 An `Entry` object containing the new created file ([File Object Model](/01-overview/objects-model.md)).
 
-**TODO:** Returns a `FileEntry` Object.
+**@TODO** Returns a `FileEntry` Object.
 
 Example:
 
@@ -381,12 +381,34 @@ $file = $client->createFile(new File('/path/to/the/file.jpg', [
 
 ```
 
-**TODO**
- - Create file from a url 
+**@TODO**
+ - Create file from a url
+
+
+#### File Entry object attributes
+
+Column                  | Type     | Description
+----------------------- | -------- | ----------------------
+id                      | Integer  | File ID
+active                  | Integer  | File's status. `1=active, 2=inactive, 3=deleted`.
+name                    | String   | File name
+title                   | String   | File's title
+location                | String   | Location of where the picture was taken. if any.
+type                    | String   | File mime type
+url                     | String   | File url relativity to Directus base url
+tags                    | String   | Comma separated tags.
+caption                 | String   | File caption (Description).
+width                   | Integer  | File width.
+height                  | Integer  | File height.
+size                    | Integer  | File size in bytes.
+embed_id                | String   | ID of the embedded file. Ex Youtube ID
+user                    | Integer  | File owner (who uploaded the file)
+date_uploaded           | String   | File uploaded date. **@TODO** It should be an DateTime object.
+storage_adapter         | String   | Storage adapter used to upload the file
 
 ---
 
-## Getting data
+## Getting Data
 
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
@@ -407,7 +429,7 @@ getTable                | `table`                | Collection of latest Directus
 getColumns              | `table`, `params`      | Collection of the column details for a given table.
 getColumn               | `table`, `column`      | Details for a specific column in a given table.
 
-**TODO**: More helpers
+**@TODO**: More helpers
 - Directus Preferences
 
 #### Returns
@@ -469,6 +491,8 @@ $user = $client->getUser(1);
 echo $user->email;
 ```
 
+**@TODO**
+
 #### Returns
 An `Entry` object containing the user information ([User Object Model](/01-overview/objects-model.md).
 
@@ -499,7 +523,7 @@ $file = $client->getFile(1);
 echo $file->name;
 ```
 
-**TODO**
+**@TODO**
 
 #### Returns
 A `FileEntry` object containing the file information.
@@ -531,7 +555,7 @@ $group = $client->getGroup(1);
 echo $group->name;
 ```
 
-**TODO**
+**@TODO**
 
 #### Returns
 A `GroupEntry` object containing the group information.
@@ -562,7 +586,7 @@ $settings = $client->getSettings();
 echo $settings->global->project_name
 ```
 
-**TODO**
+**@TODO**
 
 #### Returns
 A `SettingEntry` object containing the setting information.
@@ -584,7 +608,7 @@ Parameters    | Type    | Description
 ------------- | ------- | -----------
 user          | Integer | The user id.
 
-**TODO**: 
+**@TODO**:
 **INCORRECT**: This returns a single message, and the parameters is a message id.
 
 ### Get Tables
@@ -776,7 +800,7 @@ updateEntry             | `table`, `id`, `data`  | Updates the record with the g
 updateUser              | `id`, `data`           | Updates the given user `id` with the given `data`.
 updateFile              | `id`, `data`           | Updates the give file `id` with the given `data`.
 
-**TODO:** More helpers
+**@TODO** More helpers
 - Directus Groups
 - Directus Privileges
 - Directus Preferences
@@ -843,7 +867,7 @@ deleteUser              | `id`                   | Deletes the given user `id`.
 #### Returns
 Nothing is returned.
 
-**TODO**: Return whether or not were deleted.
+**@TODO**: Return whether or not were deleted.
 
 ### Delete Entry
 

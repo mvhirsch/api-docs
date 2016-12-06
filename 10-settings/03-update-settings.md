@@ -2,24 +2,24 @@
 
 Update Directus settings by the specified collection.
 
-### HTTP Request
+## HTTP Request
 
 ```bash
 GET /api/1/settings/[id]
 ```
 
-### Parameters
+## Parameters
 
 Name | Description
 data | the data to be update
 
-### Example Request
+## Example Request
 
 ```bash
 $ curl --data "rows_per_page=100" https://database.account.directus.io/api/1/settings/global
 ```
 
-### Response
+## Response
 
 ```json
 {
