@@ -9,7 +9,7 @@
 ------------------ | ---------------------------------------- | -------------------
 **name** _String_  |  <span class="required">Required</span>  |  The new table name.
 
-## Example Request
+### Example Request
 
 ```bash
 $ curl -d "name=projects" https://instance--key.directus.io/api/1.1/tables \
