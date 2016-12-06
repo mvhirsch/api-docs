@@ -1,37 +1,41 @@
-# Get Rows
+# Get Items
 
-Collection of tables viewable by current user.
+Retrieve a collection of items within a specific table. Which columns are visible is determined by the current user's privileges.
 
 > **Note:** Table names are case-sensitive
 
-## HTTP Request
+> **Note:** These arguments and attributes are based on the table's custom columns
+
+## Request
 
 ```bash
 GET /api/1/tables/[table-name]/rows
 ```
 
-## Example Request
+<span class="arguments">Name</span> | Value | Description
+--------|-----|------------
+**perPage** _int_ | <span class="default">Default **200**</span> | The number of items to request
+**currentPage** _int_ | <span class="default">Default **1**</span> | The offset for for the items
+**sort** _string_ | <span class="default">Default **id**</span> | The column used to sort the items
+**sort_order** _string_ | <span class="default">Default **ASC**</span> | Order to be sorted. Available options are: `ASC` (Ascending) or `DESC`
+**status** _string_ | <span class="default">Default **1**</span> | List of status values to be included. Separated by commas. `1,2`
+**in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 
+
+### Example Request
 ```bash
 $ curl https://database.account.directus.io/api/1/tables/projects/rows \
         -u usrSTeeornngkti:
 ```
 
-## Parameters
-
-Name        | Description
------------ | ------------
-perPage     | Number of rows per request.
-currentPage | Number of the requested page based on perPage. (0 = First `perPage` rows, 1 = Second `perPage` rows, and so on)
-sort        | Column used to sort the result
-sort_order  | Order to be sorted. (ASC=Ascending or DESC=Descending).
-status      | List of status values to be included. Separated by commas. `status: 1,2`
-in[field]   | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
-
 ## Response
 
-> **Note:** The architecture of this response is based on your schema.
+<span class="attributes">Attribute</span> | Description
+--------|-----|------------
+**meta** _object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**data**</span> _object_ | <span class="custom">This data and its architecture is based on your specific project's schema.</span>
 
+### Example Response
 ```json
 {
   "Delete": 0,
@@ -49,13 +53,3 @@ in[field]   | Only list records that its `field` matches one of given value. Can
   ]
 }
 ```
-
-## Result Object
-
-Name        | Description
------------ | ------------
-Active      | Active entries count.
-Delete      | Soft-delete entries count.
-Draft       | Draft entries count.
-Total       | Total entries count.
-rows        | Data rows

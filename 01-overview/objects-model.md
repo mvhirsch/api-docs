@@ -1,8 +1,9 @@
-# Directus Objects Model
+# Directus Objects
+These are the Directus object models used throughout the system.
 
-## Files
+## File Object
 
-<span class="endpoint">Attribute</span> | Description
+<span class="attributes">Attribute</span> | Description
 ----------------------------- | ---------------------- 
 id** _Integer_                | File Unique Identification number.
 **active** _Integer_            | File's status. `1=active, 2=inactive, 3=deleted`.
@@ -21,9 +22,9 @@ id** _Integer_                | File Unique Identification number.
 **date_uploaded** _String_      | File uploaded date. **TODO** It should be an DateTime object.
 **storage_adapter** _String_    | Storage adapter used to upload the file
 
-## Users
+## User Object
 
-<span class="endpoint">Attribute</span> | Description
+<span class="attributes">Attribute</span> | Description
 ----------------------------- | ---------------------- 
 **id** _Integer_              | User's Unique Identification number.
 **active** _Integer_          | User's status. `1=active, 2=inactive, 3=deleted`.

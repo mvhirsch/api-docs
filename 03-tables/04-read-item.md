@@ -1,4 +1,4 @@
-# Get Row
+# Get Item
 
 Get the specified row id in the given table.
 

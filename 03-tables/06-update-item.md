@@ -1,6 +1,6 @@
-# Update Row
+# Update Item
 
-Update a row in the given table with the specified ID.
+Update an item in the given table with the specified ID.
 
 > **Note:** Table names are case-sensitive
 
