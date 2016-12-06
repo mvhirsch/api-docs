@@ -25,6 +25,13 @@ $ curl --data "active=1&title=School+Website" \
                 -u usrSTeeornngkti:
 ```
 
+```php
+$client->createItem('projects', [
+    'active' => 1,
+    'title' =>  'School Website'
+]);
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description
