@@ -1,16 +1,8 @@
 # Get Items
 
-Retrieve a collection of items within a specific table. Which columns are visible is determined by the current user's privileges.
+<span class="request">`GET` **/api/1/tables/_[table-name]_/rows**</span>
 
-> **Note:** Table names are case-sensitive
-
-> **Note:** These arguments and attributes are based on the table's custom columns
-
-## Request
-
-```bash
-GET /api/1/tables/[table-name]/rows
-```
+<span class="description">Retrieve a collection of items within a specific table. Which columns are visible is determined by the current user's privileges.</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
@@ -21,6 +13,9 @@ GET /api/1/tables/[table-name]/rows
 **status** _string_ | <span class="default">Default **1**</span> | List of status values to be included. Separated by commas. `1,2`
 **in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 
+> **Note:** Table names are case-sensitive
+
+> **Note:** These arguments and attributes are based on the table's custom columns
 
 ### Example Request
 ```bash
