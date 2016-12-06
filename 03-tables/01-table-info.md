@@ -1,23 +1,29 @@
 # Get Table
 
-Get the information from the given table name.
-
 > **Note:** Table names are case-sensitive
 
-## HTTP Request
+<span class="request">`GET` **/api/1.1/tables/[table-name]**</span>
+<span class="description">Get the information from the given table name.</span>
 
-```bash
-GET https://instance--key.directus.io/api/1.1/tables/[table-name]
-```
+<span class="arguments">Name</span> | Value | Description
+**include_columns** _Boolean_  |  <span class="default">Default **true**</span>  |  Include the table columns information. @TODO Not available yet.
+**include_preferences**  _Boolean_ |  <span class="default">Default **true**</span>  |  Include the table preferences. @TODO: Not available yet.
 
 ## Example Request
 
 ```bash
-$ curl https://database.account.directus.io/api/1.1/tables/projects \
+$ curl https://instance--key.directus.io/api/1.1/tables/projects \
         -u [user-token]:
 ```
 
+```php
+$table = $client->getTable($tableName);
+```
+
 ## Response
+
+[Table Object](/01-overview/objects-model.md#table-object).
+
 ```json
 {
   "meta": {
@@ -37,10 +43,6 @@ $ curl https://database.account.directus.io/api/1.1/tables/projects \
     "date_create_column":null,
     "date_update_column":null,
     "footer":false,
-    "count":"0",
-    "active":0,
-    "inactive":0,
-    "trash":0,
     "columns":[
       {
          "id":"id",

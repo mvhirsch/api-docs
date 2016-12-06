@@ -5,7 +5,7 @@ These are the Directus object models used throughout the system.
 
 <span class="attributes">Attribute</span> | Description
 ----------------------------- | ----------------------
-id** _Integer_                | File Unique Identification number.
+**id** _Integer_                | File Unique Identification number.
 **active** _Integer_            | File's status. `1=active, 2=inactive, 3=deleted`.
 **name** _String_               | File name
 **title** _String_              | File's title
@@ -22,7 +22,7 @@ id** _Integer_                | File Unique Identification number.
 **date_uploaded** _String_      | File uploaded date. **TODO** It should be an DateTime object.
 **storage_adapter** _String_    | Storage adapter used to upload the file
 
-## Privileges Object
+## Privilege Object
 
 <span class="attributes">Attribute</span> | Description
 ----------------------------- | ----------------------
@@ -38,6 +38,24 @@ id** _Integer_                | File Unique Identification number.
 **read_field_blacklist** _String_     | List of columns that the group can't view/read.
 **write_field_blacklist** _String_    | List of columns that the group can't edit/update.
 **status_id** _String_                | State of the record that this permissions belongs to. (Draft, Active or Soft Deleted)
+
+## Table Object
+
+<span class="attributes">Attribute</span> | Description
+------------------------------- | ----------------------
+**table_name** _Integer_        | Table Unique name.
+**hidden** _Boolean_            | Determines if the table is completely hidden from Directus or not.
+**single** _Boolean_             | Determines if the table contains only one record/item or multiple. When Single tables are clicked in the sidebar, the Item Listing page is skipped, taking users directly to the Item Edit page. The lone item should have an id of 1.
+**default_status** _Integer_     | This is the table's default status value – which must be an option within the configuration file's Status Mapping.
+**footer** _Boolean_             | Determines if a table footer should be shown on the Item Listing page with helper functions for INT columns such as: Average, Min, Max, etc.
+**list_view** _Boolean_          | Allows for the Item Listing page to be overridden with a custom view template. @TODO
+**column_groupings** _String_    | Soon to be deprecated, this column was used to group columns on the Item Edit page.
+**primary_column** _String_      | Soon to be deprecated, This stores the column name that represents a table item/record.
+**user_create_column** _String_  | Optional. Enter the name of a column to store the Directus User ID that created the item.
+**user_update_column** _Integer_ | Optional. Enter the name of a column to store the datetime that the item was created.
+**date_create_column** _Integer_ | Optional. Enter the name of a column to store the Directus User ID that last modified the item.
+**date_update_column** _Integer_ | Optional. Enter the name of a column to store the datetime that the item was last modified.
+**filter_column_blacklist** _String_ | A CSV of column names in this table that should not be included in the Item Listing page's filter component.
 
 ## User Object
 

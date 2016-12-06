@@ -40,7 +40,7 @@ GET | `/activity` | Collection of latest Directus activity
 
 ```bash
 $ curl https://instance--key.directus.io/api/1.1/privileges/1 \
-        -u yourUserToken:
+        -u [user-token]:
 ```
 
 ```php
@@ -49,7 +49,7 @@ $privileges = $client->getGroupPrivileges(1);
 
 ## Response
 
-[Privileges Object](/01-overview/objects-model.md#privileges-object)
+[Privilege Object](/01-overview/objects-model.md#privilege-object)
 
 ```json
 {
@@ -121,7 +121,7 @@ $privileges = $client->getGroupPrivileges(1);
 
 ```bash
 $ curl https://instance--key.directus.io/api/1.1/tables/directus_users/rows \
-        -u yourUserToken:
+        -u [user-token]:
 ```
 
 ```php
