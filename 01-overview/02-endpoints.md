@@ -34,7 +34,7 @@ GET | `/activity` | Collection of latest Directus activity
 ## Example API Requests
 
 <span class="request">`GET` **/api/1/privileges/:groupId**</span>
-<span class="description">Returns JSON object of the privileges for a given group</span>
+<span class="description">Returns JSON object of the privileges for a given group.</span>
 
 #### Example Request
 

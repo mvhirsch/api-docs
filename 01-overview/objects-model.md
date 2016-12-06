@@ -1,6 +1,10 @@
 # Directus Objects
 These are the Directus object models used throughout the system.
 
+## Column Object
+
+**@TODO**
+
 ## File Object
 
 <span class="attributes">Attribute</span> | Description
