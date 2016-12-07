@@ -3,7 +3,7 @@
 ## Creating data
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
-createEntry             | `table`, `data`        | Creates a new entry in the given table.
+createItem              | `table`, `data`        | Creates a new item in the given table.
 ~~createActivity~~      | `data`                 | Creates an activity log.
 createBookmark          | `data`                 | Creates a bookmark.
 createColumn            | `data`                 | Creates a new column.
@@ -18,7 +18,7 @@ createTable             | `name`, `params`       | Creates a new table.
 createUIOptions         | `data`                 | Creates a new UI options.
 createUser              | `data`                 | Creates a new user.
 
-### Create Entry
+### Create Item
 
 Parameters    | Type    | Description
 ------------- | ------- | -----------
@@ -26,12 +26,12 @@ table         | String  | The Table name where the `data` are going to be insert
 data          | Array   | Data to be inserted in `table`. All this data attributes will depend on your table columns.
 
 #### Returns
-An `Entry` object containing the new created entry.
+An `Entry` object containing the new created item.
 
 Example:
 
 ```php
-$article = $client->createEntry('articles', [
+$article = $client->createItem('articles', [
   'title' => 'New Article',
   'body' => 'Some text'
 ]);
@@ -43,7 +43,7 @@ $article = $client->createEntry('articles', [
 ### Create Bookmark
 
 Column                  |  Type    | Description
------------------------ | -------- | ---------------------- 
+----------------------- | -------- | ----------------------
 table_name              | String   | Bookmark Table name
 title                   | String   | Bookmark title
 columns_visible         | String   | List of column separated by comma.
@@ -71,7 +71,7 @@ $bookmark = $client->createBookmark([
 ### Create Column
 
 Column                  | Type      | Description
------------------------ | --------- | ------------ 
+----------------------- | --------- | ------------
 name                    | String    | Column name.
 table                   | String    | Table name.
 type                    | String    | Data type.
@@ -127,7 +127,7 @@ $column = $client->createColumn([
 ### Create Group
 
 Column                  | Type       | Description
------------------------ | ---------- | -------------------- 
+----------------------- | ---------- | --------------------
 name                    | String     | Group name.
 restrict_to_ip_whitelist| String     | List of IPs allowed to authenticate, separated  by comma.
 
@@ -142,7 +142,7 @@ $group = $client->createGroup([
 ### Create/Send Messages
 
 Column                  | Type      |  Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 from                    | Integer   | Sender user id.
 to                      | Array     | List of users id, separated by comma.
 toGroup                 | Array     | List of groups id, separated by comma.
@@ -178,10 +178,10 @@ $message = $client->sendMessage([
 ]);
 ```
 
-#### Message Entry attributes
+#### Message Item attributes
 
 Attribute               | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 id                      | Integer   | Message ID
 from                    | Integer   | Sender ID
 recipients              | String    | List of Recipients separated by comma. **@TODO**: it should be an array.
@@ -194,7 +194,7 @@ read                    | Integer   | Whether the message was read by the authen
 ### Create Preferences
 
 Column                  | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 user                    | Integer   | User ID that this preferences belongs to.
 table_name              | String    | Table name that this preferences belongs to.
 columns_visible         | String    | List of visible column separated by comma.
@@ -222,14 +222,14 @@ $preference = $client->createPreferences([
 ### Create Privileges (Permissions)
 
 Column                  | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 group_id                | Integer   | Group ID
 table_name              | String    | Table name that this permissions belongs to.
-allow_add               | Integer   | Whether the group is allow to add/create entries in the table. (See values below)
-allow_edit              | Integer   | Whether the group is allow to edit/update entries in the table. (See values below)
-allow_delete            | Integer   | Whether the group is allow to delete/remove entries in the table. (See values below)
-allow_view              | Integer   | Whether the group is allow to view/read entries in the table. (See values below)
-allow_alter             | Integer   | Whether the group is allow to add/create entries in the table. (See values below)
+allow_add               | Integer   | Whether the group is allow to add/create items in the table. (See values below)
+allow_edit              | Integer   | Whether the group is allow to edit/update items in the table. (See values below)
+allow_delete            | Integer   | Whether the group is allow to delete/remove items in the table. (See values below)
+allow_view              | Integer   | Whether the group is allow to view/read items in the table. (See values below)
+allow_alter             | Integer   | Whether the group is allow to add/create items in the table. (See values below)
 nav_listed              | Boolean   | Whether the table should be visible in the sidebar.
 read_field_blacklist    | String    | List of columns that the group can't view/read.
 write_field_blacklist   | String    | List of columns that the group can't edit/update.
@@ -258,7 +258,7 @@ $privileges = $client->createPrivileges([
 ### Create Table
 
 Parameters              | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 name                    | String    | New table name
 **data**                | Array     | Not defined yet.
 
@@ -277,7 +277,7 @@ $privileges = $client->createTable('comments');
 ### Create Column Options
 
 Column                  | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 column                  | String    | Column name.
 table                   | String    | Column table name.
 ui                      | String    | Coolumn UI name.
@@ -305,7 +305,7 @@ $options = $client->createColumnUIOptions([
 ### Create User
 
 Column                  | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 active                  | Integer   | User's status. By default `1=active, 2-inactive, 3=deleted`.
 email `Required`        | String    | User's unique email address.
 first_name              | String    | User first name.
@@ -345,10 +345,10 @@ $user = $client->createUser([
 
 ```
 
-#### User Entry attributes
+#### User Item attributes
 
 Column                  | Type      | Description
------------------------ | --------- | ---------------------- 
+----------------------- | --------- | ----------------------
 id                      | Integer   | User ID
 active                  | Integer   | User's status. `1=active, 2=inactive, 3=deleted`.
 email                   | String    | User's unique email address.
@@ -409,12 +409,12 @@ $file = $client->createFile(new File('/path/to/the/file.jpg', [
 
 **@TODO**
  - Create file from a url
- 
- 
-#### File Entry object attributes
+
+
+#### File Item object attributes
 
 Column                  | Type     | Description
------------------------ | -------- | ---------------------- 
+----------------------- | -------- | ----------------------
 id                      | Integer  | File ID
 active                  | Integer  | File's status. `1=active, 2=inactive, 3=deleted`.
 name                    | String   | File name
@@ -431,7 +431,7 @@ embed_id                | String   | ID of the embedded file. Ex Youtube ID
 user                    | Integer  | File owner (who uploaded the file)
 date_uploaded           | String   | File uploaded date. **@TODO** It should be an DateTime object.
 storage_adapter         | String   | Storage adapter used to upload the file
- 
+
 
 ---
 
@@ -439,8 +439,8 @@ storage_adapter         | String   | Storage adapter used to upload the file
 
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
-getEntries              | `table`, `params`      | Collection of rows (items) for a given table.
-getEntry                | `table`, `id`, `params`| Details for a specific table row (item).
+getItems              | `table`, `params`      | Collection of rows (items) for a given table.
+getItem                | `table`, `id`, `params`| Details for a specific table row (item).
 getUsers                | `params`               | Collection of users.
 getUser                 | `id`, `params`         | Details for a specific user.
 getFiles                | `params`               | Collection of files.
@@ -462,7 +462,7 @@ getColumn               | `table`, `column`      | Details for a specific column
 #### Returns
 An `Entry` or `EntryCollection` object containing the fetched data.
 
-### Get Entries
+### Get Items
 
 Parameters    | Type    | Description
 ------------- | ------- | -----------
@@ -470,14 +470,14 @@ table         | String  | The Table name to fetch data from.
 params        | Array   | Customiziable options.
 
 ```php
-$articles = $client->getEntries('articles');
+$articles = $client->getItems('articles');
 
 foreach($articles as $article) {
   echo $article->title;
 }
 ```
 
-### Get Entry by ID
+### Get Item by ID
 
 Parameters    | Type    | Description
 ------------- | ------- | -----------
@@ -485,7 +485,7 @@ table         | String  | The Table name to fetch data from.
 id            | Mixed   | The record id.
 
 ```php
-$article = $client->getEntry('articles', 1);
+$article = $client->getItem('articles', 1);
 echo $article->title;
 ```
 
@@ -635,7 +635,7 @@ Parameters    | Type    | Description
 ------------- | ------- | -----------
 user          | Integer | The user id.
 
-**@TODO**: 
+**@TODO**:
 **INCORRECT**: This returns a single message, and the parameters is a message id.
 
 ### Get Tables
@@ -791,7 +791,7 @@ $params = [
   ]
 ];
 
-$articles = $client->getEntries('articles, [
+$articles = $client->getItems('articles, [
   'filters' => ['title' => ['like' => 'movies']]
 ]);
 ```
@@ -815,7 +815,7 @@ Operator                | Description
 **between** (_TODO_)    | Is Between
 **empty** (_TODO_)      | Is Emtpy
 **nempty** (_TODO_)     | Is Not Empty
-**has** (_TODO_)        | Has one or more related entries
+**has** (_TODO_)        | Has one or more related items
 
 ---
 
@@ -823,7 +823,7 @@ Operator                | Description
 
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
-updateEntry             | `table`, `id`, `data`  | Updates the record with the given `id` in `table` with `data`.
+updateItem             | `table`, `id`, `data`  | Updates the record with the given `id` in `table` with `data`.
 updateUser              | `id`, `data`           | Updates the given user `id` with the given `data`.
 updateFile              | `id`, `data`           | Updates the give file `id` with the given `data`.
 
@@ -836,7 +836,7 @@ updateFile              | `id`, `data`           | Updates the give file `id` wi
 #### Returns
 An `Entry` object containing the updated data.
 
-### Update Entry
+### Update Item
 
 Parameters    | Type    | Description
 ------------- | ------- | -----------
@@ -854,7 +854,7 @@ data          | Array   | Data to update.
 #### User data
 
 Column                  | Type    | Description
------------------------ | ------- | ---------------------- 
+----------------------- | ------- | ----------------------
 active                  | Integer | User's status. By default `1=active, 2-inactive, 3=deleted`.
 email `Required`        | String  | User's unique email address.
 first_name              | String  | User first name.
@@ -903,7 +903,7 @@ $updatedFile = $client->updateFile(1, new File('/path/to/file'));
 
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
-deleteEntry             | `table`, `id`          | Deletes the record with the given `id` in `table`.
+deleteItem             | `table`, `id`          | Deletes the record with the given `id` in `table`.
 deleteBookmark          | `id`                   | Deletes the given bookmark id.
 deleteColumn            | `name`. `table`        | Deletes the tiven column name in the given table name.
 deleteFile              | `id`                   | Deletes the give file `id`.
@@ -916,7 +916,7 @@ Nothing is returned.
 
 **@TODO**: Return whether or not were deleted.
 
-### Delete Entry
+### Delete Item
 
 Parameters    | Type    | Description
 ------------- | ------- | -----------
@@ -926,7 +926,7 @@ id            | Integer | The id of the record to delete in `table`.
 Example:
 
 ```php
-$client->deleteEntry('articles', 1);
+$client->deleteItem('articles', 1);
 ```
 
 ### Delete Bookmark
