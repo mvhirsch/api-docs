@@ -5,11 +5,13 @@
 > **Note:** These arguments and attributes are based on the table's custom columns
 
 <span class="request">`POST` **/api/1.1/tables/[table-name]/rows**</span>
-<span class="description">Create a new item in the given table.</span>
+
+<span class="description">Create a new item within a specific table</span>
+
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
-**table** _String_ | <span class="required">Required</span> | The table name within which the record will be added. The custom column arguments below must match this table's schema.
-<span class="custom">**Custom Data**</span> _Array_ | | <span class="custom">This data and its architecture is based on your specific project's schema.</span>
+**table** _String_ | <span class="required">Required</span> | The table within which the item will be added
+<span class="custom">**Custom Data**</span> _Array_ | | <span class="custom">This data and its architecture is based on your specific project's schema</span>
 
 ### Example Request
 
@@ -29,9 +31,9 @@ $newProject = $client->createItem('projects', [
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**Custom Data**</span> _object_ | <span class="custom">This data and its architecture is based on your specific project's schema.</span>
+-------|------------
+**meta** _Meta object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**Custom Data**</span> _object_ | <span class="custom">This data and its architecture is based on your specific project's schema</span>
 
 ### Example Response
 
@@ -44,7 +46,7 @@ $newProject = $client->createItem('projects', [
   "data": {
     "id": 1,
     "active": 1,
-    "title": "School Website"
+    "title": "Lorem Ipsum"
   }
 }
 ```

@@ -1,7 +1,9 @@
 # Create File
 
 <span class="request">`POST` **/api/1.1/files**</span>
-<span class="description">Add new file.</span>
+
+<span class="description">Add a new file into the Directus File Library</span>
+
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
 <span class="custom">**Files Data**</span> _File Object_ | | <span class="custom">This data and its architecture is based on Directus files's schema.</span>
@@ -33,9 +35,9 @@ $newFile = $client->createFile(new File([
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Columns Data** _File Object_ | <span class="custom">This data and its architecture is based on Directus files's schema.</span>
+--------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**Columns Data** _File Object_ | <span class="custom">This data and its architecture is based on the Directus file schema and can be extended with additional custom columns</span>
 
 ```json
 {
