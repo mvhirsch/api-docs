@@ -47,9 +47,9 @@ Preferences:
   Read Preferences: 03-tables/13-read-preferences.md
   Update Preferences: 03-tables/14-update-preferences.md
 
-#Messages:
-#  Get Messages: 07-messages/01-list-messages.md
-#  Get Message: 07-messages/02-read-message.md
+Messages:
+  Get Messages: 07-messages/01-list-messages.md
+  Get Message: 07-messages/02-read-message.md
 
 Activity:
   Get Activity: 08-activities/01-list-activity.md
