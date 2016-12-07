@@ -3,7 +3,7 @@
 <span class="request">`GET` **/api/1.1/files/[id]**</span>
 <span class="description">Get information of the specified file.</span>
 
-## Example Request
+### Example Request
 
 ```bash
 $ curl https://instance--key.directus.io/api/1.1/files/1 \

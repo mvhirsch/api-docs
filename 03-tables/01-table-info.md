@@ -9,7 +9,7 @@
 **include_columns** _Boolean_  |  <span class="default">Default **true**</span>  |  Include the table columns information. @TODO Not available yet.
 **include_preferences**  _Boolean_ |  <span class="default">Default **true**</span>  |  Include the table preferences. @TODO: Not available yet.
 
-## Example Request
+### Example Request
 
 ```bash
 $ curl https://instance--key.directus.io/api/1.1/tables/projects \

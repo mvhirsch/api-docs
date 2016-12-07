@@ -8,7 +8,7 @@
 ----------------------------------- | ----- | -----------
 **include_system** _Boolean_  |  <span class="default">Default **0**</span>  |  Whether or not to include system tables.
 
-## Example Request
+### Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1.1/tables \

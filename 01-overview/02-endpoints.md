@@ -117,7 +117,7 @@ $privileges = $client->getGroupPrivileges(1);
 **in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 **`ids`**  |  <span class="default">Optional</span>  |  Comma delimited list of ids to return.
 
-#### Example Request
+### Example Request
 
 ```bash
 $ curl https://instance--key.directus.io/api/1.1/tables/directus_users/rows \
