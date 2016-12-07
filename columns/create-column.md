@@ -26,7 +26,7 @@
 ### Example Request
 
 ```bash
-$ curl -X POST -d "column_name=year&data_type=int&char_length=4&ui=numeric&comment=Year+build" \       
+$ curl -X POST -d "column_name=year&data_type=int&char_length=4&ui=numeric&comment=Lorem+Ipsum" \       
         https://instance--key.directus.io/api/1/tables/projects/columns \
         -u [user-token]:
 ```
@@ -37,7 +37,7 @@ $column = $client->createColumn([
     'table' => 'projects',
     'type' => 'int',
     'ui' => 'numeric',
-    'comment' => 'Year Built'
+    'comment' => 'Lorem Ipsum'
     'length' => 4
 ]);
 ```
@@ -45,7 +45,7 @@ $column = $client->createColumn([
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
+---------|------------
 **meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
 **Columns Data** _Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema</span>
 
@@ -63,7 +63,7 @@ $column = $client->createColumn([
     "type": "VARCHAR",
     "char_length": "100",
     "is_nullable": "YES",
-    "comment": "Project's title",
+    "comment": "Lorem Ipsum",
     "sort": 3,
     "system": false,
     "master": false,

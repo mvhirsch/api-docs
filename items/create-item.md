@@ -16,7 +16,7 @@
 ### Example Request
 
 ```bash
-$ curl --data "active=1&title=School+Website" \
+$ curl --data "active=1&title=Lorem+Ipsum" \
         https://database.account.directus.io/api/1/tables/projects/rows \
                 -u [user-token]:
 ```
@@ -24,7 +24,7 @@ $ curl --data "active=1&title=School+Website" \
 ```php
 $newProject = $client->createItem('projects', [
     'active' => 1,
-    'title' =>  'School Website'
+    'title' =>  'Lorem Ipsum'
 ]);
 ```
 
