@@ -4,6 +4,25 @@ These are the Directus object models used throughout the system.
 ## Column Object
 
 <span class="attributes">Attribute</span> | Description
+----------------------------- | ----------------------
+**id** _Integer_              | Activity Unique Identification number.
+**type** _String_             | Activity Type: `ENTRY`, `UI`, `FILES`, `SETTINGS`, `UI`, `LOGIN` and `MESSAGES`. **@TODO: _Clarification_**
+**action** _String_           | Activity Action: `ADD`, `UPDATE`, `DELETE` and `LOGIN`.
+**identifier** _String_       | The record identifier.
+**row_id** _Integer_          | The record/item primary key (ID).
+**user** _Integer_            | ID of the users that performed the action.
+**data** _String_             | Data used on the action in json.
+**delta** _String_            | The difference in the new and old data in json.
+**parent_id** _Integer_       | ID of the parent record/item, if the current record/item is relational.
+**parent_table** _String_     | ID of the parent record/item table.
+**parent_changed** _Boolean_  | Whether or not the parent record/item changed along with its child.
+**datetime** _String_         | When the activity was performed. (UTC Time)
+**logged_ip** _String_        | User IP.
+**user_agent** _String_       | User user agent.
+
+## Column Object
+
+<span class="attributes">Attribute</span> | Description
 ---------------------------------- | ----------------------
 **id** _Integer_                   | Column Unique Identification number.
 **table_name** _Integer_           | The name of the table containing the column.
