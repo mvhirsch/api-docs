@@ -3,7 +3,23 @@ These are the Directus object models used throughout the system.
 
 ## Column Object
 
-**@TODO**
+<span class="attributes">Attribute</span> | Description
+---------------------------------- | ----------------------
+**id** _Integer_                   | Column Unique Identification number.
+**table_name** _Integer_           | The name of the table containing the column.
+**column_name** _String_           | The name of the column.
+**data_type** _String_             | The datatype of the column. Other database types (eg SQLite) have limited datatypes and this more granular value is used to know exactly how to format/type API responses. If you change the datatype directly in the database be sure to update this value. Some Directus fields are not actual columns (such as ONETOMANY), these are saved as an ALIAS and represent the ghost column.
+**ui** _String_                    | This stores the current User-Interface ID.
+**relationship_type** _String_     | This column stores the relationship type (NULL if non-relational). As an ENUM there are three options: MANYTOONE, MANYTOMANY, ONETOMANY.
+**related_table** _String_         | Only for relational columns, this value holds the table containing the related data.
+**junction_table** _String_        | Only for MANYTOMANY relational columns, this value holds the junction/bridge/associative table name. This is the table that stores two foreign keys which link related items between two tables.
+**junction_key_left** _String_     | Only for MANYTOMANY relational columns, this value holds the column name (in the junction table) that stores "this" item's ID.
+**junction_key_right** _String_    | Only for relational columns, this value stores the column name that stores the "right" key: `MANYTOMANY` – The column name (in the junction table) that stores the related item's ID. `MANYTOONE` – The column name (in the this table) that stores the related item's ID. Should be the same value as column_name. `ONETOMANY` – The column name (in the related table) that stores this item's ID.
+**hidden_input** _String_          | [0,1] Whether or not this column's field will be hidden from all users. This is global and overrides any user group permissions.
+**hidden_list** _String_           | F[0,1] Whether or not this column's field on listing page will be hidden from all users. This is global and overrides any user group permissions.
+**required** _String_              | [0,1] Whether or not the field is required before saving the edit item page.
+**sort** _String_                  | [1,2,3...] This stores the sort order for the Directus fields. This is based on the database column order but can be changed since column order is tied to lookup/optimizations and the CMS view shouldn't impact that. New items are stored with a 9999 until they are sorted with the drag-and-drop Settings interface.
+**comment** _String_               | This stores a note to be displayed beside the field on the edit page. This is based on the database column comment but has been decoupled since some database types (eg SQLite) don't natively support comments.
 
 ## File Object
 
@@ -28,11 +44,10 @@ These are the Directus object models used throughout the system.
 
 ## Preference Object
 
-**@TODO**
-
 <span class="attributes">Attribute</span> | Description
 ----------------------------- | ----------------------
 **id** _Integer_              | Preference's Unique Identification number.
+**user** _Integer_            | Preference owner. User ID.
 **table_name** _String_       | Name of the table.
 **columns_visible** _String_  | List of visible columns, separated by commas.
 **sort** _String_             | Result will be sorted by this column
