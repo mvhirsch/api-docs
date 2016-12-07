@@ -56,7 +56,8 @@ Activity:
 #  Create Activity: 08-activities/02-create-activity.md
 
 Bookmarks:
-  Get Bookmarks: 09-bookmarks/01-list-bookmarks.md
+  Get All Bookmarks: 09-bookmarks/00-list-bookmarks.md
+  Get User Bookmarks: 09-bookmarks/01-list-user-bookmarks.md
   Get Bookmark: 09-bookmarks/02-get-bookmark.md
   Create Bookmark: 09-bookmarks/03-create-bookmark.md
   Delete Bookmark: 09-bookmarks/04-delete-bookmark.md
