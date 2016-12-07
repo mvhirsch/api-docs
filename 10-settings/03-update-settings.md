@@ -1,5 +1,7 @@
 # Update Settings
 
+> **Note:** If the setting doesn't not exist it will create a new one.
+
 <span class="request">`GET` **/api/1.1/settings/[id]**</span>
 <span class="description">Update Directus settings by the specified collection.</span>
 <span class="arguments">Name</span> | Value | Description
