@@ -6,7 +6,8 @@
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/1.1/privileges/1
+$ curl https://instance--key.directus.io/api/1.1/privileges/1 \
+  -u [user-token]:
 ```
 
 ```php
@@ -20,7 +21,7 @@ List of all the tables with their privileges for the specified user-group.
 <span class="attributes">Attribute</span> | Description
 --------|-----|------------
 **meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**data**</span> _Collection of Privilege Object_ | <span class="custom">This data and its architecture is based on Directus table schema.</span>
+<span class="custom">**data**</span> _Collection of Privilege Object_ | <span class="custom">This data and its architecture is based on Directus Privileges's schema.</span>
 
 ```json
 {

@@ -23,7 +23,8 @@
 ### Example Request
 
 ```bash
-$ curl -X POST -d "group_id=2&table_name='projects'&allow_edit=2&allow_delete=&write_field_blacklist='title,published_date'" \ https://instance--key.directus.io/api/1.1/privileges/1
+$ curl -X POST -d "group_id=2&table_name='projects'&allow_edit=2&allow_delete=&write_field_blacklist='title,published_date'" \ https://instance--key.directus.io/api/1.1/privileges/1 \
+  -u [user-token]:
 ```
 
 ```php

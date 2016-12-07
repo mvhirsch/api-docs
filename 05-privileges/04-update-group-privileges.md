@@ -21,7 +21,8 @@
 ### Example Request
 
 ```bash
-$ curl -X PUT --data "allow_view=1" https://instance--key.directus.io/api/1.1/privileges/1/1
+$ curl -X PUT --data "allow_view=1" https://instance--key.directus.io/api/1.1/privileges/1/1 \
+  -u [user-token]:
 ```
 
 ```php

@@ -9,7 +9,8 @@
 ### Example Request
 
 ```bash
-$ curl --data "name='Manager'" https://instance--key.directus.io/api/1.1/groups
+$ curl --data "name='Manager'" https://instance--key.directus.io/api/1.1/groups \
+  -u [user-token]:
 ```
 
 ```php

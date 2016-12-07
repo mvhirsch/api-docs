@@ -11,7 +11,8 @@
 ### Example Request
 
 ```bash
-$ curl --data "rows_per_page=100" https://instance--key.directus.io/api/1.1/settings/global
+$ curl --data "rows_per_page=100" https://instance--key.directus.io/api/1.1/settings/global \
+  -u [user-token]:
 ```
 
 ```php

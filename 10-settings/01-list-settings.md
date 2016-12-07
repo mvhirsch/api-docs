@@ -6,7 +6,8 @@
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/1.1/settings
+$ curl https://instance--key.directus.io/api/1.1/settings \
+  -u [user-token]:
 ```
 
 ```php

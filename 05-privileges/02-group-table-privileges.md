@@ -8,7 +8,8 @@
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/1.1/privileges/1/projects
+$ curl https://instance--key.directus.io/api/1.1/privileges/1/projects \
+  -u [user-token]:
 ```
 
 ## Response
