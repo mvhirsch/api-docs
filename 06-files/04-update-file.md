@@ -1,12 +1,13 @@
 # Update File
 
-<span class="request">`GET` **/api/1.1/files/[id]**</span>
+<span class="request">`PUT` **/api/1.1/files/[id]**</span>
 
 <span class="description">Get information of the specified file **@TODO**</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
-<span class="custom">**Files Data**</span> _File Object_ | | <span class="custom">This data and its architecture is based on Directus files's schema.</span>
+**id** _Integer_ | <span class="required">Required</span> | The `id` of the file you wish to update
+<span class="custom">**Data**</span> _File Object_ | | <span class="custom">This data and its architecture is based on Directus files's schema.</span>
 **active** _Integer_            | | File's status. `1=active, 2=inactive, 3=deleted`.
 **name** _String_               | | File name
 **title** _String_              | | File's title
