@@ -3,6 +3,7 @@
 > **Note:** Table names are case-sensitive
 
 <span class="request">`GET` **/api/1.1/tables/[table-name]/columns**</span>
+
 <span class="description">Get all the given table columns information.</span>
 
 ### Example Request

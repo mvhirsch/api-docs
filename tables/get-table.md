@@ -3,11 +3,13 @@
 > **Note:** Table names are case-sensitive
 
 <span class="request">`GET` **/api/1.1/tables/[table-name]**</span>
-<span class="description">Get the information from the given table name.</span>
+
+<span class="description">Get system and schema information for a specific table</span>
 
 <span class="arguments">Name</span> | Value | Description
-**include_columns** _Boolean_  |  <span class="default">Default **true**</span>  |  Include the table columns information. @TODO Not available yet.
-**include_preferences**  _Boolean_ |  <span class="default">Default **true**</span>  |  Include the table preferences. @TODO: Not available yet.
+------------------ | ----- | -----------
+**include_columns** _Boolean_  |  <span class="default">Default **true**</span>  |  Include the table columns information @TODO Not available yet
+**include_preferences**  _Boolean_ |  <span class="default">Default **true**</span>  |  Include the table preferences @TODO Not available yet
 
 ### Example Request
 
@@ -17,15 +19,17 @@ $ curl https://instance--key.directus.io/api/1.1/tables/projects \
 ```
 
 ```php
-$table = $client->getTable($tableName);
+$table = $client->getTable('projects');
 ```
 
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**data**</span> _Table Object_ | <span class="custom">This data and its architecture is based on Directus table schema.</span>
+------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**data**</span> _Table Object_ | <span class="custom">This data and its architecture is based on Directus table schema</span>
+
+### Example Response
 
 ```json
 {
@@ -64,7 +68,7 @@ $table = $client->getTable($tableName);
          "ui":"numeric",
          "hidden":true,
          "options":[
-
+             ...
          ]
       },
       {
@@ -85,7 +89,7 @@ $table = $client->getTable($tableName);
          "ui":"checkbox",
          "hidden":true,
          "options":[
-
+             ...
          ]
       }
     ],

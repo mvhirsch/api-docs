@@ -1,13 +1,12 @@
 # Create Table
 
-
-
 <span class="request">`POST` **/api/1.1/tables**</span>
-<span class="description">The Create Table endpoint adds a new table to your database. Table names must be unique within each database and are limited to letters, numbers, and the following characters: `-_`. When creating a new table you must assign permissions to at least one Directus user-group.</span>
+
+<span class="description">Creates a new table within the database. Table names must be unique within each database and are limited to letters, numbers, and the following characters: `-_`. After creating a new table you must assign permissions to at least one Directus user group</span>
 
 <span class="arguments">Name</span> | Value | Description
 ------------------ | ---------------------------------------- | -------------------
-**name** _String_  |  <span class="required">Required</span>  |  The new table name.
+**name** _String_  |  <span class="required">Required</span>  |  The unique name of the table to create
 
 ### Example Request
 
@@ -23,10 +22,11 @@ $table = $client->createTable('projects');
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**data**</span> _Collection of Table Object_ | <span class="custom">This data and its architecture is based on Directus table schema.</span>
+-------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**data**</span> _Collection of Table Object_ | <span class="custom">This data and its architecture is based on Directus table schema</span>
 
+### Example Response
 
 ```json
 {
