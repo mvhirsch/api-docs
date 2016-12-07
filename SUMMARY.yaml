@@ -51,8 +51,8 @@ Preferences:
 #  Get Messages: 07-messages/01-list-messages.md
 #  Get Message: 07-messages/02-read-message.md
 
-#Activity:
-#  Get Activity: 08-activities/01-list-activity.md
+Activity:
+  Get Activity: 08-activities/01-list-activity.md
 #  Create Activity: 08-activities/02-create-activity.md
 
 #Bookmarks:
