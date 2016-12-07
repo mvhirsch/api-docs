@@ -1,34 +1,36 @@
 # PHP SDK
 
 ## Creating data
+
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
-createItem              | `table`, `data`        | Creates a new item in the given table.
-~~createActivity~~      | `data`                 | Creates an activity log.
-createBookmark          | `data`                 | Creates a bookmark.
-createColumn            | `data`                 | Creates a new column.
-createFile              | `data`                 | Creates a new file.
-createGroup             | `data`                 | Creates a new group.
-createMessage           | `data`                 | Creates/Sends a new messsage.
-sendMessage             | `data`                 | `createMessage` alias.
-createPreferences       | `data`                 | Creates a table preferences.
-createPrivileges        | `data`                 | Creates a table privileges (Permissions).
-**createSettings**      | `data`                 | Creates a new setting.
-createTable             | `name`, `params`       | Creates a new table.
-createUIOptions         | `data`                 | Creates a new UI options.
-createUser              | `data`                 | Creates a new user.
+createItem              | `table`, `data`        | Creates a new item within the given table
+~~createActivity~~      | `data`                 | Creates an activity log
+createBookmark          | `data`                 | Creates a bookmark
+createColumn            | `data`                 | Creates a new column
+createFile              | `data`                 | Creates a new file
+createGroup             | `data`                 | Creates a new group
+createMessage           | `data`                 | Creates/Sends a new messsage
+sendMessage             | `data`                 | `createMessage` alias
+createPreferences       | `data`                 | Creates a table preferences
+createPrivileges        | `data`                 | Creates a table privileges (Permissions)
+**createSettings**      | `data`                 | Creates a new setting
+createTable             | `name`, `params`       | Creates a new table
+createUIOptions         | `data`                 | Creates a new UI options
+createUser              | `data`                 | Creates a new user
 
 ### Create Item
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
-table         | String  | The Table name where the `data` are going to be inserted.
-data          | Array   | Data to be inserted in `table`. All this data attributes will depend on your table columns.
+table         | String  | The Table name where the `data` are going to be inserted
+data          | Array   | Data to be inserted in `table`. All this data attributes will depend on your table columns
 
 #### Returns
-An `Entry` object containing the new created item.
 
-Example:
+An Item object containing the new created item.
+
+#### Example Request
 
 ```php
 $article = $client->createItem('articles', [
@@ -37,7 +39,6 @@ $article = $client->createItem('articles', [
 ]);
 
 // echo $article->title;
-
 ```
 
 ### Create Bookmark
@@ -53,9 +54,10 @@ sort_order              | String   | Sort column order. (`ASC` or `DESC`)
 status                  | String   | List of status separated by comma.
 
 #### Returns
-An `Entry` object containing the new bookmark created.
 
-Example:
+An Entry object containing the new bookmark created.
+
+#### Example Request
 
 ```php
 $bookmark = $client->createBookmark([
@@ -65,7 +67,6 @@ $bookmark = $client->createBookmark([
 ]);
 
 // echo $bookmark->title;
-
 ```
 
 ### Create Column
@@ -89,7 +90,7 @@ junction_key_right      | String    | The column name in junction that is relate
 
 **@TODO** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
 
-Example:
+#### Example Request
 
 ```php
 $column = $client->createColumn([
@@ -131,7 +132,7 @@ Column                  | Type       | Description
 name                    | String     | Group name.
 restrict_to_ip_whitelist| String     | List of IPs allowed to authenticate, separated  by comma.
 
-Example:
+#### Example Request
 
 ```php
 $group = $client->createGroup([
@@ -148,14 +149,15 @@ to                      | Array     | List of users id, separated by comma.
 toGroup                 | Array     | List of groups id, separated by comma.
 subject                 | String    | Message subject.
 message                 | String    | Message content.
-attachements            | Array     | **@TODO** List of files to add to the message
+attachments            | Array     | **@TODO** List of files to add to the message
 
 **@TODO** Send/Create responses without the need to specify each recipients.
 
 #### Returns
-`Entry` object containing the new created message.
 
-Example:
+Entry object containing the new created message.
+
+#### Example Requests
 
 Sending message to two users.
 ```php
@@ -203,9 +205,10 @@ sort_order              | String    | Sort column order. `ASC` or `DESC`
 status                  | String    | List of status separated by comma.
 
 #### Returns
+
 An `Entry` object containing the new preference created.
 
-Example:
+#### Example Request
 
 ```php
 $preference = $client->createPreferences([
@@ -238,9 +241,10 @@ write_field_blacklist   | String    | List of columns that the group can't edit/
 Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **@TODO** Adding constant for the permissions value.
 
 #### Returns
+
 An `Entry` object containing the new privileges created.
 
-Example:
+#### Example Request
 
 ```php
 $privileges = $client->createPrivileges([
@@ -257,15 +261,16 @@ $privileges = $client->createPrivileges([
 
 ### Create Table
 
-Parameters              | Type      | Description
+Parameter              | Type      | Description
 ----------------------- | --------- | ----------------------
 name                    | String    | New table name
 **data**                | Array     | Not defined yet.
 
 #### Returns
-An `Entry` object containing the new table created privileges.
 
-Example:
+An Entry (Item) object containing the new table created privileges.
+
+#### Example Request
 
 ```php
 $privileges = $client->createTable('comments');
@@ -278,15 +283,16 @@ $privileges = $client->createTable('comments');
 
 Column                  | Type      | Description
 ----------------------- | --------- | ----------------------
-column                  | String    | Column name.
-table                   | String    | Column table name.
-ui                      | String    | Coolumn UI name.
-options                 | Array     | UI Options.
+column                  | String    | Column name
+table                   | String    | Column table name
+ui                      | String    | Column UI name
+options                 | Array     | UI Options
 
 #### Returns
+
 `Entry` object containing all the column options.
 
-Example:
+#### Example Request
 
 ```php
 $options = $client->createColumnUIOptions([
@@ -306,20 +312,20 @@ $options = $client->createColumnUIOptions([
 
 Column                  | Type      | Description
 ----------------------- | --------- | ----------------------
-active                  | Integer   | User's status. By default `1=active, 2-inactive, 3=deleted`.
-email `Required`        | String    | User's unique email address.
-first_name              | String    | User first name.
-last_name               | String    | User last name.
-password                | String    | Plain text password.
+active                  | Integer   | User's status. By default `1=active, 2-inactive, 3=deleted`
+email `Required`        | String    | User's unique email address
+first_name              | String    | User first name
+last_name               | String    | User last name
+password                | String    | Plain text password
 token                   | String    | User's unique API access token
 group                   | Integer   | User's group ID
-email_messages          | Boolean   | Whether the user wants to receive email notification.
+email_messages          | Boolean   | Whether the user wants to receive email notification
 avatar                  | String    | Avatar url
 avatar_file_id          | Integer   | Use a file id as avatar
-language                | String    | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
-timezone                | String    | User's default timezone.
-position                | String    | User's position on the project/company.
-location                | String    | User's location in the world or universe.
+language                | String    | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch)
+timezone                | String    | User's default timezone
+position                | String    | User's position on the project/company
+location                | String    | User's location in the world or universe
 phone                   | String    | User's phone number
 address                 | String    | User's address
 city                    | String    | User's city
@@ -327,9 +333,10 @@ state                   | String    | User's state
 zip                     | String    | User's zip code
 
 #### Returns
+
 An `Entry` object containing the new created user.
 
-Example:
+#### Example Request
 
 ```php
 $user = $client->createUser([
@@ -360,7 +367,7 @@ group                   | Integer   | User's group ID
 email_messages          | Boolean   | Whether the user wants to receive email notification.
 avatar                  | String    | Avatar url
 avatar_file_id          | Integer   | File id used as avatar
-language                | String    | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
+language                | String    | User's default language. Languages Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
 timezone                | String    | User's default timezone.
 position                | String    | User's position on the project/company.
 location                | String    | User's location in the world or universe.
@@ -373,24 +380,25 @@ zip                     | String    | User's zip code
 
 ### Create File
 
-Parameters              | Type     | Description
+Parameter              | Type     | Description
 ----------------------- | -------- | ---------------------------
 file                    | File     | New file
 
-File Parameters         | Type     | Description
+File Parameter         | Type     | Description
 ----------------------- | --------------------------------------
 path `Required`         | String   | Local path of the file.
-**url** (_TODO_)        | String   | URL of the file to upload, OR a youtube/vimeo link to be embeded.
+**url** (_TODO_)        | String   | URL of the file to upload, OR a YouTube/Vimeo link to be embedded.
 title                   | String   | File's title
 tags                    | String   | Comma separated tags.
 caption                 | String   | File caption (Description).
 
 #### Returns
+
 An `Entry` object containing the new created file.
 
 **@TODO** Returns a `FileEntry` Object.
 
-Example:
+#### Example Request
 
 ```php
 // From a local file
@@ -437,7 +445,7 @@ storage_adapter         | String   | Storage adapter used to upload the file
 
 ## Getting Data
 
-Method                  | Parameters             | Description
+Method                  | Parameter             | Description
 ----------------------- | ---------------------- | -----------
 getItems              | `table`, `params`      | Collection of rows (items) for a given table.
 getItem                | `table`, `id`, `params`| Details for a specific table row (item).
@@ -460,14 +468,17 @@ getColumn               | `table`, `column`      | Details for a specific column
 - Directus Preferences
 
 #### Returns
+
 An `Entry` or `EntryCollection` object containing the fetched data.
 
 ### Get Items
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 table         | String  | The Table name to fetch data from.
 params        | Array   | Customiziable options.
+
+#### Example Request
 
 ```php
 $articles = $client->getItems('articles');
@@ -479,22 +490,25 @@ foreach($articles as $article) {
 
 ### Get Item by ID
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 table         | String  | The Table name to fetch data from.
 id            | Mixed   | The record id.
+
+#### Example Request
 
 ```php
 $article = $client->getItem('articles', 1);
 echo $article->title;
 ```
 
-
 ### Get Users
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 params        | Array   | Customizable options.
+
+#### Example Request
 
 ```php
 $users = $client->getUsers([
@@ -508,10 +522,11 @@ foreach($users as $user) {
 
 ### Get User by ID
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 id            | Integer | The user id.
 
+#### Example Request
 
 ```php
 $user = $client->getUser(1);
@@ -521,13 +536,16 @@ echo $user->email;
 **@TODO**
 
 #### Returns
+
 An `UserEntry` object containing the user information.
 
 ### Get Files
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 params        | Array   | Customizable options.
+
+#### Example Request
 
 ```php
 $files = $client->getFiles([
@@ -541,9 +559,11 @@ foreach($files as $file) {
 
 ### Get File by ID
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 id            | Integer | The file.
+
+#### Example Request
 
 ```php
 $file = $client->getFile(1);
@@ -553,13 +573,16 @@ echo $file->name;
 **@TODO**
 
 #### Returns
+
 A `FileEntry` object containing the file information.
 
 ### Get Groups
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 params        | Array   | Customizable options.
+
+#### Example Request
 
 ```php
 $groups = $client->getGroups([
@@ -573,9 +596,11 @@ foreach($groups as $group) {
 
 ### Get Group by ID
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 id            | Integer | The group id.
+
+#### Example Request
 
 ```php
 $group = $client->getGroup(1);
@@ -585,13 +610,16 @@ echo $group->name;
 **@TODO**
 
 #### Returns
+
 A `GroupEntry` object containing the group information.
 
 ### Get Group Privileges
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 id            | Integer | The group id.
+
+#### Example Request
 
 ```php
 $privileges = $client->getGroupsPrivileges(1);
@@ -604,9 +632,11 @@ foreach($privileges as $privilege) {
 
 ### Get Settings
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 None          |         |
+
+#### Example Request
 
 ```php
 $settings = $client->getSettings();
@@ -616,13 +646,16 @@ echo $settings->global->project_name
 **@TODO**
 
 #### Returns
+
 A `SettingEntry` object containing the setting information.
 
 ### Get Settings by collection
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 collection    | String  | Name of the collection
+
+#### Example Request
 
 ```php
 $settings = $client->getSettingsByCollection('global');
@@ -631,18 +664,20 @@ echo $settings->project_name
 
 ### Get Message
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 user          | Integer | The user id.
 
 **@TODO**:
-**INCORRECT**: This returns a single message, and the parameters is a message id.
+**INCORRECT**: This returns a single message, and the parameter is a message id.
 
 ### Get Tables
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 params        | Array   | Customizable options.
+
+#### Example Request
 
 ```php
 $tables = $client->getTables([
@@ -656,16 +691,18 @@ foreach($tables as $table) {
 
 **Params**
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 include_system| Boolean | Include the core tables
 
 ### Get Table
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 table         | String  | The Table name.
 params        | Array   | Customizable options.
+
+#### Example Request
 
 ```php
 $table = $client->getTable('directus_groups');
@@ -674,10 +711,12 @@ echo $table->name;
 
 ### Get Table Columns
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 table         | String  | The Table name.
 params        | Array   | Customizable options.
+
+#### Example Request
 
 ```php
 $columns = $client->getTableColumns('articles');
@@ -689,10 +728,12 @@ foreach($columns as $column) {
 
 ### Get Table Column
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 table         | String  | The Table name.
 column        | String  | The column name.
+
+#### Example Request
 
 ```php
 $column = $client->getTableColumn('articles', 'title');
@@ -700,13 +741,16 @@ $isRequired = $column->required;
 ```
 
 #### Returns
+
 A `Entry` object containing the setting information.
 
-## Get data Parameters list
+## Get data Parameter list
 
-### orders
+### order
 
 Sort the result by one or more columns.
+
+#### Example Request
 
 ```php
 $params = [
@@ -720,6 +764,7 @@ $params = [
 
 Sort by only one column.
 
+#### Example Request
 
 ```php
 $params = [
@@ -731,6 +776,8 @@ $params = [
 
 Sort `orderBy` in this direction. `ASC` or `DESC`. Default to `ASC`.
 
+#### Example Request
+
 ```php
 $params = [
   'orderBy' => 'title',
@@ -738,9 +785,11 @@ $params = [
 ];
 ```
 
-### Limit
+### limit
 
 Limit the numbers of records to be returned.
+
+#### Example Request
 
 ```php
 $params = [
@@ -748,10 +797,11 @@ $params = [
 ];
 ```
 
-### Offset
+### offset
 
 Skip this many rows.
 
+#### Example Request
 
 ```php
 $params = [
@@ -764,6 +814,8 @@ $params = [
 
 Return only records that has this status. To include multiple status, it has to be separated by comma.
 
+#### Example Request
+
 ```php
 $params = [
   'status' => [1, 2]
@@ -774,15 +826,19 @@ $params = [
 
 A comma-separated list of IDs.
 
+#### Example Request
+
 ```php
 $params = [
    'ids' => [2, 4, 11]
 ];
 ```
 
-### Filters
+### filters
 
 Filter the request by using any of the supported operators.
+
+#### Example Request
 
 ```php
 $params = [
@@ -809,19 +865,19 @@ Operator                | Description
 `in`                    | Match one of the value in the list
 `nin`                   | Not match any value in the list
 `null`                  | Is Null
-**nnull** (_TODO_)      | Is Not Null
-**contains** (_TODO_)   | Contains a string
-**ncontains** (_TODO_)  | Not Contains a string
-**between** (_TODO_)    | Is Between
-**empty** (_TODO_)      | Is Emtpy
-**nempty** (_TODO_)     | Is Not Empty
-**has** (_TODO_)        | Has one or more related items
+**nnull** (@TODO)      | Is Not Null
+**contains** (@TODO)   | Contains a string
+**ncontains** (@TODO)  | Not Contains a string
+**between** (@TODO)    | Is Between
+**empty** (@TODO)      | Is Empty
+**nempty** (@TODO)     | Is Not Empty
+**has** (@TODO)        | Has one or more related items
 
 ---
 
 ## Updating data
 
-Method                  | Parameters             | Description
+Method                  | Parameter             | Description
 ----------------------- | ---------------------- | -----------
 updateItem             | `table`, `id`, `data`  | Updates the record with the given `id` in `table` with `data`.
 updateUser              | `id`, `data`           | Updates the given user `id` with the given `data`.
@@ -834,11 +890,12 @@ updateFile              | `id`, `data`           | Updates the give file `id` wi
 - Directus Settings
 
 #### Returns
+
 An `Entry` object containing the updated data.
 
 ### Update Item
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 table         | String  | The Table name.
 id            | Mixed   | The id of the record to update.
@@ -846,7 +903,7 @@ data          | Array   | Data to update.
 
 ### Update User
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 id            | Integer | The id of the user to update.
 data          | Array   | Data to update.
@@ -877,19 +934,18 @@ zip                     | String  | User's zip code
 
 ### Update File
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 id            | Integer | The id of the file to update.
 data          | Array|File | Data to update.
 
-Example:
+#### Example Requests
 
 ```php
 $updatedFile = $client->updateFile(1, ['title' => 'New Design']);
 
 // echo $updatedFile->title;
 ```
-
 
 ```php
 $updatedFile = $client->updateFile(1, new File('/path/to/file'));
@@ -901,7 +957,7 @@ $updatedFile = $client->updateFile(1, new File('/path/to/file'));
 
 ## Deleting data
 
-Method                  | Parameters             | Description
+Method                  | Parameter             | Description
 ----------------------- | ---------------------- | -----------
 deleteItem             | `table`, `id`          | Deletes the record with the given `id` in `table`.
 deleteBookmark          | `id`                   | Deletes the given bookmark id.
@@ -912,18 +968,19 @@ deleteTable             | `name`                 | Creates a new table.
 deleteUser              | `id`                   | Deletes the given user `id`.
 
 #### Returns
+
 Nothing is returned.
 
-**@TODO**: Return whether or not were deleted.
+**@TODO** Return whether or not were deleted.
 
 ### Delete Item
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 table         | String  | The table name
 id            | Integer | The id of the record to delete in `table`.
 
-Example:
+#### Example Request
 
 ```php
 $client->deleteItem('articles', 1);
@@ -931,11 +988,11 @@ $client->deleteItem('articles', 1);
 
 ### Delete Bookmark
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 id            | Integer | The id of the bookmark to delete.
 
-Example:
+#### Example Request
 
 ```php
 $client->deleteBookmark(1);
@@ -943,12 +1000,12 @@ $client->deleteBookmark(1);
 
 ### Delete Column
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 name          | String  | The column name to delete.
 table         | String  | The table the colum belongs to.
 
-Example:
+#### Example Request
 
 ```php
 $client->deleteColumn('slug', 'articles');
@@ -956,11 +1013,11 @@ $client->deleteColumn('slug', 'articles');
 
 ### Delete File
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 id            | Integer | The id of the file to delete.
 
-Example:
+#### Example Request
 
 ```php
 $client->deleteUser(1);
@@ -968,11 +1025,11 @@ $client->deleteUser(1);
 
 ### Delete Group
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 id            | Integer | The id of the group to delete.
 
-Example:
+#### Example Request
 
 ```php
 $client->deleteGroup(1);
@@ -980,11 +1037,11 @@ $client->deleteGroup(1);
 
 ### Delete Table
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 name          | String  | The name of the table to delete.
 
-Example:
+#### Example Request
 
 ```php
 $client->deleteTable('comments');
@@ -992,11 +1049,11 @@ $client->deleteTable('comments');
 
 ### Delete User
 
-Parameters    | Type    | Description
+Parameter    | Type    | Description
 ------------- | ------- | -----------
 id            | Integer | The id of the user to delete.
 
-Example:
+#### Example Request
 
 ```php
 $client->deleteUser(1);
