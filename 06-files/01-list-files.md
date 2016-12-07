@@ -1,28 +1,37 @@
 # Get Files
 
-Get all the files entries.
+<span class="request">`GET` **/api/1.1/files**</span>
+<span class="description">Get all the files entries.</span>
 
-## HTTP Request
+### Example Request
 
 ```bash
-GET /api/1/files
+$ curl https://instance--key.directus.io/api/1.1/files
 ```
 
-## Example Request
-
-```bash
-$ curl https://database.account.directus.io/api/1/files
+```php
+$files = $client->getFiles();
 ```
 
 ## Response
 
+<span class="attributes">Attribute</span> | Description
+--------|-----|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
+**Columns Data** _Collection of File Object_ | <span class="custom">This data and its architecture is based on Directus files's schema.</span>
+
 ```json
 {
-  "Active": 1,
-  "Delete": 0,
-  "Draft": 0,
-  "total": 1,
-  "rows": [{
+  "meta": {
+    "table": "directus_files",
+    "type": "collection",
+    "Active": 1,
+    "Delete": 0,
+    "Draft": 0,
+    "total": 1,
+    "total_entries": 1
+  },
+  "data": [{
     "id": 1,
     "active": 1,
     "name": "00000000001.jpg",
