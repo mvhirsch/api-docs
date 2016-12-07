@@ -6,7 +6,8 @@ Access to your instance's data is simple. Authenticate with a user's access toke
 
 It is important to remember that the Directus API is dynamic based on your database schema/architecture. That means that if you change a column or table name, the respective API endpoints will also change. So if you adjust your schema it is important to update any existing endpoints in your application code.
 
->  **Note:** Directus requires encryption of all traffic over HTTPS
+>  **Note:** We recommend encrypting all Directus traffic over HTTPS
+>  **Note:** The Directus Hosted Service encrypts all traffic over HTTPS
 
 ## Error Responses
 
