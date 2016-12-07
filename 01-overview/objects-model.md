@@ -1,7 +1,7 @@
 # Directus Objects
 These are the Directus object models used throughout the system.
 
-## Column Object
+## Activity Object
 
 <span class="attributes">Attribute</span> | Description
 ----------------------------- | ----------------------
@@ -19,6 +19,19 @@ These are the Directus object models used throughout the system.
 **datetime** _String_         | When the activity was performed. (UTC Time)
 **logged_ip** _String_        | User IP.
 **user_agent** _String_       | User user agent.
+
+## Bookmark Object
+
+<span class="attributes">Attribute</span> | Description
+----------------------------- | ----------------------
+**id** _Integer_              | Bookmark Unique Identification number.
+**user** _Integer_            | [Directus user id] This assigns the bookmark to a specific user (there's a ticket to allow for "global" bookmarks using `NULL`)
+**title** _String_            | The text to display in the navigation menu
+**url** _String_              | The path to navigate to when clicked, relative to the Directus root
+**icon_class** _String_       | Deprecated.
+**active** _String_           | Deprecated.
+**section** _String_          | ["search" or "other"] Which nav section to show the link within. User generated bookmarks use "search", while all system links go within "other"
+
 
 ## Column Object
 

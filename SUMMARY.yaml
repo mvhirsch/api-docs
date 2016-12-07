@@ -55,10 +55,11 @@ Activity:
   Get Activity: 08-activities/01-list-activity.md
 #  Create Activity: 08-activities/02-create-activity.md
 
-#Bookmarks:
-#  Get Bookmarks: 09-bookmarks/01-list-bookmarks.md
-#  Create Bookmark: 09-bookmarks/02-create-bookmark.md
-#  Delete Bookmark: 09-bookmarks/03-delete-bookmark.md
+Bookmarks:
+  Get Bookmarks: 09-bookmarks/01-list-bookmarks.md
+  Get Bookmark: 09-bookmarks/02-get-bookmark.md
+  Create Bookmark: 09-bookmarks/03-create-bookmark.md
+  Delete Bookmark: 09-bookmarks/04-delete-bookmark.md
 
 Settings:
   Get Settings: 10-settings/01-list-settings.md

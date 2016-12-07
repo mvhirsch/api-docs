@@ -1,0 +1,50 @@
+# Get Bookmarks
+
+<span class="request">`GET` **/api/1.1/bookmarks/self**</span>
+<span class="description">Get all the authenticated user bookmarks.</span>
+
+### Example Request
+
+```bash
+$ curl https://instance--key.directus.io/api/1.1/bookmarks/self \
+  -u [user-token]:
+```
+
+```php
+$bookmarks = $client->getBookmarks(1);
+```
+
+## Response
+
+<span class="attributes">Attribute</span> | Description
+--------|-----|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
+**Data** _Collection of Bookmark Object_ | <span class="custom">This data and its architecture is based on Directus bookmarks's schema.</span>
+
+```json
+{
+  "meta": {
+    "table": "directus_bookmarks",
+    "type": "collection",
+    "total": 2,
+  },
+  "data": [{
+      "id": 1,
+      "user": 1,
+      "title": "Draft Articles",
+      "url": "tables/articles/pref/Draft Articles",
+      "icon_class": null,
+      "active": null,
+      "section": "search"
+    },
+    {
+      "id": 2,
+      "user": 1,
+      "title": "Published News",
+      "url": "tables/news/pref/Published News",
+      "icon_class": null,
+      "active": null,
+      "section": "search"
+    }]
+}
+```
