@@ -2,7 +2,7 @@
 
 <span class="request">`GET` **/api/1.1/files/[id]**</span>
 
-<span class="description">Get information of the specified file</span>
+<span class="description">Get a specific file (and its metadata) from within the Directus File Library</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
@@ -22,9 +22,11 @@ $file = $client->getFile(1);
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
+--------|------------
 **meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
 **Columns Data** _File Object_ | <span class="custom">This data and its architecture is based on the Directus file schema and can be extended with additional custom columns</span>
+
+### Example Response
 
 ```json
 {
@@ -35,9 +37,9 @@ $file = $client->getFile(1);
   "data": {
     "id": 1,
     "active": 1,
-    "name": "00000000001.jpg",
+    "name": "2a05d2300cf0a8bf1a3f6567366affed.jpg",
     "url": null,
-    "title": "Website screenshot",
+    "title": "My File Name",
     "location": "",
     "caption": "",
     "type": "image\/jpg",

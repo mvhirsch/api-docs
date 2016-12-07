@@ -2,7 +2,7 @@
 
 <span class="request">`POST` **/api/1.1/tables**</span>
 
-<span class="description">Creates a new table within the database. Table names must be unique within each database and are limited to letters, numbers, and the following characters: `-_`. After creating a new table you must assign permissions to at least one Directus user group</span>
+<span class="description">Creates a new table within the database. Table names must be unique within each database and are limited to letters, numbers, and `-` or `_`. After creating a new table you must assign permissions to at least one Directus user group</span>
 
 <span class="arguments">Name</span> | Value | Description
 ------------------ | ---------------------------------------- | -------------------

@@ -6,7 +6,7 @@
 
 <span class="request">`POST` **/api/1.1/tables/[table-name]/rows**</span>
 
-<span class="description">Create a new item within a specific table</span>
+<span class="description">Create a new item within the specified table</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------

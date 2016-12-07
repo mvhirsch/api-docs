@@ -2,18 +2,19 @@
 
 <span class="request">`GET` **/api/1.1/files**</span>
 
-<span class="description">Get all the files entries</span>
+<span class="description">Get all files within the Directus File Library</span>
 
 <span class="arguments">Name</span> | Value | Description
+--------|-----|------------
 **id** _Integer_ | <span class="required">Required</span> | The `id` of the file you wish to get
 **limit** _Integer_  |  <span class="default">Default **200**</span>  |  The number of items to request
 **offset**  _Integer_ |  <span class="default">Default **0**</span>  |  The offset for for the items
-**orders[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order to be sorted. Available options are: `ASC` (Ascending) or `DESC` (Descending).
-**status**  _String_ |  <span class="default">Default **None**</span> | List of status values to be included. Separated by commas. `1,2`
-**columns** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma. `columns=id,title,published_date`
-**in[field]**  _String_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
-**ids** _String_  |  <span class="default">Optional</span>  |  Only list records that its `field` matches one of given value. Can be separated by commas. `ids=1,2`. Same as `in[id]=1,2`.
-**filters** | <span class="default">Optional</span> | Use `Filter Object` to filter the result.
+**orders[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order to be sorted. Available options are: `ASC` (Ascending) or `DESC` (Descending)
+**status**  _String_ |  <span class="default">Default **None**</span> | List of status values to be included. Separated by commas, eg: `1,2`
+**columns** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma, eg: `columns=id,title,published_date`
+**in[field]**  _String_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas, eg: `in[id]=1,2`
+**ids** _String_  |  <span class="default">Optional</span>  |  Only list records that its `field` matches one of given value. Can be separated by commas. `ids=1,2`. Same as `in[id]=1,2`
+**filters** _Object_ | <span class="default">Optional</span> | Use the Filter Object to filter the result <a class="object">Filter Object</a>
 
 ### Example Request
 
@@ -49,9 +50,9 @@ $files = $client->getFiles();
   "data": [{
     "id": 1,
     "active": 1,
-    "name": "00000000001.jpg",
+    "name": "2a05d2300cf0a8bf1a3f6567366affed.jpg",
     "url": null,
-    "title": "Website screenshot",
+    "title": "My File Name",
     "location": "",
     "caption": "",
     "type": "image\/jpg",

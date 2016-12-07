@@ -2,7 +2,7 @@
 
 <span class="request">`PUT` **/api/1.1/files/[id]**</span>
 
-<span class="description">Get information of the specified file **@TODO**</span>
+<span class="description">Update a file (and its metadata) within the Directus File Library</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
@@ -28,14 +28,14 @@
 
 ```php
 $file = $client->updateFile(2, [
-  'title' => 'New Logo'
+  'title' => 'My New File Name'
 ]);
 ```
 
 ### Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
+--------|------------
 **meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
 **Columns Data** _File Object_ | <span class="custom">This data and its architecture is based on the Directus file schema and can be extended with additional custom columns</span>
 
@@ -48,9 +48,9 @@ $file = $client->updateFile(2, [
   "data": {
     "id": 2,
     "active": 1,
-    "name": "00000000002.jpg",
+    "name": "2a05d2300cf0a8bf1a3f6567366affed.jpg",
     "url": null,
-    "title": "Logo",
+    "title": "My New File Name",
     "location": "",
     "caption": "",
     "type": "image\/jpg",
