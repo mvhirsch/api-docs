@@ -1,4 +1,4 @@
-# Get Files
+# Get Activities
 
 <span class="request">`GET` **/api/1.1/activity**</span>
 <span class="description">Get all the Directus logged activity records.</span>
