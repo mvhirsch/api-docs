@@ -1,5 +1,7 @@
 # Create Privileges
 
+> **Note:** Table names are case-sensitive
+
 <span class="request">`POST` **/api/1.1/privileges/:groupId**</span>
 <span class="description">Creating permissions/privileges to a table for the specified user-group ID.</span>
 

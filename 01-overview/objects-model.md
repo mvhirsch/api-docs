@@ -26,6 +26,19 @@ These are the Directus object models used throughout the system.
 **date_uploaded** _String_      | File uploaded date. **TODO** It should be an DateTime object.
 **storage_adapter** _String_    | Storage adapter used to upload the file
 
+## Preference Object
+
+**@TODO**
+
+<span class="attributes">Attribute</span> | Description
+----------------------------- | ----------------------
+**id** _Integer_              | Preference's Unique Identification number.
+**table_name** _String_       | Name of the table.
+**columns_visible** _String_  | List of visible columns, separated by commas.
+**sort** _String_             | Result will be sorted by this column
+**sort_order** _String_       | Sort Order. (ASC=Ascending or DESC=Descending)
+**active** _String_           | List of status values. separated by comma.
+
 ## Privilege Object
 
 <span class="attributes">Attribute</span> | Description
