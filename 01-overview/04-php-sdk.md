@@ -744,7 +744,7 @@ $isRequired = $column->required;
 
 A `Entry` object containing the setting information.
 
-## Get data Parameter list
+## Get Parameters
 
 ### order
 
