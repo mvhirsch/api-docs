@@ -29,6 +29,7 @@ GET | `/activity` | Collection of latest Directus activity
 **`columns`** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma. `columns=id,title,published_date`
 **in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 **`ids`**  |  <span class="default">Optional</span>  |  Only list records that its `field` matches one of given value. Can be separated by commas. `ids=1,2`. Same as `in[id]=1,2`.
+**skip_activity_log** | <span class="default">Default **0**</span> | Whether or not the update is going to be logged in activity.
 
 
 ## Example API Requests
