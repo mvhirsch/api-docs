@@ -21,6 +21,14 @@
 **date_uploaded** _String_      | | File uploaded date. **TODO** It should be an DateTime object.
 **storage_adapter** _String_    | | Storage adapter used to upload the file
 
+### Example Request
+
+```php
+$file = $client->updateFile(2, [
+  'title' => 'New Logo'
+]);
+```
+
 ### Response
 
 <span class="attributes">Attribute</span> | Description
