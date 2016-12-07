@@ -4,6 +4,10 @@
 
 <span class="description">Get information of the specified file</span>
 
+<span class="arguments">Name</span> | Value | Description
+--------|-----|------------
+**id** _Integer_ | <span class="required">Required</span> | The `id` of the file you wish to get
+
 ### Example Request
 
 ```bash
