@@ -16,7 +16,7 @@
 
 ```bash
 $ curl --data "title=Lorem Ipsum" \
-        https://instance--key.directus.io/api/1/tables/projects/rows/1 \
+        https://instance--key.directus.io/api/1.1/tables/projects/rows/1 \
                 -u [user-token]:
 ```
 

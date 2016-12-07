@@ -9,7 +9,7 @@
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/1/tables/projects/columns \
+$ curl https://instance--key.directus.io/api/1.1/tables/projects/columns \
         -u [user-token]:
 ```
 

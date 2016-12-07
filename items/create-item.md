@@ -17,7 +17,7 @@
 
 ```bash
 $ curl --data "active=1&title=School+Website" \
-        https://database.account.directus.io/api/1/tables/projects/rows \
+        https://database.account.directus.io/api/1.1/tables/projects/rows \
                 -u [user-token]:
 ```
 

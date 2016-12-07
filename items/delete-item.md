@@ -17,7 +17,7 @@
 
 ```bash
 $ curl -X DELETE \
-        https://database.account.directus.io/api/1/tables/projects/rows/1 \
+        https://database.account.directus.io/api/1.1/tables/projects/rows/1 \
                 -u [user-token]:
 ```
 

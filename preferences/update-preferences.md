@@ -17,7 +17,7 @@
 ### Example Request
 
 ```bash
-$ curl -d sort_order=DESC https://instance--key.directus.io/api/1/tables/projects/preferences \
+$ curl -d sort_order=DESC https://instance--key.directus.io/api/1.1/tables/projects/preferences \
         -u [user-token]:
 ```
 
