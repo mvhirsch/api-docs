@@ -4,7 +4,7 @@
 
 <span class="request">`GET` **/api/1.1/tables**</span>
 
-<span class="description">Retrieve a collection of tables within Directus. Which tables are returned is determined by the current user's privileges</span>
+<span class="description">Retrieve a collection of tables within Directus based on the current user's privileges</span>
 
 <span class="arguments">Name</span> | Value | Description
 ----------------------------------- | ----- | -----------
