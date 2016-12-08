@@ -472,12 +472,32 @@ getColumn               | `table`, `column`      | Details for a specific column
 
 An `Entry` or `EntryCollection` object containing the fetched data.
 
+### Get Activity
+
+Parameter    | Type    | Description
+------------- | ------- | -----------
+params        | Array   | Customizable options.
+
+#### Example Request
+
+```php
+$activities = $client->getActivity([
+  'filters' => [
+    'table_name' => 'articles'
+  ]
+]);
+
+foreach($activities as $activity) {
+  echo $activity->action;
+}
+```
+
 ### Get Items
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
 table         | String  | The Table name to fetch data from.
-params        | Array   | Customiziable options.
+params        | Array   | Customizable options.
 
 #### Example Request
 
