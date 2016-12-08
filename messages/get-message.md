@@ -1,8 +1,12 @@
 # Get Messages
 
-<span class="request">`GET` **/api/1.1/messages/_message-id_**</span>
+<span class="request">`GET` **/api/1.1/messages/_[message-id]_**</span>
 
 <span class="description">Get a specific message by its ID</span>
+
+<span class="arguments">Name</span> | Value | Description
+--------|-----|------------
+**message-id** _Integer_ | <span class="required">Required</span> | The `id` of the message you wish to get
 
 ### Example Request
 

@@ -4,7 +4,7 @@
 
 > **Note:** These arguments and attributes are based on the table's custom columns
 
-<span class="request">`POST` **/api/1.1/tables/_table-name_/rows**</span>
+<span class="request">`POST` **/api/1.1/tables/_[table-name]_/rows**</span>
 
 <span class="description">Create a new item within the specified table</span>
 

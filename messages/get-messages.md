@@ -16,6 +16,12 @@ $ curl https://instance--key.directus.io/api/1.1/messages/self \
 ```
 
 ```php
+// Using the SDK with API connection
+// you can fetch bookmarks same as get bookmarks method
+$messages = $client->getMessages();
+
+// Using the SDK with DB connection you can fetch any messages from any user
+// So you `1` here is the user id.
 $messages = $client->getMessages(1);
 ```
 

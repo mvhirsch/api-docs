@@ -1,6 +1,6 @@
 # Update File
 
-<span class="request">`PUT` **/api/1.1/files/_id_**</span>
+<span class="request">`PUT` **/api/1.1/files/_[id]_**</span>
 
 <span class="description">Update a file (and its metadata) within the Directus File Library</span>
 

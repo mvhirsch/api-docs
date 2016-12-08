@@ -2,9 +2,13 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1.1/tables/_table-name_/preferences**</span>
+<span class="request">`GET` **/api/1.1/tables/_[table-name]_/preferences**</span>
 
 <span class="description">Get all preferences for a table</span>
+
+<span class="arguments">Name</span> | Value | Description
+--------|-----|------------
+**table-name** _String_  |  <span class="required">Required</span>  |  The table you wish to get the preferences from
 
 ### Example Request
 

@@ -2,14 +2,14 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`PATCH` **/api/1.1/tables/_table-name_/rows/_row-id_**</span>
+<span class="request">`PATCH` **/api/1.1/tables/_[table-name]_/rows/_[row-id]_**</span>
 
 <span class="description">Update an item within a specific table</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
-**table** _String_ | <span class="required">Required</span> | The table that contains the item you wish to update
-**id** _Integer_ | <span class="required">Required</span> | The `id` of the item you wish to update
+**table-name** _String_ | <span class="required">Required</span> | The table that contains the item you wish to update
+**row-id** _Integer_ | <span class="required">Required</span> | The `id` of the item you wish to update
 <span class="custom">**Custom Data**</span> _Array_ | <span class="required">Required</span> | <span class="custom">This data and its architecture is based on your specific project's schema</span>
 
 ### Example Request

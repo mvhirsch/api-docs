@@ -2,12 +2,13 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1.1/tables/_table-name_**</span>
+<span class="request">`GET` **/api/1.1/tables/_[table-name]_**</span>
 
 <span class="description">Get system and schema information for a specific table</span>
 
 <span class="arguments">Name</span> | Value | Description
 ------------------ | ----- | -----------
+**table-name** _String_  |  <span class="required">Required</span>  |  The table name you wish to get the information from
 **include_columns** _Boolean_  |  <span class="default">Default **true**</span>  |  Include the table columns information @TODO Not available yet
 **include_preferences**  _Boolean_ |  <span class="default">Default **true**</span>  |  Include the table preferences @TODO Not available yet
 

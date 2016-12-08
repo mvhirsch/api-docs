@@ -14,7 +14,7 @@
 **columns** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma, eg: `columns=id,title,published_date`
 **in[field]**  _String_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas, eg: `in[id]=1,2`
 **ids** _String_  |  <span class="default">Optional</span>  |  Only list records that its `field` matches one of given value. Can be separated by commas. `ids=1,2`. Same as `in[id]=1,2`
-**filters** _Object_ | <span class="default">Optional</span> | Use the Filter Object to filter the result <a class="object">Filter Object</a>
+**filters** _Object_ | <span class="default">Optional</span> | Use the [`Filter Operators`](/overview/endpoints.md#supported-filters-operators) to filter the result <a class="object">Filter Object</a>
 
 ### Example Request
 

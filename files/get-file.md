@@ -1,6 +1,6 @@
 # Get File
 
-<span class="request">`GET` **/api/1.1/files/_id_**</span>
+<span class="request">`GET` **/api/1.1/files/_[id]_**</span>
 
 <span class="description">Get a specific file (and its metadata) from within the Directus File Library</span>
 

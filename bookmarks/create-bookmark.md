@@ -6,7 +6,7 @@
 
 <span class="arguments">Name</span> | Value | Description
 --------------|--------------- | ----------------------
-**user** _Integer_         |   | [Directus user id] This assigns the bookmark to a specific user (there's a ticket to allow for "global" bookmarks using `NULL`)
+**user** _Integer_         |   | [Directus user id] This assigns the bookmark to a specific user (there's a ticket to allow for "global" bookmarks using `NULL`) (Only using local connection)
 **title** _String_         |   | The text to display in the navigation menu
 **url** _String_           |   | The path to navigate to when clicked, relative to the Directus root
 **icon_class** _String_     |  | Deprecated
@@ -14,6 +14,12 @@
 **section** _String_        |  | ["search" or "other"] Which nav section to show the link within. User generated bookmarks use "search", while all system links go within "other"
 
 ### Example Request
+
+```bash
+$ curl --data "title=Draft+Articles&table_name=articles&status=2" \
+        https://instance--key.directus.io/api/1.1/bookmarks \
+                -u [user-token]:
+```
 
 ```php
 $bookmark = $client->createBookmark([

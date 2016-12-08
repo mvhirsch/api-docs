@@ -12,6 +12,12 @@ $ curl https://instance--key.directus.io/api/1.1/bookmarks/self \
 ```
 
 ```php
+// Using the SDK with API connection
+// you can fetch bookmarks same as get bookmarks method
+$bookmarks = $client->getBookmarks();
+
+// Using the SDK with DB connection you can fetch any bookmarks
+// So you `1` here is the user id.
 $bookmarks = $client->getBookmarks(1);
 ```
 

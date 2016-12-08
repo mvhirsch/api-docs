@@ -1,6 +1,6 @@
 # Get Bookmark
 
-<span class="request">`GET` **/api/1.1/bookmarks/_bookmark-id_**</span>
+<span class="request">`GET` **/api/1.1/bookmarks/_[bookmark-id]_**</span>
 
 <span class="description">Get all of the bookmarks for the current user</span>
 

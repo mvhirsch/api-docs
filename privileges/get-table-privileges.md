@@ -2,9 +2,14 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1/privileges/_group-id_/_table-name_**</span>
+<span class="request">`GET` **/api/1/privileges/_[group-id]_/_[table-name]_**</span>
 
 <span class="description">Get the table privileges for a specific user group</span>
+
+<span class="arguments">Name</span> | Value | Description
+------------------ | ----- | -----------
+**group-id** _Integer_  |  <span class="required">Required</span>  |  The group `id` you wish to get the privileges from
+**table-name** _String_  |  <span class="required">Required</span>  |  The table name you wish to get the privileges from
 
 ### Example Request
 

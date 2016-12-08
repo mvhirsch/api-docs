@@ -1,8 +1,12 @@
 # Get Privileges
 
-<span class="request">`GET` **/api/1.1/privileges/_group-id_**</span>
+<span class="request">`GET` **/api/1.1/privileges/_[group-id]_**</span>
 
 <span class="description">Get the privileges for the specified user group</span>
+
+<span class="arguments">Name</span> | Value | Description
+------------------ | ----- | -----------
+**group-id** _Integer_  |  <span class="required">Required</span>  |  The group `id` you wish to get the privileges from
 
 ### Example Request
 

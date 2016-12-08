@@ -1,6 +1,6 @@
 # Delete Bookmark
 
-<span class="request">`DELETE` **/api/1.1/bookmarks/_bookmark-id_**</span>
+<span class="request">`DELETE` **/api/1.1/bookmarks/_[bookmark-id]_**</span>
 
 <span class="description">Deletes a bookmark</span>
 

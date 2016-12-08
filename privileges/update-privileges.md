@@ -1,11 +1,13 @@
 # Update Privileges
 
-<span class="request">`PUT` **/api/1.1/privileges/_group-id_/_privileges-id_**</span>
+<span class="request">`PUT` **/api/1.1/privileges/_[group-id]_/_[privileges-id]_**</span>
 
 <span class="description">Update the specified group privileges for the specified table</span>
 
 <span class="arguments">Name</span> | Value | Description
 ------------------ | ----- | -----------
+**group-id** _Integer_  |  <span class="required">Required</span>  |  The group `id` you wish to update the privileges
+**privileges-id** _Integer_  |  <span class="required">Required</span>  |  The privilege `id` you wish to update
 **id** _Integer_            |  | Privilege's Unique Identification number
 **group_id** _Integer_              |  | Group ID
 **table_name** _String_            |   | Table name that this permissions belongs to

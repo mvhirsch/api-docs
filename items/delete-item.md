@@ -4,14 +4,14 @@
 
 > **Note:** To perform a Soft-delete directly, use the update endpoint and update the `active` column.
 
-<span class="request">`DELETE` **/api/1.1/tables/_table-name_/rows/_row-id_**</span>
+<span class="request">`DELETE` **/api/1.1/tables/_[table-name]_/rows/_[row-id]_**</span>
 
 <span class="description">Delete (or soft-delete) an item within a specific table</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
-**table** _String_ | <span class="required">Required</span> | The table that contains the item you wish to delete
-**id** _Integer_ | <span class="required">Required</span> | The `id` of the item you wish to delete
+**table-name** _String_ | <span class="required">Required</span> | The table that contains the item you wish to delete
+**row-id** _Integer_ | <span class="required">Required</span> | The `id` of the item you wish to delete
 
 ### Example Request
 

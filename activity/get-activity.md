@@ -15,7 +15,7 @@
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/1.1/activity&filters[table_name][eq]=projects \
+$ curl -g https://instance--key.directus.io/api/1.1/activity&filters[table_name][eq]=projects \
   -u [user-token]:
 ```
 

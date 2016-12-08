@@ -1,8 +1,10 @@
 # Get Settings By Type
 
-<span class="request">`GET` **/api/1.1/settings/_collection-name_**</span>
+<span class="request">`GET` **/api/1.1/settings/_[collection-name]_**</span>
 
 <span class="description">Get all Directus settings for the specified collection</span>
+
+**group-id** _String_  |  <span class="required">Required</span>  |  The collection `name` you wish to get the settings
 
 ### Example Request
 

@@ -1,6 +1,6 @@
 # Get Group
 
-<span class="request">`GET` **/api/1.1/groups/_id_**</span>
+<span class="request">`GET` **/api/1.1/groups/_[id]_**</span>
 
 <span class="description">Get system information for the specified user group</span>
 

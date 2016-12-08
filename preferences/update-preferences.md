@@ -2,12 +2,13 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`POST` **/api/1.1/tables/_table-name_/preferences**</span>
+<span class="request">`POST` **/api/1.1/tables/_[table-name]_/preferences**</span>
 
 <span class="description">Update a preference within a specific table</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
+**table-name** _String_  |  <span class="required">Required</span>  |  The table you wish to update the preferences
 **id** _Integer_           |   | Preference's Unique Identification number
 **table_name** _String_     |  | Name of the table
 **columns_visible** _String_   |  | List of visible columns, separated by commas
