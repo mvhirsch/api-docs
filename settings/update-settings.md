@@ -2,7 +2,7 @@
 
 > **Note:** If the setting doesn't not exist it will create a new one.
 
-<span class="request">`UPDATE` **/api/1.1/settings/_[collection-name]_**</span>
+<span class="request">`PUT` **/api/1.1/settings/_[collection-name]_**</span>
 
 <span class="description">Update the Directus settings for the specified collection</span>
 
@@ -19,8 +19,7 @@ $ curl --data "rows_per_page=100" https://instance--key.directus.io/api/1.1/sett
 ```
 
 ```php
-// @TODO: Not available yet.
-$setting = $client->updateSetting('global', [
+$setting = $client->updateSettings('global', [
   'rows_per_page' => 100
 ])
 ```
