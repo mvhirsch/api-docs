@@ -445,24 +445,25 @@ storage_adapter         | String   | Storage adapter used to upload the file
 
 ## Getting Data
 
-Method                  | Parameter             | Description
+Method                  | Parameter              | Description
 ----------------------- | ---------------------- | -----------
-getItems              | `table`, `params`      | Collection of rows (items) for a given table.
-getItem                | `table`, `id`, `params`| Details for a specific table row (item).
-getUsers                | `params`               | Collection of users.
-getUser                 | `id`, `params`         | Details for a specific user.
-getFiles                | `params`               | Collection of files.
-getFile                 | `id`, `params`         | Details for a specific file.
-getGroups               | `params`               | Collection of all Directus user-groups.
-getGroup                | `id`, `params`         | Details for a specific user-group.
-getGroupPrivileges      | `group_id`             | Privileges for a given user-group.
-getSettings             | None                   | All Directus Settings.
-getSettingsByCollection | `collection`           | All Directus Settings in a given collection.
-getMessages             | `userId`               | Collection of messages for the authenticated user.
-getTables               | `params`               | Collection of tables viewable by authenticated user.
-getTable                | `table`                | Collection of latest Directus activity.
-getColumns              | `table`, `params`      | Collection of the column details for a given table.
-getColumn               | `table`, `column`      | Details for a specific column in a given table.
+getActivity             | `params`               | Get Directus Activity
+getItems                | `table`, `params`      | Collection of rows (items) for a given table
+getItem                 | `table`, `id`, `params`| Details for a specific table row (item)
+getUsers                | `params`               | Collection of users
+getUser                 | `id`, `params`         | Details for a specific user
+getFiles                | `params`               | Collection of files
+getFile                 | `id`, `params`         | Details for a specific file
+getGroups               | `params`               | Collection of all Directus user-groups
+getGroup                | `id`, `params`         | Details for a specific user-group
+getGroupPrivileges      | `group_id`             | Privileges for a given user-group
+getSettings             | None                   | All Directus Setting
+getSettingsByCollection | `collection`           | All Directus Settings in a given collection
+getMessages             | `userId`               | Collection of messages for the authenticated user
+getTables               | `params`               | Collection of tables viewable by authenticated user
+getTable                | `table`                | Collection of latest Directus activity
+getColumns              | `table`, `params`      | Collection of the column details for a given table
+getColumn               | `table`, `column`      | Details for a specific column in a given table
 
 **@TODO**: More helpers
 - Directus Preferences
