@@ -32,7 +32,7 @@ $files = $client->getFiles();
 <span class="attributes">Attribute</span> | Description
 --------|------------
 **meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
-**Columns Data** _Collection of File Object_ | <span class="custom">This data and its architecture is based on the Directus file schema and can be extended with additional custom columns</span>
+**data** _Collection of File Object_ | <span class="custom">This data and its architecture is based on the Directus file schema and can be extended with additional custom columns</span>
 
 ### Example Response
 
