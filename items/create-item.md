@@ -4,9 +4,9 @@
 
 > **Note:** These arguments and attributes are based on the table's custom columns
 
-<span class="request">`POST` **/api/1.1/tables/[table-name]/rows**</span>
+<span class="request">`POST` **/api/1.1/tables/_table-name_/rows**</span>
 
-<span class="description">Create a new item within a specific table</span>
+<span class="description">Create a new item within the specified table</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
@@ -16,15 +16,15 @@
 ### Example Request
 
 ```bash
-$ curl --data "active=1&title=School+Website" \
-        https://database.account.directus.io/api/1.1/tables/projects/rows \
+$ curl --data "active=1&title=Lorem+Ipsum" \
+        https://instance--key.directus.io/api/1.1/tables/projects/rows \
                 -u [user-token]:
 ```
 
 ```php
 $newProject = $client->createItem('projects', [
     'active' => 1,
-    'title' =>  'School Website'
+    'title' =>  'Lorem Ipsum'
 ]);
 ```
 

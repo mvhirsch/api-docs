@@ -1,10 +1,12 @@
 # Create Group
 
 <span class="request">`POST` **/api/1.1/groups**</span>
-<span class="description">Create a new user group.</span>
+
+<span class="description">Create a new user group</span>
+
 <span class="arguments">Name</span> | Value | Description
 ------------------ | ---------------------------------------- | -------------------
-**name** _String_  |  <span class="required">Required</span>  |  The new group name.
+**name** _String_  |  <span class="required">Required</span>  |  The name of the new group
 
 ### Example Request
 
@@ -20,9 +22,11 @@ $newGroup = $client->createGroup('Manager');
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Columns Data** _Group Object_ | <span class="custom">This data and its architecture is based on Directus groups's schema.</span>
+--------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**data** _Group Object_ | <span class="custom">This data and its architecture is based on Directus groups's schema</span>
+
+### Example Response
 
 ```json
 {

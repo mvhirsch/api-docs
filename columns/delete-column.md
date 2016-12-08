@@ -2,11 +2,16 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`DELETE` **/api/1.1/tables/[table-name]/columns/[column-name]**</span>
-<span class="description">Deletes a column to the given table.</span>
+<span class="request">`DELETE` **/api/1.1/tables/_table-name_/columns/_column-name_**</span>
+
+<span class="description">Deletes a column from the specified table</span>
+
 <span class="arguments">Name</span> | Value | Description
-**table_name** _String_             | <span class="required">Required</span>    | Table name
-**column_name** _String_            | <span class="required">Required</span>    | Column name
+------------------ | ----- | -----------
+**table_name** _String_             | <span class="required">Required</span>    | The name of the table that contains the column to delete
+**column_name** _String_            | <span class="required">Required</span>    | The name of the column you wish to delete
+
+### Example Request
 
 ```bash
 $ curl -X DELETE  https://instance--key.directus.io/api/1.1/tables/projects/columns/intro \
@@ -20,11 +25,11 @@ $client->deleteColumn('projects', 'intro');
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**success** _Boolean_ | Whether or not the bookmark was deleted.
-**error** _Error Object_ | This object contains error information (if any). <a class="object">**Error Object**: View Nested Attributes</a>
+--------|------------
+**success** _Boolean_ | Whether or not the bookmark was deleted
+**error** _Error Object_ | Contains error information for failures <a class="object">**Error Object**: View Nested Attributes</a>
 
-#### Successful
+### Example Response (Success)
 
 ```json
 {
@@ -36,7 +41,7 @@ $client->deleteColumn('projects', 'intro');
 }
 ```
 
-#### Unsuccessful
+### Example Response (Failure)
 
 ```
 {

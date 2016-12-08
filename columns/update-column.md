@@ -1,39 +1,45 @@
 # Update Column
 
 > **Note:** Table and column names are case-sensitive
+
 > **Note:** Does not update the table column-type.
 
-<span class="request">`PUT` **/api/1.1/tables/[table-name]/columns/[column-name]**</span>
-<span class="description">Updates a column in the given table.</span>
+<span class="request">`PUT` **/api/1.1/tables/_table-name_/columns/_column-name_**</span>
+
+<span class="description">Updates a column within the specified table</span>
+
 <span class="arguments">Name</span> | Value | Description
-**column_name** _String_                    |     | Column name.
-**table_name** _String_                   |     | Table name.
-**data_type** _String_                    |     | Data type.
+------------------ | ----- | -----------
+**column_name** _String_                    |     | Column name
+**table_name** _String_                   |     | Table name
+**data_type** _String_                    |     | Data type
 **ui** _String_                      |     | UI name
-**hidden_input** _Boolean_           |     | Whether the column will be hidden in the edit form.
-**hidden_list** _Boolean_            |     | Whether the column will be hidden in the list page.
-**required** _Boolean_               |     | Whether the column is required.
-**sort** _String_                    |     | Sort position in number.
-**comment** _String_                 |     | Note on the column.
+**hidden_input** _Boolean_           |     | Whether the column will be hidden in the edit form
+**hidden_list** _Boolean_            |     | Whether the column will be hidden in the list page
+**required** _Boolean_               |     | Whether the column is required
+**sort** _String_                    |     | Sort position in number
+**comment** _String_                 |     | Note on the column
 **relationship_type** _String_       |     | Column relationship type, `ONETOMANY`, `MANYTOMANY` or `MANYTOONE`
-**related_table** _String_           |     | The table name this column is related to.
+**related_table** _String_           |     | The table name this column is related to
 **junction_table** _String_          |     | The pivot/junction table that joins the column's table with the related table
-**junction_key_left** _String_       |     | The column name in junction that is related to the column's table.
-**junction_key_right** _String_      |     | The column name in junction that is related to the related table.
+**junction_key_left** _String_       |     | The column name in junction that is related to the column's table
+**junction_key_right** _String_      |     | The column name in junction that is related to the related table
 
 ### Example Request
 
 ```bash
-$ curl -X PUT --data "comment=Project+name" https://instance--key.directus.io/api/1.1/tables/projects/title \
+$ curl -X PUT --data "comment=Project+Name" https://instance--key.directus.io/api/1.1/tables/projects/title \
         -u [user-token]:
 ```
 
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Columns Data** _Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema.</span>
+--------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**Columns Data** _Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema</span>
+
+### Example Response
 
 ```json
 {
@@ -47,7 +53,7 @@ $ curl -X PUT --data "comment=Project+name" https://instance--key.directus.io/ap
     "type": "VARCHAR",
     "char_length": "100",
     "is_nullable": "YES",
-    "comment": "Project's title",
+    "comment": "Project Name",
     "sort": 3,
     "system": false,
     "master": false,

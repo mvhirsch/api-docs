@@ -2,9 +2,9 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`POST` **/api/1.1/tables/[table-name]/columns**</span>
+<span class="request">`POST` **/api/1.1/tables/_table-name_/columns**</span>
 
-<span class="description">Create/Add a column to the given table.</span>
+<span class="description">Create a new column within the specified table</span>
 
 <span class="arguments">Name</span> | Value | Description
 ------------------ | ----- | -----------
@@ -23,6 +23,8 @@
 **junction_key_left** _String_       |     | The column name in junction that is related to the column's table (only used when storing relational data)
 **junction_key_right** _String_      |     | The column name in junction that is related to the related table (only used when storing relational data)
 
+### Example Request
+
 ```bash
 $ curl -X POST -d "column_name=year&data_type=int&char_length=4&ui=numeric&comment=Year+build" \       
         https://instance--key.directus.io/api/1.1/tables/projects/columns \
@@ -35,7 +37,7 @@ $column = $client->createColumn([
     'table' => 'projects',
     'type' => 'int',
     'ui' => 'numeric',
-    'comment' => 'Year Built'
+    'comment' => 'Lorem Ipsum'
     'length' => 4
 ]);
 ```
@@ -43,9 +45,11 @@ $column = $client->createColumn([
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Columns Data** _Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema.</span>
+---------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**data** _Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema</span>
+
+### Example Response
 
 ```json
 {
@@ -59,7 +63,7 @@ $column = $client->createColumn([
     "type": "VARCHAR",
     "char_length": "100",
     "is_nullable": "YES",
-    "comment": "Project's title",
+    "comment": "Lorem Ipsum",
     "sort": 3,
     "system": false,
     "master": false,

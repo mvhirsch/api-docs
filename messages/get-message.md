@@ -1,7 +1,8 @@
 # Get Messages
 
-<span class="request">`GET` **/api/1.1/messages/_[message-id]_**</span>
-<span class="description">Get a single message by its ID.</span>
+<span class="request">`GET` **/api/1.1/messages/_message-id_**</span>
+
+<span class="description">Get a specific message by its ID</span>
 
 ### Example Request
 
@@ -17,9 +18,11 @@ $messages = $client->getMessage(1);
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Data** _Message Object_ | <span class="custom">This data and its architecture is based on Directus messages's schema.</span>
+--------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**data** _Message Object_ | <span class="custom">This data and its architecture is based on Directus messages's schema</span>
+
+### Example Response
 
 ```json
 {

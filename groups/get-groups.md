@@ -1,7 +1,8 @@
 # Get Groups
 
 <span class="request">`GET` **/api/1.1/groups**</span>
-<span class="description">Get all the user groups.</span>
+
+<span class="description">Get system information for all user groups</span>
 
 ### Example Request
 
@@ -17,9 +18,11 @@ $groups = $client->getGroups();
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Columns Data** _Collection of Group Object_ | <span class="custom">This data and its architecture is based on Directus groups's schema.</span>
+--------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**data** _Group Object Collection_ | <span class="custom">This data and its architecture is based on Directus groups's schema</span>
+
+### Example Response
 
 ```json
 {

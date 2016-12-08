@@ -2,8 +2,9 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1.1/privileges/[group-id]/[table-name]**</span>
-<span class="description">Get the table privilege of the specified user-group.</span>
+<span class="request">`GET` **/api/1/privileges/_group-id_/_table-name_**</span>
+
+<span class="description">Get the table privileges for a specific user group</span>
 
 ### Example Request
 
@@ -17,9 +18,11 @@ $ curl https://instance--key.directus.io/api/1.1/privileges/1/projects \
 Table privilege for the specified table and user-group.
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**data**</span> _Privilege Object_ | <span class="custom">This data and its architecture is based on Directus Privileges's schema.</span>
+-------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**data**</span> _Privilege Object_ | <span class="custom">This data and its architecture is based on Directus Privileges's schema</span>
+
+### Example Response
 
 ```json
 {

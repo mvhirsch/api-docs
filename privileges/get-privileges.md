@@ -1,7 +1,8 @@
 # Get Privileges
 
-<span class="request">`GET` **/api/1.1/privileges/[group-id]**</span>
-<span class="description">Get the privileges of the specified user-group.</span>
+<span class="request">`GET` **/api/1.1/privileges/_group-id_**</span>
+
+<span class="description">Get the privileges for the specified user group</span>
 
 ### Example Request
 
@@ -19,9 +20,11 @@ $privileges = $client->getGroupPrivileges(1);
 List of all the tables with their privileges for the specified user-group.
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**data**</span> _Collection of Privilege Object_ | <span class="custom">This data and its architecture is based on Directus Privileges's schema.</span>
+-------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**data**</span> _Privilege Object Collection_ | <span class="custom">This data and its architecture is based on Directus Privileges's schema</span>
+
+### Example Request
 
 ```json
 {

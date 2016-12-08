@@ -1,10 +1,12 @@
 # Get Messages
 
 <span class="request">`GET` **/api/1.1/messages/self**</span>
-<span class="description">Get all the authenticated user messages.</span>
+
+<span class="description">Get all of the messages for the current user</span>
 
 <span class="arguments">Name</span> | Value | Description
-**max_id** _Integer_  |  <span class="optional">Optional</span>  |  Messages newer than this message id.
+--------|-----|------------
+**max_id** _Integer_  |  <span class="optional">Optional</span>  |  Only get messages newer than this message id
 
 ### Example Request
 
@@ -20,9 +22,11 @@ $messages = $client->getMessages(1);
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Data** _Collection of Message Object_ | <span class="custom">This data and its architecture is based on Directus messages's schema.</span>
+--------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**Data** _Message Object Collection_ | <span class="custom">This data and its architecture is based on Directus messages's schema</span>
+
+### Example Response
 
 ```json
 {

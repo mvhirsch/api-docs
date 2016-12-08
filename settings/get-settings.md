@@ -1,7 +1,8 @@
 # Get Settings
 
 <span class="request">`GET` **/api/1.1/settings**</span>
-<span class="description">Get all Directus settings.</span>
+
+<span class="description">Get all Directus settings</span>
 
 ### Example Request
 
@@ -17,9 +18,11 @@ $settings = $client->getSettings();
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**data**</span> _object_ | <span class="custom">This data and its architecture is based on Directus settings's content.</span>
+---------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**data**</span> _object_ | <span class="custom">This data and its architecture is based on Directus settings's content</span>
+
+### Example Response
 
 ```json
 {

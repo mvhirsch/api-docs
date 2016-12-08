@@ -4,9 +4,9 @@
 
 > **Note:** These arguments and attributes are based on the table's custom columns
 
-<span class="request">`GET` **/api/1.1/tables/_[table-name]_/rows**</span>
+<span class="request">`GET` **/api/1.1/tables/_table-name_/rows**</span>
 
-<span class="description">Retrieve a collection of items within a specific table. Which columns are returned is determined by the current user's privileges</span>
+<span class="description">Retrieve a collection of items within a specific table based on the current user's privileges</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------

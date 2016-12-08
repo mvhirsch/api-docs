@@ -1,9 +1,10 @@
 # Get Group
 
-<span class="request">`GET` **/api/1.1/groups/[id]**</span>
-<span class="description">Get the information of the specified user group.</span>
+<span class="request">`GET` **/api/1.1/groups/_id_**</span>
 
-## Example Request
+<span class="description">Get system information for the specified user group</span>
+
+### Example Request
 
 ```bash
 $ curl https://instance--key.directus.io/api/1.1/groups/1 \
@@ -17,9 +18,11 @@ $group = $client->getGroup(1);
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Columns Data** _Group Object_ | <span class="custom">This data and its architecture is based on Directus groups's schema.</span>
+-------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**data** _Group Object_ | <span class="custom">This data and its architecture is based on Directus groups's schema</span>
+
+### Example Response
 
 ```json
 {

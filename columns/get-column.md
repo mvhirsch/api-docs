@@ -2,8 +2,9 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1.1/tables/[table-name]/columns/[column-name]**</span>
-<span class="description">Get Information on a given column information from the specified table.</span>
+<span class="request">`GET` **/api/1.1/tables/_table-name_/columns/_column-name_**</span>
+
+<span class="description">Get the system and schema information for a column within a specific table</span>
 
 ### Example Request
 
@@ -19,9 +20,11 @@ $column = $client->getColumn('projects', 'title');
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Columns Data** _Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema.</span>
+-------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**Columns Data** _Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema</span>
+
+### Example Response
 
 ```json
 {

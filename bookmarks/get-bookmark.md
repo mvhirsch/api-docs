@@ -1,7 +1,8 @@
 # Get Bookmark
 
-<span class="request">`GET` **/api/1.1/bookmarks/_[bookmark-id]_**</span>
-<span class="description">Get all the authenticated user bookmarks.</span>
+<span class="request">`GET` **/api/1.1/bookmarks/_bookmark-id_**</span>
+
+<span class="description">Get all of the bookmarks for the current user</span>
 
 ### Example Request
 
@@ -17,9 +18,11 @@ $bookmark = $client->getBookmark(1);
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-**Data** _Bookmark Object_ | <span class="custom">This data and its architecture is based on Directus bookmarks's schema.</span>
+--------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**data** _Bookmark Object_ | <span class="custom">This data and its architecture is based on Directus bookmarks's schema</span>
+
+### Example Response
 
 ```json
 {
