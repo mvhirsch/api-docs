@@ -39,7 +39,7 @@ Filter the request by using any of the supported operators.
 
 Operator                | Description
 ----------------------- | ----------------------
-`=`, `eq`               | Equal to
+`=`, `eq`, _None_       | Equal to
 `<>`, `!=`, `neq`       | Not Equal to
 `<`, `lt`               | Less than
 `<=`, `lte`             | Less than or equal to

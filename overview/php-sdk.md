@@ -850,13 +850,18 @@ $params = [
 $articles = $client->getItems('articles, [
   'filters' => ['title' => ['like' => 'movies']]
 ]);
+
+// Not operator is default to equal to.
+$articles = $client->getItems('articles, [
+  'filters' => ['slug' => 'lorem-ipsum']
+]);
 ```
 
 #### Supported Operators
 
 Operator                | Description
 ----------------------- | ----------------------
-`=`, `eq`               | Equal to
+`=`, `eq`, _None_       | Equal to
 `<>`, `!=`, `neq`       | Not Equal to
 `<`, `lt`               | Less than
 `<=`, `lte`             | Less than or equal to

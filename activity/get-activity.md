@@ -15,14 +15,14 @@
 ### Example Request
 
 ```bash
-$ curl -g https://instance--key.directus.io/api/1.1/activity&filters[table_name][eq]=projects \
+$ curl -g https://instance--key.directus.io/api/1.1/activity&filters[table_name]=projects \
   -u [user-token]:
 ```
 
 ```php
 $activity = $client->getActivity([
   'filters' => [
-    'table_name' => ['eq' => 'projects']
+    'table_name' => projects
   ]
 ]);
 ```
