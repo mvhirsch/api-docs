@@ -11,7 +11,7 @@
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
 **table** _String_ | <span class="required">Required</span> | The table within which the item will be added
-<span class="custom">**Custom Data**</span> _Array_ | | <span class="custom">This data and its architecture is based on your specific project's schema</span>
+<span class="custom">**data**</span> _Array_ | | <span class="custom">This data and its architecture is based on your specific project's schema</span>
 
 ### Example Request
 
