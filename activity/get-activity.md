@@ -31,8 +31,8 @@ $activity = $client->getActivity([
 
 <span class="attributes">Attribute</span> | Description
 --------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
-**data** _Activity Object Collection_ | <span class="custom">This data and its architecture is based on Directus activity's schema</span>
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
+**data** _Activity Object Collection_ | <span class="custom">This data and its architecture is based on Directus activity's schema</span> [**Activity Object**: View Nested Attributes](/overview/objects-model.md#activity-object)
 
 ### Example Response
 

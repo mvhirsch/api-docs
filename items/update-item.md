@@ -30,8 +30,8 @@ $updatedProject = $client->updateItem('projects', 1, [
 
 <span class="attributes">Attribute</span> | Description
 --------|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**Custom Data**</span> _object_ | <span class="custom">This data and its architecture is based on your specific project's schema</span>
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
+<span class="custom">**data**</span> _object_ | <span class="custom">This data and its architecture is based on your specific project's schema</span>
 
 ### Example Response
 

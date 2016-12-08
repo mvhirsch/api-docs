@@ -19,7 +19,7 @@ $settings = $client->getSettings();
 
 <span class="attributes">Attribute</span> | Description
 ---------|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
 <span class="custom">**data**</span> _object_ | <span class="custom">This data and its architecture is based on Directus settings's content</span>
 
 ### Example Response
