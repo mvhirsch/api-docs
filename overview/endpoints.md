@@ -31,76 +31,136 @@ GET | `/activity` | Collection of latest Directus activity
 **in[field]**  _String_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 **ids** _String_  |  <span class="default">Optional</span>  |  Only list records that its `field` matches one of given value. Can be separated by commas. `ids=1,2`. Same as `in[id]=1,2`.
 **skip_activity_log** | <span class="default">Default **0**</span> | Whether or not the update is going to be logged in activity.
-**filters** | <span class="default">Optional</span> | Use `Filter Object` to filter the result.
+**filters** | <span class="default">Optional</span> | Use `Filter Operators` to filter the result.
 
+#### Supported Filters Operators
+
+Filter the request by using any of the supported operators.
+
+Operator                | Description
+----------------------- | ----------------------
+`=`, `eq`               | Equal to
+`<>`, `!=`, `neq`       | Not Equal to
+`<`, `lt`               | Less than
+`<=`, `lte`             | Less than or equal to
+`>`, `gt`               | Greater than
+`>=`, `gte`             | Greater than or equal to
+`in`                    | Match one of the value in the list
+`nin`                   | Not match any value in the list
+`null`                  | Is Null
+**nnull** (@TODO)      | Is Not Null
+**contains** (@TODO)   | Contains a string
+**ncontains** (@TODO)  | Not Contains a string
+**between** (@TODO)    | Is Between
+**empty** (@TODO)      | Is Empty
+**nempty** (@TODO)     | Is Not Empty
+**has** (@TODO)        | Has one or more related items
 
 ## Example API Requests
 
-<span class="request">`GET` **/api/1.1/privileges/:groupId**</span>
-<span class="description">Returns JSON object of the privileges for a given group.</span>
+<span class="request">`GET` **/api/1.1/tables/_[table-name]_/rows**</span>
+<span class="description">Retrieve a collection of items within a specific table based on the current user's privileges</span>
 
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/1.1/privileges/1 \
+$ curl -g https://instance--key.directus.io/api/1.1/tables/directus_users/rows?filters[email][like]=@rngr.org \
         -u [user-token]:
 ```
 
 ```php
-$privileges = $client->getGroupPrivileges(1);
+$users = $client->getItems('directus_users, [
+  'filters' => ['email' => ['like' => '@rngr.org']]
+]);
 ```
 
 ## Response
 
-[Privilege Object](/01-overview/objects-model.md#privilege-object)
+[User Object](/01-overview/objects-model.md#user-object)
 
 ```json
 {
   "meta": {
+    "table": "directus_users",
     "type": "collection",
-    "table": "directus_privileges"
+    "total": 1,
+    "Active": 9,
+    "Delete": 0,
+    "Draft": 0,
+    "total_entries": 9
   },
   "data": [
-    {
-      "id": 23,
-      "table_name": "countries",
-      "allow_add": 1,
-      "allow_edit": 2,
-      "allow_delete": 2,
-      "allow_alter": 1,
-      "allow_view": 2,
-      "group_id": 1,
-      "read_field_blacklist": null,
-      "write_field_blacklist": null,
-      "nav_listed": 0
-    },
-    {
+  {
       "id": 1,
-      "table_name": "directus_activity",
-      "allow_add": 1,
-      "allow_edit": 2,
-      "allow_delete": 2,
-      "allow_alter": 1,
-      "allow_view": 2,
-      "group_id": 1,
-      "group_id": 1,
-      "read_field_blacklist": null,
-      "write_field_blacklist": null,
-      "nav_listed": 0
+      "active": 1,
+      "first_name": "Ben",
+      "last_name": "Haynes",
+      "email": "welling@rngr.org",
+      "token": "user-token",
+      "position": "",
+      "email_messages": 1,
+      "last_login": "2016-12-02T07:44:45-04:00",
+      "last_access": "2016-12-02T07:44:45-04:00",
+      "last_page": "",
+      "ip": "",
+      "group": {
+        "meta": {
+          "table": "directus_groups",
+          "type": "item"
+        },
+        "data": {
+          "id": 1,
+          "name": "Administrator",
+          "description": null,
+          "restrict_to_ip_whitelist": "0"
+        }
+      },
+      "avatar": "//www.gravatar.com/avatar/65abcdof6a5aea481d9124343433423sab97e0a0fe?s=200&d=identicon&r=g",
+      "avatar_file_id": null,
+      "location": "",
+      "phone": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "language": "en",
+      "timezone": "America/New_York"
     },
     {
-      "id": 18,
-      "table_name": "directus_bookmarks",
-      "allow_add": 1,
-      "allow_edit": 2,
-      "allow_delete": 2,
-      "allow_alter": 1,
-      "allow_view": 2,
-      "group_id": 1,
-      "group_id": 0,
-      "read_field_blacklist": null,
-      "write_field_blacklist": null,
-      "nav_listed": 0
+      "id": 2,
+      "active": 1,
+      "first_name": "Welling",
+      "last_name": "Guzmán",
+      "email": "welling@rngr.org",
+      "token": "user-token",
+      "position": "",
+      "email_messages": 1,
+      "last_login": "2016-11-02T07:44:45-04:00",
+      "last_access": "2016-11-02T07:44:45-04:00",
+      "last_page": "",
+      "ip": "",
+      "group": {
+        "meta": {
+          "table": "directus_groups",
+          "type": "item"
+        },
+        "data": {
+          "id": 1,
+          "name": "Administrator",
+          "description": null,
+          "restrict_to_ip_whitelist": "0"
+        }
+      },
+      "avatar": "//www.gravatar.com/avatar/653cc7f6a5aea481d9124343433423sab97e0a0fe?s=200&d=identicon&r=g",
+      "avatar_file_id": null,
+      "location": "",
+      "phone": "",
+      "address": "",
+      "city": "",
+      "state": "",
+      "zip": "",
+      "language": "es",
+      "timezone": "Pacific/Midway"
     }
   ]
 }
