@@ -31,7 +31,7 @@ GET | `/activity` | Collection of latest Directus activity
 **in[field]**  _String_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 **ids** _String_  |  <span class="default">Optional</span>  |  Only list records that its `field` matches one of given value. Can be separated by commas. `ids=1,2`. Same as `in[id]=1,2`.
 **skip_activity_log** | <span class="default">Default **0**</span> | Whether or not the update is going to be logged in activity.
-**filters** | <span class="default">Optional</span> | Use `Filter Operators` to filter the result.
+**filters** | <span class="default">Optional</span> | Use [`Filter Operators`](/overview/endpoints.md#supported-filters-operators) to filter the result.
 
 #### Supported Filters Operators
 
