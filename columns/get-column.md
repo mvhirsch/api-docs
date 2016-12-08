@@ -2,9 +2,9 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1.1/tables/[table-name]/columns/[column-name]**</span>
+<span class="request">`GET` **/api/1.1/tables/_table-name_/columns/_column-name_**</span>
 
-<span class="description">Get Information on a given column information from the specified table</span>
+<span class="description">Get the system and schema information for a column within a specific table</span>
 
 ### Example Request
 

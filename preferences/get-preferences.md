@@ -2,8 +2,9 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1.1/tables/[table-name]/preferences**</span>
-<span class="description">Get table preferences.</span>
+<span class="request">`GET` **/api/1.1/tables/_table-name_/preferences**</span>
+
+<span class="description">Get all preferences for a table</span>
 
 ### Example Request
 
@@ -19,9 +20,11 @@ $preferences = $client->getPreferences('projects');
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
+-------|------------
 **meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
 <span class="custom">**data**</span> _Preference Object_ | <span class="custom">This data and its architecture is based on Directus Preferences's schema.</span>
+
+### Example Response
 
 ```json
 {

@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`DELETE` **/api/1.1/tables/[table-name]/columns/[column-name]**</span>
+<span class="request">`DELETE` **/api/1.1/tables/_table-name_/columns/_column-name_**</span>
 
 <span class="description">Deletes a column from the specified table</span>
 

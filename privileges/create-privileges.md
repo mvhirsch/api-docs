@@ -2,23 +2,24 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`POST` **/api/1.1/privileges/:groupId**</span>
-<span class="description">Creating permissions/privileges to a table for the specified user-group ID.</span>
+<span class="request">`POST` **/api/1.1/privileges/_group-id_**</span>
 
-<span class="attributes">Attribute</span> | Description
------------------------------ | ----------------------
-**id** _Integer_              | Privilege's Unique Identification number.
-**group_id** _Integer_                | Group ID
-**table_name** _String_               | Table name that this permissions belongs to.
-**allow_add** _Integer_               | Whether the group is allow to add/create entries in the table. (See values below)
-**allow_edit** _Integer_              | Whether the group is allow to edit/update entries in the table. (See values below)
-**allow_delete** _Integer_            | Whether the group is allow to delete/remove entries in the table. (See values below)
-**allow_view** _Integer_              | Whether the group is allow to view/read entries in the table. (See values below)
-**allow_alter** _Integer_             | Whether the group is allow to add/create entries in the table. (See values below)
-**nav_listed** _Boolean_              | Whether the table should be visible in the sidebar.
-**read_field_blacklist** _String_     | List of columns that the group can't view/read.
-**write_field_blacklist** _String_    | List of columns that the group can't edit/update.
-**status_id** _String_                | State of the record that this permissions belongs to. (Draft, Active or Soft Deleted)
+<span class="description">Create new table privileges for the specified user group</span>
+
+<span class="arguments">Name</span> | Value | Description
+------------------ | ----- | -----------
+**id** _Integer_           |   | Privilege's Unique Identification number.
+**group_id** _Integer_             |   | The `id` for the user group that should be assigned these privileges
+**table_name** _String_           |    | The table name that these privileges should be applied to
+**allow_add** _Integer_            |   | Permission to add/create entries in the table (See values below)
+**allow_edit** _Integer_           |   | Permission to edit/update entries in the table (See values below)
+**allow_delete** _Integer_        |   | Permission to delete/remove entries in the table (See values below)
+**allow_view** _Integer_          |    | Permission to view/read entries in the table (See values below)
+**allow_alter** _Integer_          |   | Permission to add/create entries in the table (See values below)
+**nav_listed** _Boolean_           |   | If the table should be visible in the sidebar for this user group
+**read_field_blacklist** _String_    | | A CSV of column names that the group can't view (read)
+**write_field_blacklist** _String_  |  | A CSV of column names that the group can't edit (update)
+**status_id** _String_              |  | State of the record that this permissions belongs to (Draft, Active or Soft Deleted)
 
 ### Example Request
 
@@ -40,9 +41,11 @@ $privileges = $client->createPrivileges([
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**data**</span> _Privilege Object_ | <span class="custom">This data and its architecture is based on Directus Privileges's schema.</span>
+--------|------------
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+<span class="custom">**data**</span> _Privilege Object_ | <span class="custom">This data and its architecture is based on Directus Privileges's schema</span>
+
+### Example Response
 
 ```json
 {

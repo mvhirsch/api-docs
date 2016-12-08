@@ -1,7 +1,8 @@
 # Delete Bookmark
 
-<span class="request">`DELETE` **/api/1.1/bookmarks/_[bookmark-id]_**</span>
-<span class="description">Deletes a bookmark.</span>
+<span class="request">`DELETE` **/api/1.1/bookmarks/_bookmark-id_**</span>
+
+<span class="description">Deletes a bookmark</span>
 
 ### Example Request
 
@@ -17,11 +18,11 @@ $bookmark = $client->deleteBookmark(1);
 ## Response
 
 <span class="attributes">Attribute</span> | Description
---------|-----|------------
-**success** _Boolean_ | Whether or not the bookmark was deleted.
-**error** _Error Object_ | This object contains error information (if any). <a class="object">**Error Object**: View Nested Attributes</a>
+--------|------------
+**success** _Boolean_ | Whether or not the bookmark was deleted
+**error** _Error Object_ | This object contains error information (if any) <a class="object">**Error Object**: View Nested Attributes</a>
 
-#### Successful
+### Example Request (Success)
 
 ```json
 {
@@ -29,7 +30,7 @@ $bookmark = $client->deleteBookmark(1);
 }
 ```
 
-#### Unsuccessful
+### Example Request (Failure)
 
 ```json
 {

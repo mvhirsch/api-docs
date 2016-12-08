@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1.1/tables/[table-name]**</span>
+<span class="request">`GET` **/api/1.1/tables/_table-name_**</span>
 
 <span class="description">Get system and schema information for a specific table</span>
 

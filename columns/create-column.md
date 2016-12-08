@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`POST` **/api/1.1/tables/[table-name]/columns**</span>
+<span class="request">`POST` **/api/1.1/tables/_table-name_/columns**</span>
 
 <span class="description">Create a new column within the specified table</span>
 
@@ -47,7 +47,7 @@ $column = $client->createColumn([
 <span class="attributes">Attribute</span> | Description
 ---------|------------
 **meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
-**Columns Data** _Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema</span>
+**data** _Column Object_ | <span class="custom">This data and its architecture is based on Directus columns's schema</span>
 
 ### Example Response
 

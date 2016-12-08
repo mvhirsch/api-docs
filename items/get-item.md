@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1.1/tables/[table-name]/rows/[row-id]**</span>
+<span class="request">`GET` **/api/1.1/tables/_table-name_/rows/_row-id_**</span>
 
 <span class="description">Get a specific item within a table</span>
 
