@@ -4,27 +4,27 @@
 
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
-createItem              | `table`, `data`        | Creates a new item within the given table
-~~createActivity~~      | `data`                 | Creates an activity log
-createBookmark          | `data`                 | Creates a bookmark
-createColumn            | `data`                 | Creates a new column
-createFile              | `data`                 | Creates a new file
-createGroup             | `data`                 | Creates a new group
-createMessage           | `data`                 | Creates/Sends a new messsage
-sendMessage             | `data`                 | `createMessage` alias
-createPreferences       | `data`                 | Creates a table preferences
-createPrivileges        | `data`                 | Creates a table privileges (Permissions)
-**createSettings**      | `data`                 | Creates a new setting
-createTable             | `name`, `params`       | Creates a new table
-createUIOptions         | `data`                 | Creates a new UI options
-createUser              | `data`                 | Creates a new user
+**createItem**              | `table`, `data`        | Creates a new item within the given table
+**~~createActivity~~**      | `data`                 | Creates an activity log
+**createBookmark**          | `data`                 | Creates a bookmark
+**createColumn**            | `data`                 | Creates a new column
+**createFile**              | `data`                 | Creates a new file
+**createGroup**             | `data`                 | Creates a new group
+**createMessage**           | `data`                 | Creates/Sends a new messsage
+**sendMessage**             | `data`                 | `createMessage` alias
+**createPreferences**       | `data`                 | Creates a table preferences
+**createPrivileges**        | `data`                 | Creates a table privileges (Permissions)
+**createSettings**          | `data`                 | Creates a new setting
+**createTable**             | `name`, `params`       | Creates a new table
+**createUIOptions**         | `data`                 | Creates a new UI options
+**createUser**              | `data`                 | Creates a new user
 
 ### Create Item
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-table         | String  | The Table name where the `data` are going to be inserted
-data          | Array   | Data to be inserted in `table`. All this data attributes will depend on your table columns
+**table**         | String  | The Table name where the `data` are going to be inserted
+**data**          | Array   | Data to be inserted in `table`. All this data attributes will depend on your table columns
 
 #### Returns
 
@@ -45,13 +45,13 @@ $article = $client->createItem('articles', [
 
 Column                  |  Type    | Description
 ----------------------- | -------- | ----------------------
-table_name              | String   | Bookmark Table name
-title                   | String   | Bookmark title
-columns_visible         | String   | List of column separated by comma.
-search_string           | String   | List of filters separated by comma. Format `column:operator:value`
-sort                    | String   | Sort column.
-sort_order              | String   | Sort column order. (`ASC` or `DESC`)
-status                  | String   | List of status separated by comma.
+**table_name**              | String   | Bookmark Table name
+**title**                   | String   | Bookmark title
+**columns_visible**         | String   | List of column separated by comma.
+**search_string**           | String   | List of filters separated by comma. Format `column:operator:value`
+**sort**                    | String   | Sort column.
+**sort_order**              | String   | Sort column order. (`ASC` or `DESC`)
+**status**                  | String   | List of status separated by comma.
 
 #### Returns
 
@@ -73,20 +73,20 @@ $bookmark = $client->createBookmark([
 
 Column                  | Type      | Description
 ----------------------- | --------- | ------------
-name                    | String    | Column name.
-table                   | String    | Table name.
-type                    | String    | Data type.
-ui                      | String    | UI name
-hidden_input            | Boolean   | Whether the column will be hidden in the edit form.
-hidden_list             | Boolean   | Whether the column will be hidden in the list page.
-required                | Boolean   | Whether the column is required.
-sort                    | String    | Sort position in number.
-comment                 | String    | Note on the column.
-relationship_type       | String    | Column relationship type, `ONETOMANY`, `MANYTOMANY` or `MANYTOONE`
-related_table           | String    | The table name this column is related to.
-junction_table          | String    | The pivot/junction table that joins the column's table with the related table
-junction_key_left       | String    | The column name in junction that is related to the column's table.
-junction_key_right      | String    | The column name in junction that is related to the related table.
+**name**                    | String    | Column name.
+**table**                   | String    | Table name.
+**type**                    | String    | Data type.
+**ui**                      | String    | UI name
+**hidden_input**            | Boolean   | Whether the column will be hidden in the edit form.
+**hidden_list**             | Boolean   | Whether the column will be hidden in the list page.
+**required**                | Boolean   | Whether the column is required.
+**sort**                    | String    | Sort position in number.
+**comment**                 | String    | Note on the column.
+**relationship_type**       | String    | Column relationship type, `ONETOMANY`, `MANYTOMANY` or `MANYTOONE`
+**related_table**           | String    | The table name this column is related to.
+**junction_table**          | String    | The pivot/junction table that joins the column's table with the related table
+**junction_key_left**       | String    | The column name in junction that is related to the column's table.
+**junction_key_right**      | String    | The column name in junction that is related to the related table.
 
 **@TODO** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
 
@@ -129,8 +129,8 @@ $column = $client->createColumn([
 
 Column                  | Type       | Description
 ----------------------- | ---------- | --------------------
-name                    | String     | Group name.
-restrict_to_ip_whitelist| String     | List of IPs allowed to authenticate, separated  by comma.
+**name****                    |** String     | Group name.
+**restrict_to_ip_whitelist**| String     | List of IPs allowed to authenticate, separated  by comma.
 
 #### Example Request
 
@@ -144,12 +144,12 @@ $group = $client->createGroup([
 
 Column                  | Type      |  Description
 ----------------------- | --------- | ----------------------
-from                    | Integer   | Sender user id.
-to                      | Array     | List of users id, separated by comma.
-toGroup                 | Array     | List of groups id, separated by comma.
-subject                 | String    | Message subject.
-message                 | String    | Message content.
-attachments            | Array     | **@TODO** List of files to add to the message
+**from**                    | Integer   | Sender user id.
+**to**                      | Array     | List of users id, separated by comma.
+**toGroup**                 | Array     | List of groups id, separated by comma.
+**subject**                 | String    | Message subject.
+**message**                 | String    | Message content.
+**attachments**            | Array     | **@TODO** List of files to add to the message
 
 **@TODO** Send/Create responses without the need to specify each recipients.
 
@@ -184,25 +184,25 @@ $message = $client->sendMessage([
 
 Attribute               | Type      | Description
 ----------------------- | --------- | ----------------------
-id                      | Integer   | Message ID
-from                    | Integer   | Sender ID
-recipients              | String    | List of Recipients separated by comma. **@TODO**: it should be an array.
-subject                 | String    | Message subject
-responses               | Array     | List of responses messages
-response_to             | Integer   | Parent message (replied to this message id)
-read                    | Integer   | Whether the message was read by the authenticated user. **@TODO** It should be bool
+**id**                      | Integer   | Message ID
+**from**                    | Integer   | Sender ID
+**recipients**              | String    | List of Recipients separated by comma. **@TODO**: it should be an array.
+**subject**                 | String    | Message subject
+**responses**               | Array     | List of responses messages
+**response_to**             | Integer   | Parent message (replied to this message id)
+**read**                    | Integer   | Whether the message was read by the authenticated user. **@TODO** It should be bool
 
 
 ### Create Preferences
 
 Column                  | Type      | Description
 ----------------------- | --------- | ----------------------
-user                    | Integer   | User ID that this preferences belongs to.
-table_name              | String    | Table name that this preferences belongs to.
-columns_visible         | String    | List of visible column separated by comma.
-sort                    | String    | Sort column.
-sort_order              | String    | Sort column order. `ASC` or `DESC`
-status                  | String    | List of status separated by comma.
+**user**                    | Integer   | User ID that this preferences belongs to.
+**table_name**              | String    | Table name that this preferences belongs to.
+**columns_visible**         | String    | List of visible column separated by comma.
+**sort**                    | String    | Sort column.
+**sort_order**              | String    | Sort column order. `ASC` or `DESC`
+**status**                  | String    | List of status separated by comma.
 
 #### Returns
 
@@ -226,16 +226,16 @@ $preference = $client->createPreferences([
 
 Column                  | Type      | Description
 ----------------------- | --------- | ----------------------
-group_id                | Integer   | Group ID
-table_name              | String    | Table name that this permissions belongs to.
-allow_add               | Integer   | Whether the group is allow to add/create items in the table. (See values below)
-allow_edit              | Integer   | Whether the group is allow to edit/update items in the table. (See values below)
-allow_delete            | Integer   | Whether the group is allow to delete/remove items in the table. (See values below)
-allow_view              | Integer   | Whether the group is allow to view/read items in the table. (See values below)
-allow_alter             | Integer   | Whether the group is allow to add/create items in the table. (See values below)
-nav_listed              | Boolean   | Whether the table should be visible in the sidebar.
-read_field_blacklist    | String    | List of columns that the group can't view/read.
-write_field_blacklist   | String    | List of columns that the group can't edit/update.
+**group_id**                | Integer   | Group ID
+**table_name**              | String    | Table name that this permissions belongs to.
+**allow_add**               | Integer   | Whether the group is allow to add/create items in the table. (See values below)
+**allow_edit**              | Integer   | Whether the group is allow to edit/update items in the table. (See values below)
+**allow_delete**            | Integer   | Whether the group is allow to delete/remove items in the table. (See values below)
+**allow_view**              | Integer   | Whether the group is allow to view/read items in the table. (See values below)
+**allow_alter**             | Integer   | Whether the group is allow to add/create items in the table. (See values below)
+**nav_listed**              | Boolean   | Whether the table should be visible in the sidebar.
+**read_field_blacklist**    | String    | List of columns that the group can't view/read.
+**write_field_blacklist**   | String    | List of columns that the group can't edit/update.
 **status_id**           | String    | State of the record that this permissions belongs to. (Draft, Active or Soft Deleted)
 
 Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **@TODO** Adding constant for the permissions value.
@@ -263,7 +263,7 @@ $privileges = $client->createPrivileges([
 
 Parameter              | Type      | Description
 ----------------------- | --------- | ----------------------
-name                    | String    | New table name
+**name**                    | String    | New table name
 **data**                | Array     | Not defined yet.
 
 #### Returns
@@ -283,10 +283,10 @@ $privileges = $client->createTable('comments');
 
 Column                  | Type      | Description
 ----------------------- | --------- | ----------------------
-column                  | String    | Column name
-table                   | String    | Column table name
-ui                      | String    | Column UI name
-options                 | Array     | UI Options
+**column**                  | String    | Column name
+**table**                   | String    | Column table name
+**ui**                      | String    | Column UI name
+**options**                 | Array     | UI Options
 
 #### Returns
 
@@ -312,25 +312,25 @@ $options = $client->createColumnUIOptions([
 
 Column                  | Type      | Description
 ----------------------- | --------- | ----------------------
-active                  | Integer   | User's status. By default `1=active, 2-inactive, 3=deleted`
-email `Required`        | String    | User's unique email address
-first_name              | String    | User first name
-last_name               | String    | User last name
-password                | String    | Plain text password
-token                   | String    | User's unique API access token
-group                   | Integer   | User's group ID
-email_messages          | Boolean   | Whether the user wants to receive email notification
-avatar                  | String    | Avatar url
-avatar_file_id          | Integer   | Use a file id as avatar
-language                | String    | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch)
-timezone                | String    | User's default timezone
-position                | String    | User's position on the project/company
-location                | String    | User's location in the world or universe
-phone                   | String    | User's phone number
-address                 | String    | User's address
-city                    | String    | User's city
-state                   | String    | User's state
-zip                     | String    | User's zip code
+**active**                  | Integer   | User's status. By default `1=active, 2-inactive, 3=deleted`
+**email** `Required`        | String    | User's unique email address
+**first_name**              | String    | User first name
+**last_name**               | String    | User last name
+**password**                | String    | Plain text password
+**token**                   | String    | User's unique API access token
+**group**                   | Integer   | User's group ID
+**email_messages**          | Boolean   | Whether the user wants to receive email notification
+**avatar**                  | String    | Avatar url
+**avatar_file_id**          | Integer   | Use a file id as avatar
+**language**                | String    | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch)
+**timezone**                | String    | User's default timezone
+**position**                | String    | User's position on the project/company
+**location**                | String    | User's location in the world or universe
+**phone**                   | String    | User's phone number
+**address**                 | String    | User's address
+**city**                    | String    | User's city
+**state**                   | String    | User's state
+**zip**                     | String    | User's zip code
 
 #### Returns
 
@@ -356,26 +356,26 @@ $user = $client->createUser([
 
 Column                  | Type      | Description
 ----------------------- | --------- | ----------------------
-id                      | Integer   | User ID
-active                  | Integer   | User's status. `1=active, 2=inactive, 3=deleted`.
-email                   | String    | User's unique email address.
-first_name              | String    | User first name.
-last_name               | String    | User last name.
-password                | String    | hashed password. **IS THIS NEEDED?**
-token                   | String    | User's unique API access token
-group                   | Integer   | User's group ID
-email_messages          | Boolean   | Whether the user wants to receive email notification.
-avatar                  | String    | Avatar url
-avatar_file_id          | Integer   | File id used as avatar
-language                | String    | User's default language. Languages Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
-timezone                | String    | User's default timezone.
-position                | String    | User's position on the project/company.
-location                | String    | User's location in the world or universe.
-phone                   | String    | User's phone number
-address                 | String    | User's address
-city                    | String    | User's city
-state                   | String    | User's state
-zip                     | String    | User's zip code
+**id**                      | Integer   | User ID
+**active**                  | Integer   | User's status. `1=active, 2=inactive, 3=deleted`.
+**email**                   | String    | User's unique email address.
+**first_name**              | String    | User first name.
+**last_name**               | String    | User last name.
+**password**                | String    | hashed password. **IS THIS NEEDED?**
+**token**                   | String    | User's unique API access token
+**group**                   | Integer   | User's group ID
+**email_messages**          | Boolean   | Whether the user wants to receive email notification.
+**avatar**                  | String    | Avatar url
+**avatar_file_id**          | Integer   | File id used as avatar
+**language**                | String    | User's default language. Languages Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
+**timezone**                | String    | User's default timezone.
+**position**                | String    | User's position on the project/company.
+**location**                | String    | User's location in the world or universe.
+**phone**                   | String    | User's phone number
+**address**                 | String    | User's address
+**city**                    | String    | User's city
+**state**                   | String    | User's state
+**zip**                     | String    | User's zip code
 
 
 ### Create File
@@ -386,11 +386,11 @@ file                    | File     | New file
 
 File Parameter         | Type     | Description
 ----------------------- | --------------------------------------
-path `Required`         | String   | Local path of the file.
-**url** (_TODO_)        | String   | URL of the file to upload, OR a YouTube/Vimeo link to be embedded.
-title                   | String   | File's title
-tags                    | String   | Comma separated tags.
-caption                 | String   | File caption (Description).
+**path** `Required`         | String   | Local path of the file.
+**url** (@TODO)        | String   | URL of the file to upload, OR a YouTube/Vimeo link to be embedded.
+**title**                   | String   | File's title
+**tags**                    | String   | Comma separated tags.
+**caption**                 | String   | File caption (Description).
 
 #### Returns
 
@@ -423,22 +423,22 @@ $file = $client->createFile(new File('/path/to/the/file.jpg', [
 
 Column                  | Type     | Description
 ----------------------- | -------- | ----------------------
-id                      | Integer  | File ID
-active                  | Integer  | File's status. `1=active, 2=inactive, 3=deleted`.
-name                    | String   | File name
-title                   | String   | File's title
-location                | String   | Location of where the picture was taken. if any.
-type                    | String   | File mime type
-url                     | String   | File url relativity to Directus base url
-tags                    | String   | Comma separated tags.
-caption                 | String   | File caption (Description).
-width                   | Integer  | File width.
-height                  | Integer  | File height.
-size                    | Integer  | File size in bytes.
-embed_id                | String   | ID of the embedded file. Ex Youtube ID
-user                    | Integer  | File owner (who uploaded the file)
-date_uploaded           | String   | File uploaded date. **@TODO** It should be an DateTime object.
-storage_adapter         | String   | Storage adapter used to upload the file
+**id**                      | Integer  | File ID
+**active**                  | Integer  | File's status. `1=active, 2=inactive, 3=deleted`.
+**name**                    | String   | File name
+**title**                   | String   | File's title
+**location**                | String   | Location of where the picture was taken. if any.
+**type**                    | String   | File mime type
+**url**                     | String   | File url relativity to Directus base url
+**tags**                    | String   | Comma separated tags.
+**caption**                 | String   | File caption (Description).
+**width**                   | Integer  | File width.
+**height**                  | Integer  | File height.
+**size**                    | Integer  | File size in bytes.
+**embed_id**                | String   | ID of the embedded file. Ex Youtube ID
+**user**                    | Integer  | File owner (who uploaded the file)
+**date_uploaded**           | String   | File uploaded date. **@TODO** It should be an DateTime object.
+**storage_adapter**         | String   | Storage adapter used to upload the file
 
 
 ---
@@ -447,23 +447,23 @@ storage_adapter         | String   | Storage adapter used to upload the file
 
 Method                  | Parameter              | Description
 ----------------------- | ---------------------- | -----------
-getActivity             | `params`               | Get Directus Activity
-getItems                | `table`, `params`      | Collection of rows (items) for a given table
-getItem                 | `table`, `id`, `params`| Details for a specific table row (item)
-getUsers                | `params`               | Collection of users
-getUser                 | `id`, `params`         | Details for a specific user
-getFiles                | `params`               | Collection of files
-getFile                 | `id`, `params`         | Details for a specific file
-getGroups               | `params`               | Collection of all Directus user-groups
-getGroup                | `id`, `params`         | Details for a specific user-group
-getGroupPrivileges      | `group_id`             | Privileges for a given user-group
-getSettings             | None                   | All Directus Setting
-getSettingsByCollection | `collection`           | All Directus Settings in a given collection
-getMessages             | `userId`               | Collection of messages for the authenticated user
-getTables               | `params`               | Collection of tables viewable by authenticated user
-getTable                | `table`                | Collection of latest Directus activity
-getColumns              | `table`, `params`      | Collection of the column details for a given table
-getColumn               | `table`, `column`      | Details for a specific column in a given table
+**getActivity**             | `params`               | Get Directus Activity
+**getItems**                | `table`, `params`      | Collection of rows (items) for a given table
+**getItem**                 | `table`, `id`, `params`| Details for a specific table row (item)
+**getUsers**                | `params`               | Collection of users
+**getUser**                 | `id`, `params`         | Details for a specific user
+**getFiles**                | `params`               | Collection of files
+**getFile**                 | `id`, `params`         | Details for a specific file
+**getGroups**               | `params`               | Collection of all Directus user-groups
+**getGroup**                | `id`, `params`         | Details for a specific user-group
+**getGroupPrivileges**      | `group_id`             | Privileges for a given user-group
+**getSettings**             | None                   | All Directus Setting
+**getSettingsByCollection** | `collection`           | All Directus Settings in a given collection
+**getMessages**             | `userId`               | Collection of messages for the authenticated user
+**getTables**               | `params`               | Collection of tables viewable by authenticated user
+**getTable**                | `table`                | Collection of latest Directus activity
+**getColumns**              | `table`, `params`      | Collection of the column details for a given table
+**getColumn**               | `table`, `column`      | Details for a specific column in a given table
 
 **@TODO**: More helpers
 - Directus Preferences
@@ -476,7 +476,7 @@ An `Entry` or `EntryCollection` object containing the fetched data.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-params        | Array   | Customizable options.
+**params**        | Array   | Customizable options.
 
 #### Example Request
 
@@ -496,8 +496,8 @@ foreach($activities as $activity) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-table         | String  | The Table name to fetch data from.
-params        | Array   | Customizable options.
+**table**         | String  | The Table name to fetch data from.
+**params**        | Array   | Customizable options.
 
 #### Example Request
 
@@ -513,8 +513,8 @@ foreach($articles as $article) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-table         | String  | The Table name to fetch data from.
-id            | Mixed   | The record id.
+**table**         | String  | The Table name to fetch data from.
+**id**            | Mixed   | The record id.
 
 #### Example Request
 
@@ -527,7 +527,7 @@ echo $article->title;
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-params        | Array   | Customizable options.
+**params**        | Array   | Customizable options.
 
 #### Example Request
 
@@ -545,7 +545,7 @@ foreach($users as $user) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-id            | Integer | The user id.
+**id**            | Integer | The user id.
 
 #### Example Request
 
@@ -564,7 +564,7 @@ An `UserEntry` object containing the user information.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-params        | Array   | Customizable options.
+**params**        | Array   | Customizable options.
 
 #### Example Request
 
@@ -582,7 +582,7 @@ foreach($files as $file) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-id            | Integer | The file.
+**id**            | Integer | The file.
 
 #### Example Request
 
@@ -601,7 +601,7 @@ A `FileEntry` object containing the file information.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-params        | Array   | Customizable options.
+**params**        | Array   | Customizable options.
 
 #### Example Request
 
@@ -619,7 +619,7 @@ foreach($groups as $group) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-id            | Integer | The group id.
+**id**            | Integer | The group id.
 
 #### Example Request
 
@@ -638,7 +638,7 @@ A `GroupEntry` object containing the group information.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-id            | Integer | The group id.
+**id**            | Integer | The group id.
 
 #### Example Request
 
@@ -674,7 +674,7 @@ A `SettingEntry` object containing the setting information.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-collection    | String  | Name of the collection
+**collection**    | String  | Name of the collection
 
 #### Example Request
 
@@ -687,7 +687,7 @@ echo $settings->project_name
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-user          | Integer | The user id.
+**user**          | Integer | The user id.
 
 **@TODO**:
 **INCORRECT**: This returns a single message, and the parameter is a message id.
@@ -696,7 +696,7 @@ user          | Integer | The user id.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-params        | Array   | Customizable options.
+**params**        | Array   | Customizable options.
 
 #### Example Request
 
@@ -714,14 +714,14 @@ foreach($tables as $table) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-include_system| Boolean | Include the core tables
+**include_system**| Boolean | Include the core tables
 
 ### Get Table
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-table         | String  | The Table name.
-params        | Array   | Customizable options.
+**table**         | String  | The Table name.
+**params**        | Array   | Customizable options.
 
 #### Example Request
 
@@ -734,8 +734,8 @@ echo $table->name;
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-table         | String  | The Table name.
-params        | Array   | Customizable options.
+**table**         | String  | The Table name.
+**params**        | Array   | Customizable options.
 
 #### Example Request
 
@@ -751,8 +751,8 @@ foreach($columns as $column) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-table         | String  | The Table name.
-column        | String  | The column name.
+**table**         | String  | The Table name.
+**column**        | String  | The column name.
 
 #### Example Request
 
@@ -905,9 +905,9 @@ Operator                | Description
 
 Method                  | Parameter             | Description
 ----------------------- | ---------------------- | -----------
-updateItem             | `table`, `id`, `data`  | Updates the record with the given `id` in `table` with `data`.
-updateUser              | `id`, `data`           | Updates the given user `id` with the given `data`.
-updateFile              | `id`, `data`           | Updates the give file `id` with the given `data`.
+**updateItem**             | `table`, `id`, `data`  | Updates the record with the given `id` in `table` with `data`.
+**updateUser**              | `id`, `data`           | Updates the given user `id` with the given `data`.
+**updateFile**              | `id`, `data`           | Updates the give file `id` with the given `data`.
 
 **@TODO** More helpers
 - Directus Groups
@@ -923,47 +923,47 @@ An `Entry` object containing the updated data.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-table         | String  | The Table name.
-id            | Mixed   | The id of the record to update.
-data          | Array   | Data to update.
+**table**         | String  | The Table name.
+**id**            | Mixed   | The id of the record to update.
+**data**          | Array   | Data to update.
 
 ### Update User
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-id            | Integer | The id of the user to update.
-data          | Array   | Data to update.
+**id**            | Integer | The id of the user to update.
+**data**          | Array   | Data to update.
 
 #### User data
 
 Column                  | Type    | Description
 ----------------------- | ------- | ----------------------
-active                  | Integer | User's status. By default `1=active, 2-inactive, 3=deleted`.
-email `Required`        | String  | User's unique email address.
-first_name              | String  | User first name.
-last_name               | String  | User last name.
-password                | String  | Plain text password, will be hashed on the server side.
-token                   | String  | User's unique API access token
-group                   | Integer | User's group ID
-email_messages          | Integer | Whether the user wants to receive email notification.
-avatar                  | String  | Avatar url
-avatar_file_id          | Integer | Use a file id as avatar
-language                | String  | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
-timezone                | String  | User's default timezone.
-position                | String  | User's position on the project/company.
-location                | String  | User's location in the world or universe.
-phone                   | String  | User's phone number
-address                 | String  | User's address
-city                    | String  | User's city
-state                   | String  | User's state
-zip                     | String  | User's zip code
+**active**                  | Integer | User's status. By default `1=active, 2-inactive, 3=deleted`.
+**email** `Required`        | String  | User's unique email address.
+**first_name**              | String  | User first name.
+**last_name**               | String  | User last name.
+**password**                | String  | Plain text password, will be hashed on the server side.
+**token**                   | String  | User's unique API access token
+**group**                   | Integer | User's group ID
+**email_messages**          | Integer | Whether the user wants to receive email notification.
+**avatar**                  | String  | Avatar url
+**avatar_file_id**          | Integer | Use a file id as avatar
+**language**                | String  | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
+**timezone**                | String  | User's default timezone.
+**position**                | String  | User's position on the project/company.
+**location**                | String  | User's location in the world or universe.
+**phone**                   | String  | User's phone number
+**address**                 | String  | User's address
+**city**                    | String  | User's city
+**state**                   | String  | User's state
+**zip**                     | String  | User's zip code
 
 ### Update File
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-id            | Integer | The id of the file to update.
-data          | Array|File | Data to update.
+**id**            | Integer | The id of the file to update.
+**data**          | Array|File | Data to update.
 
 #### Example Requests
 
@@ -985,13 +985,13 @@ $updatedFile = $client->updateFile(1, new File('/path/to/file'));
 
 Method                  | Parameter             | Description
 ----------------------- | ---------------------- | -----------
-deleteItem             | `table`, `id`          | Deletes the record with the given `id` in `table`.
-deleteBookmark          | `id`                   | Deletes the given bookmark id.
-deleteColumn            | `name`. `table`        | Deletes the tiven column name in the given table name.
-deleteFile              | `id`                   | Deletes the give file `id`.
-deleteGroup             | `id`                   | Creates a new group.
-deleteTable             | `name`                 | Creates a new table.
-deleteUser              | `id`                   | Deletes the given user `id`.
+**deleteItem**             | `table`, `id`          | Deletes the record with the given `id` in `table`.
+**deleteBookmark**          | `id`                   | Deletes the given bookmark id.
+**deleteColumn**            | `name`. `table`        | Deletes the tiven column name in the given table name.
+**deleteFile**              | `id`                   | Deletes the give file `id`.
+**deleteGroup**             | `id`                   | Creates a new group.
+**deleteTable**             | `name`                 | Creates a new table.
+**deleteUser**              | `id`                   | Deletes the given user `id`.
 
 #### Returns
 
@@ -1003,8 +1003,8 @@ Nothing is returned.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-table         | String  | The table name
-id            | Integer | The id of the record to delete in `table`.
+**table**         | String  | The table name
+**id**            | Integer | The id of the record to delete in `table`.
 
 #### Example Request
 
@@ -1016,7 +1016,7 @@ $client->deleteItem('articles', 1);
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-id            | Integer | The id of the bookmark to delete.
+**id**            | Integer | The id of the bookmark to delete.
 
 #### Example Request
 
@@ -1028,8 +1028,8 @@ $client->deleteBookmark(1);
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-name          | String  | The column name to delete.
-table         | String  | The table the colum belongs to.
+**name**          | String  | The column name to delete.
+**table**         | String  | The table the colum belongs to.
 
 #### Example Request
 
@@ -1041,7 +1041,7 @@ $client->deleteColumn('slug', 'articles');
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-id            | Integer | The id of the file to delete.
+**id**            | Integer | The id of the file to delete.
 
 #### Example Request
 
@@ -1053,7 +1053,7 @@ $client->deleteUser(1);
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-id            | Integer | The id of the group to delete.
+**id**            | Integer | The id of the group to delete.
 
 #### Example Request
 
@@ -1065,7 +1065,7 @@ $client->deleteGroup(1);
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-name          | String  | The name of the table to delete.
+**name**          | String  | The name of the table to delete.
 
 #### Example Request
 
@@ -1077,7 +1077,7 @@ $client->deleteTable('comments');
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-id            | Integer | The id of the user to delete.
+**id**            | Integer | The id of the user to delete.
 
 #### Example Request
 

@@ -2,22 +2,22 @@
 
 **Base API URL: `{{DIRECTUS_ROOT}}/api/1.1/`**
 
-Type      | Resource | Description
+<span class="endpoints">Type</span>      | Resource | Description
 --------- | -------- | -----------
-GET | `/tables` | Collection of tables viewable by current user
-GET | `/tables/[table-name]/rows` | Collection of rows (items) for a given table
-GET | `/tables/[table-name]/rows/[id]` | Details for a specific table row (item)
-GET | `/tables/[table-name]/columns` | Collection of the column details for a given table
-GET | `/tables/[table-name]/columns/[column-name]` | Details for a specific column in a given table
-GET | `/privileges/[group-id]` | Privileges for a given user-group
-GET | `/groups` | Collection of all Directus user-groups
-GET | `/groups/[id]` | Details for a specific user-group
-GET | `/preferences/[table-name]` | Preferences for a specific table
-GET | `/bookmarks` | Bookmarks for currently authenticated user
-GET | `/bookmarks/[id]` | Bookmarks for a specific user
-GET | `/messages/rows` | Collection of messages for the authenticated user
-GET | `/messages/rows/[id]` | Details for a specific message
-GET | `/activity` | Collection of latest Directus activity
+GET | /tables | Collection of tables viewable by current user
+GET | /tables/**table-name**/rows | Collection of rows (items) for a given table
+GET | /tables/**table-name**/rows/**id** | Details for a specific table row (item)
+GET | /tables/**table-name**/columns | Collection of the column details for a given table
+GET | /tables/**table-name**/columns/**column-name** | Details for a specific column in a given table
+GET | /privileges/**group-id** | Privileges for a given user-group
+GET | /groups | Collection of all Directus user-groups
+GET | /groups/**id** | Details for a specific user-group
+GET | /preferences/**table-name** | Preferences for a specific table
+GET | /bookmarks | Bookmarks for currently authenticated user
+GET | /bookmarks/**id** | Bookmarks for a specific user
+GET | /messages/rows | Collection of messages for the authenticated user
+GET | /messages/rows/**id** | Details for a specific message
+GET | /activity | Collection of latest Directus activity
 
 ## Global Parameters
 
@@ -31,7 +31,7 @@ GET | `/activity` | Collection of latest Directus activity
 **in[field]**  _String_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 **ids** _String_  |  <span class="default">Optional</span>  |  Only list records that its `field` matches one of given value. Can be separated by commas. `ids=1,2`. Same as `in[id]=1,2`.
 **skip_activity_log** | <span class="default">Default **0**</span> | Whether or not the update is going to be logged in activity.
-**filters** | <span class="default">Optional</span> | Use [`Filter Operators`](/overview/endpoints.md#supported-filter-operators) to filter the result.
+**filters** | <span class="default">Optional</span> | Use the operators below to filter the result: [**Filter Operators**](/overview/endpoints.md#supported-filter-operators)
 
 ## Supported Filter Operators
 
