@@ -8,6 +8,12 @@
 --------- | -------- | -----------
 GET | /activity | Collection of latest Directus activity
 
+## Authentication
+
+<span class="endpoints">Type</span>      | Resource | Description
+--------- | -------- | -----------
+POST | /auth/request-token | Gets your user token using your credentials
+
 ## Bookmarks
 
 <span class="endpoints">Type</span>      | Resource | Description
