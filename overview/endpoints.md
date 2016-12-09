@@ -129,7 +129,7 @@ Operator                | Description
 `in`                    | Match one of the value in the list
 `nin`                   | Not match any value in the list
 `null`                  | Is Null
-**nnull** (@TODO)       | Is Not Null
+`nnull`                 | Is Not Null
 `contains`, `like`      | Contains a string
 `ncontains`, `nlike`    | Not Contains a string
 **between** (@TODO)     | Is Between
