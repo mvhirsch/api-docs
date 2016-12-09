@@ -130,8 +130,8 @@ Operator                | Description
 `nin`                   | Not match any value in the list
 `null`                  | Is Null
 **nnull** (@TODO)       | Is Not Null
-**contains** (@TODO)    | Contains a string
-**ncontains** (@TODO)   | Not Contains a string
+`contains`, `like`      | Contains a string
+`ncontains`, `nlike`    | Not Contains a string
 **between** (@TODO)     | Is Between
 `empty`                 | Is Empty (NULL or empty string)
 `nempty`                | Is Not Empty (NULL or empty string)
