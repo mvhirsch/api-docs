@@ -459,7 +459,8 @@ getGroup                | `id`, `params`         | Details for a specific user-g
 getGroupPrivileges      | `group_id`             | Privileges for a given user-group
 getSettings             | None                   | All Directus Setting
 getSettingsByCollection | `collection`           | All Directus Settings in a given collection
-getMessages             | `userId`               | Collection of messages for the authenticated user
+getMessage              | `id`                   | Details for a specific message
+getMessages             | `userId`               | Collection of messages
 getTables               | `params`               | Collection of tables viewable by authenticated user
 getTable                | `table`                | Collection of latest Directus activity
 getColumns              | `table`, `params`      | Collection of the column details for a given table
@@ -683,20 +684,33 @@ $settings = $client->getSettingsByCollection('global');
 echo $settings->project_name
 ```
 
+### Get Messages
+
+Parameter    | Type    | Description
+------------ | ------- | -----------
+userId       | Integer | User ID messages list
+
+```php
+// Using the API Client it's going to be default to the authenticated user.
+$messages = $client->getMessages(1);
+```
+
 ### Get Message
 
 Parameter    | Type    | Description
-------------- | ------- | -----------
-user          | Integer | The user id.
+------------ | ------- | -----------
+id           | Integer | The message id
+userId       | Integer | The user id (only for db connection)
 
-**@TODO**:
-**INCORRECT**: This returns a single message, and the parameter is a message id.
+```php
+$message = $client->getMessage(1);
+```
 
 ### Get Tables
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-params        | Array   | Customizable options.
+params        | Array   | Customizable options
 
 #### Example Request
 

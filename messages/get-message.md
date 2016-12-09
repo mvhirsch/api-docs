@@ -1,8 +1,8 @@
 # Get Messages
 
-<span class="request">`GET` **/api/1.1/messages/_[message-id]_**</span>
+<span class="request">`GET` **/api/1.1/messages/rows/_[message-id]_**</span>
 
-<span class="description">Get a specific message by its ID</span>
+<span class="description">Get a specific message by its ID (if it belongs to the given or authenticated user)</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
@@ -16,7 +16,9 @@ $ curl https://instance--key.directus.io/api/1.1/messages/1 \
 ```
 
 ```php
-$messages = $client->getMessage(1);
+$messageId = 1;
+$userId = 2; // On db connection only
+$messages = $client->getMessage($messageId, $userId);
 ```
 
 ## Response
