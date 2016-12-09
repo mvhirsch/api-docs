@@ -1,4 +1,4 @@
-# Get Messages
+# Get Message
 
 <span class="request">`GET` **/api/1.1/messages/rows/_[message-id]_**</span>
 
