@@ -2,14 +2,14 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`DELETE` **/api/1.1/tables/_table-name_/columns/_column-name_**</span>
+<span class="request">`DELETE` **/api/1.1/tables/_[table-name]_/columns/_[column-name]_**</span>
 
 <span class="description">Deletes a column from the specified table</span>
 
 <span class="arguments">Name</span> | Value | Description
 ------------------ | ----- | -----------
-**table_name** _String_             | <span class="required">Required</span>    | The name of the table that contains the column to delete
-**column_name** _String_            | <span class="required">Required</span>    | The name of the column you wish to delete
+**table-name** _String_             | <span class="required">Required</span>    | The name of the table that contains the column to delete
+**column-name** _String_            | <span class="required">Required</span>    | The name of the column you wish to delete
 
 ### Example Request
 

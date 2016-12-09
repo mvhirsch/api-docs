@@ -47,11 +47,11 @@ Column                  |  Type    | Description
 ----------------------- | -------- | ----------------------
 **table_name**              | String   | Bookmark Table name
 **title**                   | String   | Bookmark title
-**columns_visible**         | String   | List of column separated by comma.
+**columns_visible**         | String   | List of column separated by comma
 **search_string**           | String   | List of filters separated by comma. Format `column:operator:value`
-**sort**                    | String   | Sort column.
+**sort**                    | String   | Sort column
 **sort_order**              | String   | Sort column order. (`ASC` or `DESC`)
-**status**                  | String   | List of status separated by comma.
+**status**                  | String   | List of status separated by comma
 
 #### Returns
 
@@ -73,20 +73,20 @@ $bookmark = $client->createBookmark([
 
 Column                  | Type      | Description
 ----------------------- | --------- | ------------
-**name**                    | String    | Column name.
-**table**                   | String    | Table name.
-**type**                    | String    | Data type.
+**name**                    | String    | Column name
+**table**                   | String    | Table name
+**type**                    | String    | Data type
 **ui**                      | String    | UI name
-**hidden_input**            | Boolean   | Whether the column will be hidden in the edit form.
-**hidden_list**             | Boolean   | Whether the column will be hidden in the list page.
-**required**                | Boolean   | Whether the column is required.
-**sort**                    | String    | Sort position in number.
-**comment**                 | String    | Note on the column.
+**hidden_input**            | Boolean   | Whether the column will be hidden in the edit form
+**hidden_list**             | Boolean   | Whether the column will be hidden in the list page
+**required**                | Boolean   | Whether the column is required
+**sort**                    | String    | Sort position in number
+**comment**                 | String    | Note on the column
 **relationship_type**       | String    | Column relationship type, `ONETOMANY`, `MANYTOMANY` or `MANYTOONE`
-**related_table**           | String    | The table name this column is related to.
+**related_table**           | String    | The table name this column is related to
 **junction_table**          | String    | The pivot/junction table that joins the column's table with the related table
-**junction_key_left**       | String    | The column name in junction that is related to the column's table.
-**junction_key_right**      | String    | The column name in junction that is related to the related table.
+**junction_key_left**       | String    | The column name in junction that is related to the column's table
+**junction_key_right**      | String    | The column name in junction that is related to the related table
 
 **@TODO** Make most of the attributes "guessed/automated", for example `single_ui` should should has `related_table` to `directus_files` and `junction_key_right` to the same column name.
 
@@ -129,8 +129,8 @@ $column = $client->createColumn([
 
 Column                  | Type       | Description
 ----------------------- | ---------- | --------------------
-**name****                    |** String     | Group name.
-**restrict_to_ip_whitelist**| String     | List of IPs allowed to authenticate, separated  by comma.
+**name**                | String     | Group name
+**restrict_to_ip_whitelist** | String     | List of IPs allowed to authenticate, separated  by comma
 
 #### Example Request
 
@@ -144,12 +144,12 @@ $group = $client->createGroup([
 
 Column                  | Type      |  Description
 ----------------------- | --------- | ----------------------
-**from**                    | Integer   | Sender user id.
-**to**                      | Array     | List of users id, separated by comma.
-**toGroup**                 | Array     | List of groups id, separated by comma.
-**subject**                 | String    | Message subject.
-**message**                 | String    | Message content.
-**attachments**            | Array     | **@TODO** List of files to add to the message
+**from**                    | Integer   | Sender user id
+**to**                      | Array     | List of users id, separated by comma
+**toGroup**                 | Array     | List of groups id, separated by comma
+**subject**                 | String    | Message subject
+**message**                 | String    | Message content
+**attachments**             | Array     | **@TODO** List of files to add to the message
 
 **@TODO** Send/Create responses without the need to specify each recipients.
 
@@ -186,7 +186,7 @@ Attribute               | Type      | Description
 ----------------------- | --------- | ----------------------
 **id**                      | Integer   | Message ID
 **from**                    | Integer   | Sender ID
-**recipients**              | String    | List of Recipients separated by comma. **@TODO**: it should be an array.
+**recipients**              | String    | List of Recipients separated by comma. **@TODO**: it should be an array
 **subject**                 | String    | Message subject
 **responses**               | Array     | List of responses messages
 **response_to**             | Integer   | Parent message (replied to this message id)
@@ -197,12 +197,12 @@ Attribute               | Type      | Description
 
 Column                  | Type      | Description
 ----------------------- | --------- | ----------------------
-**user**                    | Integer   | User ID that this preferences belongs to.
-**table_name**              | String    | Table name that this preferences belongs to.
-**columns_visible**         | String    | List of visible column separated by comma.
-**sort**                    | String    | Sort column.
+**user**                    | Integer   | User ID that this preferences belongs to
+**table_name**              | String    | Table name that this preferences belongs to
+**columns_visible**         | String    | List of visible column separated by comma
+**sort**                    | String    | Sort column
 **sort_order**              | String    | Sort column order. `ASC` or `DESC`
-**status**                  | String    | List of status separated by comma.
+**status**                  | String    | List of status separated by comma
 
 #### Returns
 
@@ -227,16 +227,16 @@ $preference = $client->createPreferences([
 Column                  | Type      | Description
 ----------------------- | --------- | ----------------------
 **group_id**                | Integer   | Group ID
-**table_name**              | String    | Table name that this permissions belongs to.
-**allow_add**               | Integer   | Whether the group is allow to add/create items in the table. (See values below)
-**allow_edit**              | Integer   | Whether the group is allow to edit/update items in the table. (See values below)
-**allow_delete**            | Integer   | Whether the group is allow to delete/remove items in the table. (See values below)
-**allow_view**              | Integer   | Whether the group is allow to view/read items in the table. (See values below)
-**allow_alter**             | Integer   | Whether the group is allow to add/create items in the table. (See values below)
-**nav_listed**              | Boolean   | Whether the table should be visible in the sidebar.
-**read_field_blacklist**    | String    | List of columns that the group can't view/read.
-**write_field_blacklist**   | String    | List of columns that the group can't edit/update.
-**status_id**           | String    | State of the record that this permissions belongs to. (Draft, Active or Soft Deleted)
+**table_name**              | String    | Table name that this permissions belongs to
+**allow_add**               | Integer   | Whether the group is allow to add/create items in the table (See values below)
+**allow_edit**              | Integer   | Whether the group is allow to edit/update items in the table (See values below)
+**allow_delete**            | Integer   | Whether the group is allow to delete/remove items in the table (See values below)
+**allow_view**              | Integer   | Whether the group is allow to view/read items in the table (See values below)
+**allow_alter**             | Integer   | Whether the group is allow to add/create items in the table (See values below)
+**nav_listed**              | Boolean   | Whether the table should be visible in the sidebar
+**read_field_blacklist**    | String    | List of columns that the group can't view/read
+**write_field_blacklist**   | String    | List of columns that the group can't edit/update
+**status_id**           | String    | State of the record that this permissions belongs to (Draft, Active or Soft Deleted)
 
 Permissions: `0=Cannot, 1=Can (Your own), 2=Can (all)` **@TODO** Adding constant for the permissions value.
 
@@ -264,7 +264,7 @@ $privileges = $client->createPrivileges([
 Parameter              | Type      | Description
 ----------------------- | --------- | ----------------------
 **name**                    | String    | New table name
-**data**                | Array     | Not defined yet.
+**data**                | Array     | Not defined yet
 
 #### Returns
 
@@ -357,20 +357,20 @@ $user = $client->createUser([
 Column                  | Type      | Description
 ----------------------- | --------- | ----------------------
 **id**                      | Integer   | User ID
-**active**                  | Integer   | User's status. `1=active, 2=inactive, 3=deleted`.
-**email**                   | String    | User's unique email address.
-**first_name**              | String    | User first name.
-**last_name**               | String    | User last name.
-**password**                | String    | hashed password. **IS THIS NEEDED?**
+**active**                  | Integer   | User's status. `1=active, 2=inactive, 3=deleted`
+**email**                   | String    | User's unique email address
+**first_name**              | String    | User first name
+**last_name**               | String    | User last name
+**password**                | String    | hashed password **IS THIS NEEDED?**
 **token**                   | String    | User's unique API access token
 **group**                   | Integer   | User's group ID
-**email_messages**          | Boolean   | Whether the user wants to receive email notification.
+**email_messages**          | Boolean   | Whether the user wants to receive email notification
 **avatar**                  | String    | Avatar url
 **avatar_file_id**          | Integer   | File id used as avatar
-**language**                | String    | User's default language. Languages Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
-**timezone**                | String    | User's default timezone.
-**position**                | String    | User's position on the project/company.
-**location**                | String    | User's location in the world or universe.
+**language**                | String    | User's default language. Languages Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch)
+**timezone**                | String    | User's default timezone
+**position**                | String    | User's position on the project/company
+**location**                | String    | User's location in the world or universe
 **phone**                   | String    | User's phone number
 **address**                 | String    | User's address
 **city**                    | String    | User's city
@@ -387,10 +387,10 @@ file                    | File     | New file
 File Parameter         | Type     | Description
 ----------------------- | --------------------------------------
 **path** `Required`         | String   | Local path of the file.
-**url** (@TODO)        | String   | URL of the file to upload, OR a YouTube/Vimeo link to be embedded.
+**url** (@TODO)        | String   | URL of the file to upload, OR a YouTube/Vimeo link to be embedded
 **title**                   | String   | File's title
-**tags**                    | String   | Comma separated tags.
-**caption**                 | String   | File caption (Description).
+**tags**                    | String   | Comma separated tags
+**caption**                 | String   | File caption (Description)
 
 #### Returns
 
@@ -424,20 +424,20 @@ $file = $client->createFile(new File('/path/to/the/file.jpg', [
 Column                  | Type     | Description
 ----------------------- | -------- | ----------------------
 **id**                      | Integer  | File ID
-**active**                  | Integer  | File's status. `1=active, 2=inactive, 3=deleted`.
+**active**                  | Integer  | File's status. `1=active, 2=inactive, 3=deleted`
 **name**                    | String   | File name
 **title**                   | String   | File's title
-**location**                | String   | Location of where the picture was taken. if any.
+**location**                | String   | Location of where the picture was taken (if any)
 **type**                    | String   | File mime type
 **url**                     | String   | File url relativity to Directus base url
-**tags**                    | String   | Comma separated tags.
-**caption**                 | String   | File caption (Description).
-**width**                   | Integer  | File width.
-**height**                  | Integer  | File height.
-**size**                    | Integer  | File size in bytes.
+**tags**                    | String   | Comma separated tags
+**caption**                 | String   | File caption (Description)
+**width**                   | Integer  | File width
+**height**                  | Integer  | File height
+**size**                    | Integer  | File size in bytes
 **embed_id**                | String   | ID of the embedded file. Ex Youtube ID
 **user**                    | Integer  | File owner (who uploaded the file)
-**date_uploaded**           | String   | File uploaded date. **@TODO** It should be an DateTime object.
+**date_uploaded**           | String   | File uploaded date **@TODO** It should be an DateTime object
 **storage_adapter**         | String   | Storage adapter used to upload the file
 
 
@@ -477,7 +477,7 @@ An `Entry` or `EntryCollection` object containing the fetched data.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**params**        | Array   | Customizable options.
+**params**        | Array   | Customizable options
 
 #### Example Request
 
@@ -497,8 +497,8 @@ foreach($activities as $activity) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**table**         | String  | The Table name to fetch data from.
-**params**        | Array   | Customizable options.
+**table**         | String  | The Table name to fetch data from
+**params**        | Array   | Customizable options
 
 #### Example Request
 
@@ -514,8 +514,8 @@ foreach($articles as $article) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**table**         | String  | The Table name to fetch data from.
-**id**            | Mixed   | The record id.
+**table**         | String  | The Table name to fetch data from
+**id**            | Mixed   | The record id
 
 #### Example Request
 
@@ -528,7 +528,7 @@ echo $article->title;
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**params**        | Array   | Customizable options.
+**params**        | Array   | Customizable options
 
 #### Example Request
 
@@ -546,7 +546,7 @@ foreach($users as $user) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**id**            | Integer | The user id.
+**id**            | Integer | The user id
 
 #### Example Request
 
@@ -565,7 +565,7 @@ An `UserEntry` object containing the user information.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**params**        | Array   | Customizable options.
+**params**        | Array   | Customizable options
 
 #### Example Request
 
@@ -583,7 +583,7 @@ foreach($files as $file) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**id**            | Integer | The file.
+**id**            | Integer | The file
 
 #### Example Request
 
@@ -602,7 +602,7 @@ A `FileEntry` object containing the file information.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**params**        | Array   | Customizable options.
+**params**        | Array   | Customizable options
 
 #### Example Request
 
@@ -620,7 +620,7 @@ foreach($groups as $group) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**id**            | Integer | The group id.
+**id**            | Integer | The group id
 
 #### Example Request
 
@@ -639,7 +639,7 @@ A `GroupEntry` object containing the group information.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**id**            | Integer | The group id.
+**id**            | Integer | The group id
 
 #### Example Request
 
@@ -710,7 +710,7 @@ $message = $client->getMessage(1);
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**params**        | Array   | Customizable options.
+**params**        | Array   | Customizable options
 
 #### Example Request
 
@@ -734,8 +734,8 @@ Parameter    | Type    | Description
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**table**         | String  | The Table name.
-**params**        | Array   | Customizable options.
+**table**         | String  | The Table name
+**params**        | Array   | Customizable options
 
 #### Example Request
 
@@ -748,8 +748,8 @@ echo $table->name;
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**table**         | String  | The Table name.
-**params**        | Array   | Customizable options.
+**table**         | String  | The Table name
+**params**        | Array   | Customizable options
 
 #### Example Request
 
@@ -765,8 +765,8 @@ foreach($columns as $column) {
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**table**         | String  | The Table name.
-**column**        | String  | The column name.
+**table**         | String  | The Table name
+**column**        | String  | The column name
 
 #### Example Request
 
@@ -919,9 +919,9 @@ Operator                | Description
 
 Method                  | Parameter             | Description
 ----------------------- | ---------------------- | -----------
-**updateItem**             | `table`, `id`, `data`  | Updates the record with the given `id` in `table` with `data`.
-**updateUser**              | `id`, `data`           | Updates the given user `id` with the given `data`.
-**updateFile**              | `id`, `data`           | Updates the give file `id` with the given `data`.
+**updateItem**             | `table`, `id`, `data`  | Updates the record with the given `id` in `table` with `data`
+**updateUser**              | `id`, `data`           | Updates the given user `id` with the given `data`
+**updateFile**              | `id`, `data`           | Updates the give file `id` with the given `data`
 
 **@TODO** More helpers
 - Directus Groups
@@ -937,35 +937,35 @@ An `Entry` object containing the updated data.
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**table**         | String  | The Table name.
-**id**            | Mixed   | The id of the record to update.
-**data**          | Array   | Data to update.
+**table**         | String  | The Table name
+**id**            | Mixed   | The id of the record to update
+**data**          | Array   | Data to update
 
 ### Update User
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**id**            | Integer | The id of the user to update.
-**data**          | Array   | Data to update.
+**id**            | Integer | The id of the user to update
+**data**          | Array   | Data to update
 
 #### User data
 
 Column                  | Type    | Description
 ----------------------- | ------- | ----------------------
-**active**                  | Integer | User's status. By default `1=active, 2-inactive, 3=deleted`.
-**email** `Required`        | String  | User's unique email address.
-**first_name**              | String  | User first name.
-**last_name**               | String  | User last name.
-**password**                | String  | Plain text password, will be hashed on the server side.
+**active**                  | Integer | User's status. By default `1=active, 2-inactive, 3=deleted`
+**email** `Required`        | String  | User's unique email address
+**first_name**              | String  | User first name
+**last_name**               | String  | User last name
+**password**                | String  | Plain text password, will be hashed on the server side
 **token**                   | String  | User's unique API access token
 **group**                   | Integer | User's group ID
 **email_messages**          | Integer | Whether the user wants to receive email notification.
 **avatar**                  | String  | Avatar url
 **avatar_file_id**          | Integer | Use a file id as avatar
-**language**                | String  | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch).
-**timezone**                | String  | User's default timezone.
-**position**                | String  | User's position on the project/company.
-**location**                | String  | User's location in the world or universe.
+**language**                | String  | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch)
+**timezone**                | String  | User's default timezone
+**position**                | String  | User's position on the project/company
+**location**                | String  | User's location in the world or universe
 **phone**                   | String  | User's phone number
 **address**                 | String  | User's address
 **city**                    | String  | User's city
@@ -976,8 +976,8 @@ Column                  | Type    | Description
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**id**            | Integer | The id of the file to update.
-**data**          | Array|File | Data to update.
+**id**            | Integer | The id of the file to update
+**data**          | Array|File | Data to update
 
 #### Example Requests
 
@@ -999,13 +999,13 @@ $updatedFile = $client->updateFile(1, new File('/path/to/file'));
 
 Method                  | Parameter             | Description
 ----------------------- | ---------------------- | -----------
-**deleteItem**             | `table`, `id`          | Deletes the record with the given `id` in `table`.
-**deleteBookmark**          | `id`                   | Deletes the given bookmark id.
-**deleteColumn**            | `name`. `table`        | Deletes the tiven column name in the given table name.
-**deleteFile**              | `id`                   | Deletes the give file `id`.
-**deleteGroup**             | `id`                   | Creates a new group.
-**deleteTable**             | `name`                 | Creates a new table.
-**deleteUser**              | `id`                   | Deletes the given user `id`.
+**deleteItem**             | `table`, `id`          | Deletes the record with the given `id` in `table`
+**deleteBookmark**          | `id`                   | Deletes the given bookmark id
+**deleteColumn**            | `name`. `table`        | Deletes the tiven column name in the given table name
+**deleteFile**              | `id`                   | Deletes the give file `id`
+**deleteGroup**             | `id`                   | Creates a new group
+**deleteTable**             | `name`                 | Creates a new table
+**deleteUser**              | `id`                   | Deletes the given user `id`
 
 #### Returns
 
@@ -1018,7 +1018,7 @@ Nothing is returned.
 Parameter    | Type    | Description
 ------------- | ------- | -----------
 **table**         | String  | The table name
-**id**            | Integer | The id of the record to delete in `table`.
+**id**            | Integer | The id of the record to delete in `table`
 
 #### Example Request
 
@@ -1030,7 +1030,7 @@ $client->deleteItem('articles', 1);
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**id**            | Integer | The id of the bookmark to delete.
+**id**            | Integer | The id of the bookmark to delete
 
 #### Example Request
 
@@ -1042,8 +1042,8 @@ $client->deleteBookmark(1);
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**name**          | String  | The column name to delete.
-**table**         | String  | The table the colum belongs to.
+**name**          | String  | The column name to delete
+**table**         | String  | The table the colum belongs to
 
 #### Example Request
 
@@ -1055,7 +1055,7 @@ $client->deleteColumn('slug', 'articles');
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**id**            | Integer | The id of the file to delete.
+**id**            | Integer | The id of the file to delete
 
 #### Example Request
 
@@ -1067,7 +1067,7 @@ $client->deleteUser(1);
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**id**            | Integer | The id of the group to delete.
+**id**            | Integer | The id of the group to delete
 
 #### Example Request
 
@@ -1079,7 +1079,7 @@ $client->deleteGroup(1);
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**name**          | String  | The name of the table to delete.
+**name**          | String  | The name of the table to delete
 
 #### Example Request
 
@@ -1091,7 +1091,7 @@ $client->deleteTable('comments');
 
 Parameter    | Type    | Description
 ------------- | ------- | -----------
-**id**            | Integer | The id of the user to delete.
+**id**            | Integer | The id of the user to delete
 
 #### Example Request
 

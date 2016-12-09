@@ -4,7 +4,9 @@
 
 <span class="description">Get all Directus settings for the specified collection</span>
 
-**group-id** _String_  |  <span class="required">Required</span>  |  The collection `name` you wish to get the settings
+<span class="arguments">Name</span> | Value | Description
+------------------ | ----- | -----------
+**collection-name** _String_  |  <span class="required">Required</span>  |  The collection `name` you wish to get the settings
 
 ### Example Request
 

@@ -9,7 +9,7 @@
 **limit** _Integer_  |  <span class="default">Default **200**</span>  |  The number of items to request
 **offset**  _Integer_ |  <span class="default">Default **0**</span>  |  The offset for for the items
 **in[field]**  _String_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas `in[id]=1,2`
-**ids** _String_  |  <span class="default">Optional</span>  |  Only list records that its `field` matches one of given value. Can be separated by commas `ids=1,2`. Same as `in[id]=1,2`.
+**ids** _String_  |  <span class="default">Optional</span>  |  Only list records that its `field` matches one of given value. Can be separated by commas `ids=1,2`. Same as `in[id]=1,2`
 **filters** | <span class="default">Optional</span> | Use `Filter Object` to filter the result.
 
 ### Example Request

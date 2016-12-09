@@ -25,8 +25,8 @@ $preferences = $client->getPreferences('projects');
 
 <span class="attributes">Attribute</span> | Description
 -------|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself. [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
-<span class="custom">**data**</span> _Preference Object_ | <span class="custom">This data and its architecture is based on Directus Preferences's schema.</span> [**Preference Object**: View Nested Attributes](/overview/objects-model.md#preference-object)
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
+<span class="custom">**data**</span> _Preference Object_ | <span class="custom">This data and its architecture is based on Directus Preferences's schema</span> [**Preference Object**: View Nested Attributes](/overview/objects-model.md#preference-object)
 
 ### Example Response
 

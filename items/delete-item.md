@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-> **Note:** To perform a Soft-delete directly, use the update endpoint and update the `active` column.
+> **Note:** To perform a Soft-delete directly, use the update endpoint and update the `active` column
 
 <span class="request">`DELETE` **/api/1.1/tables/_[table-name]_/rows/_[row-id]_**</span>
 

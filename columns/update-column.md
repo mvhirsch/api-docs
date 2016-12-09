@@ -4,7 +4,7 @@
 
 > **Note:** Does not update the table column-type.
 
-<span class="request">`PUT` **/api/1.1/tables/_table-name_/columns/_column-name_**</span>
+<span class="request">`PUT` **/api/1.1/tables/_[table-name]_/columns/_[column-name]_**</span>
 
 <span class="description">Updates a column within the specified table</span>
 

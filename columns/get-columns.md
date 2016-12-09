@@ -2,9 +2,13 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1.1/tables/_table-name_/columns**</span>
+<span class="request">`GET` **/api/1.1/tables/_[table-name]_/columns**</span>
 
 <span class="description">Get the system and schema information for all the columns within a specified table based on the current user's privileges</span>
+
+<span class="arguments">Name</span> | Value | Description
+------------------ | ----- | -----------
+**table-name** _String_             | <span class="required">Required</span>    | The name of the table that contains the column to get the information
 
 ### Example Request
 

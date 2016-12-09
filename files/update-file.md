@@ -8,17 +8,17 @@
 --------|-----|------------
 **id** _Integer_ | <span class="required">Required</span> | The `id` of the file you wish to update
 <span class="custom">**Data**</span> _File Object_ | | <span class="custom">This data and its architecture is based on Directus files's schema.</span>
-**active** _Integer_            | | File's status `1=active, 2=inactive, 3=deleted`.
+**active** _Integer_            | | File's status `1=active, 2=inactive, 3=deleted`
 **name** _String_               | | File name
 **title** _String_              | | File's title
 **location** _String_           | | Location of where the picture was taken, if any
 **type** _String_               | | File mime type
 **url** _String_                | | File url relativity to Directus base url
-**tags** _String_               | | Comma separated tags.
+**tags** _String_               | | Comma separated tags
 **caption** _String_            | | File caption (description)
-**width** _Integer_             | | File width.
-**height** _Integer_            | | File height.
-**size** _Integer_              | | File size in bytes.
+**width** _Integer_             | | File width
+**height** _Integer_            | | File height
+**size** _Integer_              | | File size in bytes
 **embed_id** _String_           | | ID of the embedded file. Ex Youtube ID
 **user** _Integer_              | | File owner (who uploaded the file)
 **date_uploaded** _String_      | | File uploaded date. **TODO** It should be an DateTime object

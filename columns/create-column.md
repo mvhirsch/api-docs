@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`POST` **/api/1.1/tables/_table-name_/columns**</span>
+<span class="request">`POST` **/api/1.1/tables/_[table-name]_/columns**</span>
 
 <span class="description">Create a new column within the specified table</span>
 

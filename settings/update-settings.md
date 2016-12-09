@@ -1,6 +1,6 @@
 # Update Settings
 
-> **Note:** If the setting doesn't not exist it will create a new one.
+> **Note:** If the setting doesn't not exist it will create a new one
 
 <span class="request">`PUT` **/api/1.1/settings/_[collection-name]_**</span>
 

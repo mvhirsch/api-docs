@@ -9,7 +9,7 @@
 <span class="arguments">Name</span> | Value | Description
 ------------------ | ----- | -----------
 **group-id** _Integer_  |  <span class="required">Required</span>  |  The group `id` you wish to get the privileges from
-**id** _Integer_           |   | Privilege's Unique Identification number.
+**id** _Integer_           |   | Privilege's Unique Identification number
 **group_id** _Integer_             |   | The `id` for the user group that should be assigned these privileges
 **table_name** _String_           |    | The table name that these privileges should be applied to
 **allow_add** _Integer_            |   | Permission to add/create entries in the table (See values below)
