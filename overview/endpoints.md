@@ -132,7 +132,8 @@ Operator                | Description
 `nnull`                 | Is Not Null
 `contains`, `like`      | Contains a string
 `ncontains`, `nlike`    | Not Contains a string
-**between** (@TODO)     | Is Between
+`between`               | Is Between
+`nbetween`              | Is Not Between
 `empty`                 | Is Empty (NULL or empty string)
 `nempty`                | Is Not Empty (NULL or empty string)
 **has** (@TODO)         | Has one or more related items
