@@ -4,7 +4,6 @@ Introduction:
   API Overview: overview/api-overview.md
   Authentication: overview/authentication.md
   Endpoints: overview/endpoints.md
-  PHP SDK: overview/php-sdk.md
   Directus Objects: overview/objects-model.md
 
 Items:
@@ -66,3 +65,6 @@ Settings:
   Get Settings: settings/get-settings.md
   Get Setting By Type: settings/get-type-settings.md
   Update Settings: settings/update-settings.md
+
+SDKs:
+  PHP SDK: SDKs/php-sdk.md
