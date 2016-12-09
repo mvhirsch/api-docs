@@ -27,8 +27,8 @@ $ curl -d sort_order=DESC https://instance--key.directus.io/api/1.1/tables/proje
 
 <span class="attributes">Attribute</span> | Description
 --------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**data**</span> _Preference Object_ | <span class="custom">This data and its architecture is based on Directus Preferences's schema</span>
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
+<span class="custom">**data**</span> _Preference Object_ | <span class="custom">This data and its architecture is based on Directus Preferences's schema</span> [**Preference Object**: View Nested Attributes](/overview/objects-model.md#preference-object)
 
 ### Example Response
 

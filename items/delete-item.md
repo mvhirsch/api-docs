@@ -29,7 +29,7 @@ $response = $client->deleteItem('projects', 1);
 
 <span class="attributes">Attribute</span> | Description
 --------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
 <span class="custom">**success**</span> _Boolean_ | Whether the deletion was successful or not
 
 ### Example Response

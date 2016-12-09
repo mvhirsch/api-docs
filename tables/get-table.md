@@ -27,8 +27,8 @@ $table = $client->getTable('projects');
 
 <span class="attributes">Attribute</span> | Description
 ------|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
-<span class="custom">**data**</span> _Table Object_ | <span class="custom">This data and its architecture is based on Directus table schema</span>
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
+<span class="custom">**data**</span> _Table Object_ | <span class="custom">This data and its architecture is based on Directus table schema</span> [**Table Object**: View Nested Attributes](/overview/objects-model.md#table-object)
 
 ### Example Response
 

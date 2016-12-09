@@ -33,8 +33,8 @@ $bookmark = $client->createBookmark([
 
 <span class="attributes">Attribute</span> | Description
 --------|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself <a class="object">**Meta Object**: View Nested Attributes</a>
-**data** _Bookmark Object_ | <span class="custom">This data and its architecture is based on Directus bookmarks's schema</span>
+**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
+**data** _Bookmark Object_ | <span class="custom">This data and its architecture is based on Directus bookmarks's schema</span> [**Bookmark Object**: View Nested Attributes](/overview/objects-model.md#bookmark-object)
 
 ### Example Response
 

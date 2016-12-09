@@ -2,26 +2,26 @@
 
 **Base API URL: `{{DIRECTUS_ROOT}}/api/1.1/`**
 
-Type      | Resource | Description
+<span class="endpoints">Type</span>      | Resource | Description
 --------- | -------- | -----------
-GET | `/tables` | Collection of tables viewable by current user
-GET | `/tables/[table-name]/rows` | Collection of rows (items) for a given table
-GET | `/tables/[table-name]/rows/[id]` | Details for a specific table row (item)
-GET | `/tables/[table-name]/columns` | Collection of the column details for a given table
-GET | `/tables/[table-name]/columns/[column-name]` | Details for a specific column in a given table
-GET | `/privileges/[group-id]` | Privileges for a given user-group
-GET | `/groups` | Collection of all Directus user-groups
-GET | `/groups/[id]` | Details for a specific user-group
-GET | `/preferences/[table-name]` | Preferences for a specific table
-GET | `/bookmarks` | Bookmarks for currently authenticated user
-GET | `/bookmarks/[id]` | Bookmarks for a specific user
-GET | `/messages/rows` | Collection of messages for the authenticated user
-GET | `/messages/rows/[id]` | Details for a specific message
-GET | `/activity` | Collection of latest Directus activity
+GET | /tables | Collection of tables viewable by current user
+GET | /tables/**table-name**/rows | Collection of rows (items) for a given table
+GET | /tables/**table-name**/rows/**id** | Details for a specific table row (item)
+GET | /tables/**table-name**/columns | Collection of the column details for a given table
+GET | /tables/**table-name**/columns/**column-name** | Details for a specific column in a given table
+GET | /privileges/**group-id** | Privileges for a given user-group
+GET | /groups | Collection of all Directus user-groups
+GET | /groups/**id** | Details for a specific user-group
+GET | /preferences/**table-name** | Preferences for a specific table
+GET | /bookmarks | Bookmarks for currently authenticated user
+GET | /bookmarks/**id** | Bookmarks for a specific user
+GET | /messages/rows | Collection of messages for the authenticated user
+GET | /messages/rows/**id** | Details for a specific message
+GET | /activity | Collection of latest Directus activity
 
 ## Global Parameters
 
-<span class="arguments">Name</span> | Value | Description
+<span class="attributes">Name</span> | Value | Description
 ------------------------------------| ----- | ------------
 **limit** _Integer_  |  <span class="default">Default **200**</span>  |  The number of items to request
 **offset**  _Integer_ |  <span class="default">Default **0**</span>  |  The offset for for the items
@@ -31,9 +31,9 @@ GET | `/activity` | Collection of latest Directus activity
 **in[field]**  _String_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 **ids** _String_  |  <span class="default">Optional</span>  |  Only list records that its `field` matches one of given value. Can be separated by commas. `ids=1,2`. Same as `in[id]=1,2`.
 **skip_activity_log** | <span class="default">Default **0**</span> | Whether or not the update is going to be logged in activity.
-**filters** | <span class="default">Optional</span> | Use [`Filter Operators`](/overview/endpoints.md#supported-filters-operators) to filter the result.
+**filters** | <span class="default">Optional</span> | Use the operators below to filter the result: [**Filter Operators**](/overview/endpoints.md#supported-filter-operators)
 
-#### Supported Filters Operators
+## Supported Filter Operators
 
 Filter the request by using any of the supported operators.
 
@@ -58,7 +58,8 @@ Operator                | Description
 
 ## Example API Requests
 
-<span class="request">`GET` **/api/1.1/tables/_[table-name]_/rows**</span>
+<span class="request">`GET` **/api/1.1/tables/_table-name_/rows**</span>
+
 <span class="description">Retrieve a collection of items within a specific table based on the current user's privileges</span>
 
 ### Example Request
@@ -78,6 +79,8 @@ $users = $client->getItems('directus_users, [
 
 [User Object](/01-overview/objects-model.md#user-object)
 
+### Example Response
+
 ```json
 {
   "meta": {
@@ -95,7 +98,7 @@ $users = $client->getItems('directus_users, [
       "active": 1,
       "first_name": "Ben",
       "last_name": "Haynes",
-      "email": "welling@rngr.org",
+      "email": "ben@rngr.org",
       "token": "user-token",
       "position": "",
       "email_messages": 1,
@@ -166,19 +169,19 @@ $users = $client->getItems('directus_users, [
 }
 ```
 
-<span class="request">`GET` **/api/1.1/tables/_[table-name]_/rows**</span>
+<span class="request">`GET` **/api/1.1/tables/_table-name_/rows**</span>
 
-<span class="description">Returns a collection of table entries the authenticated user has permission to view.</span>
+<span class="description">Returns a collection of table entries based on the current user's privileges</span>
 
 <span class="arguments">Name</span> | Value | Description
 ----------------------------------- | ----- | ------------
 **limit** _Integer_  |  <span class="default">Default **200**</span>  |  The number of items to request
 **offset**  _Integer_ |  <span class="default">Default **0**</span>  |  The offset for for the items
 **orders[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order to be sorted. Available options are: `ASC` (Ascending) or `DESC` (Descending).
-**status**  _String_ |  <span class="default">Default **None**</span> | List of status values to be included. Separated by commas. `1,2`
-**`columns`** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma. `columns=id,title,published_date`
-**in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
-**`ids`**  |  <span class="default">Optional</span>  |  Comma delimited list of ids to return.
+**status**  _String_ |  <span class="default">Default **None**</span> | List of status values to be included. Separated by commas, eg: `1,2`
+**columns** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma. `columns=id,title,published_date`
+**in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas, eg: `in[id]=1,2`
+**ids**  |  <span class="default">Optional</span>  |  Comma delimited list of ids to return
 
 ### Example Request
 
@@ -190,6 +193,8 @@ $ curl https://instance--key.directus.io/api/1.1/tables/directus_users/rows \
 ```php
 $projects = $client->getItems('users');
 ```
+
+### Example Response
 
 ```json
 {
