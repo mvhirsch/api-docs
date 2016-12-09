@@ -129,13 +129,13 @@ Operator                | Description
 `in`                    | Match one of the value in the list
 `nin`                   | Not match any value in the list
 `null`                  | Is Null
-**nnull** (@TODO)      | Is Not Null
-**contains** (@TODO)   | Contains a string
-**ncontains** (@TODO)  | Not Contains a string
-**between** (@TODO)    | Is Between
-**empty** (@TODO)      | Is Empty
-**nempty** (@TODO)     | Is Not Empty
-**has** (@TODO)        | Has one or more related items
+**nnull** (@TODO)       | Is Not Null
+**contains** (@TODO)    | Contains a string
+**ncontains** (@TODO)   | Not Contains a string
+**between** (@TODO)     | Is Between
+**empty**               | Is Empty (NULL or empty string)
+**nempty**              | Is Not Empty (NULL or empty string)
+**has** (@TODO)         | Has one or more related items
 
 ## Example API Requests
 
