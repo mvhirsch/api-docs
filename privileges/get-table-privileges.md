@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1/privileges/_[group-id]_/_[table-name]_**</span>
+<span class="request">`GET` **/api/1.1/privileges/_[group-id]_/_[table-name]_**</span>
 
 <span class="description">Get the table privileges for a specific user group</span>
 

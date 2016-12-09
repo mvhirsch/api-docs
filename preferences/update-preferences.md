@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`POST` **/api/1.1/tables/_[table-name]_/preferences**</span>
+<span class="request">`PUT` **/api/1.1/tables/_[table-name]_/preferences**</span>
 
 <span class="description">Update a preference within a specific table</span>
 

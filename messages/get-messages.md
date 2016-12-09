@@ -1,6 +1,6 @@
 # Get Messages
 
-<span class="request">`GET` **/api/1.1/messages/self**</span>
+<span class="request">`GET` **/api/1.1/messages/rows**</span>
 
 <span class="description">Get all of the messages for the current user</span>
 
