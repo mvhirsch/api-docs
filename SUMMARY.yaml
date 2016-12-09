@@ -66,5 +66,5 @@ Settings:
   Get Setting By Type: settings/get-type-settings.md
   Update Settings: settings/update-settings.md
 
-SDKs:
+PHP SDK:
   PHP SDK: SDKs/php-sdk.md
