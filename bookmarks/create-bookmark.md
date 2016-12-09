@@ -1,6 +1,6 @@
 # Create Bookmark
 
-<span class="request">`POST` **/api/1.1/bookmarks/_bookmark-id_**</span>
+<span class="request">`POST` **/api/1.1/bookmarks**</span>
 
 <span class="description">Create a new bookmark.</span>
 
