@@ -12,10 +12,10 @@ GET | /tables/**table-name**/columns/**column-name** | Details for a specific co
 GET | /privileges/**group-id** | Privileges for a given user-group
 GET | /groups | Collection of all Directus user-groups
 GET | /groups/**id** | Details for a specific user-group
-GET | /preferences/**table-name** | Preferences for a specific table
+GET | /preferences/**table-name** | Preferences for a specific table or bookmark
 GET | /bookmarks | Bookmarks for currently authenticated user
 GET | /bookmarks/**id** | Bookmarks for a specific user
-POST| /bookmarks | Create new bookmark
+POST| /bookmarks | Create new link in the sidebar
 GET | /messages/rows | Collection of messages for the authenticated user
 GET | /messages/rows/**id** | Details for a specific message
 GET | /activity | Collection of latest Directus activity

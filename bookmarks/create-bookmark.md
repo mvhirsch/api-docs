@@ -2,7 +2,7 @@
 
 <span class="request">`POST` **/api/1.1/bookmarks**</span>
 
-<span class="description">Create a new bookmark.</span>
+<span class="description">Create a new bookmark</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------------|--------------- | ----------------------
@@ -12,6 +12,10 @@
 **icon_class** _String_     |  | Deprecated
 **active** _String_        |   | Deprecated
 **section** _String_        |  | ["search" or "other"] Which nav section to show the link within. User generated bookmarks use "search", while all system links go within "other"
+
+> **Note:** Creating a bookmark will create only a link which will point to an url given.
+
+> **Note:** Creating a bookmark saving a result filtered with different parameters you have to create a preferences with the same title as the bookmark, having the url formatted as follow `/tables/[table-name]/pref/[bookmark-title]`
 
 ### Example Request
 
