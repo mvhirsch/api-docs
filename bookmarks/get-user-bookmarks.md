@@ -1,4 +1,4 @@
-# Get Bookmarks
+# Get User Bookmarks
 
 <span class="request">`GET` **/api/1.1/bookmarks/self**</span>
 
