@@ -133,8 +133,8 @@ Operator                | Description
 **contains** (@TODO)    | Contains a string
 **ncontains** (@TODO)   | Not Contains a string
 **between** (@TODO)     | Is Between
-**empty**               | Is Empty (NULL or empty string)
-**nempty**              | Is Not Empty (NULL or empty string)
+`empty`                 | Is Empty (NULL or empty string)
+`nempty`                | Is Not Empty (NULL or empty string)
 **has** (@TODO)         | Has one or more related items
 
 ## Example API Requests
