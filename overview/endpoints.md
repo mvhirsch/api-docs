@@ -106,7 +106,7 @@ GET | /tables/**_[table-name]_** | Gets system and schema information for a spec
 ------------------------------------| ----- | ------------
 **limit** _Integer_  |  <span class="default">Default **200**</span>  |  The number of items to request
 **offset**  _Integer_ |  <span class="default">Default **0**</span>  |  The offset for for the items
-**orders[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order to be sorted. Available options are: `ASC` (Ascending) or `DESC` (Descending)
+**order[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order to be sorted. Available options are: `ASC` (Ascending) or `DESC` (Descending)
 **status**  _String_ |  <span class="default">Default **None**</span> | List of status values to be included. Separated by commas. `1,2`
 **columns** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma. `columns=id,title,published_date`
 **in[field]**  _String_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
@@ -264,7 +264,7 @@ $users = $client->getItems('directus_users, [
 **table-name** _String_ |     | The table name you wish to get items from
 **limit** _Integer_  |  <span class="default">Default **200**</span>  |  The number of items to request
 **offset**  _Integer_ |  <span class="default">Default **0**</span>  |  The offset for for the items
-**orders[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order to be sorted. Available options are: `ASC` (Ascending) or `DESC` (Descending)
+**order[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order to be sorted. Available options are: `ASC` (Ascending) or `DESC` (Descending)
 **status**  _String_ |  <span class="default">Default **None**</span> | List of status values to be included. Separated by commas, eg: `1,2`
 **columns** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma. `columns=id,title,published_date`
 **in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas, eg: `in[id]=1,2`

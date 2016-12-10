@@ -531,7 +531,7 @@ Parameter    | Type    | Description
 
 ```php
 $users = $client->getUsers([
-  'orders' => ['email' => 'ASC']
+  'order' => ['email' => 'ASC']
 ]);
 
 foreach($users as $user) {
@@ -568,7 +568,7 @@ Parameter    | Type    | Description
 
 ```php
 $files = $client->getFiles([
-  'orders' => ['size' => 'DESC']
+  'order' => ['size' => 'DESC']
 ]);
 
 foreach($files as $file) {
@@ -605,7 +605,7 @@ Parameter    | Type    | Description
 
 ```php
 $groups = $client->getGroups([
-  'orders' => ['name' => 'ASC']
+  'order' => ['name' => 'ASC']
 ]);
 
 foreach($groups as $group) {
@@ -786,7 +786,7 @@ Sort the result by one or more columns.
 
 ```php
 $params = [
-  'orders' => [
+  'order' => [
     'id' => 'ASC',
     'title' => 'DESC'
   ]
