@@ -136,7 +136,8 @@ Operator                | Description
 `nbetween`              | Is Not Between
 `empty`                 | Is Empty (NULL or empty string)
 `nempty`                | Is Not Empty (NULL or empty string)
-**has** (@TODO)         | Has one or more related items
+`all`                   | Match all related items
+`has`                   | Has one or more related items
 
 ## Example API Requests
 
