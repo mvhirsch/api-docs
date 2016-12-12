@@ -778,6 +778,8 @@ A `Entry` object containing the setting information.
 
 # Get Parameters
 
+Some methods accepts parameters to alter/filter the collection result.
+
 ## order
 
 Sort the result by one or more columns.
@@ -791,6 +793,8 @@ $params = [
     'title' => 'DESC'
   ]
 ];
+
+$articles = $client->getItems('articles', $params);
 ```
 ## orderBy
 
@@ -802,6 +806,8 @@ Sort by only one column.
 $params = [
   'orderBy' => 'title'
 ];
+
+$articles = $client->getItems('articles', $params);
 ```
 
 ## orderDirection
@@ -815,6 +821,8 @@ $params = [
   'orderBy' => 'title',
   'orderDirection' => 'DESC'
 ];
+
+$articles = $client->getItems('articles', $params);
 ```
 
 ## limit
@@ -827,6 +835,8 @@ Limit the numbers of records to be returned.
 $params = [
   'limit' => 100
 ];
+
+$articles = $client->getItems('articles', $params);
 ```
 
 ## offset
@@ -840,6 +850,8 @@ $params = [
   'limit' => 100,
   'offset' => 50
 ];
+
+$articles = $client->getItems('articles', $params);
 ```
 
 ## status
@@ -852,6 +864,8 @@ Return only records that has this status. To include multiple status, it has to 
 $params = [
   'status' => [1, 2]
 ];
+
+$articles = $client->getItems('articles', $params);
 ```
 
 ## ids
@@ -864,6 +878,8 @@ A comma-separated list of IDs.
 $params = [
    'ids' => [2, 4, 11]
 ];
+
+$articles = $client->getItems('articles', $params);
 ```
 
 ## filters
@@ -883,7 +899,7 @@ $articles = $client->getItems('articles, [
   'filters' => ['title' => ['like' => 'movies']]
 ]);
 
-// Not operator is default to equal to.
+// Not using a `operator` is default to equal to.
 $articles = $client->getItems('articles, [
   'filters' => ['slug' => 'lorem-ipsum']
 ]);
