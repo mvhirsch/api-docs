@@ -1,4 +1,4 @@
-# The Directus API v1.0
+# The Directus API v1.1
 
 > **Connect your data with our RESTful API and SDKs**
 
@@ -11,9 +11,9 @@ It is important to remember that the Directus API is dynamic based on your datab
 >  **Note:** The Directus Hosted Service encrypts all traffic over HTTPS
 
 ## Other Versions
-A newer version (1.1) of the Directus API is available below. This version is still in beta and requires version 6.3.6 of Directus.
+The older version (1.0) of the Directus API is available below.
 
-**[http://api.getdirectus.com/1.1/](http://api.getdirectus.com/1.1/)**
+**[http://api.getdirectus.com/1.0/](http://api.getdirectus.com/1.0/)**
 
 ## Error Responses
 
