@@ -5,7 +5,7 @@ Add new file.
 ## HTTP Request
 
 ```bash
-GET /api/1/files
+POST /api/1/files
 ```
 
 ## Parameters
@@ -27,6 +27,10 @@ date_uploaded   | Format YYYY-MM-DD HH:MM:SS UTC
 embed_id        | Embedded link id. (Supports Youtube ID and Vimeo ID)
 user            | File owner.
 storage_adapter | File storage adapter name
+
+## Request
+
+$ curl --data "name=image.png&type=image/png&data=data:image/png;base64,<base64-data>" https://database.account.directus.io/api/1/files
 
 ## Response
 
