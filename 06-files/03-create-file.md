@@ -31,7 +31,7 @@ storage_adapter | File storage adapter name
 ## Request
 
 ```bash
-$ curl --data "name=image.png&type=image/png&data=data:image/png;base64,<base64-data>" \
+$ curl --data "name=image.jpg&type=image/jpeg&data=data:image/jpeg;base64,<base64-data>" \
 https://instance--key.directus.io/api/1/files
 ```
 
