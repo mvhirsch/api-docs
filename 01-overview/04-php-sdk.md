@@ -3,7 +3,7 @@
 ## Creating data
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
-createEntry             | `table`, `data`        | Creates a new entry in the given table.
+createItem             | `table`, `data`         | Creates a new item in the given table.
 ~~createActivity~~      | `data`                 | Creates an activity log.
 createBookmark          | `data`                 | Creates a bookmark.
 createColumn            | `data`                 | Creates a new column.
@@ -18,7 +18,7 @@ createTable             | `name`, `params`       | Creates a new table.
 createUIOptions         | `data`                 | Creates a new UI options.
 createUser              | `data`                 | Creates a new user.
 
-### Create Entry
+### Create Item
 
 Parameters    | Type    | Description
 ------------- | ------- | -----------
@@ -26,12 +26,12 @@ table         | String  | The Table name where the `data` are going to be insert
 data          | Array   | Data to be inserted in `table`. All this data attributes will depend on your table columns.
 
 #### Returns
-An `Entry` object containing the new created entry.
+An `Entry` object containing the new created item.
 
 Example:
 
 ```php
-$article = $client->createEntry('articles', [
+$article = $client->createItem('articles', [
   'title' => 'New Article',
   'body' => 'Some text'
 ]);
@@ -178,7 +178,7 @@ $message = $client->sendMessage([
 ]);
 ```
 
-#### Message Entry attributes
+#### Message Item attributes
 
 Attribute               | Type      | Description
 ----------------------- | --------- | ----------------------
@@ -385,7 +385,7 @@ $file = $client->createFile(new File('/path/to/the/file.jpg', [
  - Create file from a url
 
 
-#### File Entry object attributes
+#### File Item object attributes
 
 Column                  | Type     | Description
 ----------------------- | -------- | ----------------------
@@ -413,7 +413,7 @@ storage_adapter         | String   | Storage adapter used to upload the file
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
 getEntries              | `table`, `params`      | Collection of rows (items) for a given table.
-getEntry                | `table`, `id`, `params`| Details for a specific table row (item).
+getItem                | `table`, `id`, `params`| Details for a specific table row (item).
 getUsers                | `params`               | Collection of users.
 getUser                 | `id`, `params`         | Details for a specific user.
 getFiles                | `params`               | Collection of files.
@@ -450,7 +450,7 @@ foreach($articles as $article) {
 }
 ```
 
-### Get Entry by ID
+### Get Item by ID
 
 Parameters    | Type    | Description
 ------------- | ------- | -----------
@@ -458,7 +458,7 @@ table         | String  | The Table name to fetch data from.
 id            | Mixed   | The record id.
 
 ```php
-$article = $client->getEntry('articles', 1);
+$article = $client->getItem('articles', 1);
 echo $article->title;
 ```
 
@@ -796,7 +796,7 @@ Operator                | Description
 
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
-updateEntry             | `table`, `id`, `data`  | Updates the record with the given `id` in `table` with `data`.
+updateItem             | `table`, `id`, `data`  | Updates the record with the given `id` in `table` with `data`.
 updateUser              | `id`, `data`           | Updates the given user `id` with the given `data`.
 updateFile              | `id`, `data`           | Updates the give file `id` with the given `data`.
 
@@ -809,7 +809,7 @@ updateFile              | `id`, `data`           | Updates the give file `id` wi
 #### Returns
 An `Entry` object containing the updated data.
 
-### Update Entry
+### Update Item
 
 Parameters    | Type    | Description
 ------------- | ------- | -----------
@@ -856,7 +856,7 @@ $updatedFile = $client->updateFile(1, new File('/path/to/file'));
 
 Method                  | Parameters             | Description
 ----------------------- | ---------------------- | -----------
-deleteEntry             | `table`, `id`          | Deletes the record with the given `id` in `table`.
+deleteItem             | `table`, `id`          | Deletes the record with the given `id` in `table`.
 deleteBookmark          | `id`                   | Deletes the given bookmark id.
 deleteColumn            | `name`. `table`        | Deletes the tiven column name in the given table name.
 deleteFile              | `id`                   | Deletes the give file `id`.
@@ -869,7 +869,7 @@ Nothing is returned.
 
 **@TODO**: Return whether or not were deleted.
 
-### Delete Entry
+### Delete Item
 
 Parameters    | Type    | Description
 ------------- | ------- | -----------
@@ -879,7 +879,7 @@ id            | Integer | The id of the record to delete in `table`.
 Example:
 
 ```php
-$client->deleteEntry('articles', 1);
+$client->deleteItem('articles', 1);
 ```
 
 ### Delete Bookmark
