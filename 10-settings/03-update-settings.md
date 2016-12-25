@@ -19,6 +19,12 @@ data | the data to be update
 $ curl --data "rows_per_page=100" https://database.account.directus.io/api/1/settings/global
 ```
 
+```javascript
+client.updateSettings('global', {
+  rows_per_page: 100
+});
+```
+
 ## Response
 
 ```json

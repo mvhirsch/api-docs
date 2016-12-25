@@ -28,9 +28,8 @@ $ php https://database.account.directus.io/api/1/tables/projects/rows \
         -u usrSTeeornngkti:
 ```
 
-```node
-$ node https://database.account.directus.io/api/1/tables/projects/rows \
-        -u usrSTeeornngkti:
+```javascript
+client.getItems('projects');
 ```
 
 ## Response

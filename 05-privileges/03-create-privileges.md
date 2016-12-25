@@ -13,6 +13,13 @@ GET https://database.account.directus.io/api/1/privileges/[group-id]
 $ curl https://database.account.directus.io/api/1/privileges/1
 ```
 
+```javascript
+client.createPrivileges({
+  table_name: 'projects',
+  group_id: 1,
+  allow_add: 2
+});
+
 ## Parameters
 
 Name         | Description

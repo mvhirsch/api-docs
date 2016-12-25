@@ -17,6 +17,10 @@ $ curl https://database.account.directus.io/api/1/tables/projects/columns/title 
         -u usrSTeeornngkti:
 ```
 
+```javascript
+client.getColumn('projects', 'title');
+```
+
 ## Parameters
 
 None.

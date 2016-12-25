@@ -27,6 +27,12 @@ $ curl -d sort_order=DESC https://database.account.directus.io/api/1/tables/proj
         -u usrSTeeornngkti:
 ```
 
+```javascript
+client.updatePreferences('projects', {
+  sort_order: 'DESC'
+});
+```
+
 ## Response
 
 ```json

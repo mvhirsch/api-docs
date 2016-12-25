@@ -19,6 +19,12 @@ $ curl --data "comment=Project+name" https://database.account.directus.io/api/1/
         -u usrSTeeornngkti:
 ```
 
+```javascript
+client.updateColumn('projects', 'title', {
+  comment: 'Project name'
+});
+```
+
 ## Parameters
 
 Name        | Description

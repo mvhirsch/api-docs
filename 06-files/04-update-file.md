@@ -28,6 +28,13 @@ embed_id        | Embedded link id. (Supports Youtube ID and Vimeo ID)
 user            | File owner.
 storage_adapter | File storage adapter name
 
+### Example Request
+```javascript
+client.updateFile(2, {
+  title: 'My New File Name'
+});
+```
+
 ### Response
 
 ```json

@@ -16,6 +16,10 @@ $ curl https://database.account.directus.io/api/1/tables/projects/preferences \
         -u usrSTeeornngkti:
 ```
 
+```javascript
+client.getPreferences('projects');
+```
+
 ## Response
 
 ```json

@@ -14,6 +14,10 @@ GET /api/1/settings
 $ curl https://database.account.directus.io/api/1/settings
 ```
 
+```javascript
+client.getSettings();
+```
+
 ## Response
 
 ```json

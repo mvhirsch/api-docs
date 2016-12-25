@@ -17,6 +17,10 @@ $ curl https://database.account.directus.io/api/1/tables/projects \
         -u [user-token]:
 ```
 
+```javascript
+client.getTable('projects');
+```
+
 ## Response
 ```json
 {

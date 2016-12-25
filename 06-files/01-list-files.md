@@ -14,6 +14,10 @@ GET /api/1/files
 $ curl https://database.account.directus.io/api/1/files
 ```
 
+```javascript
+client.getFiles();
+```
+
 ## Response
 
 ```json

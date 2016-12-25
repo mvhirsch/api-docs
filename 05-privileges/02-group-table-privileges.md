@@ -14,6 +14,10 @@ GET /api/1/privileges/[group-id]/[table-name]
 $ curl https://database.account.directus.io/api/1/privileges/1/projects
 ```
 
+```javascript
+client.getTablePrivileges(1, 'projects');
+```
+
 ## Response
 
 Table privilege for the specified table and user-group.
