@@ -23,6 +23,10 @@ $ curl https://instance--key.directus.io/api/1.1/tables/projects \
 $table = $client->getTable('projects');
 ```
 
+```javascript
+client.getTable('projects');
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

@@ -27,6 +27,10 @@ $ curl https://instance--key.directus.io/api/1.1/files \
 $files = $client->getFiles();
 ```
 
+```javascript
+client.getFiles();
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

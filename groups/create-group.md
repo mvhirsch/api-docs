@@ -19,6 +19,10 @@ $ curl --data "name=Manager" https://instance--key.directus.io/api/1.1/groups \
 $newGroup = $client->createGroup('Manager');
 ```
 
+```javascript
+client.createGroup('Manager');
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

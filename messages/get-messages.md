@@ -20,6 +20,11 @@ $userId = 1; // default to authenticated user
 $messages = $client->getMessages($userId);
 ```
 
+```javascript
+// Gets messages of authenticated user
+client.getMessages();
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

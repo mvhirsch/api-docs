@@ -21,6 +21,10 @@ $ curl -d "name=projects" https://instance--key.directus.io/api/1.1/tables \
 $table = $client->createTable('projects');
 ```
 
+```javascript
+client.createTable('projects');
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

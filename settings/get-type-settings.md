@@ -19,6 +19,10 @@ $ curl https://instance--key.directus.io/api/1.1/settings/global \
 $settings = $client->getSettingsByCollection('global');
 ```
 
+```javascript
+client.getSettingsByCollection('global');
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

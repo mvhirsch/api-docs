@@ -34,6 +34,12 @@ $privilege = $client->updateItem('directus_privileges', 1, [
 ]);
 ```
 
+```javascript
+client.updatePrivileges(1, 1, {
+  allow_view: 1
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

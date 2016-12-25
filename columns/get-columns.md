@@ -21,6 +21,10 @@ $ curl https://instance--key.directus.io/api/1.1/tables/projects/columns \
 $columns = $client->getColumns('projects');
 ```
 
+```javascript
+client.getColumns('projects');
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

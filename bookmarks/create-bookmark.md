@@ -33,6 +33,14 @@ $bookmark = $client->createBookmark([
 ]);
 ```
 
+```javascript
+client.createBookmark({
+  title: 'Draft Articles',
+  table_name: 'articles',
+  status: 2
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

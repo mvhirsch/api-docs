@@ -21,6 +21,11 @@ $userId = 2; // On db connection only
 $messages = $client->getMessage($messageId, $userId);
 ```
 
+```javascript
+const messageId = 1;
+client.getMessage(messageId);
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

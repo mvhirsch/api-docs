@@ -26,6 +26,12 @@ $updatedProject = $client->updateItem('projects', 1, [
 ]);
 ```
 
+```javascript
+client.updateItem('projects', 1, {
+  title: 'Lorem Ipsum'
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

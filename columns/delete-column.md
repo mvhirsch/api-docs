@@ -22,6 +22,10 @@ $ curl -X DELETE  https://instance--key.directus.io/api/1.1/tables/projects/colu
 $client->deleteColumn('projects', 'intro');
 ```
 
+```javascript
+client.deleteColumn('projects', 'intro');
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

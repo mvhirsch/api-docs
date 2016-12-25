@@ -21,6 +21,12 @@ $ curl https://database.account.directus.io/api/1.1/tables \
 $tables = $client->getTables(['include_system' => false]);
 ```
 
+```javascript
+client.getTables({
+  include_system: false
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

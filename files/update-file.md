@@ -32,6 +32,12 @@ $file = $client->updateFile(2, [
 ]);
 ```
 
+```javascript
+client.updateFile(2, {
+  title: 'My New File Name'
+});
+```
+
 ### Response
 
 <span class="attributes">Attribute</span> | Description

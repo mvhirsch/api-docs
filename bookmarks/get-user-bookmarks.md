@@ -21,6 +21,10 @@ $bookmarks = $client->getBookmarks();
 $bookmarks = $client->getBookmarks(1);
 ```
 
+```javascript
+client.getUserBookmarks();
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

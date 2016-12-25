@@ -15,6 +15,10 @@ $ curl https://instance--key.directus.io/api/1.1/groups/1 \
 $group = $client->getGroup(1);
 ```
 
+```javascript
+client.getGroup(1);
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

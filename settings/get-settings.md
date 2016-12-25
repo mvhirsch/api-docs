@@ -15,6 +15,10 @@ $ curl https://instance--key.directus.io/api/1.1/settings \
 $settings = $client->getSettings();
 ```
 
+```javascript
+client.getSettings();
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

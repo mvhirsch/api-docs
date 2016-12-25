@@ -15,6 +15,10 @@ $ curl https://instance--key.directus.io/api/1.1/bookmarks/1 \
 $bookmark = $client->getBookmark(1);
 ```
 
+```javascript
+client.getBookmark(1);
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description
