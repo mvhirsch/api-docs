@@ -18,6 +18,13 @@ $ curl --data "active=1&title=Example" \
                 -u usrSTeeornngkti:
 ```
 
+```javascript
+client.updateItem('projects', 1, {
+  active: 1,
+  title: 'Example'
+});
+```
+
 ## Parameters
 
 > **Note:** The parameters are based on the table's column.

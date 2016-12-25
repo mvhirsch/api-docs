@@ -16,6 +16,16 @@ $ curl -X POST -d "column_name=year&data_type=int&char_length=4&ui=numeric&comme
         -u usrSTeeornngkti:
 ```
 
+```javascript
+client.createColumn('projects', {
+  column_name: 'year',
+  data_type: 'int',
+  char_length: 4,
+  ui: 'numeric',
+  comment: 'Year Build'
+});
+```
+
 ## Parameters
 
 Name        | Description

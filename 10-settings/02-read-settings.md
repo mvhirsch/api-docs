@@ -14,6 +14,10 @@ GET /api/1/settings/[collectionName]
 $ curl https://database.account.directus.io/api/1/settings/global
 ```
 
+```javascript
+client.getSettingsByCollection('global');
+```
+
 ## Response
 
 ```json

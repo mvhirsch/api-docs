@@ -32,6 +32,13 @@ $client->createItem('projects', [
 ]);
 ```
 
+```javascript
+client.createItem('projects', {
+  active: 1,
+  title: 'School Website'
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

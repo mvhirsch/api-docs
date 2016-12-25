@@ -20,6 +20,10 @@ name | The name of the group
 $ curl --data "name='Manager'" https://database.account.directus.io/api/1/groups
 ```
 
+```javascript
+client.createGroup('Manager');
+```
+
 ## Response
 ```json
 {

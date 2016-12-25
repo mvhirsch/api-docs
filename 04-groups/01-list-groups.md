@@ -14,6 +14,10 @@ GET /api/1/groups
 $ curl https://database.account.directus.io/api/1/groups
 ```
 
+```javascript
+client.getGroups();
+```
+
 ## Response
 ```json
 {

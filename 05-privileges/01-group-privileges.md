@@ -14,6 +14,10 @@ GET /api/1/privileges/[group-id]
 $ curl https://database.account.directus.io/api/1/privileges/1
 ```
 
+```javascript
+client.getGroupPrivileges(1);
+```
+
 ## Response
 
 List of all the tables with their privileges for the specified user-group.

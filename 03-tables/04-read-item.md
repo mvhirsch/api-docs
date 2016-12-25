@@ -17,6 +17,10 @@ $ curl https://database.account.directus.io/api/1/tables/projects/rows/1 \
         -u usrSTeeornngkti:
 ```
 
+```javascript
+client.getItem('projects', 1);
+```
+
 ## Response
 
 > **Note:** The architecture of this response is based on your schema.

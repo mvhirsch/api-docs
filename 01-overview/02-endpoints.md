@@ -116,5 +116,6 @@ Parameter  |  Example  |  Description
       "state": "",
       "zip": ""
     }
-]
+  ]
+}
 ```

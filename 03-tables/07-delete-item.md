@@ -22,6 +22,14 @@ $ curl -X PATCH \
                 -u usrSTeeornngkti:
 ```
 
+```javascript
+// Soft delete
+client.deleteItem('projects', 1);
+
+// Delete from DB as well
+client.deleteItem('projects', 1, true);
+```
+
 ## Parameters
 
 Name     | Description
