@@ -18,6 +18,10 @@ $ curl https://instance--key.directus.io/api/1.1/privileges/1/projects \
   -u [user-token]:
 ```
 
+```javascript
+client.getTablePrivileges(1, 'projects');
+```
+
 ## Response
 
 Table privilege for the specified table and user-group.

@@ -27,6 +27,14 @@ $activity = $client->getActivity([
 ]);
 ```
 
+```javascript
+client.getActivity({
+  filters: {
+    table_name: 'projects'
+  }
+})
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

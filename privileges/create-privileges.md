@@ -39,6 +39,16 @@ $privileges = $client->createPrivileges([
 ]);
 ```
 
+```javascript
+client.createPrivileges({
+  group_id: 2,
+  table_name: 'projects',
+  allow_edit: 2,
+  allow_delete: 0,
+  write_field_blacklist: 'title,published_date'
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

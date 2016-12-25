@@ -19,6 +19,10 @@ $ curl https://instance--key.directus.io/api/1.1/privileges/1 \
 $privileges = $client->getGroupPrivileges(1);
 ```
 
+```javascript
+client.getGroupPrivileges(1);
+```
+
 ## Response
 
 List of all the tables with their privileges for the specified user-group.

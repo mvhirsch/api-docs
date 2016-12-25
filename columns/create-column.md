@@ -42,6 +42,17 @@ $column = $client->createColumn([
 ]);
 ```
 
+```javascript
+client.createColumn({
+  name: 'year',
+  table: 'projects',
+  type: 'int',
+  ui: 'numeric',
+  comment: 'Lorem Ipsum',
+  length: 4
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

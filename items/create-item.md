@@ -28,6 +28,13 @@ $newProject = $client->createItem('projects', [
 ]);
 ```
 
+```javascript
+client.createItem('projects', {
+  active: 1,
+  title: 'Lorem Ipsum'
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

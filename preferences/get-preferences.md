@@ -21,6 +21,10 @@ $ curl https://instance--key.directus.io/api/1.1/tables/projects/preferences \
 $preferences = $client->getPreferences('projects');
 ```
 
+```javascript
+client.getPreferences('projects');
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

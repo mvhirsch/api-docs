@@ -24,6 +24,12 @@ $setting = $client->updateSettings('global', [
 ])
 ```
 
+```javascript
+client.updateSettings('global', {
+  rows_per_page: 100
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

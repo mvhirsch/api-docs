@@ -24,6 +24,13 @@ $newFile = $client->createFile(new File([
 ]));
 ```
 
+```javascript
+client.createFile({
+  title: 'My File Name',
+  data: 'bm90aGluZyB0byBzZWUgaGVyZQ==' // Base64 file content
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

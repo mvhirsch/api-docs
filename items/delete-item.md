@@ -25,6 +25,10 @@ $ curl -X DELETE \
 $response = $client->deleteItem('projects', 1);
 ```
 
+```javascript
+client.deleteItem('projects', 1);
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

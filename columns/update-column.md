@@ -32,6 +32,12 @@ $ curl -X PUT --data "comment=Project+Name" https://instance--key.directus.io/ap
         -u [user-token]:
 ```
 
+```javascript
+client.updateColumn('projects', 'title', {
+  comment: 'Project Name'
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description

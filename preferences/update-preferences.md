@@ -23,6 +23,12 @@ $ curl -d sort_order=DESC https://instance--key.directus.io/api/1.1/tables/proje
         -u [user-token]:
 ```
 
+```javascript
+client.updatePreferences('projects', {
+  sort_order: 'DESC'
+});
+```
+
 ## Response
 
 <span class="attributes">Attribute</span> | Description
