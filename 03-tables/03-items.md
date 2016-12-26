@@ -18,14 +18,14 @@
 **in[field]**  _sting_ | <span class="default">Optional</span> | Only list records that its `field` matches one of given value. Can be separated by commas. `in[id]=1,2`
 
 ### Example Request
+
 ```bash
 $ curl https://database.account.directus.io/api/1/tables/projects/rows \
         -u usrSTeeornngkti:
 ```
 
 ```php
-$ php https://database.account.directus.io/api/1/tables/projects/rows \
-        -u usrSTeeornngkti:
+$items = $client->getItems('projects');
 ```
 
 ```javascript
