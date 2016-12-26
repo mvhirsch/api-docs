@@ -5,4 +5,4 @@
 # API Documentation
 Directus API Reference
 
-[Web Formatted Version](https://getdirectus.com/api) – The web version of this repository
+[Web Formatted Version](https://api.getdirectus.com) – The web version of this repository
