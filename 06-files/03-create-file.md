@@ -36,7 +36,7 @@ https://instance--key.directus.io/api/1/files
 ```
 
 ```php
-$file = $client->createFile(new \Directus\SDK\File('/path/to/file');
+$file = $client->createFile(new \Directus\SDK\File('/path/to/file'));
 ```
 
 ```javascript
