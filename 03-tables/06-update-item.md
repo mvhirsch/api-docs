@@ -10,12 +10,19 @@ Update an item in the given table with the specified ID.
 PATCH /api/1/tables/[table-name]/rows/[row-id]
 ```
 
-## Example Request
+### Example Request
 
 ```bash
 $ curl --data "active=1&title=Example" \
         https://database.account.directus.io/api/1/tables/projects/rows/1 \
                 -u usrSTeeornngkti:
+```
+
+```php
+$item = $client->updateItem('projects', 1, [
+  'active': 1,
+  'title': 'Example'
+]);
 ```
 
 ```javascript

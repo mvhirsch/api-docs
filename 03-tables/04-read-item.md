@@ -10,11 +10,15 @@ Get the specified row id in the given table.
 GET /api/1/tables/[table-name]/rows/[row-id]
 ```
 
-## Example Request
+### Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/tables/projects/rows/1 \
         -u usrSTeeornngkti:
+```
+
+```php
+$item = $client->getItem('projects', 1);
 ```
 
 ```javascript

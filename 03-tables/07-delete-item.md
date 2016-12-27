@@ -14,19 +14,27 @@ PATCH /api/1/tables/[table-name]/rows/[row-id]
 DELETE /api/1/tables/[table-name]/rows/[row-id]
 ```
 
-## Example Request
+### Example Request
 
 ```bash
-$ curl -X PATCH \
+$ curl -X PATCH --data "active=0" \
         https://database.account.directus.io/api/1/tables/projects/rows/1 \
                 -u usrSTeeornngkti:
 ```
 
+```php
+// Soft delete (only if it has status columm)
+$client->deleteItem('projects', 1);
+
+// Delete from DB
+$client->deleteItem('projects', 1, true);
+```
+
 ```javascript
-// Soft delete
+// Soft delete (only if it has status columm)
 client.deleteItem('projects', 1);
 
-// Delete from DB as well
+// Delete from DB
 client.deleteItem('projects', 1, true);
 ```
 
