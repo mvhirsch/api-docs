@@ -29,9 +29,22 @@ user            | File owner.
 storage_adapter | File storage adapter name
 
 ### Example Request
+
+```bash
+$ curl --data "title=My+New+File+Title" \
+        https://database.account.directus.io/api/1/files/2 \
+                -u usrSTeeornngkti:
+```
+
+```php
+$file = $client->updateFile(2, [
+    'title' => 'My New File Title'
+]);
+```
+
 ```javascript
 client.updateFile(2, {
-  title: 'My New File Name'
+  title: 'My New File Title'
 });
 ```
 

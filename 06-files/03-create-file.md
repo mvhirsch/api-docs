@@ -28,11 +28,15 @@ embed_id        | Embedded link id. (Supports Youtube ID and Vimeo ID)
 user            | File owner.
 storage_adapter | File storage adapter name
 
-## Example Request
+### Example Request
 
 ```bash
 $ curl --data "name=image.jpg&type=image/jpeg&data=data:image/jpeg;base64,<base64-data>" \
 https://instance--key.directus.io/api/1/files
+```
+
+```php
+$file = $client->createFile(new \Directus\SDK\File('/path/to/file');
 ```
 
 ```javascript

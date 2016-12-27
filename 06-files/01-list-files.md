@@ -8,10 +8,14 @@ Get all the files entries.
 GET /api/1/files
 ```
 
-## Example Request
+### Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/files
+```
+
+```php
+$files = $client->getFiles();
 ```
 
 ```javascript

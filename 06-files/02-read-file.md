@@ -8,10 +8,14 @@ Get information of the specified file.
 GET /api/1/files/[id]
 ```
 
-## Example Request
+### Example Request
 
 ```bash
 $ curl https://database.account.directus.io/api/1/files/1
+```
+
+```php
+$file = $client->getFile(1);
 ```
 
 ```javascript
