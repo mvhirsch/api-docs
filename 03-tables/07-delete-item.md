@@ -20,6 +20,10 @@ DELETE /api/1/tables/[table-name]/rows/[row-id]
 $ curl -X PATCH --data "active=0" \
         https://database.account.directus.io/api/1/tables/projects/rows/1 \
                 -u usrSTeeornngkti:
+                
+$ curl -X DELETE \
+        https://database.account.directus.io/api/1/tables/projects/rows/1 \
+                -u usrSTeeornngkti:
 ```
 
 ```php
