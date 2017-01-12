@@ -14,7 +14,7 @@
 **columns_visible** _String_   |  | List of visible columns, separated by commas
 **sort** _String_          |   | Result will be sorted by this column
 **sort_order** _String_     |  | Sort Order (ASC=Ascending or DESC=Descending)
-**active** _String_         |  | List of status values. separated by comma
+**status** _String_         |  | List of status values. separated by comma
 
 ### Example Request
 
@@ -51,7 +51,7 @@ client.updatePreferences('projects', {
     "columns_visible": "title",
     "sort": "id",
     "sort_order": "DESC",
-    "active": "1,2",
+    "status": "1,2",
     "search_string": null
   }
 }

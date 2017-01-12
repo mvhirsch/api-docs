@@ -98,7 +98,7 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 **columns_visible** _String_  | List of visible columns, separated by commas
 **sort** _String_             | Result will be sorted by this column
 **sort_order** _String_       | Sort Order. (ASC=Ascending or DESC=Descending)
-**active** _String_           | List of status values. separated by comma
+**status** _String_           | List of status values. separated by comma
 
 ## Privilege Object
 
