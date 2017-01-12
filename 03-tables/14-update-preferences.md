@@ -18,7 +18,7 @@ table_name       | Name of the table.
 columns_visible  | List of visible columns, separated by commas.
 sort             | Result will be sorted by this column
 sort_order       | Sort Order. (ASC=Ascending or DESC=Descending)
-active           | List of status values. separated by comma.
+status           | List of status values. separated by comma.
 
 ## Example Request
 
@@ -43,7 +43,7 @@ client.updatePreferences('projects', {
   "columns_visible": "title",
   "sort": "id",
   "sort_order": "ASC",
-  "active": "1,2",
+  "status": "1,2",
   "search_string": null
 }
 ```

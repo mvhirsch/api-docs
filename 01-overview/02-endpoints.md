@@ -27,7 +27,7 @@ Parameter  |  Example  |  Description
 **`perPage`**  |  *`100`, `200`, `300`*  |  Number of results per page
 **`sort`**  |  *`id`, `title`, `date_uploaded`*  |  Column to sort results upon
 **`sort_order`**  |  *`ASC`, `DESC`*  |  Order direction for sorting
-**`active`**  |  *`1`, `1,2`, `2`*  |  Filter by a CSV of status values **for tables with a status column** such as `active`
+**`status`**  |  *`1`, `1,2`, `2`*  |  Filter by a CSV of status values **for tables with a status column** such as `active`
 **`columns_visible`**  |  *`title`, `date`*  |  Name of column shown in results. Can be chained such as: `columns_visible=title&columns_visibile=first_name`
 
 

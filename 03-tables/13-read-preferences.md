@@ -31,7 +31,7 @@ client.getPreferences('projects');
   "columns_visible": "title",
   "sort": "id",
   "sort_order": "ASC",
-  "active": "1,2",
+  "status": "1,2",
   "search_string": null
 }
 ```
