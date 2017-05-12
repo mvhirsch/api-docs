@@ -792,6 +792,41 @@ Operator                | Description
 
 ---
 
+### Joins
+
+Join additional tables to compare while finding data.
+
+`type` is optional and defaults to `INNER` but may also be `LEFT`, `RIGHT` or another value, as supported by the database.
+
+```php
+$params = [
+    'joins' => [
+        'authors' => [
+            'on' => [
+                'authors.id',
+                'articles.author'
+            ],
+            'type' => 'INNER'
+       ]
+    ]
+];
+
+$articles = $client->getEntries('articles, [
+    'joins' => [
+        'authors' => [
+            'on' => [
+                'authors.id',
+                'articles.author'
+            ],
+            'type' => 'INNER'
+       ]
+    ],
+    'filters' => [
+        'authors.name' => ['=' => 'James']
+    ]
+]);
+```
+
 ## Updating data
 
 Method                  | Parameters             | Description
