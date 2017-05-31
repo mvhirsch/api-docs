@@ -1,14 +1,14 @@
 # Filters
 
-Filters are a way to refine item listing results based on one or more conditions.
+Filters are a way to refine listing results based on one or more conditions.
 
 ### How to use
 
-Adding a filter you have to use the query param key `filters` using the following format `filters[column-name][operator]=value`.
+To add a filter you have to use the query param key `filters` with the following format: `filters[column-name][operator]=value`
 
 
 Example:
-Fetching all customers from United States
+Fetching `customers` from United States
 
 `api/1.1/tables/customers/rows?filters[country][eq]=us`
 
@@ -16,9 +16,9 @@ Fetching all customers from United States
 
 `filters[country][eq]=us` filters the customers to only those with `country` equal to `us`.
 
-Also `filters[country][eq]=us` can be simpliefied to `filters[country]=us`
+Also `filters[country][eq]=us` can be simplified to `filters[country]=us`
 
-**Note**: Directus does not support multiple filtering on the same column nor relational filtering yet.
+**Note**: Directus does not support relational filtering or multiple filters for the same column (yet).
 
 #### Supported Operators
 
