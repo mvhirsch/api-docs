@@ -4,6 +4,7 @@ Introduction:
   API Overview: overview/api-overview.md
   Authentication: overview/authentication.md
   Endpoints: overview/endpoints.md
+  Filters: overview/filters.md
   Directus Objects: overview/objects-model.md
 
 Items:
