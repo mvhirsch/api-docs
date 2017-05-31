@@ -18,6 +18,14 @@ Fetching `customers` from United States
 
 Also `filters[country][eq]=us` can be simplified to `filters[country]=us`
 
+To add another filter you have to separate each filters with the ampersand symbol (`&`).
+
+Example
+Fetching `customers` from New York, United States
+
+`api/1.1/tables/customers/rows?filters[country][eq]=us&filters[state][eq]=ny`
+
+
 **Note**: Directus does not support relational filtering or multiple filters for the same column (yet).
 
 #### Supported Operators
