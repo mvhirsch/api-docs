@@ -7,8 +7,7 @@ Filters are a way to refine listing results based on one or more conditions.
 To add a filter you have to use the query param key `filters` with the following format: `filters[column-name][operator]=value`
 
 
-Example:
-Fetching `customers` from United States
+#### Example: Fetching `customers` from United States
 
 `api/1.1/tables/customers/rows?filters[country][eq]=us`
 
@@ -20,8 +19,7 @@ Also `filters[country][eq]=us` can be simplified to `filters[country]=us`
 
 To add another filter you have to separate each filters with the ampersand symbol (`&`).
 
-Example
-Fetching `customers` from New York, United States
+#### Example: Fetching `customers` from New York, United States
 
 `api/1.1/tables/customers/rows?filters[country][eq]=us&filters[state][eq]=ny`
 
