@@ -23,6 +23,10 @@ To add another filter you have to separate each filters with the ampersand symbo
 
 `api/1.1/tables/customers/rows?filters[country][eq]=us&filters[state][eq]=ny`
 
+### Example: Fetching `customers` from New York and New Mexico, United States
+
+`api/1.1/tables/customers/rows?filters[country][eq]=us&filters[state][in]=ny,nm`
+
 
 **Note**: Directus does not support relational filtering or multiple filters for the same column (yet).
 
