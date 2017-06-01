@@ -27,6 +27,11 @@ To add another filter you have to separate each filters with the ampersand symbo
 
 `api/1.1/tables/customers/rows?filters[country][eq]=us&filters[state][in]=ny,nm`
 
+By default all condition are grouped in AND logical operators, the example below will explain how to use or operator:
+
+#### Example: Fetching `customers` from New York and New Mexico OR Oregon and Louisiana, United States
+
+`api/1.1/tables/customers/rows?filters[country][eq]=us&filters[state][in]=ny,nm&filters[state][logical]=or&filters[state][in]=or,la`
 
 **Note**: Directus does not support relational filtering or multiple filters for the same column (yet).
 
