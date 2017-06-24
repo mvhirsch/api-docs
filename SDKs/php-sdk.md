@@ -1073,7 +1073,7 @@ Parameter    | Type    | Description
 ### Example Request
 
 ```php
-$client->deleteUser(1);
+$client->deleteFile(1);
 ```
 
 ## Delete Group
