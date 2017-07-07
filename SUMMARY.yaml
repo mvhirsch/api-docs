@@ -67,6 +67,10 @@ Settings:
   Get Setting By Type: settings/get-type-settings.md
   Update Settings: settings/update-settings.md
 
+Utils:
+  Random String: utils/get-random-string.md
+  Hash String: utils/get-hash-string.md
+
 PHP SDK:
   PHP SDK: SDKs/php-sdk.md
 
