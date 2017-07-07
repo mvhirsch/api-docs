@@ -46,7 +46,7 @@ var hash = client.hash('secret', {
 
 <span class="attributes">Attribute</span> | Description
 ------|------------
-<span class="custom">**data**</span> Containing a `hash` key with the hashed value.
+<span class="custom">**data**</span> | Containing a `hash` key with the hashed value.
 
 ### Example Response
 

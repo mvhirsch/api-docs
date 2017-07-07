@@ -30,7 +30,7 @@ var random = client.getRandom({length: 64});
 
 <span class="attributes">Attribute</span> | Description
 ------|------------
-<span class="custom">**data**</span> Containing a `random` key with the new generated random value.
+<span class="custom">**data**</span> | Containing a `random` key with the new generated random value.
 
 ### Example Response
 
