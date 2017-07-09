@@ -64,12 +64,7 @@ curl https://instance--key.directus.io/api/1.1/tables?access_token=Py8RumuLD7HE5
 *All API calls pass through ACL*
 
 ### Passwords
-Directus generates random salts when a password is hashed, encodes the hash-type, salt and stretching iteration count into the “hash encoding string”. During the comparison, it reads this string to retrieve necessary information.
-
-* `CRYPT_BLOWFISH` for passwords
-* 8 iteration password stretching
-* `/dev/urandom` for randomness
-* 128 bit encryption key
+Directus using the `CRYPT_BLOWFISH` algorithm generates random salts when a password is hashed, encodes the hash-type, salt and stretching iteration count into the “hash encoding string”. During the comparison, it reads this string to retrieve necessary information.
 
 ### Database Security
 * Prepared statements (PDO) for all database interactions
