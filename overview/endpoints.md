@@ -39,25 +39,25 @@ PUT | /tables/**_[table-name]_**/columns/**_[column-name]_** | Updates the given
 <span class="endpoints">Type</span>      | Resource | Description
 --------- | -------- | -----------
 POST | /files | Creates a new file
-GET | /files/**_[id]_** | Details for a specific file
-GET | /files | Collection of files
-PUT | /files/**_[id]_**
+GET | /files/**_[id]_** | Retrieves details for a specific file
+GET | /files | Retrieves a collection of files
+PUT | /files/**_[id]_** | Updates the details for a specific file
 
 ## Groups
 
 <span class="endpoints">Type</span>      | Resource | Description
 --------- | -------- | -----------
 POST | /groups | Creates a new group
-GET | /groups | Collection of all Directus user-groups
-GET | /groups/**[id]** | Details for a specific user-group
+GET | /groups | Retrieves a collection of all Directus user-groups
+GET | /groups/**[id]** | Retrieves details for a specific user-group
 
 ## Items
 
 <span class="endpoints">Type</span>      | Resource | Description
 --------- | -------- | -----------
 POST | /tables/**_[table-name]_**/rows | Creates a new item in the given table
-GET | /tables/**[table-name]**/rows | Collection of rows (items) for a given table
-GET | /tables/**[table-name]**/rows/**id** | Details for a specific table row (item)
+GET | /tables/**[table-name]**/rows | Retrieves a collection of rows (items) for a given table
+GET | /tables/**[table-name]**/rows/**id** | Retrieves details for a specific table row (item)
 PUT | /tables/**_[table-name]_**/rows/**_[row-id]_** | Updates an item within a specific table
 DELETE | /tables/**_[table-name]_**/rows/**_[row-id]_** | Delete (or soft-delete) an item within a specific table
 
@@ -65,22 +65,22 @@ DELETE | /tables/**_[table-name]_**/rows/**_[row-id]_** | Delete (or soft-delete
 
 <span class="endpoints">Type</span>      | Resource | Description
 --------- | -------- | -----------
-GET | /messages/rows | Collection of messages for the authenticated user
-GET | /messages/rows/**[id]** | Details for a specific message
+GET | /messages/rows | Retrieves a collection of messages for the authenticated user
+GET | /messages/rows/**[id]** | Retreives details for a specific message
 
 ## Preferences
 
 <span class="endpoints">Type</span>      | Resource | Description
 --------- | -------- | -----------
-GET | /preferences/**table-name** | Preferences for a specific table or bookmark
+GET | /preferences/**table-name** | Retrieves preferences for a specific table or bookmark
 PUT | /tables/**_[table-name]_**/preferences | Update a preference within a specific table
 
 ## Privileges
 
 <span class="endpoints">Type</span>      | Resource | Description
 --------- | -------- | -----------
-POST | /privileges/**_[group-id]_** | Creates a new table privileges for the specified user group
-GET | /privileges/**[group-id]** | Privileges for a given user-group
+POST | /privileges/**_[group-id]_** | Creates new table privileges for the specified user group
+GET | /privileges/**[group-id]** | Retrieves privileges for a given user-group
 GET | /privileges/**_[group-id]_**/**_[table-name]_** | Gets the table privileges for a specific user group
 PUT | /privileges/**_[group-id]_**/**_[privileges-id]_** | Updates the specified group privileges for the specified table
 

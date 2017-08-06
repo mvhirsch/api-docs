@@ -5,12 +5,12 @@ Authentication privileges are inherited from the user-group that the key was gen
 ## API Key
 A single consumer-key is generated for each user which is passed as a parameter with every API resource that uses this type. **Used with all GET Resources**
 
-Authentication is perform by using your private account API Key. You can generate API keys [here](#). @TODO
+Authentication is performed by using your private account API Key. You can generate API keys [here](#). @TODO
 
 Authentication can be done in three different ways:
 
 ## Request API Key
-Using a user credentials you can get its API token key by sending a `POST` request to `/api/1.1/auth/request-token`.
+Using a user's credentials you can get its API token key by sending a `POST` request to `/api/1.1/auth/request-token`.
 
 ```bash
 curl -d "email=user@directus.local&password=pass123" https://instance--key.directus.io/api/1.1/auth/request-token
@@ -71,10 +71,10 @@ Directus using the `CRYPT_BLOWFISH` algorithm generates random salts when a pass
 * Zend-db module for out-of-the-box security
 
 ### Timing Attacks
-While account email probing is theoretically possible, you can dummy salt so consistent response time if desired.
+While account email probing is theoretically possible, you can dummy salt so there is a consistent response time if desired.
 
 ### Password Reset
-When a new password is requested, the existing password is NULLified and a new unique password token is sent to the account's email address.
+When a new password is requested, the existing password is NULLIFIED and a new unique password token is sent to the account's email address.
 
 ### XSS
 While internal XSS may be possible, successfully authenticated users are assumed to be non-malicious. This was a design decision to give full control to any connected applications. All malicious data needs to be sanitized in the web-application/data entry point, else the database and therefore Directus could become compromised.
