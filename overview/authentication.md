@@ -5,7 +5,7 @@ Authentication privileges are inherited from the user-group that the key was gen
 ## API Key
 A single consumer-key is generated for each user which is passed as a parameter with every API resource that uses this type. **Used with all GET Resources**
 
-Authentication is perform by using your private account API Key. You can generate API keys [here](#). @TODO
+Authentication is performed by using your private account API Key. You can generate API keys [here](#). @TODO
 
 Authentication can be done in three different ways:
 
