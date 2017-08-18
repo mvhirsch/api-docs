@@ -14,7 +14,7 @@ GET | `/groups` | Collection of all Directus user-groups
 GET | `/groups/[id]` | Details for a specific user-group
 GET | `/preferences/[table-name]` | Preferences for a specific table
 GET | `/bookmarks` | Bookmarks for currently authenticated user
-GET | `/bookmarks/[id]` | Bookmarks for a specific user
+GET | `/bookmarks/[id]` | Details for a specific Bookmark for currently authenticated user
 GET | `/messages/rows` | Collection of messages for the authenticated user
 GET | `/messages/rows/[id]` | Details for a specific message
 GET | `/activity` | Collection of latest Directus activity
