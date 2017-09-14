@@ -16,7 +16,9 @@
 **order[field]** _String_  |  <span class="default">Default **ASC**</span> |  Order the result will be sorted to. Available options are: `ASC` (Ascending) or `DESC` (Descending)
 **status**  _String_ |  <span class="default">Default **None**</span> | List of status values to be included. Separated by commas: `1,2`
 **columns** _String_  |  <span class="default">Optional</span>  |  The columns to be shown on the result. Columns are separated by comma: `columns=id,title,published_date`
-**in[field]**  _sting_ | <span class="default">Optional</span> | Only list records where the `field` matches a specific value. Values can be separated by commas: `in[id]=1,2`
+**depth** _Integer_ | <span class="default">Optional</span> | Set the depth of relational items to be fetched and returned
+**preview** _Integer_ | <span class="default">Default **0**</span> | Ignore the status column. Returns everything
+**in[field]**  _String_ | <span class="default">Optional</span> | Only list records where the `field` matches a specific value. Values can be separated by commas: `in[id]=1,2`
 **ids**  |  <span class="default">Optional</span>  |  Only list records with the specified `id` values. Can be separated by commas. `ids=1,2`. Same as `in[id]=1,2`
 **filters** | <span class="default">Optional</span> | Use [`Filter Operators`](/overview/endpoints.md#supported-filters-operators) to filter the result
 

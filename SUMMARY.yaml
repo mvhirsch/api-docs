@@ -13,6 +13,9 @@ Items:
   Get Item: items/get-item.md
   Update Item: items/update-item.md
   Delete Item: items/delete-item.md
+  Batch Create Items: items/batch-create-items.md
+  Batch Update Items: items/batch-update-items.md
+  Batch Delete Items: items/batch-delete-items.md
 
 Files:
   Create File: files/create-file.md
