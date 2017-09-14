@@ -50,7 +50,7 @@ client.createBulk('projects', items);
 ```json
 {
   "meta": {
-    "table": "projects"
+    "table": "projects",
     "type": "collection",
     "total": 2,
     "total_entries": 2
