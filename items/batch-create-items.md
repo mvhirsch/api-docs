@@ -66,6 +66,6 @@ client.createBulk('projects', items);
       "active": 1,
       "title": "Another Lorem Ipsum"
     }
-  }
+  ]
 }
 ```
