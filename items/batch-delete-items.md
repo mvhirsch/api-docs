@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-> **Note:** To perform a Soft-delete directly, use the update endpoint and update the `active` column
+> **Note:** To perform a Soft-delete directly, use the update endpoint and update the `status` column
 
 <span class="request">`DELETE` **/api/1.1/tables/_[table-name]_/rows/bulk**</span>
 
@@ -10,7 +10,7 @@
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
-**table-name** _String_ | <span class="required">Required</span> | The table that contains the item you wish to delete
+**table-name** _String_ | <span class="required">Required</span> | The table that contains the items you wish to delete
 
 ### Example Request
 
