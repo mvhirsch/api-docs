@@ -42,7 +42,7 @@ client.updateBulk('projects', items);
 ```json
 {
   "meta": {
-    "table": "projects"
+    "table": "projects",
     "type": "collection",
     "total": 2,
     "total_entries": 2
@@ -58,6 +58,6 @@ client.updateBulk('projects', items);
       "active": 1,
       "title": "Another Lorem Ipsum"
     }
-  }
+  ]
 }
 ```
