@@ -2,7 +2,7 @@
 
 > **Note:** Table names are case-sensitive
 
-> **Note:** To perform a Soft-delete directly, use the update endpoint and update the `active` column
+> **Note:** To perform a soft-delete, add `soft=1` as query parameter to the url. Only works if status interface column exists.
 
 <span class="request">`DELETE` **/api/1.1/tables/_[table-name]_/rows/_[row-id]_**</span>
 
