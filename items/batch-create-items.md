@@ -16,12 +16,13 @@
 ### Example Request
 
 ```bash
+# Using json as data
 $ curl -H "Content-Type: application/json" \
         --data '{"rows": [{"active": 1, "title": "Lorem Ipsum"}, {"active":1,"title": "Another Lorem Ipsum"}]}' \
         https://instance--key.directus.io/api/1.1/tables/projects/rows/bulk \
                 -u [user-token]:
-```
-```bash
+
+# Using application/x-www-form-urlencoded
 $ curl --data "rows[0][active]=1&rows[0][title]=Lorem+Ipsum&rows[1][active]=1&rows[1][title]=Another+Lorem+Ipsum" \
         https://instance--key.directus.io/api/1.1/tables/projects/rows/bulk \
                 -u [user-token]:
