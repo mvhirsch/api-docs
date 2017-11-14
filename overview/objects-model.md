@@ -72,7 +72,7 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 <span class="attributes">Attribute</span> | Description
 ----------------------------- | ----------------------
 **id** _Integer_                | File Unique Identification number
-**active** _Integer_            | File's status. `1=active, 2=inactive, 3=deleted`
+**active** _Integer_            | File's status. `0=deleted,1=active, 2=inactive`
 **name** _String_               | File name
 **title** _String_              | File's title
 **location** _String_           | Location of where the picture was taken. if any
@@ -140,7 +140,7 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 <span class="attributes">Attribute</span> | Description
 ----------------------------- | ----------------------
 **id** _Integer_              | User's Unique Identification number
-**active** _Integer_          | User's status. `1=active, 2=inactive, 3=deleted`
+**active** _Integer_          | User's status. `0=deleted, 1=active, 2=inactive`
 **email** _String_            | User's unique email address
 **first_name** _String_       | User first name
 **last_name** _String_        | User last name
