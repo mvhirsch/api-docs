@@ -100,6 +100,19 @@ POST | /tables | Creates a new table within the database
 GET | /tables | Collection of tables viewable by current user
 GET | /tables/**_[table-name]_** | Gets system and schema information for a specific table
 
+## Users
+
+<span class="endpoints">Type</span>      | Resource | Description
+--------- | -------- | -----------
+GET  | /users | Retrieves a list of users. Limit by `rows_per_page` setting.
+POST | /users | Creates a new user.
+GET  | /users/**_[id]_** | Retrieves the information of the given user id.
+GET  | /users/me | Retrieves the information of the authenticated user.
+DELETE | /users/**_[id]_** | Deletes the given user id
+DELETE | /users/me | Deletes the authenticated user
+PATCH  | /users/**_[id]_** | Updates the given user information
+PATCH  | /users/me | Updates the authentication information
+
 ## Global Parameters
 
 <span class="attributes">Name</span> | Value | Description
