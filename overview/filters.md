@@ -52,6 +52,8 @@ Operator                | Description
 `contains`              | Contains a string
 `ncontains`             | Not Contains a string
 `between`               | Is Between
+`nbetween`              | Is Not Between
 `empty`                 | Is Emtpy
 `nempty`                | Is Not Empty
 `has`                   | Has one or more related entries
+`nhas`                  | Has zero related entries
