@@ -9,9 +9,9 @@ These are the Directus object models used throughout the system.
 **table** _String_            | Table the data was fetched from
 **Active** _Integer_          | How many `active` items has this table
 **Draft** _Integer_           | How many `draft` items has this table
-**Delete** _String_           | How many `deleted` items has this table
-**total** _String_            | How many items were returned
-**total_entries** _String_    | How many items the table has
+**Delete** _Integer_           | How many `deleted` items has this table
+**total** _Integer_            | How many items were returned
+**total_entries** _Integer_    | How many items the table has
 
 The status name are configurable and `Active`, `Draft` and `Delete` are the default values.
 
