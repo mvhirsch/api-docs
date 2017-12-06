@@ -1,5 +1,7 @@
 # Get Privileges
 
+> **Note:**: Only admin has permission to access this endpoint
+
 <span class="request">`GET` **/api/1.1/privileges/_[group-id]_**</span>
 
 <span class="description">Get the privileges for the specified user group</span>

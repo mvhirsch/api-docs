@@ -1,5 +1,7 @@
 # Update Privileges
 
+> **Note:**: Only admin has permission to access this endpoint
+
 <span class="request">`PUT` **/api/1.1/privileges/_[group-id]_/_[privileges-id]_**</span>
 
 <span class="description">Update the specified group privileges for the specified table</span>

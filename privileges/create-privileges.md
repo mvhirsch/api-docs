@@ -1,6 +1,7 @@
 # Create Privileges
 
 > **Note:** Table names are case-sensitive
+> **Note:**: Only admin has permission to access this endpoint
 
 <span class="request">`POST` **/api/1.1/privileges/_[group-id]_**</span>
 

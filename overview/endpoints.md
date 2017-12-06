@@ -77,6 +77,8 @@ PUT | /tables/**_[table-name]_**/preferences | Update a preference within a spec
 
 ## Privileges
 
+> **Note**: Only admin has access to the privileges endpoints
+
 <span class="endpoints">Type</span>      | Resource | Description
 --------- | -------- | -----------
 POST | /privileges/**_[group-id]_** | Creates new table privileges for the specified user group
