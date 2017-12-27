@@ -10,19 +10,18 @@ Authentication is performed by using your private account API Key. You can gener
 Authentication can be done in three different ways:
 
 ## Request API Key
-Using a user's credentials you can get its API token key by sending a `POST` request to `/api/1.1/auth/request-token`.
+Using a user's credentials you can get its API token key by sending a `POST` request to `/api/2.0/auth/login`.
 
 ```bash
-curl -d "email=user@directus.local&password=pass123" https://instance--key.directus.io/api/1.1/auth/request-token
+curl -d "email=user@directus.local&password=pass123" https://instance--key.directus.io/api/2.0/auth/login
 ```
 
-On a successful request the API will respond with the json below:
+On a successful request the API will respond with a valid JWT token.
 
 ```json
 {
-  "success": true,
   "data": {
-    "token": "userAPIToken"
+    "token": "user.API.Token"
   }
 }
 ```
@@ -31,17 +30,19 @@ Otherwise with the json below:
 
 ```json
 {
-  "success": false,
   "error": {
+    "code": 101,
     "message": "Incorrect email or password"
   }
 }
 ```
 
+> **Note:** Since API 2.0 the user token is now going to be referred as the private/secret token. It still can be used to authenticate to the API as well.
+
 ### HTTP Basic Auth
 
 ```bash
-curl -u Py8RumuLD7HE5juFrOR5: https://instance--key.directus.io/api/1.1/tables
+curl -u Py8RumuLD7HE5juFrOR5: https://instance--key.directus.io/api/2.0/tables
 ```
 
 Pay attention to the colon after the API key, it's not part of the API key.
@@ -51,13 +52,13 @@ Pay attention to the colon after the API key, it's not part of the API key.
 Instead of using `-u Py8RumuLD7HE5juFrOR5:` it can be used Authentication header.
 
 ```bash
-curl -H "Authorization: Bearer Py8RumuLD7HE5juFrOR5" https://instance--key.directus.io/api/1.1/tables
+curl -H "Authorization: Bearer Py8RumuLD7HE5juFrOR5" https://instance--key.directus.io/api/2.0/tables
 ```
 
 ### Query String
 
 ```bash
-curl https://instance--key.directus.io/api/1.1/tables?access_token=Py8RumuLD7HE5juFrOR5
+curl https://instance--key.directus.io/api/2.0/tables?access_token=Py8RumuLD7HE5juFrOR5
 ```
 
 ## Security

@@ -12,7 +12,8 @@ GET | /activity | Collection of latest Directus activity
 
 <span class="endpoints">Type</span>      | Resource | Description
 --------- | -------- | -----------
-POST | /auth/request-token | Gets your user token using your credentials
+POST | /auth/login | Gets your user token using your credentials
+POST | /auth/refresh | Refresh the user token using a valid token
 
 ## Bookmarks
 

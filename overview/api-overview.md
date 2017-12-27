@@ -11,11 +11,20 @@ It is important to remember that the Directus API is dynamic based on your datab
 >  **Note:** The Directus Hosted Service encrypts all traffic over HTTPS
 
 ## Other Versions
-The older version (1.0) of the Directus API is available below.
+The older versions of the Directus API is available below.
 
 **[http://api.getdirectus.com/1.0/](http://api.getdirectus.com/1.0/)**
+**[http://api.getdirectus.com/1.1/](http://api.getdirectus.com/1.0/)**
 
 ## Error Responses
+
+Directus uses HTTP status code to indicate the status of a request.
+
+- Between 200-299 means the request succeed
+- Between 400-499 means the request failed due to the provided information
+- Between 500-599 means the request failed due to Directus error while processing the request
+
+If a status code is between 400 and 599 and `error` property is returned from the server giving details about the error.
 
 ### Not Authenticated
 You must be logged in to Directus to access the API. Some high-level view permissions (ex. table-listing) are not *strictly* enforced by privileges, just general authentication.
