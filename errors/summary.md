@@ -9,7 +9,7 @@
 - 403 Forbidden - The user has not permission to perform the action
 - 404 Not Found - Request resource not found
 - 409 Conflict - @TODO
-- 500 Internal Server Error - Internal Directus error/misconfiguration. If persist should [open a ticket](https://github.com/directus/directus/issues/new)
+- 500 Internal Server Error - Internal Directus error/misconfiguration
 
 ## Error codes
 
