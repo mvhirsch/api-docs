@@ -1,6 +1,6 @@
 # Get Activities
 
-<span class="request">`GET` **/api/1.1/activity**</span>
+<span class="request">`GET` **/api/2.0/activities**</span>
 
 <span class="description">Get all the activity records within Directus</span>
 

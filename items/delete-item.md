@@ -4,7 +4,9 @@
 
 > **Note:** To perform a soft-delete, add `soft=1` as query parameter to the url. Only works if status interface column exists.
 
-<span class="request">`DELETE` **/api/1.1/tables/_[table-name]_/rows/_[row-id]_**</span>
+> **Note:** Directus System tables not allowed, use dedicated endpoints, otherwise an error is thrown. [See Items Error codes](/errors/items.md)
+
+<span class="request">`DELETE` **/api/2.0/items/_[table-name]_/_[row-id]_**</span>
 
 <span class="description">Delete (or soft-delete) an item within a specific table</span>
 

@@ -4,7 +4,9 @@
 
 > **Note:** These arguments and attributes are based on the table's custom columns
 
-<span class="request">`POST` **/api/1.1/tables/_[table-name]_/rows/bulk**</span>
+> **Note:** Directus System tables not allowed, use dedicated endpoints, otherwise an error is thrown. [See Items Error codes](/errors/items.md)
+
+<span class="request">`POST` **/api/2.0/items/_[table-name]_/batch**</span>
 
 <span class="description">Create multiple new items within the specified table</span>
 

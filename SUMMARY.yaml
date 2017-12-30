@@ -7,6 +7,10 @@ Introduction:
   Filters: overview/filters.md
   Directus Objects: overview/objects-model.md
 
+Authentication:
+  Login: auth/login.md
+  Refresh: auth/refresh.md
+
 Items:
   Create Item: items/create-item.md
   Get Items: items/get-items.md
@@ -55,7 +59,7 @@ Messages:
   Get Message: messages/get-message.md
 
 Activity:
-  Get Activity: activity/get-activity.md
+  Get Activities: activity/get-activity.md
 #  Create Activity: activity/create-activity.md
 
 Bookmarks:

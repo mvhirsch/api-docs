@@ -2,7 +2,9 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`GET` **/api/1.1/tables/_[table-name]_/rows/_[row-id]_**</span>
+> **Note:** Directus System tables not allowed, use dedicated endpoints, otherwise an error is thrown. [See Items Error codes](/errors/items.md)
+
+<span class="request">`GET` **/api/2.0/items/_[table-name]_/_[row-id]_**</span>
 
 <span class="description">Get a specific item within a table</span>
 

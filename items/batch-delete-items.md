@@ -4,7 +4,9 @@
 
 > **Note:** To perform a Soft-delete directly, use the update endpoint and update the `status` column
 
-<span class="request">`DELETE` **/api/1.1/tables/_[table-name]_/rows/bulk**</span>
+> **Note:** Directus System tables not allowed, use dedicated endpoints, otherwise an error is thrown. [See Items Error codes](/errors/items.md)
+
+<span class="request">`DELETE` **/api/2.0/items/_[table-name]_/batch**</span>
 
 <span class="description">Delete (or soft-delete) an item within a specific table</span>
 

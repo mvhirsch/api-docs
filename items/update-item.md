@@ -2,7 +2,9 @@
 
 > **Note:** Table names are case-sensitive
 
-<span class="request">`PUT` **/api/1.1/tables/_[table-name]_/rows/_[row-id]_**</span>
+> **Note:** Directus System tables not allowed, use dedicated endpoints, otherwise an error is thrown. [See Items Error codes](/errors/items.md)
+
+<span class="request">`PUT` **/api/2.0/items/_[table-name]_/_[row-id]_**</span>
 
 <span class="description">Update an item within a specific table</span>
 
