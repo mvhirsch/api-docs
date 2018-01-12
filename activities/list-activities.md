@@ -9,8 +9,8 @@
 **fields**  _String_ |  <span class="default">Default *</span>  |  CSV of columns to include in the output. includes dot notation (Ex: "user.name" and user.* for all fields in user related field)
 **limit** _Integer_  |  <span class="default">Default **200**</span>  |  The maximum number of items to request
 **offset**  _Integer_ |  <span class="default">Default **0**</span>  |  The offset for the items
-**sort**  _Integer_ |  <span class="default">Default **0**</span>  |  CSV of fields to sort by. (Ex: `sort=name`: sort by name ascending , `sort=-name` sor by name descending , `sort=?`: sort randomly) 
-**meta**  _Integer_ |  <span class="default">Default **0**</span>  |  CSV of meta data fields to include. Allows * for all meta fields
+**sort**  _String_ |  <span class="default">Default **0**</span>  |  CSV of fields to sort by. (Ex: `sort=name`: sort by name ascending , `sort=-name` sort by name descending , `sort=?`: sort randomly) 
+**meta**  _String_ |  <span class="default">Default **0**</span>  |  CSV of meta data fields to include. Allows * for all meta fields
 **id** _String_  |  <span class="default">Optional</span>  |  Only list records that its `primary key` matches one of given value. Can be separated by commas `id=1,2`. Same as `filter[id][in]=1,2`
 **filter** | <span class="default">Optional</span> | Use [**Filter Object**](/overview/filters.md) to filter the result.
 
