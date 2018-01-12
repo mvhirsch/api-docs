@@ -8,7 +8,7 @@ Introduction:
   Directus Objects: overview/objects-model.md
 
 Authentication:
-  Login: auth/login.md
+  Authenticate: auth/authenticate.md
   Refresh: auth/refresh.md
 
 Items:
@@ -58,9 +58,8 @@ Messages:
   Get Messages: messages/get-messages.md
   Get Message: messages/get-message.md
 
-Activity:
-  Get Activities: activity/get-activity.md
-#  Create Activity: activity/create-activity.md
+Activities:
+   List All Activities: activities/list-activity.md
 
 Bookmarks:
   Get All Bookmarks: bookmarks/get-bookmarks.md

@@ -2,7 +2,7 @@
 
 > **Note:** This endpoint returns a JWT Token that expire in `cms_user_auto_sign_out` minutes set in the web app settings.
 
-<span class="request">`POST` **/api/2.0/auth/login**</span>
+<span class="request">`POST` **/api/2.0/auth/authenticate**</span>
 
 <span class="description">Generates a JWT token</span>
 
@@ -14,8 +14,8 @@
 ### Example Request
 
 ```bash
-$ curl --data "email=user@directus.local&password=pass123" \
-        https://instance--key.directus.io/api/2.0/auth/login \
+$ curl --data "email=user@getdirectus.com&password=pass1234" \
+        https://instance--key.directus.io/api/2.0/auth/authenticate \
                 -u [user-token]:
 ```
 
