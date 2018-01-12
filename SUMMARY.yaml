@@ -59,7 +59,8 @@ Messages:
   Get Message: messages/get-message.md
 
 Activities:
-   List All Activities: activities/list-activity.md
+   List All Activities: activities/list-activities.md
+   Get Activity: activities/get-activity.md
 
 Bookmarks:
   Get All Bookmarks: bookmarks/get-bookmarks.md
