@@ -63,11 +63,13 @@ Activities:
    Get Activity: activities/get-activity.md
 
 Bookmarks:
+  Create Bookmark: bookmarks/create-bookmark.md
+  Update Bookmark: bookmarks/update-bookmark.md
+  Delete Bookmark: bookmarks/delete-bookmark.md
   Get All Bookmarks: bookmarks/get-bookmarks.md
   Get User Bookmarks: bookmarks/get-user-bookmarks.md
+  Get Auth User Bookmarks: bookmarks/get-user-bookmarks.md
   Get Bookmark: bookmarks/get-bookmark.md
-  Create Bookmark: bookmarks/create-bookmark.md
-  Delete Bookmark: bookmarks/delete-bookmark.md
 
 Settings:
   Get Settings: settings/get-settings.md

@@ -1,18 +1,18 @@
 # Delete Bookmark
 
-<span class="request">`DELETE` **/api/1.1/bookmarks/_[bookmark-id]_**</span>
+<span class="request">`DELETE` **/api/2.0/bookmarks/_[id]_**</span>
 
 <span class="description">Deletes a bookmark</span>
 
 ### Example Request
 
 ```bash
-$ curl -X DELETE https://instance--key.directus.io/api/1.1/bookmarks/1 \
+$ curl -X DELETE https://instance--key.directus.io/api/2.0/bookmarks/1 \
   -u [user-token]:
 ```
 
 ```php
-$bookmark = $client->deleteBookmark(1);
+$client->deleteBookmark(1);
 ```
 
 ```javascript
@@ -23,23 +23,22 @@ client.deleteBookmark(1);
 
 <span class="attributes">Attribute</span> | Description
 --------|------------
-**success** _Boolean_ | Whether or not the bookmark was deleted
-**error** _Error Object_ | This object contains error information (if any) <a class="object">**Error Object**: View Nested Attributes</a>
+**error** _Error Object_ | This object contains error information (if any) <a class="object">[**Error Object**: View Nested Attributes](/overview/objects-model.md#error-object)</a>
 
-### Example Request (Success)
+### Example Response (Success)
 
 ```json
 {
-  "success": true
+  
 }
 ```
 
-### Example Request (Failure)
+### Example Response (Failure)
 
 ```json
 {
-  "success": false,
   "error": {
+    "code": 1,
     "message": "bookmark_not_found"
   }
 }

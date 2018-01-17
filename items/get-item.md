@@ -4,21 +4,19 @@
 
 > **Note:** Directus System tables not allowed, use dedicated endpoints, otherwise an error is thrown. [See Items Error codes](/errors/items.md)
 
-<span class="request">`GET` **/api/2.0/items/_[table-name]_/_[row-id]_**</span>
+<span class="request">`GET` **/api/2.0/items/_[table-name]_/_[item-id]_**</span>
 
-<span class="description">Get a specific item within a table</span>
+<span class="description">Get a item information</span>
 
 <span class="arguments">Name</span> | Value | Description
---------|-----|------------
-**table-name** _String_ | <span class="required">Required</span> | The table that contains the item you wish to get
-**row-id** _Integer_ | <span class="required">Required</span> | The `id` of the item you wish to get
-**depth** _Integer_ | <span class="default">Optional</span> | Set the depth of relational items being fetched and returned
-**preview** _Integer_ | <span class="default">Default **0**</span> | Ignore the status column. Returns everything
+--------------|--------------- | ----------------------
+**fields**  _String_ |  <span class="default">Default *</span>  |  CSV of columns to include in the output. includes dot notation (Ex: "user.name" and user.* for all fields in user related field) 
+**meta**  _String_ |  <span class="default">Default **0**</span>  |  CSV of meta data fields to include. Allows * for all meta fields
 
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/1.1/tables/projects/rows/1 \
+$ curl https://instance--key.directus.io/api/2.0/items/projects/1 \
         -u [user-token]:
 ```
 
@@ -27,7 +25,7 @@ $item = $client->getItem('projects', 1);
 ```
 
 ```javascript
-client.getItem('projects', 1);
+const item = client.getItem('projects', 1);
 ```
 
 ## Response
@@ -47,7 +45,7 @@ client.getItem('projects', 1);
   },
   "data": {
     "id": 1,
-    "title": "Lorem Ipsum"
+    "title": "Directus API"
   }
 }
 ```

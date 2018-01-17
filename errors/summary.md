@@ -15,3 +15,4 @@
 
 - [General](/errors/general.md)
 - [Authentication](/errors/auth.md)
+- [Items](/errors/items.md)

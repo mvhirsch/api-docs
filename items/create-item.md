@@ -8,7 +8,7 @@
 
 <span class="request">`POST` **/api/2.0/items/_[table-name]_**</span>
 
-<span class="description">Create a new item within the specified table</span>
+<span class="description">Create a new item to the given table</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
@@ -18,22 +18,22 @@
 ### Example Request
 
 ```bash
-$ curl --data "active=1&title=Lorem+Ipsum" \
-        https://instance--key.directus.io/api/1.1/tables/projects/rows \
+$ curl --data "status=1&title=Directus+API" \
+        https://instance--key.directus.io/api/2.0/items/projects \
                 -u [user-token]:
 ```
 
 ```php
 $newProject = $client->createItem('projects', [
-    'active' => 1,
-    'title' =>  'Lorem Ipsum'
+    'status' => 1,
+    'title' =>  'Directus API'
 ]);
 ```
 
 ```javascript
-client.createItem('projects', {
-  active: 1,
-  title: 'Lorem Ipsum'
+const newProject = client.createItem('projects', {
+  status: 1,
+  title: 'Directus API'
 });
 ```
 
@@ -54,8 +54,8 @@ client.createItem('projects', {
   },
   "data": {
     "id": 1,
-    "active": 1,
-    "title": "Lorem Ipsum"
+    "status": 1,
+    "title": "Directus API"
   }
 }
 ```

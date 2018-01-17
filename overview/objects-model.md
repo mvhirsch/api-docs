@@ -1,6 +1,10 @@
 # Directus Objects
 These are the Directus object models used throughout the system.
 
+## Query Parameters Object
+
+## Error Object
+
 ## Token Object
 
 <span class="attributes">Attribute</span> | Description

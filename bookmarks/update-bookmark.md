@@ -1,27 +1,40 @@
-# Get Bookmark
+# Update Bookmark
 
-<span class="request">`GET` **/api/2.0/bookmarks/_[id]_**</span>
+<span class="request">`PATCH` **/api/2.0/bookmarks/_[id]_**</span>
 
-<span class="description">Get a bookmark information</span>
+<span class="description">Update an existing bookmark</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------------|--------------- | ----------------------
-**fields**  _String_ |  <span class="default">Default *</span>  |  CSV of columns to include in the output. includes dot notation (Ex: "user.name" and user.* for all fields in user related field) 
-**meta**  _String_ |  <span class="default">Default **0**</span>  |  CSV of meta data fields to include. Allows * for all meta fields
+**user** _Integer_         |   | [Directus user id] This assigns the bookmark to a specific user. Default to the authenticated user id
+**title** _String_         |   | The text to display in the navigation menu
+**url** _String_           |   | The path the bookmarks navigate to 
+
+## Parameters
+<span class="arguments">Name</span> | Value | Description
+--------------|--------------- | ----------------------
+**meta** _String_ |  <span class="default">Default **0**</span>  |  CSV of meta data fields to include. Allows * for all meta fields
 
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/2.0/bookmarks/1 \
-  -u [user-token]:
+$ curl -X PATCH --data "title=Global+Settings&url=/settings/global" \
+        https://instance--key.directus.io/api/2.0/bookmarks/1 \
+                -u [user-token]:
 ```
 
 ```php
-$bookmark = $client->getBookmark(1);
+$bookmark = $client->updateBookmark(1, [
+  'title' => 'Global Settings',
+  'url' => '/settings/global'
+]);
 ```
 
 ```javascript
-const bookmark = client.getBookmark(1);
+const bookmark = client.updateBookmark(1, {
+  title: 'Global Settings',
+  url: '/settings/global'
+});
 ```
 
 ## Response

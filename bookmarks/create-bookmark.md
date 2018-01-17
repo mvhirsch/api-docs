@@ -6,18 +6,18 @@
 
 <span class="arguments">Name</span> | Value | Description
 --------------|--------------- | ----------------------
-**user** _Integer_         |   | [Directus user id] This assigns the bookmark to a specific user (Admin only, any other group needs to be their own id, or skip this field)
+**user** _Integer_         |   | [Directus user id] This assigns the bookmark to a specific user. Default to the authenticated user id
 **title** _String_         |   | The text to display in the navigation menu
 **url** _String_           |   | The path to navigate to
-**section** _String_        |  | ["search" or "other"] Which nav section to show the link within. User generated bookmarks use "search", while all system links go within "other"
 
 > **Note:** Creating a bookmark will create only a link which will point to an url given.
-> **Note:** Creating a bookmark saving a result filtered with different parameters you have to make sure the bookmark `section` is "search" and to [create a preferences](/preferences/create-preferences.md) with the same title as the bookmark.
+> **Note:** Creating a bookmark saving a result filtered with different parameters you have to make sure to [create a preferences](/preferences/create-preferences.md) with the same title as the bookmark.
+> **Note:** If the bookmark has a preference the url is being ignored. 
 
 ## Parameters
 <span class="arguments">Name</span> | Value | Description
 --------------|--------------- | ----------------------
-**meta**  _String_ |  <span class="default">Default **0**</span>  |  CSV of meta data fields to include. Allows * for all meta fields
+**meta** _String_ |  <span class="default">Default **0**</span>  |  CSV of meta data fields to include. Allows * for all meta fields
 
 ### Example Request
 
@@ -35,7 +35,7 @@ $bookmark = $client->createBookmark([
 ```
 
 ```javascript
-client.createBookmark({
+const bookmark = client.createBookmark({
   title: 'Admin Settings',
   url: '/settings'
 });
@@ -56,16 +56,13 @@ client.createBookmark({
 {
   "meta": {
     "table": "directus_bookmarks",
-    "type": "item",
+    "type": "item"
   },
   "data": {
     "id": 1,
     "user": 1,
-    "title": "Draft Articles",
-    "url": "tables/articles/pref/Draft Articles",
-    "icon_class": null,
-    "active": null,
-    "section": "search"
+    "title": "Admin Settings",
+    "url": "/settings"
   }
 }
 ```

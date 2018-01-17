@@ -6,25 +6,25 @@
 
 > **Note:** Directus System tables not allowed, use dedicated endpoints, otherwise an error is thrown. [See Items Error codes](/errors/items.md)
 
-<span class="request">`DELETE` **/api/2.0/items/_[table-name]_/_[row-id]_**</span>
+<span class="request">`DELETE` **/api/2.0/items/_[table-name]_/_[item-id]_**</span>
 
 <span class="description">Delete (or soft-delete) an item within a specific table</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
 **table-name** _String_ | <span class="required">Required</span> | The table that contains the item you wish to delete
-**row-id** _Integer_ | <span class="required">Required</span> | The `id` of the item you wish to delete
+**item-id** _Integer_ | <span class="required">Required</span> | The `id` of the item you wish to delete
 
 ### Example Request
 
 ```bash
 $ curl -X DELETE \
-        https://database.account.directus.io/api/1.1/tables/projects/rows/1 \
+        https://instance--key.directus.io/api/2.0/items/projects/1 \
                 -u [user-token]:
 ```
 
 ```php
-$response = $client->deleteItem('projects', 1);
+$client->deleteItem('projects', 1);
 ```
 
 ```javascript
@@ -35,16 +35,23 @@ client.deleteItem('projects', 1);
 
 <span class="attributes">Attribute</span> | Description
 --------|-----|------------
-**meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
-<span class="custom">**success**</span> _Boolean_ | Whether the deletion was successful or not
+<span class="custom">**error**</span> _Object_ | Failed performing the delete action. [**Error Object**: View Nested Attributes](/overview/objects-model.md#error-object)
 
-### Example Response
+### Example Response (Success)
 
 ```json
 {
-  "meta": {
-    "table": "projects"
-  },
-  "success": true
+  
+}
+```
+
+### Example Response (Failure)
+
+```json
+{
+  "error": {
+    "code": 1,
+    "message": "item_not_found"
+  }
 }
 ```
