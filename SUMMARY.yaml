@@ -51,8 +51,11 @@ Group Privileges:
   Update Privileges: privileges/update-privileges.md
 
 Preferences:
+  Create Preferences: preferences/create-preferences.md
   Get Preferences: preferences/get-preferences.md
   Update Preferences: preferences/update-preferences.md
+  Delete Preferences: preferences/delete-preferences.md
+  List Preferences: preferences/list-preferences.md
 
 Messages:
   Get Messages: messages/get-messages.md

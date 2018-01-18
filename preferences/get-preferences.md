@@ -1,28 +1,27 @@
-# Get Preferences
+# Get a Preference Information
 
-> **Note:** Table names are case-sensitive
+<span class="request">`GET` **/api/2.0/preferences/_[id]_**</span>
 
-<span class="request">`GET` **/api/1.1/tables/_[table-name]_/preferences**</span>
-
-<span class="description">Get all preferences for a table</span>
+<span class="description">Get a preference information</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
-**table-name** _String_  |  <span class="required">Required</span>  |  The table you wish to get the preferences from
+**fields**  _String_ |  <span class="default">Default *</span>  |  CSV of columns to include in the output. includes dot notation (Ex: "user.name" and user.* for all fields in user related field) 
+**meta**  _String_ |  <span class="default">Default **0**</span>  |  CSV of meta data fields to include. Allows * for all meta fields
 
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/1.1/tables/projects/preferences \
+$ curl https://instance--key.directus.io/api/2.0/preferences/1 \
         -u [user-token]:
 ```
 
 ```php
-$preferences = $client->getPreferences('projects');
+$preference = $client->getPreference(1);
 ```
 
 ```javascript
-client.getPreferences('projects');
+const preference = client.getPreference(1);
 ```
 
 ## Response
@@ -30,26 +29,28 @@ client.getPreferences('projects');
 <span class="attributes">Attribute</span> | Description
 -------|------------
 **meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
-<span class="custom">**data**</span> _Preference Object_ | <span class="custom">This data and its architecture is based on Directus Preferences's schema</span> [**Preference Object**: View Nested Attributes](/overview/objects-model.md#preference-object)
+**data** _Preference Object_ | <span class="custom">This data and its architecture is based on Directus preference's schema</span> [**Preference Object**: View Nested Attributes](/overview/objects-model.md#preference-object)
+
+> **Note:** the metadata information is off by default. Read the metadata parameter in the [**Query Parameters Object**](/overview/objects-model.md#query-parameters-object)
 
 ### Example Response
 
 ```json
 {
   "meta": {
-    "type": "item",
-    "table": "directus_preferences"
+    "table": "directus_preferences",
+    "type": "item"
   },
   "data": {
     "id": 1,
     "user": 1,
     "table_name": "projects",
     "title": null,
-    "columns_visible": "title",
+    "visible_fields": "title",
     "sort": "id",
-    "sort_order": "ASC",
-    "status": "1,2",
-    "search_string": null
+    "status": null,
+    "search_string": null,
+    "list_view_options": null
   }
 }
 ```

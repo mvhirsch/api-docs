@@ -24,7 +24,6 @@ $ curl --data "email=user@getdirectus.com&password=pass1234" \
 <span class="attributes">Attribute</span> | Description
 -------|------------
 **data** _object_ | Reference [**Token Object**: View Nested Attributes](/overview/objects-model.md#token-object)
-<span class="custom">**data**</span> _object_ | <span class="custom">This data and its architecture is based on your specific project's schema</span>
 
 ### Example Response
 

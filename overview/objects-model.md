@@ -105,10 +105,12 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 **id** _Integer_              | Preference's Unique Identification number
 **user** _Integer_            | Preference owner. User ID
 **table_name** _String_       | Name of the table
-**columns_visible** _String_  | List of visible columns, separated by commas
+**title** _String_            | Title of the bookmark
+**visible_fields** _String_  | List of visible fields, separated by commas
 **sort** _String_             | Result will be sorted by this column
-**sort_order** _String_       | Sort Order. (ASC=Ascending or DESC=Descending)
-**status** _String_           | List of status values. separated by comma
+**status** _String_           | List of status values to be filter by default. separated by comma
+**search_string** _String_    | Private: List of filtering conditions. Reserved for the web app.
+**list_view_options** _Object_| Options for each listing view
 
 ## Privilege Object
 

@@ -17,13 +17,13 @@
 ### Example Request
 
 ```bash
-$ curl -g https://instance--key.directus.io/api/2.0/activities&filters[table_name]=projects \
+$ curl -g https://instance--key.directus.io/api/2.0/activities?filter[table_name]=projects \
   -u [user-token]:
 ```
 
 ```php
 $activity = $client->getActivities([
-  'filters' => [
+  'filter' => [
     'table_name' => projects
   ]
 ]);
@@ -31,7 +31,7 @@ $activity = $client->getActivities([
 
 ```javascript
 client.getActivities({
-  filters: {
+  filter: {
     table_name: 'projects'
   }
 })
@@ -51,7 +51,7 @@ client.getActivities({
   "meta": {
     "table": "directus_activity",
     "type": "collection",
-    "total": 2
+    "result_count": 2
   },
   "data": [{
       "id": 1,
