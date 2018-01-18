@@ -11,6 +11,14 @@ These are the Directus object models used throughout the system.
 ----------------------------- | ----------------------
 **token** _String_            | String representing the JWT token
 
+### The JWT Payload
+
+<span class="attributes">Attribute</span> | Description
+----------------------------- | ----------------------
+**id** _Integer_              | User ID
+**group** _Integer_           | Group ID
+**exp** _Integer_             | Unix Timestamp in seconds
+
 ## Meta Object
 
 <span class="attributes">Attribute</span> | Description
