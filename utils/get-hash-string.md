@@ -1,8 +1,8 @@
 # Get a hashed value
 
-<span class="request">`POST` **/api/1.1/hash**</span>
+<span class="request">`POST` **/api/2.0/utils/hash**</span>
 
-<span class="description">Get a hash value from a given string</span>
+<span class="description">Hash a given string</span>
 
 <span class="arguments">Name</span> | Value | Description
 ------------------ | ----- | -----------
@@ -16,17 +16,18 @@
 ------------------ | -----------
 **core**           | The php default hasher algorithm used in PASSWORD_DEFAULT
 **bcrypt**         | BCrypt algorithm using `password_hash`
-**sha1**           | Generated a 160-bit hash value
-**sha224**         | Generated a 224-bit hash value
-**sha256**         | Generated a 256-bit hash value
-**sha384**         | Generated a 384-bit hash value
-**sha512**         | Generated a 512-bit hash value
+**md5   **         | Generates a MD5 hash
+**sha1**           | Generates a 160-bit hash value
+**sha224**         | Generates a 224-bit hash value
+**sha256**         | Generates a 256-bit hash value
+**sha384**         | Generates a 384-bit hash value
+**sha512**         | Generates a 512-bit hash value
 
 ### Example Request
 
 ```bash
 $ curl --data "string=secret&hasher=bcrypt" \
-        https://instance--key.directus.io/api/1.1/hash \
+        https://instance--key.directus.io/api/2.0/hash \
         -u [user-token]:
 ```
 
@@ -47,12 +48,12 @@ var hash = client.hash('secret', {
 <span class="attributes">Attribute</span> | Description
 ------|------------
 <span class="custom">**data**</span> | Containing a `hash` key with the hashed value.
+**data** _Hash Object_ | <span class="custom">This data and its architecture is based on Directus hash object</span> [**Hash Object**: View Nested Attributes](/overview/objects-model.md#hash-object)
 
 ### Example Response
 
 ```json
 {
-  "success": true,
   "data": {
     "hash": "$2y$valueHashed"
   }

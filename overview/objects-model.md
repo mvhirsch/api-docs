@@ -19,6 +19,18 @@ These are the Directus object models used throughout the system.
 **group** _Integer_           | Group ID
 **exp** _Integer_             | Unix Timestamp in seconds
 
+## Hash Object
+
+<span class="attributes">Attribute</span> | Description
+----------------------------- | ----------------------
+**hash** _String_            | String representing a hashed string
+
+## Random String Object
+
+<span class="attributes">Attribute</span> | Description
+----------------------------- | ----------------------
+**random** _String_           | String representing a random string
+
 ## Meta Object
 
 <span class="attributes">Attribute</span> | Description

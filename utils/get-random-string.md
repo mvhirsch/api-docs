@@ -2,7 +2,7 @@
 
 > **Note:** This does not use any sophisticated random algorithm.
 
-<span class="request">`POST` **/api/1.1/random**</span>
+<span class="request">`POST` **/api/2.0/utils/random**</span>
 
 <span class="description">Get a random string</span>
 
@@ -14,7 +14,7 @@
 
 ```bash
 $ curl --data "length=64" \
-        https://instance--key.directus.io/api/1.1/random \
+        https://instance--key.directus.io/api/2.0/utils/random \
         -u [user-token]:
 ```
 
@@ -23,20 +23,19 @@ $random = $client->getRandom(['length' => 64]);
 ```
 
 ```javascript
-var random = client.getRandom({length: 64});
+const random = client.getRandom({length: 64});
 ```
 
 ## Response
 
 <span class="attributes">Attribute</span> | Description
 ------|------------
-<span class="custom">**data**</span> | Containing a `random` key with the new generated random value.
+**data** _Random String Object_ | <span class="custom">This data and its architecture is based on Directus Random String object</span> [**Random String Object**: View Nested Attributes](/overview/objects-model.md#random-string-object)
 
 ### Example Response
 
 ```json
 {
-  "success": true,
   "data": {
     "random": "123456789abc"
   }
