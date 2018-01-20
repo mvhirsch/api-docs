@@ -1,6 +1,6 @@
-# Get Activities
+# Get Activity List
 
-<span class="request">`GET` **/api/2.0/activities**</span>
+<span class="request">`GET` **/api/2.0/activity**</span>
 
 <span class="description">Get all the activity records within Directus</span>
 
@@ -17,12 +17,12 @@
 ### Example Request
 
 ```bash
-$ curl -g https://instance--key.directus.io/api/2.0/activities?filter[table_name]=projects \
+$ curl -g https://instance--key.directus.io/api/2.0/activity?filter[table_name]=projects \
   -u [user-token]:
 ```
 
 ```php
-$activity = $client->getActivities([
+$activityList = $client->getActivityList([
   'filter' => [
     'table_name' => projects
   ]
@@ -30,7 +30,7 @@ $activity = $client->getActivities([
 ```
 
 ```javascript
-client.getActivities({
+const activityList = client.getActivityList({
   filter: {
     table_name: 'projects'
   }

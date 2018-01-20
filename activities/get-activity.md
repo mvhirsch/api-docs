@@ -1,4 +1,4 @@
-# Get Activities
+# Get an activity information
 
 <span class="request">`GET` **/api/2.0/activities/_[id]_**</span>
 
