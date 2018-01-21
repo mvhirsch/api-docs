@@ -191,3 +191,14 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 **city** _String_             | User's city
 **state** _String_            | User's state
 **zip** _String_              | User's zip code
+
+## Setting Object
+
+<span class="attributes">Attribute</span> | Description
+----------------------------- | ----------------------
+**id** _Integer_              | Setting Unique Identification number
+**scope** _String_            | Setting scope
+**key** _String_              | Setting name
+**value** _String_            | Setting value
+
+> *Note: the combination of scope and key must be unique

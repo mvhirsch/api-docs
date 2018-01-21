@@ -75,9 +75,11 @@ Bookmarks:
   Get Bookmark: bookmarks/get-bookmark.md
 
 Settings:
-  Get Settings: settings/get-settings.md
-  Get Setting By Type: settings/get-type-settings.md
-  Update Settings: settings/update-settings.md
+  Create Setting: settings/create-settings.md
+  Get Setting: settings/get-setting.md
+  Update Settings: settings/update-setting.md
+  Delete Settings: settings/delete-setting.md
+  List Settings: settings/list-settings.md
 
 Utils:
   Random String: utils/get-random-string.md
