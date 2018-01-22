@@ -143,22 +143,21 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 **search_string** _String_    | Private: List of filtering conditions. Reserved for the web app.
 **list_view_options** _Object_| Options for each listing view
 
-## Privilege Object
+## Permission Object
 
 <span class="attributes">Attribute</span> | Description
 ----------------------------- | ----------------------
-**id** _Integer_              | Privilege's Unique Identification number
-**group_id** _Integer_                | Group ID
-**table_name** _String_               | Table name that this permissions belongs to
-**allow_add** _Integer_               | Whether the group is allow to add/create entries in the table (See values below)
-**allow_edit** _Integer_              | Whether the group is allow to edit/update entries in the table (See values below)
-**allow_delete** _Integer_            | Whether the group is allow to delete/remove entries in the table (See values below)
-**allow_view** _Integer_              | Whether the group is allow to view/read entries in the table (See values below)
-**allow_alter** _Integer_             | Whether the group is allow to add/create entries in the table (See values below)
-**nav_listed** _Boolean_              | Whether the table should be visible in the sidebar
-**read_field_blacklist** _String_     | List of columns that the group can't view/read
-**write_field_blacklist** _String_    | List of columns that the group can't edit/update
-**status_id** _String_                | State of the record that this permissions belongs to (Draft, Active or Soft Deleted)
+**id** _Integer_              | Unique Identification number
+**group** _Integer_           | Group ID
+**collection** _String_       | Name of the collection this permission belongs to
+**create** _Integer_          | Whether the group is allowed to create items in the collection
+**read** _Integer_            | Whether the group is allowed to read items in the collection
+**update** _Integer_          | Whether the group is allowed to update items in the collection
+**delete** _Integer_          | Whether the group is allowed to delete items in the table
+**navigate** _Boolean_        | Whether the table should be visible in the navigation (App only)
+**read_field_blacklist** _String_     | List of columns that the group can't read
+**write_field_blacklist** _String_    | List of columns that the group can't update
+**status** _Integer_          | State of the item that this permission belongs to, Ex Draft, Active or Deleted
 
 ## Table Object
 

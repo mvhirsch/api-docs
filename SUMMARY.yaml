@@ -46,11 +46,12 @@ Groups:
   Delete Group: groups/delete-group.md
   List Groups: groups/list-groups.md
 
-Group Privileges:
-  Create Privileges: privileges/create-privileges.md
-  Get Privileges: privileges/get-privileges.md
-  Get Table Privileges: privileges/get-table-privileges.md
-  Update Privileges: privileges/update-privileges.md
+Permissions:
+  Create Permission: permissions/create-permission.md
+  Get Permission: permissions/get-permission.md
+  Update Permission: permissions/update-permission.md
+  Delete Permission: permissions/delete-permission.md
+  List Permissions: permissions/list-permissions.md
 
 Users:
   Create User: users/create-user.md
