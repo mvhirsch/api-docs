@@ -118,6 +118,17 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 **date_uploaded** _String_      | File uploaded date. **TODO** It should be an DateTime object
 **storage_adapter** _String_    | Storage adapter used to upload the file
 
+## Group Object
+
+<span class="attributes">Attribute</span> | Description
+----------------------------- | ----------------------
+**id** _Integer_              | Unique Identification number
+**name** _String_             | Unique name
+**description** _String_      | The text to display in the navigation menu
+**ip_whitelist** _String_     | CSV of allowed IP. `NULL/Empty` means all IP allowed.
+**nav_override** _String_     | JSON representing a custom navigation for the users in the group.
+**nav_blacklist** _String_    | CSV of blacklisted navigation path
+
 ## Preference Object
 
 <span class="attributes">Attribute</span> | Description

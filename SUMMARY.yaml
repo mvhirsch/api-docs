@@ -41,8 +41,10 @@ Columns:
 
 Groups:
   Create Group: groups/create-group.md
-  Get Groups: groups/get-groups.md
   Get Group: groups/get-group.md
+  Update Group: groups/update-group.md
+  Delete Group: groups/delete-group.md
+  List Groups: groups/list-groups.md
 
 Group Privileges:
   Create Privileges: privileges/create-privileges.md

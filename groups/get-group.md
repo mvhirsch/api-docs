@@ -1,22 +1,22 @@
 # Get Group
 
-<span class="request">`GET` **/api/1.1/groups/_[id]_**</span>
+<span class="request">`GET` **/api/2.0/groups/_[id]_**</span>
 
-<span class="description">Get system information for the specified user group</span>
+<span class="description">Get a user group information</span>
 
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/1.1/groups/1 \
+$ curl https://instance--key.directus.io/api/2.0/groups/2 \
   -u [user-token]:
 ```
 
 ```php
-$group = $client->getGroup(1);
+$group = $client->getGroup(2);
 ```
 
 ```javascript
-client.getGroup(1);
+const group = client.getGroup(2);
 ```
 
 ## Response
@@ -35,15 +35,11 @@ client.getGroup(1);
     "type": "item"
   },
   "data": {
-    "id": "1",
-    "name": "Administrator",
+    "id": 2,
+    "name": "Manager",
     "description": null,
-    "restrict_to_ip_whitelist": "0",
+    "ip_whitelist": null,
     "nav_override": null,
-    "show_activity": "1",
-    "show_messages": "1",
-    "show_users": "1",
-    "show_files": "1",
     "nav_blacklist": null
   }
 }

@@ -1,8 +1,8 @@
-# Create Group
+# Update Group
 
-<span class="request">`POST` **/api/2.0/groups**</span>
+<span class="request">`PATCH` **/api/2.0/groups/_[id]_**</span>
 
-<span class="description">Create a new user group</span>
+<span class="description">Updates a user group</span>
 
 <span class="arguments">Name</span> | Value | Description
 ------------------ | ---------------------------------------- | -------------------
@@ -11,19 +11,19 @@
 ### Example Request
 
 ```bash
-$ curl --data "name=Manager" https://instance--key.directus.io/api/2.0/groups \
+$ curl --X PATCH --data "description=All+Company+Managers" https://instance--key.directus.io/api/2.0/groups/2 \
   -u [user-token]:
 ```
 
 ```php
-$group = $client->createGroup([
-    'name' => 'Manager'
+$group = $client->updateGroup(2, [
+    'description' => 'All Company Managers'
 ]);
 ```
 
 ```javascript
-const group = client.createGroup({
-    name: 'Manager'
+const group = client.updateGroup(2, {
+    description: 'All Company Managers'
 });
 ```
 
@@ -45,7 +45,7 @@ const group = client.createGroup({
   "data": {
     "id": 2,
     "name": "Manager",
-    "description": null,
+    "description": "All Company Managers",
     "ip_whitelist": null,
     "nav_override": null,
     "nav_blacklist": null
