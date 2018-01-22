@@ -171,26 +171,34 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 
 <span class="attributes">Attribute</span> | Description
 ----------------------------- | ----------------------
-**id** _Integer_              | User's Unique Identification number
-**active** _Integer_          | User's status. `0=deleted, 1=active, 2=inactive`
-**email** _String_            | User's unique email address
-**first_name** _String_       | User first name
-**last_name** _String_        | User last name
-**password** _String_         | hashed password
-**token** _String_            | User's unique API access token
-**group** _Integer_           | User's group ID
-**email_messages** _Boolean_  | Whether the user wants to receive email notification
-**avatar** _String_           | Avatar url
-**avatar_file_id** _Integer_  | File id used as avatar
-**language** _String_         | User's default language. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch)
-**timezone** _String_         | User's default timezone
-**position** _String_         | User's position on the project/company
-**location** _String_         | User's location in the world or universe
-**phone** _String_            | User's phone number
-**address** _String_          | User's address
-**city** _String_             | User's city
-**state** _String_            | User's state
-**zip** _String_              | User's zip code
+**id** _Integer_              | Unique Identification number
+**status** _Integer_          | Status. `0=deleted, 1=active, 2=inactive`
+**first_name** _String_       | First name
+**last_name** _String_        | Last name
+**email** _String_            | Unique email address
+**email_notifications** _Boolean_  | Whether the user wants to receive email notification
+**group** _Integer_           | Group ID
+**password** _String_         | Hashed password
+**avatar** _String_           | Avatar url or File id used as avatar
+**company** _String_          | Company name
+**title** _String_            | Title on the project/company
+**phone** _String_            | Phone number
+**address** _String_          | Address
+**city** _String_             | City
+**state** _String_            | State
+**zip** _String_              | Zip code
+**country** _String_          | Country
+**language** _String_         | Directus Language. Default to English. Language Supported `en` (English), `es` (Spanish), `de` (German), `fr` (French), `it` (Italian), `zh-hans` (Simplified Chinese) and `nl` (Dutch)
+**timezone** _String_         | Directus timezone. Default to New York timezone
+**last_ip** _String_          | Last IP it was authenticated from
+**last_login** _DateTime_     | Last IP it was authenticated from
+**last_access** _DateTime_    | Last IP it was authenticated from
+**last_page** _String_        | Last IP it was authenticated from
+**token** _String_            | Unique API secret access token
+**invite_token** _String_     | Last IP it was authenticated from
+**invite_date** _DateTime_    | Last IP it was authenticated from
+**invite_sender** _Integer_   | Last IP it was authenticated from
+**invite_accepted** _Boolean_ | Last IP it was authenticated from
 
 ## Setting Object
 

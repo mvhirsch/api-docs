@@ -13,10 +13,10 @@ Authentication:
 
 Items:
   Create Item: items/create-item.md
-  Get Items: items/get-items.md
   Get Item: items/get-item.md
   Update Item: items/update-item.md
   Delete Item: items/delete-item.md
+  List Items: items/list-items.md
   Batch Create Items: items/batch-create-items.md
   Batch Update Items: items/batch-update-items.md
   Batch Delete Items: items/batch-delete-items.md
@@ -49,6 +49,13 @@ Group Privileges:
   Get Privileges: privileges/get-privileges.md
   Get Table Privileges: privileges/get-table-privileges.md
   Update Privileges: privileges/update-privileges.md
+
+Users:
+  Create User: users/create-user.md
+  Get User: users/get-user.md
+  Update User: users/update-user.md
+  Update User: users/delete-user.md
+  List Users: users/list-users.md
 
 Preferences:
   Create Preferences: preferences/create-preferences.md
