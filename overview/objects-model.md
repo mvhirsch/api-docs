@@ -101,22 +101,22 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 
 <span class="attributes">Attribute</span> | Description
 ----------------------------- | ----------------------
-**id** _Integer_                | File Unique Identification number
-**active** _Integer_            | File's status. `0=deleted,1=active, 2=inactive`
-**name** _String_               | File name
-**title** _String_              | File's title
-**location** _String_           | Location of where the picture was taken. if any
-**type** _String_               | File mime type
-**url** _String_                | File url relativity to Directus base url
-**tags** _String_               | Comma separated tags
-**caption** _String_            | File caption (Description)
-**width** _Integer_             | File width
-**height** _Integer_            | File height
-**size** _Integer_              | File size in bytes
-**embed_id** _String_           | ID of the embeded file. Ex Youtube ID
-**user** _Integer_              | File owner (who uploaded the file)
-**date_uploaded** _String_      | File uploaded date. **TODO** It should be an DateTime object
-**storage_adapter** _String_    | Storage adapter used to upload the file
+**id** _Integer_              | Unique Identification number
+**_data_** _Alias_            | Base64 content (upload only)
+**name** _String_             | Name
+**title** _String_            | Title can be seen as a cleaner file's name, Ex: Office Christmas Party 2016
+**location** _String_         | Location of where the picture was taken. if any, pulled from the IPTC location when available
+**type** _String_             | Mime type
+**url** _String_              | File url base on the filesystem root (only returned)
+**tags** _String_             | Comma separated tags
+**caption** _String_          | Caption (Description)
+**width** _Integer_           | Width, if it's an image or a video
+**height** _Integer_          | Height, if it's an image or a video
+**size** _Integer_            | Size in bytes
+**embed_id** _String_         | ID of the embeded file. Ex the Youtube ID
+**user** _Integer_            | The user who upload the file
+**date_uploaded** _DateTime_  | File uploaded date. **TODO** It should be an DateTime object
+**storage_adapter** _String_  | Storage adapter used to upload the file
 
 ## Group Object
 

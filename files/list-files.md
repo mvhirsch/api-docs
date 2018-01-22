@@ -1,47 +1,45 @@
-# Update File
+# List Files
 
-<span class="request">`PATCH` **/api/1.1/files/_[id]_**</span>
+<span class="request">`GET` **/api/2.0/files**</span>
 
-<span class="description">Update a file information</span>
+<span class="description">Returns a list of files</span>
 
 <span class="arguments">Name</span> | Value | Description
 --------|-----|------------
-**File Object**         | <span class="required">Required</span> | The file information. See the [**File Object**](/overview/objects-model.md#permission-object)
+**Items Parameters Object**         | | The file information. See the [**Items Parameters Object**](/overview/items-parameters.md)
 
 ### Example Request
 
 ```bash
-$ curl -X PATCH --data "title=My+New+File+Name" \
-        https://instance--key.directus.io/api/2.0/files/1 \
-                -u [user-token]:
+$ curl https://instance--key.directus.io/api/2.0/files \
+  -u [user-token]:
 ```
 
 ```php
-$file = $client->updateFile(1, [
-  'title' => 'My New File Name'
-]);
+$files = $client->getFileList();
 ```
 
 ```javascript
-const file = client.updateFile(1, {
-  title: 'My New File Name'
-});
+const files = client.getFileList();
 ```
 
-### Response
+## Response
 
 <span class="attributes">Attribute</span> | Description
 --------|------------
 **meta** _Meta Object_ | The Directus system metadata object that provides useful information not contained within the dataset itself [**Meta Object**: View Nested Attributes](/overview/objects-model.md#meta-object)
-**data** _File Object_ | <span class="custom">This data and its architecture is based on the Directus file schema and can be extended with additional custom columns</span> [**File Object**: View Nested Attributes](/overview/objects-model.md#file-object)
+**data** _File Object_ Collection | <span class="custom">This data and its architecture is based on the Directus file schema and can be extended with additional custom columns</span> [**File Object**: View Nested Attributes](/overview/objects-model.md#file-object)
+
+### Example Response
 
 ```json
 {
   "meta": {
     "table": "directus_files",
-    "type": "item"
+    "type": "collection",
+    "result_count": 1
   },
-  "data": {
+  "data": [{
     "id": 2,
     "name": "2a05d2300cf0a8bf1a3f6567366affed.jpg",
     "url": "/storage/uploads/2a05d2300cf0a8bf1a3f6567366affed.jpg",
@@ -57,6 +55,6 @@ const file = client.updateFile(1, {
     "user": 1,
     "date_uploaded": "2018-01-15 04:30:52 UTC",
     "storage_adapter": "local"
-  }
+  }]
 }
 ```

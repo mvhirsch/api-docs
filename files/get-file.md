@@ -1,17 +1,13 @@
 # Get File
 
-<span class="request">`GET` **/api/1.1/files/_[id]_**</span>
+<span class="request">`GET` **/api/2.0/files/_[id]_**</span>
 
-<span class="description">Get a specific file (and its metadata) from within the Directus File Library</span>
-
-<span class="arguments">Name</span> | Value | Description
---------|-----|------------
-**id** _Integer_ | <span class="required">Required</span> | The `id` of the file you wish to get
+<span class="description">Get a file information</span>
 
 ### Example Request
 
 ```bash
-$ curl https://instance--key.directus.io/api/1.1/files/1 \
+$ curl https://instance--key.directus.io/api/2.0/files/1 \
   -u [user-token]:
 ```
 
@@ -20,7 +16,7 @@ $file = $client->getFile(1);
 ```
 
 ```javascript
-client.getFile(1);
+const file = client.getFile(1);
 ```
 
 ## Response
@@ -39,22 +35,20 @@ client.getFile(1);
     "type": "item"
   },
   "data": {
-    "id": 1,
-    "active": 1,
+    "id": 2,
     "name": "2a05d2300cf0a8bf1a3f6567366affed.jpg",
-    "url": null,
+    "url": "/storage/uploads/2a05d2300cf0a8bf1a3f6567366affed.jpg",
     "title": "My File Name",
     "location": "",
     "caption": "",
     "type": "image\/jpg",
-    "charset": "binary",
     "tags": "",
     "width": 594,
     "height": 447,
     "size": 52155,
     "embed_id": null,
     "user": 1,
-    "date_uploaded": "2013-11-15 04:30:52 UTC",
+    "date_uploaded": "2018-01-15 04:30:52 UTC",
     "storage_adapter": "local"
   }
 }

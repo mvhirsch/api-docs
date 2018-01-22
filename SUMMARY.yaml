@@ -22,10 +22,11 @@ Items:
   Batch Delete Items: items/batch-delete-items.md
 
 Files:
-  Create File: files/create-file.md
-  Get Files: files/get-files.md
+  Upload File: files/uplaod-file.md
   Get File: files/get-file.md
   Update File: files/update-file.md
+  Delete File: files/delete-file.md
+  List Files: files/list-files.md
 
 Tables:
   Create Table: tables/create-table.md
