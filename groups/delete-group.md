@@ -1,4 +1,4 @@
-# Update Group
+# Delete Group
 
 <span class="request">`DELETE` **/api/2.0/groups/_[id]_**</span>
 
