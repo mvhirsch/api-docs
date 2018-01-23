@@ -29,11 +29,11 @@ Files:
   List Files: files/list-files.md
 
 Collections:
-  Create Collection: tables/create-collection.md
-  Get Collection: tables/get-collection.md
-  Update Collection: tables/update-collection.md
-  Delete Collection: tables/delete-collection.md
-  List Collections: tables/list-collections.md
+  Create Collection: collections/create-collection.md
+  Get Collection: collections/get-collection.md
+  Update Collection: collections/update-collection.md
+  Delete Collection: collections/delete-collection.md
+  List Collections: collections/list-collections.md
 
 Columns:
   Create Column: columns/create-column.md
