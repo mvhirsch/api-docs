@@ -28,10 +28,12 @@ Files:
   Delete File: files/delete-file.md
   List Files: files/list-files.md
 
-Tables:
-  Create Table: tables/create-table.md
-  Get Tables: tables/get-tables.md
-  Get Table: tables/get-table.md
+Collections:
+  Create Collection: tables/create-collection.md
+  Get Collection: tables/get-collection.md
+  Update Collection: tables/update-collection.md
+  Delete Collection: tables/delete-collection.md
+  List Collections: tables/list-collections.md
 
 Columns:
   Create Column: columns/create-column.md

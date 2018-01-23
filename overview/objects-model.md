@@ -159,7 +159,7 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 **write_field_blacklist** _String_    | List of columns that the group can't update
 **status** _Integer_          | State of the item that this permission belongs to, Ex Draft, Active or Deleted
 
-## Table Object
+## Collection Object
 
 <span class="attributes">Attribute</span> | Description
 ------------------------------- | ----------------------
