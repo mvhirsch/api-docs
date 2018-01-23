@@ -17,7 +17,7 @@
 ```bash
 $ curl  -H "Content-Type: application/json" \
           -d '{
-                  "table_name": "projects", 
+                  "name": "projects", 
                   "columns": [
                       {
                           "name": "code",
