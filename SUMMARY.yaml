@@ -35,12 +35,12 @@ Collections:
   Delete Collection: collections/delete-collection.md
   List Collections: collections/list-collections.md
 
-Columns:
-  Create Column: columns/create-column.md
-  Get Columns: columns/get-columns.md
-  Get Column: columns/get-column.md
-  Update Column: columns/update-column.md
-  Delete Column: columns/delete-column.md
+Fields:
+  Create Field: fields/create-field.md
+  Get Field: fields/get-field.md
+  Update Field: fields/update-field.md
+  Delete Field: fields/delete-field.md
+  List Fields: fields/list-fields.md
 
 Groups:
   Create Group: groups/create-group.md
