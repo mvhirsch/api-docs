@@ -17,8 +17,8 @@
 ```bash
 $ curl  -H "Content-Type: application/json" \
           -d '{
-                  "name": "projects", 
-                  "columns": [
+                  "collection": "projects", 
+                  "fields": [
                       {
                           "name": "code",
                           "interface": "primary_key"
@@ -45,7 +45,7 @@ $ curl  -H "Content-Type: application/json" \
 
 ```php
 $collection = $client->createCollection('projects', [
-    'columns' => [
+    'fields' => [
         [
             'name' => 'code',
             'interface' => 'primary_key'
@@ -74,7 +74,7 @@ $collection = $client->createCollection('projects', [
 
 ```javascript
 const collection = client.createCollection('projects', {
-   columns: [
+   fields: [
        {
            name: 'code',
            interface: 'primary_key'
@@ -113,7 +113,7 @@ const collection = client.createCollection('projects', {
     "table": "directus_tables"
   },
   "data": {
-    "name": "projects",
+    "collection": "projects",
     "fields": [
       {
         "id": 1,

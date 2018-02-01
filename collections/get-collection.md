@@ -44,7 +44,7 @@ const collection = client.getCollection('projects', {
 ```json
 {
   "data": {
-    "name": "projects",
+    "collection": "projects",
     "fields": [
       {
         "id": 1,

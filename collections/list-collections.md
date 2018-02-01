@@ -35,7 +35,7 @@ const collections = client.getCollectionList();
 ```json
 {
   "data": [{
-    "name": "projects",
+    "collection": "projects",
     "fields": [
       {
         "id": 1,

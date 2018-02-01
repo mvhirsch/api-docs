@@ -16,7 +16,7 @@
 $ curl  -H "Content-Type: application/json" \
           -d '{
                   "preview_url": "http://localhost/project/{{name}}",
-                  "columns": [
+                  "fields": [
                       {
                           "name": "title",
                           "length": 128
@@ -30,7 +30,7 @@ $ curl  -H "Content-Type: application/json" \
 ```php
 $collection = $client->updateCollection('projects', [
     'preview_url' => 'http://localhost/project/{{name}}',
-    'columns' => [
+    'fields' => [
         [
             'name' => 'title',
             'length' => 128
@@ -42,7 +42,7 @@ $collection = $client->updateCollection('projects', [
 ```javascript
 const collection = client.updateCollection('projects', {
    preview_url: 'http://localhost/project/{{name}}',
-   columns: [
+   fields: [
        {
            name: 'title',
            length: 128
@@ -67,7 +67,7 @@ const collection = client.updateCollection('projects', {
     "table": "directus_tables"
   },
   "data": {
-    "name": "projects",
+    "collection": "projects",
     "fields": [
       {
         "id": 1,
