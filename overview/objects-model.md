@@ -103,20 +103,24 @@ The status name are configurable and `Active`, `Draft` and `Delete` are the defa
 ----------------------------- | ----------------------
 **id** _Integer_              | Unique Identification number
 **_data_** _Alias_            | Base64 content (upload only)
-**name** _String_             | Name
+**filename** _String_         | File's Name
 **title** _String_            | Title can be seen as a cleaner file's name, Ex: Office Christmas Party 2016
+**description** _String_      | File's Description
 **location** _String_         | Location of where the picture was taken. if any, pulled from the IPTC location when available
-**type** _String_             | Mime type
-**url** _String_              | File url base on the filesystem root (only returned)
 **tags** _String_             | Comma separated tags
-**caption** _String_          | Caption (Description)
 **width** _Integer_           | Width, if it's an image or a video
 **height** _Integer_          | Height, if it's an image or a video
-**size** _Integer_            | Size in bytes
-**embed_id** _String_         | ID of the embeded file. Ex the Youtube ID
-**user** _Integer_            | The user who upload the file
-**date_uploaded** _DateTime_  | File uploaded date. **TODO** It should be an DateTime object
+**filesize** _Integer_        | Size in bytes
+**duration** _Integer_        | Duration in seconds
+**metadata** _JSON_           | File metadata
+**type** _String_             | Mime type
+**charset** _String_          | Characters set
+**embed** _String_            | ID of the embeded file. Ex the Youtube ID
+**folder** _Integer_          | Virtual Folder where this file is located
+**upload_user** _Integer_     | The user who upload the file
+**upload_date** _DateTime_    | File uploaded date. **TODO** It should be an DateTime object
 **storage_adapter** _String_  | Storage adapter used to upload the file
+**url** _String_              | File url base on the filesystem root (only returned)
 
 ## Group Object
 

@@ -43,20 +43,26 @@ const file = client.updateFile(1, {
   },
   "data": {
     "id": 2,
-    "name": "2a05d2300cf0a8bf1a3f6567366affed.jpg",
-    "url": "/storage/uploads/2a05d2300cf0a8bf1a3f6567366affed.jpg",
+    "filename": "2a05d2300cf0a8bf1a3f6567366affed.jpg",
     "title": "My New File Name",
-    "location": "",
-    "caption": "",
-    "type": "image\/jpg",
-    "tags": "",
+    "description": null,
+    "location": null,
+    "tags": null,
     "width": 594,
     "height": 447,
-    "size": 52155,
-    "embed_id": null,
-    "user": 1,
-    "date_uploaded": "2018-01-15 04:30:52 UTC",
-    "storage_adapter": "local"
+    "filesize": 52155,
+    "duration": null,
+    "metadata": null,
+    "type": "image/jpeg",
+    "charset": "binary",
+    "embed": null,
+    "folder": null,
+    "upload_user": 1,
+    "upload_date": "2018-02-01T11:29:49-05:00",
+    "storage_adapter": "local",
+    "url": "/storage/uploads/2a05d2300cf0a8bf1a3f6567366affed.jpg",
+    "thumbnail_url": "/storage/uploads/thumbs/2.jpg",
+    "html": null
   }
 }
 ```
