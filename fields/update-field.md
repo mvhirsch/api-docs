@@ -46,22 +46,19 @@ const field = client.updateField('projects', 'year', {
     "type": "item"
   },
   "data": {
-    "id": 1,
+    "id": 5,
     "collection": "projects",
-    "name": "year",
+    "field": "year",
     "type": "INT",
-    "length": 4,
-    "nullable": true,
-    "comment": "Year The Project was built",
-    "sort": 3,
-    "system": false,
-    "master": false,
-    "hidden_list": false,
-    "hidden_input": false,
-    "required": false,
-    "column_type": "int(4)",
     "interface": "numeric",
-    "options": []
+    "options": null,
+    "locked": 0,
+    "translation": null,
+    "required": false,
+    "sort": 4,
+    "comment": "Year The Project was built",
+    "hidden_list": false,
+    "hidden_input": false
   }
 }
 ```

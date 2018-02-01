@@ -13,7 +13,7 @@
 ### Example Request
 
 ```bash
-$ curl -d "name=year&type=int&length=4&interface=numeric&comment=Year+built" \       
+$ curl -d "field=year&type=int&length=4&interface=numeric&comment=Year+built" \       
         https://instance--key.directus.io/api/2.0/fields/projects \
         -u [user-token]:
 ```
@@ -54,20 +54,17 @@ const field = client.createField('projects', 'year', {
   "data": {
     "id": 1,
     "collection": "projects",
-    "name": "year",
+    "field": "year",
     "type": "INT",
-    "length": 4,
-    "nullable": true,
-    "comment": "Year built",
-    "sort": 3,
-    "system": false,
-    "master": false,
-    "hidden_list": false,
-    "hidden_input": false,
-    "required": false,
-    "column_type": "int(4)",
     "interface": "numeric",
-    "options": []
+    "options": null,
+    "locked": 0,
+    "translation": null,
+    "required": false,
+    "sort": 3,
+    "comment": "Year built",
+    "hidden_list": false,
+    "hidden_input": false
   }
 }
 ```

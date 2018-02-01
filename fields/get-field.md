@@ -40,20 +40,17 @@ const field = client.getField('projects', 'year');
   "data": {
     "id": 1,
     "collection": "projects",
-    "name": "year",
+    "field": "year",
     "type": "INT",
-    "length": 4,
-    "nullable": true,
-    "comment": "Year built",
-    "sort": 3,
-    "system": false,
-    "master": false,
-    "hidden_list": false,
-    "hidden_input": false,
-    "required": false,
-    "column_type": "int(4)",
     "interface": "numeric",
-    "options": []
+    "options": null,
+    "locked": 0,
+    "translation": null,
+    "required": false,
+    "sort": 3,
+    "comment": "Year built",
+    "hidden_list": false,
+    "hidden_input": false
   }
 }
 ```
