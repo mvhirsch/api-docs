@@ -9,3 +9,4 @@
 - **0006** - Method Not Allowed (405)
 - **0007** - Too Many Requests (429)
 - **0008** - API Environment Configuration Not Found (404)
+- **0009** - Failed generating a SQL Query
