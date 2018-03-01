@@ -45,6 +45,9 @@ These are the Directus object models used throughout the system.
 
 The status name are configurable and `Active`, `Draft` and `Delete` are the default values.
 
+## Server Object
+TODO
+
 ## Activity Object
 
 <span class="attributes">Attribute</span> | Description

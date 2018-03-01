@@ -7,96 +7,73 @@ Introduction:
   Filters: overview/filters.md
   Directus Objects: overview/objects-model.md
 
-Authentication:
-  Authenticate: auth/authenticate.md
-  Refresh: auth/refresh.md
-
 Items:
   Create Item: items/create-item.md
+  Get Items: items/get-items.md
   Get Item: items/get-item.md
   Update Item: items/update-item.md
   Delete Item: items/delete-item.md
-  List Items: items/list-items.md
-  Batch Create Items: items/batch-create-items.md
-  Batch Update Items: items/batch-update-items.md
-  Batch Delete Items: items/batch-delete-items.md
 
 Files:
-  Upload File: files/uplaod-file.md
+  Create File: files/create-file.md
+  Get Files: files/get-files.md
   Get File: files/get-file.md
   Update File: files/update-file.md
-  Delete File: files/delete-file.md
-  List Files: files/list-files.md
 
-Collections:
-  Create Collection: collections/create-collection.md
-  Get Collection: collections/get-collection.md
-  Update Collection: collections/update-collection.md
-  Delete Collection: collections/delete-collection.md
-  List Collections: collections/list-collections.md
+Tables:
+  Create Table: tables/create-table.md
+  Get Tables: tables/get-tables.md
+  Get Table: tables/get-table.md
 
-Fields:
-  Create Field: fields/create-field.md
-  Get Field: fields/get-field.md
-  Update Field: fields/update-field.md
-  Delete Field: fields/delete-field.md
-  List Fields: fields/list-fields.md
+Columns:
+  Create Column: columns/create-column.md
+  Get Columns: columns/get-columns.md
+  Get Column: columns/get-column.md
+  Update Column: columns/update-column.md
+  Delete Column: columns/delete-column.md
 
 Groups:
   Create Group: groups/create-group.md
+  Get Groups: groups/get-groups.md
   Get Group: groups/get-group.md
-  Update Group: groups/update-group.md
-  Delete Group: groups/delete-group.md
-  List Groups: groups/list-groups.md
 
-Permissions:
-  Create Permission: permissions/create-permission.md
-  Get Permission: permissions/get-permission.md
-  Update Permission: permissions/update-permission.md
-  Delete Permission: permissions/delete-permission.md
-  List Permissions: permissions/list-permissions.md
-
-Users:
-  Create User: users/create-user.md
-  Get User: users/get-user.md
-  Update User: users/update-user.md
-  Update User: users/delete-user.md
-  List Users: users/list-users.md
+Group Privileges:
+  Create Privileges: privileges/create-privileges.md
+  Get Privileges: privileges/get-privileges.md
+  Get Table Privileges: privileges/get-table-privileges.md
+  Update Privileges: privileges/update-privileges.md
 
 Preferences:
-  Create Preferences: preferences/create-preferences.md
   Get Preferences: preferences/get-preferences.md
   Update Preferences: preferences/update-preferences.md
-  Delete Preferences: preferences/delete-preferences.md
-  List Preferences: preferences/list-preferences.md
 
 Messages:
   Get Messages: messages/get-messages.md
   Get Message: messages/get-message.md
 
-Activities:
-   List All Activities: activities/list-activities.md
-   Get Activity: activities/get-activity.md
+Activity:
+  Get Activity: activity/get-activity.md
+#  Create Activity: activity/create-activity.md
 
 Bookmarks:
-  Create Bookmark: bookmarks/create-bookmark.md
-  Update Bookmark: bookmarks/update-bookmark.md
-  Delete Bookmark: bookmarks/delete-bookmark.md
   Get All Bookmarks: bookmarks/get-bookmarks.md
   Get User Bookmarks: bookmarks/get-user-bookmarks.md
-  Get Auth User Bookmarks: bookmarks/get-user-bookmarks.md
   Get Bookmark: bookmarks/get-bookmark.md
+  Create Bookmark: bookmarks/create-bookmark.md
+  Delete Bookmark: bookmarks/delete-bookmark.md
 
 Settings:
-  Create Setting: settings/create-settings.md
-  Get Setting: settings/get-setting.md
-  Update Settings: settings/update-setting.md
-  Delete Settings: settings/delete-setting.md
-  List Settings: settings/list-settings.md
+  Get Settings: settings/get-settings.md
+  Get Setting By Type: settings/get-type-settings.md
+  Update Settings: settings/update-settings.md
 
 Utils:
   Random String: utils/get-random-string.md
   Hash String: utils/get-hash-string.md
+
+Utils:
+  Info: server/info.md
+  Ping: server/ping.md
 
 PHP SDK:
   PHP SDK: SDKs/php-sdk.md
