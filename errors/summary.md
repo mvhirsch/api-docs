@@ -15,5 +15,6 @@
 
 - [General](/errors/general.md)
 - [Authentication](/errors/auth.md)
+- [Permissions](/errors/permissions.md)
 - [Items](/errors/items.md)
 - [Utils](/errors/utils.md)
