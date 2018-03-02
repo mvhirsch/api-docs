@@ -3,7 +3,7 @@
 ## HTTP Status codes
 - 200 OK - Everything was as expected
 - 201 Created - @TODO
-- 204 No Content - A item has been deleted (@TODO)
+- 204 No Content - A item has been deleted
 - 400 Bad Request - The provided information was invalid
 - 401 Unauthorized - The user needs authorization to perform the action
 - 403 Forbidden - The user has not permission to perform the action
@@ -15,6 +15,6 @@
 
 - [General](/errors/general.md)
 - [Authentication](/errors/auth.md)
-- [Permissions](/errors/permissions.md)
 - [Items](/errors/items.md)
+- [Permissions](/errors/permissions.md)
 - [Utils](/errors/utils.md)
