@@ -1,6 +1,7 @@
 # Authenticate using a user credentials
 
-> **Note:** This endpoint returns a JWT Token that expire in `cms_user_auto_sign_out` minutes set in the web app settings.
+> **Note:** The JWT Token expires in 5 minutes.
+> **Note:** If the user changes group the token becomes invalid for the new group.
 
 <span class="request">`POST` **/api/2.0/auth/authenticate**</span>
 
@@ -29,7 +30,7 @@ $ curl --data "email=user@getdirectus.com&password=pass1234" \
 
 ```json
 {
- 
+
   "data": {
     "token": "JWT.Token.Example"
   }
