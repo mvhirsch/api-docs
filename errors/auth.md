@@ -5,3 +5,6 @@
 - **0102** - Expired Token (401)
 - **0103** - Inactive User (401)
 - **0104** - Invalid Reset Password Token (401)
+- **0105** - Expired Reset Password Token (401)
+- **0106** - User Not Found (404)
+- **0107** - User with a given email Not Found (404)
