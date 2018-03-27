@@ -7,13 +7,12 @@ Install the package via npm
 Initialize the SDK object with your the desired api key and url
 
 ```javascript
-const SDK = require('directus-sdk-javascript');
+const RemoteInstance = require('directus-sdk-javascript/remote');
 
-const client = new SDK(
-  'api-key-12345',
-  'http://directus.url/api/', // Directus-hosted or own server
-  1.1 // API Version
-);
+const client = new RemoteInstance({
+  'http://directus.url/api/1.1', // Directus-hosted or own server
+  accessToken: 'api-key-12345' // [optional]
+});
 ```
 
 All methods can be used with either callbacks or promises.
