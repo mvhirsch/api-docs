@@ -15,21 +15,10 @@ const client = new RemoteInstance({
 });
 ```
 
-All methods can be used with either callbacks or promises.
+Every endpoint returns a promise which resolves the APIs JSON on success and rejects on an error:
 
 ```javascript
-client.getEntries('projects', (err, res) => {
-  if(err) throw err;
-  console.log(res);
-});
-```
-
-```javascript
-client.getEntries('projects')
-  .then(res => {
-    console.log(res);
-  })
-  .catch(err => {
-    throw err;
-  });
+client.getItems('projects')
+  .then(res => console.log(res))
+  .catch(err => console.log(err));
 ```
